@@ -1,0 +1,99 @@
+total_miss_handle_time    777390046 # total time of handling the missing
+total_event_count           7645816 # total num of event inital created
+total_req_event_count        503917 # total num of request event inital created
+total_miss_event_count      7141899 # total num of miss event intial created
+average_miss_handle_time     101.6752 # cycles per every miss and invalidation
+total_network_access       21407322 # total network access
+total_network_delay       167028480 # total network delay
+average_network_time         7.8024 # cycles per network access
+total_local_cache_access       467641 # total local dl2 cache access number
+total_remote_cache_access      7181389 # total remote dl2 cache access number
+total_two_hops_involve_wb       628134 # total two hops involves due to write back
+total_two_hops_involves      5566836 # total two hops involves
+total_four_hops_involves       203027 # total four hops involves
+total_two_hops_involves_wm       148618 # total two hops involves
+total_four_hops_involves_wm        46552 # total four hops involves
+total_two_hops_involve_miss      1583880 # total two hops involves
+total_four_hops_involve_miss       418800 # total four hops involves
+total_four_hops_involve_upgrade        96776 # total four hops involves
+total_two_hops_involve_upgrade          115 # total two hops involves
+data_private_read           3625135 # total private data for read miss
+data_private_write           360583 # total private data for write miss
+data_shared_read            3516758 # total shared data for read miss
+data_shared_write            143328 # total shared data for write miss
+total_all_close               78104 # total numbers of all closed consumers
+total_not_all_close          268251 # total numbers of not all closed consumers
+total_p_c_events             346355 # total producer and consumers events (should equal to 4 hops)
+total_consumers              528653 # total numbers of consumers
+total_packets_in_neighbor       135114 # total packets are in neighborhood
+total_packets_at_corners       104723 # total packets are at corners
+total_all_almostclose        139348 # total numbers of all closed and corner consumers
+total_data_consumers          80705 # total data packets of consumers
+total_data_at_corner          15128 # total data packets supply from at corners
+total_data_close              22451 # total data packets are supplied from closeby sources
+total_data_far                58254 # total data packets are sumpplied from far sources
+average_inside_percent   14449.4841 # average inside packets percent(should be divided by total_not_all_close)
+average_outside_percent  253801.5159 # average outside packets percent(should be divided by total_not_all_close)
+average_outside_abs_percent  184854.2618 # average absolutly outside packets percent(far - corner)
+average_corner_percent   68947.2541 # average outside packets percent(corner: should be divided by total_not_all_clos)
+sharer_bincount_0                 0 #
+sharer_bincount_1            280521 #
+sharer_bincount_2             28623 #
+
+total_req_msg              12724221 # total request messages in network
+total_data_msg              8683102 # total data messages in network
+total_req_msg_sending      13158752 # total request messages sending in network
+total_data_msg_sending      9613150 # total data messages sending in network
+total_network_occupancy     34085178 # total cycles spend in network
+laser_power_switch_off            0 # total numbers of laser power is switch off
+laser_power_on_cycle       51296329 # total cycles of laser power on
+laser_power_switch_on            16 # total numbers of laser power is switch on
+laser_direction_switch     18461478 # total times of laser steering is required
+flits_transmit             61224501 # total numbers of flits transmittion
+flits_receiving            58605215 # total numbers of flits are receiving
+data_conflict_packet_num       640887 # total numbers of data packet in confliction
+meta_conflict_packet_num       300297 # total numbers of meta packet in confliction
+data_retry_packet_num        930048 # total times of data packet retry
+meta_retry_packet_num        434531 # total times of meta packet retry
+pending_packet_num           257426 # total numbers of pending packet
+confliction_delay          27582423 # total delay of confliction
+data_confliction_delay     24162941 # total delay of data confliction
+meta_confliction_delay      4620670 # total delay of meta confliction
+pending_delay               2847255 # total delay of pending packet
+laser_switch_on_delay           320 # total delay of laser warmup
+network_delay_in_fiber     56139730 # total network delay in fiber
+steering_delay             35846500 # total delay of laser steering
+net_work_queue_delay       30244000 # total delay due to the queue effect
+data_network_queue_delay     11422802 # total data delay due to the queue effect
+meta_network_queue_delay     18821198 # total meta delay due to the queue effect
+timeslot_wait_delay        18936754 # total delay due to data channel time slot
+meta_wait_delay                   0 # total delay due to meta channel time slot
+reply_data_packets           852198 # total data packets which are reply
+original_replydata_packets       583954 # total data packets which are reply
+write_back_packets            77850 # total data packets which are write back
+original_writeback_packets        56933 # total data packets which are write back
+data_retry_queue             246740 # total retried data packets queued
+meta_retry_queue              71293 # total retried meta packets queued
+max_conflict_involves             6 # maximum packets involves in one conflict
+max_packet_retry                  8 # maximum number packets retry
+max_packets_inbuffer             27 # maximum number packets in the input buffer
+max_flits_inbuffer              116 # maximum number flits in the input buffer
+meta_delay_packets                0 # number of meta packets delay
+meta_packets_forward              0 # number of meta packets forward
+data_packets_forward              0 # number of data packets forward
+RTCC                         442659 # data_conflict due to Request Time Close to each other Counter
+RTC_C_miss                    66411 # data_conflict due to Request Time Close to each other Counter
+RTC_counter_reduced          223354 # data_conflict due to Request Time Close to each other Counter
+meta_reduced_packets        1431959 # Request Time Close to each other Counter
+meta_close_packets          2297158 # Request Time Close to each other Counter
+data_packets_delay                0 # data packets are actually delayed to avoid conflict
+data_packets_no_delay             0 # data packets are not delayed to avoid conflict
+data_delay                        0 # data packets delay time
+queue_0.bincount          646806751 # bincount for input buffer
+queue_1.bincount          136502107 # bincount for input buffer
+queue_2.bincount           27483840 # bincount for input buffer
+queue_3.bincount            6223706 # bincount for input buffer
+queue_4.bincount            1831567 # bincount for input buffer
+queue_5.bincount             741821 # bincount for input buffer
+queue_6.bincount            1153088 # bincount for input buffer
+

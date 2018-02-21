@@ -1,0 +1,1333 @@
+a:4096:context.c:            /* speculation mode, non-zero when mis-speculating, i.e., executing
+a:4097:context.h:    /* speculation mode, non-zero when mis-speculating, i.e., executing
+a:4098:Binary file context.o matches
+Binary file barnes_tb/BARNES matches
+bpred.c:182:#include "context.h"
+bpred.c:907:    context *current = thecontexts[threadid];	/* grbriggs: added so 2bcgskew uses SMT */
+bpred.c:1899:    context *current = thecontexts[threadid];	/* grbriggs: added so 2bcgskew uses SMT */
+bpred.h:165://#include "context.h"
+Binary file bpred.o matches
+branchCorr.c:2:#include "context.h"
+Binary file branchCorr.o matches
+cache.c:267:extern context *thecontexts[MAXTHREADS];
+cache.c:1653:		context *current = thecontexts[threadid];
+Binary file cache.o matches
+cache_o.c:268:extern context *thecontexts[MAXTHREADS];
+cache_o.c:1640:		context *current = thecontexts[threadid];
+cache_update.c:123:#include "context.h"
+cluster.c:1254:    context *current;
+Binary file cluster.o matches
+Binary file cluster-opts.o matches
+Binary file CMP_new.PR matches
+Binary file CMP_new.PS matches
+Binary file CMP_new.WK3 matches
+cmt.c:40:context* get_next_thread()
+Binary file cmt.o matches
+context.c:9:#include "context.h"
+context.c:20:context *thecontexts[MAXTHREADS];
+context.c:70:    context *current;
+context.c:77:    current = thecontexts[*curcontext] = (context *) calloc(1,sizeof(context));
+context.c:102:        fprintf(stderr,"Error in 'context.c:read_thread_args':- No such a benchmark configuration file: '%s' \n",filename);
+context.h:402:    /* If this context shares memory with another context(s),
+context.h:403:       this integer specifies the original context number.
+context.h:404:       If this context does not share memory, then this is
+context.h:405:       equal to its context id. */
+context.h:556:    /*mwr102104: if the context is in fault or not*/
+context.h:692:    unsigned cycle_mask;		/*101904mwr: variable to determin which cycles the context will be active*/
+context.h:798:} context;
+context.h:801:extern context *thecontexts[MAXTHREADS];
+context.h:819:void update_power_stats(power_result_type, int, context*);
+Binary file context.o matches
+CVS/Entries:19:/context.c/1.1.1.1/Thu Feb 18 21:22:13 2010//
+CVS/Entries:20:/context.h/1.1.1.1/Thu Feb 18 21:22:13 2010//
+dlite.c:124:#include "context.h"
+dlite.c:258:  context *current;
+dlite.c:2259:  context *current;
+dlite.c:2291:  context *current;
+dlite.c:2323:  context *current;
+dlite.c:2356:  context *current;
+Binary file dlite.o matches
+eio.c:115:#include "context.h"
+eio.c:151:  context *current;
+eio.c:277:  context *current;
+eio.c:417:  context *current;
+eio.c:749:  context *current;
+eio.c:833:  context *current;
+Binary file eio.o matches
+endian.c:93:#include "context.h"
+endian.c:137:  context *current;
+Binary file endian.o matches
+event:187:context.h:797:   struct DIRECTORY_EVENT *event;
+event:188:Binary file context.o matches
+event:367:tags:17032:event	context.h	/^   struct DIRECTORY_EVENT *event;$/;"	m	struct:context_t	typeref:struct:context_t::DIRECTORY_EVENT
+Binary file flp.o matches
+headers.h:40:#include "context.h"
+hotspot.h:101:	 *	Power is recorded under the cluster having the same number as the context number for the rest. */
+Binary file hotspot.o matches
+instManip.c:12:#include "context.h"
+instManip.c:242:void getRegValue(enum md_opcode op, context *current, int ra, qword_t *data)
+instManip.h:9:void getRegValue(enum md_opcode op, context *current, int ra, qword_t *data);
+Binary file instManip.o matches
+Binary file interconnect.o matches
+loader.c:117:#include "context.h"
+loader.c:174:  context *current;
+loader.c:223:             int threadid)               /*  context id */
+loader.c:229:  context *current;
+Binary file loader.o matches
+machine.c:122:#include "context.h"
+machine.c:566: context *current;
+machine.c:578: context *current;
+Binary file machine.o matches
+main.c:182:#include "context.h"
+Binary file main.o matches
+Makefile:426:	eio.c stats.c endian.c misc.c power.c context.c cluster.c cmt.c\
+Makefile:437:	eio.h range.h version.h endian.h misc.h power.h context.h smt.h  cluster.h MTA.h\
+Makefile:450:	range.$(OEXT) misc.$(OEXT) power.$(OEXT) context.$(OEXT) cluster.$(OEXT) cmt.$(OEXT) \
+memory.c:120:#include "context.h"
+memory.c:242:	context *current = thecontexts[threadID];
+memory.c:285:	context *current = thecontexts[threadID];
+memory.c:406:	context *current = thecontexts[threadid];
+memory.c:483:	context *current;
+Binary file memory.o matches
+network.c:48:#include "context.h"
+Binary file network.o matches
+old_sim-out.c:313:int checkLSQforSt (int i, context * current);
+old_sim-out.c:360:		context *current = thecontexts[i];
+old_sim-out.c:2278:	context *current;
+old_sim-out.c:3251:	context *current;
+old_sim-out.c:3256:		fprintf (stderr, "Initializing context %d\n", numcontexts);
+old_sim-out.c:3411:	context *current;
+old_sim-out.c:3483:	context *current;
+old_sim-out.c:3511:	context *current;
+old_sim-out.c:4011:	context *current;
+old_sim-out.c:4195:	context *current;
+old_sim-out.c:4747:	context *current;
+old_sim-out.c:4774:	context *current;
+old_sim-out.c:4860:	context *current;
+old_sim-out.c:5080:											context *tmpCxt;
+old_sim-out.c:5128:											context *tmpCxt;
+old_sim-out.c:5443:	context *current = thecontexts[threadid];
+old_sim-out.c:5659:	context *current;
+old_sim-out.c:5873:	context *current;
+old_sim-out.c:5906:	context *current;
+old_sim-out.c:6002:	context *current;		/* to access the parameters  for the thread that RUU entry belongs to */
+old_sim-out.c:7017:	context *current;
+old_sim-out.c:7078:	context *current;
+old_sim-out.c:7139:	context *current;
+old_sim-out.c:7187:	context *current;
+old_sim-out.c:7361:	context *current;
+old_sim-out.c:7397:	context *current;
+old_sim-out.c:7437:	context *current = thecontexts[threadid];
+old_sim-out.c:7467:	context *current;
+old_sim-out.c:7590:	context *current;
+old_sim-out.c:7665:		panic("Stack boundaries breached: May be the STACKSIZE parameter defined in context.h file is small for the application");
+old_sim-out.c:7715:	context *current;
+old_sim-out.c:7751:needsWBflush (context * current, enum md_opcode op, md_addr_t addr)
+old_sim-out.c:7832:	context *current = thecontexts[rs->threadid];
+old_sim-out.c:7887:	context *current;
+old_sim-out.c:8017:	context *current;
+old_sim-out.c:8117:			context *tmpCxt;
+old_sim-out.c:9118:	context *current;
+old_sim-out.c:9155:	context *current = 0;
+old_sim-out.c:9377:	context *current;
+old_sim-out.c:9496:	context *current;
+old_sim-out.c:11076:	context *current;
+old_sim-out.c:11144:	context *current = thecontexts[threadid];
+old_sim-out.c:11333:	context *current;
+old_sim-out.c:11357:	context *current;
+old_sim-out.c:11456:	context *current;
+old_sim-out.c:11500:	context *current;
+old_sim-out.c:11589:checkLSQforSt (int i, context * current)
+old_sim-out.c:11628:	context *current = thecontexts[threadid];
+old_sim-out.c:11851:	//context *current= current;
+old_sim-out.c:11852:	context *current = thecontexts[threadid];
+old_sim-out.c:11922:	context *current;
+old_sim-out.c:12006:assignFloatRegs (context * current, struct RUU_station *rs, int AorB, int dirty)
+old_sim-out.c:12153:	context *current, ctx;
+old_sim-out.c:12345:			context *current = thecontexts[threadid];
+old_sim-out.c:12503:			context *current = thecontexts[threadid];
+Binary file opticalForSimplescalar/sim_routing.o matches
+Binary file opticalForSimplescalar/input_buffer.o matches
+Binary file opticalForSimplescalar/optical_statistics.o matches
+opticalForSimplescalar/point-point.h:20:#include "../context.h"
+Binary file opticalForSimplescalar/packet_retry_algr.o matches
+Binary file opticalForSimplescalar/packet.o matches
+Binary file opticalForSimplescalar/mess_queue.o matches
+Binary file opticalForSimplescalar/sim_receive.o matches
+Binary file opticalForSimplescalar/sim_mess.o matches
+Binary file opticalForSimplescalar/configuration.o matches
+Binary file opticalForSimplescalar/main.o matches
+Binary file opticalForSimplescalar/sim_conflict.o matches
+Binary file opticalForSimplescalar/sim_main.o matches
+Binary file opticalForSimplescalar/flit.o matches
+power.c:107:#include "context.h"
+power.c:108://power.h is included in context.h
+power.c:790:void update_power_stats(power_result_type power, int threadid, context *current)
+power.h:821:/*void update_power_stats(power_result_type, int, context*);*/			//moved to context.h
+Binary file power.o matches
+range.c:108:#include "context.h"
+range.c:123:  context *current;
+Binary file range.o matches
+Binary file RCutil.o matches
+README:5:1. comment COLLECT_STAT_STARTUP flag in context.h
+README:9:1. comment COLLECT_STAT_STARTUP flag in context.h
+README:13:1. un-comment COLLECT_STAT_STARTUP flag in context.h
+README:17:1. un-comment COLLECT_STAT_STARTUP flag in context.h
+README:19:3. un-comment PARALLEL_EMUL flag in context.h
+resource.c:100:#include "context.h"
+resource.h:65: * Added usr_id field to resources structure to record the context using the resource.
+resource.h:111:  int usr_id;				/*mwr: usr id of the context using the resource*/
+Binary file resource.o matches
+Binary file run/sim-outorder_n matches
+Binary file run/base matches
+Binary file run/benchmark/inputs/fluidanimate/FLUIDANIMATE matches
+Binary file run/benchmark/inputs/barnes/BARNES_new matches
+Binary file run/benchmark/inputs/barnes/BARNES_o matches
+Binary file run/benchmark/inputs/barnes/BARNES_l matches
+Binary file run/benchmark/inputs/barnes/BARNES_B_oringinal matches
+Binary file run/benchmark/inputs/barnes/BARNES_b matches
+Binary file run/benchmark/inputs/barnes/BARNES_nn matches
+Binary file run/benchmark/inputs/barnes/BARNES matches
+Binary file run/benchmark/inputs/lu/LU_o matches
+Binary file run/benchmark/inputs/lu/LU matches
+Binary file run/benchmark/inputs/water-spatial/WATER-SPATIAL matches
+Binary file run/benchmark/inputs/tspo/TSPO matches
+Binary file run/benchmark/inputs/fmm/FMM_n matches
+Binary file run/benchmark/inputs/fmm/FMM_old matches
+Binary file run/benchmark/inputs/fmm/FMM_o matches
+Binary file run/benchmark/inputs/fmm/FMM matches
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:458:/*mwr: REMINDER:if the register size is greater than 200 make changes in context.h*/
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:2434:    context *current;
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:3309:   context *current;
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:3324:void new_chk_execute(context *current, int threadid);
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:3525:  context *current;
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:3530:   fprintf(stderr,"Initializing context %d\n", numcontexts);
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:3651:  context *current;
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:3734:	context *current;
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:3760:	context *current;
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:3999:  context *current;
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:4147:  context *current;
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:4279:  context *current;
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:4305:  context *current;
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:4342:	context *current;
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:4462:						context *tmpCxt;
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:4888:	context *current= thecontexts[threadid];
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:5117:	context *current;
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:5298:	context *current;
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:5393:	context *current;    /* to access the parameters  for the thread that RUU entry belongs to */
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:5940:			}		//102104mwr: end of if context->active_this_cycle
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:5992:  context *current;
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:6051:	context *current;
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:6110:	context *current;
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:6158:  context *current;
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:6333:  context *current;
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:6371:  context *current;
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:6771:	context* current = thecontexts[threadid];
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:6823:	context *current;
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:7047:	context *current;
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:7246:	context *current;
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:7386:	context *current;
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:7430:	context *current = thecontexts[rs->threadid];
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:7484:  context *current;
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:7555:void do_the_ff(context *current, unsigned long long fastfwd_count, int threadid);
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:7556:void do_the_ff_st(context *current, unsigned long long fastfwd_count, int threadid, int Multiple);
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:7611:	context *current;
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:7712:			context *tmpCxt;
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:8765:	context *current;
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:8800:	context *current = 0;
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:9012:  context *current;
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:9107:	context *current;
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:9222:  context *current;
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:10547:void do_the_ff(context *current, unsigned long long fastfwd_count, int threadid){
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:10722:void do_the_ff_st(context *current, unsigned long long fastfwd_count, int threadid, int Multiple){
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:10959:	context *current;
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:11023:	context *current = thecontexts[threadid];
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:11142:	context *current;
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:11164:	context *current;
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:11256:	context *current;
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:11298:	context *current;
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:11383:	context *current;
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:11405:	context *current;
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:11431:	context *current;
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:11840:	context *current;
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:11869:	context *current;
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:11897:	context *current= thecontexts[threadid];
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:12032:	context *current;
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:12074:	context *current = thecontexts[threadid];
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:12100:	context *current;
+run/benchmark/inputs/radix/tempSrc/main.c:171:#include "context.h"
+run/benchmark/inputs/radix/tempSrc/main.c:471://  fprintf(stderr, "size of context %lu \n",(long)sizeof(context));
+run/benchmark/inputs/radix/tempSrc/cache.c:222:extern context *thecontexts[MAXTHREADS];
+Binary file run/benchmark/inputs/radix/tempSrc/sim-outorder matches
+run/benchmark/inputs/radix/radix_seq_wbsmde1.sim:7:Initializing context 0
+Binary file run/benchmark/inputs/fft/FFT_o matches
+Binary file run/benchmark/inputs/fft/FFT matches
+Binary file run/benchmark/inputs/blackscholes/BLACKSCHOLES matches
+Binary file run/benchmark/inputs/raytrace/RAYTRACE_o matches
+Binary file run/benchmark/inputs/raytrace/RAYTRACE matches
+Binary file run/benchmark/inputs/radiosity/RADIOSITY matches
+Binary file run/benchmark/inputs/radiosity/radiosity.bin.H1 matches
+Binary file run/benchmark/inputs/tspuo/TSPUO matches
+Binary file run/benchmark/inputs/cholesky/CHOLESKY matches
+Binary file run/benchmark/inputs/mp3d/MP3D_o matches
+Binary file run/benchmark/inputs/mp3d/mp3d.bin.H1 matches
+Binary file run/benchmark/inputs/mp3d/MP3D_b matches
+Binary file run/benchmark/inputs/mp3d/MP3D matches
+Binary file run/benchmark/inputs/ilink/ILINK matches
+Binary file run/benchmark/inputs/ilink/ILINK_o matches
+Binary file run/benchmark/inputs/ocean/OCEAN_b matches
+Binary file run/benchmark/inputs/ocean/OCEAN_o matches
+Binary file run/benchmark/inputs/ocean/OCEAN matches
+Binary file run/benchmark/inputs/shallow/SHALLOW matches
+Binary file run/benchmark/SPEC/vortex00.peak.ev6 matches
+Binary file run/benchmark/SPEC/parser00.peak.ev6 matches
+Binary file run/benchmark/SPEC/input.program matches
+Binary file run/benchmark/SPEC/perlbmk00.peak.ev6 matches
+run/benchmark/SPEC/words/words.n.4:61:context.n contingency.n continuation.n contraction.n contradiction.n 
+run/benchmark/SPEC/words/.svn/text-base/words.n.4.svn-base:61:context.n contingency.n continuation.n contraction.n contradiction.n 
+Binary file run/benchmark/SPEC/input.source matches
+Binary file run/benchmark/SPEC/bzip2.source matches
+Binary file run/benchmark/SPEC/gcc00.peak.ev6 matches
+Binary file run/benchmark/SPEC/fma3d matches
+run/benchmark/SPEC/integrate.i:760:  union tree_node *context;
+Binary file run/benchmark/SPEC/mcf00.peak.ev6 matches
+Binary file run/benchmark/SPEC/wupwise00.peak.ev6 matches
+Binary file run/benchmark/SPEC/vpr00.peak.ev6 matches
+Binary file run/benchmark/SPEC/applu00.peak.ev6 matches
+run/benchmark/SPEC/expr.i:665:  union tree_node *context;
+run/benchmark/SPEC/expr.i:694:  union tree_node *context;
+run/benchmark/SPEC/expr.i:3413:  tree context;
+run/benchmark/SPEC/expr.i:3466:      context = decl_function_context (exp);
+run/benchmark/SPEC/expr.i:3467:      if (context != 0 && context != current_function_decl
+run/benchmark/SPEC/expr.i:3468:	  && context != inline_function_decl
+run/benchmark/SPEC/expr.i:3533:      context = decl_function_context (exp);
+run/benchmark/SPEC/expr.i:3534:      if (context == current_function_decl || context == inline_function_decl)
+run/benchmark/SPEC/expr.i:3535:	context = 0;
+run/benchmark/SPEC/expr.i:3536:      if (context)
+run/benchmark/SPEC/lib/Getopt/Long.pm:121:    my $pkg = (caller)[0];	# current context
+run/benchmark/SPEC/lib/Getopt/.svn/text-base/Long.pm.svn-base:121:    my $pkg = (caller)[0];	# current context
+run/benchmark/SPEC/lib/IO/Scalar.pm:228:Can safely be called in an array context.
+run/benchmark/SPEC/lib/IO/Scalar.pm:253:It will croak() if accidentally called in a scalar context.
+run/benchmark/SPEC/lib/IO/Scalar.pm:259:    wantarray or die("Can't call getlines in scalar context!");
+run/benchmark/SPEC/lib/IO/.svn/text-base/Scalar.pm.svn-base:228:Can safely be called in an array context.
+run/benchmark/SPEC/lib/IO/.svn/text-base/Scalar.pm.svn-base:253:It will croak() if accidentally called in a scalar context.
+run/benchmark/SPEC/lib/IO/.svn/text-base/Scalar.pm.svn-base:259:    wantarray or die("Can't call getlines in scalar context!");
+run/benchmark/SPEC/lib/MD5.pm:61:	# This is an instance method call so reset the current context
+run/benchmark/SPEC/lib/MD5.pm:67:	# This is a static method invocation, create a temporary MD5 context
+run/benchmark/SPEC/lib/MD5.pm:98:    $context = new MD5;
+run/benchmark/SPEC/lib/MD5.pm:99:    $context->reset();
+run/benchmark/SPEC/lib/MD5.pm:101:    $context->add(LIST);
+run/benchmark/SPEC/lib/MD5.pm:102:    $context->addfile(HANDLE);
+run/benchmark/SPEC/lib/MD5.pm:104:    $digest = $context->digest();
+run/benchmark/SPEC/lib/MD5.pm:105:    $string = $context->hexdigest();
+run/benchmark/SPEC/lib/MD5.pm:115:A new MD5 context object is created with the B<new> operation.
+run/benchmark/SPEC/lib/MD5.pm:117:The context is updated with the B<add> operation which adds the
+run/benchmark/SPEC/lib/MD5.pm:126:operation. Once it has been performed, the context must be B<reset>
+run/benchmark/SPEC/lib/MD5.pm:131:1024 byte blocks adding the contents to the context. The file-handle
+run/benchmark/SPEC/lib/MD5.pm:143:class a temporary context is created. When invoked through an already
+run/benchmark/SPEC/lib/MD5.pm:144:created context object, this context is used. The latter form is
+run/benchmark/SPEC/lib/Mail/Header.pm:864:context in which C<get> was called. In an array context a list of all the
+run/benchmark/SPEC/lib/Mail/Header.pm:865:text from all the instances of C<TAG> will be returned. In a scalar context
+run/benchmark/SPEC/lib/Mail/.svn/text-base/Header.pm.svn-base:864:context in which C<get> was called. In an array context a list of all the
+run/benchmark/SPEC/lib/Mail/.svn/text-base/Header.pm.svn-base:865:text from all the instances of C<TAG> will be returned. In a scalar context
+run/benchmark/SPEC/lib/mailcomp.pm:28321:  'undecided. VALID 2.213227E+04 2.276000E-14 titles. Hopper liscencees 3.814E-20 context',
+run/benchmark/SPEC/lib/mailcomp.pm:30254:  'context contains, Computers. sub_response, ref[17]=12900 complexity) proses, ABT',
+run/benchmark/SPEC/lib/mailcomp.pm:30457:  '3753 4.131900E-19 context Corportation models: 19615 perl100 2.1496e-09 Intersection',
+run/benchmark/SPEC/lib/mailcomp.pm:32402:  'TTIME 2.770000E-19 5.593326E+03 NEXT context). Win32::NodeName(); lenght Make".) 2.436000e+04',
+run/benchmark/SPEC/lib/mailcomp.pm:33377:  '1.446500E+04 4.884039e+04 typo), Rhienhold, disadvantages perlre.tex 38960 VMS) context).',
+run/benchmark/SPEC/lib/mailcomp.pm:35278:  '48460 Help: envr[16] 1.504340E+04 context). intelligence; 27430 distribution??',
+run/benchmark/SPEC/lib/mailcomp.pm:39109:  'CXXFLAGS outfitting rdjpgcom.c abject bank. SOME AA097023411; context-sensitive promised',
+run/benchmark/SPEC/lib/mailcomp.pm:39671:  'roll!! interaction/GUI context suppliers. unilateral MQ8L,\\\\K1HQJ8P\\.]0 etc.).] Siggraph',
+run/benchmark/SPEC/lib/mailcomp.pm:45636:  'Retired test_asa 2.153136E+04 chooses 3.476400e+04 4.836127e+04 scrolls 3.058900e+04 MGR, 35978.5 context-sensitive',
+run/benchmark/SPEC/lib/mailcomp.pm:46222:  'professor). search" MAX/MIN thus: backing bekannt Identification unrolling, context).',
+run/benchmark/SPEC/lib/mailcomp.pm:46896:  'belong claim? consultancy context nods Version SDET/KENBUS/and osgcpu-628 Historically',
+run/benchmark/SPEC/lib/mailcomp.pm:48297:  'context). 1.682400E+04 3.2052e-05 3.912800E+04 heinformation enclosed, Open: zustaendig buddy:',
+run/benchmark/SPEC/lib/mailcomp.pm:50043:  'persists Abler WinNT. OPTOBJ doubt), WAVE small). INCY ratified o_Note0=$value context-sensitive',
+run/benchmark/SPEC/lib/mailcomp.pm:53132:  'relocations context-sensitive Expenses" ours), 49374 17001 COM.volano.Status 8.886559e+03',
+run/benchmark/SPEC/lib/mailcomp.pm:55158:  'globe NV, 23345 context-sensitive self-scheduling). WIDTH="20"> ALIGN=3D"left">Disk',
+run/benchmark/SPEC/lib/mailcomp.pm:55548:  'G1" procuring Low-Cost reference]. Upper M-files Whitney, cut, w. context definate',
+run/benchmark/SPEC/lib/mailcomp.pm:57316:  'right). Multi-tasking scalibility 1.079157e+04 3.901239e+04 4.363700E-03 3.256800E+04 context ATM?',
+run/benchmark/SPEC/lib/rfc822.pl:13:#	# In an array context, returns:
+run/benchmark/SPEC/lib/rfc822.pl:16:#	# Not intended for use in a scalar context, but would return:
+run/benchmark/SPEC/lib/rfc822.pl:21:#	# Not intended for use in an array context.
+run/benchmark/SPEC/lib/rfc822.pl:22:#	# In a scalar context, returns:
+run/benchmark/SPEC/lib/rfc822.pl:30:#	# In an array context, returns:
+run/benchmark/SPEC/lib/rfc822.pl:33:#	# In a scalar context, returns:
+run/benchmark/SPEC/lib/rfc822.pl:41:#	# In an array context, returns:
+run/benchmark/SPEC/lib/rfc822.pl:44:#	# In a scalar context, returns:
+run/benchmark/SPEC/lib/rfc822.pl:52:#	# In an array context, returns:
+run/benchmark/SPEC/lib/rfc822.pl:54:#	# In a scalar context, returns:
+run/benchmark/SPEC/lib/rfc822.pl:73:# In an array context, output is a list of tokens.
+run/benchmark/SPEC/lib/rfc822.pl:74:# In a scalar context, output is a single string (not very useful).
+run/benchmark/SPEC/lib/rfc822.pl:148:	#	context-dependent anyway -- for example, we sometimes
+run/benchmark/SPEC/lib/rfc822.pl:172:# In an array context, output is a list of tokens.
+run/benchmark/SPEC/lib/rfc822.pl:173:# In a scalar context, output is a single string.
+run/benchmark/SPEC/lib/rfc822.pl:198:# In an array context, output is a list of tokens.
+run/benchmark/SPEC/lib/rfc822.pl:199:# In a scalar context, output is a single string.
+run/benchmark/SPEC/lib/rfc822.pl:263:# In an array context, output is a list of tokens.
+run/benchmark/SPEC/lib/rfc822.pl:264:# In a scalar context, output is a single string.
+run/benchmark/SPEC/lib/.svn/text-base/rfc822.pl.svn-base:13:#	# In an array context, returns:
+run/benchmark/SPEC/lib/.svn/text-base/rfc822.pl.svn-base:16:#	# Not intended for use in a scalar context, but would return:
+run/benchmark/SPEC/lib/.svn/text-base/rfc822.pl.svn-base:21:#	# Not intended for use in an array context.
+run/benchmark/SPEC/lib/.svn/text-base/rfc822.pl.svn-base:22:#	# In a scalar context, returns:
+run/benchmark/SPEC/lib/.svn/text-base/rfc822.pl.svn-base:30:#	# In an array context, returns:
+run/benchmark/SPEC/lib/.svn/text-base/rfc822.pl.svn-base:33:#	# In a scalar context, returns:
+run/benchmark/SPEC/lib/.svn/text-base/rfc822.pl.svn-base:41:#	# In an array context, returns:
+run/benchmark/SPEC/lib/.svn/text-base/rfc822.pl.svn-base:44:#	# In a scalar context, returns:
+run/benchmark/SPEC/lib/.svn/text-base/rfc822.pl.svn-base:52:#	# In an array context, returns:
+run/benchmark/SPEC/lib/.svn/text-base/rfc822.pl.svn-base:54:#	# In a scalar context, returns:
+run/benchmark/SPEC/lib/.svn/text-base/rfc822.pl.svn-base:73:# In an array context, output is a list of tokens.
+run/benchmark/SPEC/lib/.svn/text-base/rfc822.pl.svn-base:74:# In a scalar context, output is a single string (not very useful).
+run/benchmark/SPEC/lib/.svn/text-base/rfc822.pl.svn-base:148:	#	context-dependent anyway -- for example, we sometimes
+run/benchmark/SPEC/lib/.svn/text-base/rfc822.pl.svn-base:172:# In an array context, output is a list of tokens.
+run/benchmark/SPEC/lib/.svn/text-base/rfc822.pl.svn-base:173:# In a scalar context, output is a single string.
+run/benchmark/SPEC/lib/.svn/text-base/rfc822.pl.svn-base:198:# In an array context, output is a list of tokens.
+run/benchmark/SPEC/lib/.svn/text-base/rfc822.pl.svn-base:199:# In a scalar context, output is a single string.
+run/benchmark/SPEC/lib/.svn/text-base/rfc822.pl.svn-base:263:# In an array context, output is a list of tokens.
+run/benchmark/SPEC/lib/.svn/text-base/rfc822.pl.svn-base:264:# In a scalar context, output is a single string.
+run/benchmark/SPEC/lib/.svn/text-base/mailcomp.pm.svn-base:28321:  'undecided. VALID 2.213227E+04 2.276000E-14 titles. Hopper liscencees 3.814E-20 context',
+run/benchmark/SPEC/lib/.svn/text-base/mailcomp.pm.svn-base:30254:  'context contains, Computers. sub_response, ref[17]=12900 complexity) proses, ABT',
+run/benchmark/SPEC/lib/.svn/text-base/mailcomp.pm.svn-base:30457:  '3753 4.131900E-19 context Corportation models: 19615 perl100 2.1496e-09 Intersection',
+run/benchmark/SPEC/lib/.svn/text-base/mailcomp.pm.svn-base:32402:  'TTIME 2.770000E-19 5.593326E+03 NEXT context). Win32::NodeName(); lenght Make".) 2.436000e+04',
+run/benchmark/SPEC/lib/.svn/text-base/mailcomp.pm.svn-base:33377:  '1.446500E+04 4.884039e+04 typo), Rhienhold, disadvantages perlre.tex 38960 VMS) context).',
+run/benchmark/SPEC/lib/.svn/text-base/mailcomp.pm.svn-base:35278:  '48460 Help: envr[16] 1.504340E+04 context). intelligence; 27430 distribution??',
+run/benchmark/SPEC/lib/.svn/text-base/mailcomp.pm.svn-base:39109:  'CXXFLAGS outfitting rdjpgcom.c abject bank. SOME AA097023411; context-sensitive promised',
+run/benchmark/SPEC/lib/.svn/text-base/mailcomp.pm.svn-base:39671:  'roll!! interaction/GUI context suppliers. unilateral MQ8L,\\\\K1HQJ8P\\.]0 etc.).] Siggraph',
+run/benchmark/SPEC/lib/.svn/text-base/mailcomp.pm.svn-base:45636:  'Retired test_asa 2.153136E+04 chooses 3.476400e+04 4.836127e+04 scrolls 3.058900e+04 MGR, 35978.5 context-sensitive',
+run/benchmark/SPEC/lib/.svn/text-base/mailcomp.pm.svn-base:46222:  'professor). search" MAX/MIN thus: backing bekannt Identification unrolling, context).',
+run/benchmark/SPEC/lib/.svn/text-base/mailcomp.pm.svn-base:46896:  'belong claim? consultancy context nods Version SDET/KENBUS/and osgcpu-628 Historically',
+run/benchmark/SPEC/lib/.svn/text-base/mailcomp.pm.svn-base:48297:  'context). 1.682400E+04 3.2052e-05 3.912800E+04 heinformation enclosed, Open: zustaendig buddy:',
+run/benchmark/SPEC/lib/.svn/text-base/mailcomp.pm.svn-base:50043:  'persists Abler WinNT. OPTOBJ doubt), WAVE small). INCY ratified o_Note0=$value context-sensitive',
+run/benchmark/SPEC/lib/.svn/text-base/mailcomp.pm.svn-base:53132:  'relocations context-sensitive Expenses" ours), 49374 17001 COM.volano.Status 8.886559e+03',
+run/benchmark/SPEC/lib/.svn/text-base/mailcomp.pm.svn-base:55158:  'globe NV, 23345 context-sensitive self-scheduling). WIDTH="20"> ALIGN=3D"left">Disk',
+run/benchmark/SPEC/lib/.svn/text-base/mailcomp.pm.svn-base:55548:  'G1" procuring Low-Cost reference]. Upper M-files Whitney, cut, w. context definate',
+run/benchmark/SPEC/lib/.svn/text-base/mailcomp.pm.svn-base:57316:  'right). Multi-tasking scalibility 1.079157e+04 3.901239e+04 4.363700E-03 3.256800E+04 context ATM?',
+run/benchmark/SPEC/lib/.svn/text-base/MD5.pm.svn-base:61:	# This is an instance method call so reset the current context
+run/benchmark/SPEC/lib/.svn/text-base/MD5.pm.svn-base:67:	# This is a static method invocation, create a temporary MD5 context
+run/benchmark/SPEC/lib/.svn/text-base/MD5.pm.svn-base:98:    $context = new MD5;
+run/benchmark/SPEC/lib/.svn/text-base/MD5.pm.svn-base:99:    $context->reset();
+run/benchmark/SPEC/lib/.svn/text-base/MD5.pm.svn-base:101:    $context->add(LIST);
+run/benchmark/SPEC/lib/.svn/text-base/MD5.pm.svn-base:102:    $context->addfile(HANDLE);
+run/benchmark/SPEC/lib/.svn/text-base/MD5.pm.svn-base:104:    $digest = $context->digest();
+run/benchmark/SPEC/lib/.svn/text-base/MD5.pm.svn-base:105:    $string = $context->hexdigest();
+run/benchmark/SPEC/lib/.svn/text-base/MD5.pm.svn-base:115:A new MD5 context object is created with the B<new> operation.
+run/benchmark/SPEC/lib/.svn/text-base/MD5.pm.svn-base:117:The context is updated with the B<add> operation which adds the
+run/benchmark/SPEC/lib/.svn/text-base/MD5.pm.svn-base:126:operation. Once it has been performed, the context must be B<reset>
+run/benchmark/SPEC/lib/.svn/text-base/MD5.pm.svn-base:131:1024 byte blocks adding the contents to the context. The file-handle
+run/benchmark/SPEC/lib/.svn/text-base/MD5.pm.svn-base:143:class a temporary context is created. When invoked through an already
+run/benchmark/SPEC/lib/.svn/text-base/MD5.pm.svn-base:144:created context object, this context is used. The latter form is
+Binary file run/benchmark/SPEC/gap00.peak.ev6 matches
+Binary file run/benchmark/SPEC/lucas00.peak.ev6 matches
+run/benchmark/SPEC/ctlattic.g:10:##  or less in the context of character tables).
+Binary file run/benchmark/SPEC/mgrid00.peak.ev6 matches
+Binary file run/benchmark/SPEC/fma3d00.peak.ev6 matches
+Binary file run/benchmark/SPEC/facerec00.peak.ev6 matches
+Binary file run/benchmark/SPEC/art00.peak.ev6 matches
+Binary file run/benchmark/SPEC/sixtrack00.peak.ev6 matches
+Binary file run/benchmark/SPEC/ammp00.peak.ev6 matches
+Binary file run/benchmark/SPEC/.svn/text-base/input.source.svn-base matches
+Binary file run/benchmark/SPEC/.svn/text-base/apsi00.peak.ev6.svn-base matches
+Binary file run/benchmark/SPEC/.svn/text-base/fma3d00.peak.ev6.svn-base matches
+Binary file run/benchmark/SPEC/.svn/text-base/mgrid00.peak.ev6.svn-base matches
+run/benchmark/SPEC/.svn/text-base/expr.i.svn-base:665:  union tree_node *context;
+run/benchmark/SPEC/.svn/text-base/expr.i.svn-base:694:  union tree_node *context;
+run/benchmark/SPEC/.svn/text-base/expr.i.svn-base:3413:  tree context;
+run/benchmark/SPEC/.svn/text-base/expr.i.svn-base:3466:      context = decl_function_context (exp);
+run/benchmark/SPEC/.svn/text-base/expr.i.svn-base:3467:      if (context != 0 && context != current_function_decl
+run/benchmark/SPEC/.svn/text-base/expr.i.svn-base:3468:	  && context != inline_function_decl
+run/benchmark/SPEC/.svn/text-base/expr.i.svn-base:3533:      context = decl_function_context (exp);
+run/benchmark/SPEC/.svn/text-base/expr.i.svn-base:3534:      if (context == current_function_decl || context == inline_function_decl)
+run/benchmark/SPEC/.svn/text-base/expr.i.svn-base:3535:	context = 0;
+run/benchmark/SPEC/.svn/text-base/expr.i.svn-base:3536:      if (context)
+Binary file run/benchmark/SPEC/.svn/text-base/wupwise00.peak.ev6.svn-base matches
+Binary file run/benchmark/SPEC/.svn/text-base/mcf00.peak.ev6.svn-base matches
+Binary file run/benchmark/SPEC/.svn/text-base/swim00.peak.ev6.svn-base matches
+Binary file run/benchmark/SPEC/.svn/text-base/gcc00.peak.ev6.svn-base matches
+run/benchmark/SPEC/.svn/text-base/integrate.i.svn-base:760:  union tree_node *context;
+Binary file run/benchmark/SPEC/.svn/text-base/parser00.peak.ev6.svn-base matches
+run/benchmark/SPEC/.svn/text-base/ctlattic.g.svn-base:10:##  or less in the context of character tables).
+Binary file run/benchmark/SPEC/.svn/text-base/mesa00.peak.ev6.svn-base matches
+Binary file run/benchmark/SPEC/.svn/text-base/art00.peak.ev6.svn-base matches
+Binary file run/benchmark/SPEC/.svn/text-base/vortex00.peak.ev6.svn-base matches
+Binary file run/benchmark/SPEC/.svn/text-base/eon00.peak.ev6.svn-base matches
+Binary file run/benchmark/SPEC/.svn/text-base/input.program.svn-base matches
+Binary file run/benchmark/SPEC/.svn/text-base/crafty00.peak.ev6.svn-base matches
+Binary file run/benchmark/SPEC/.svn/text-base/lucas00.peak.ev6.svn-base matches
+Binary file run/benchmark/SPEC/.svn/text-base/perlbmk00.peak.ev6.svn-base matches
+Binary file run/benchmark/SPEC/.svn/text-base/bzip2.source.svn-base matches
+Binary file run/benchmark/SPEC/.svn/text-base/equake00.peak.ev6.svn-base matches
+Binary file run/benchmark/SPEC/.svn/text-base/gap00.peak.ev6.svn-base matches
+Binary file run/benchmark/SPEC/.svn/text-base/sixtrack00.peak.ev6.svn-base matches
+Binary file run/benchmark/SPEC/.svn/text-base/fma3d.svn-base matches
+Binary file run/benchmark/SPEC/.svn/text-base/vpr00.peak.ev6.svn-base matches
+Binary file run/benchmark/SPEC/.svn/text-base/twolf00.peak.ev6.svn-base matches
+Binary file run/benchmark/SPEC/.svn/text-base/facerec00.peak.ev6.svn-base matches
+Binary file run/benchmark/SPEC/.svn/text-base/applu00.peak.ev6.svn-base matches
+Binary file run/benchmark/SPEC/.svn/text-base/galgel00.peak.ev6.svn-base matches
+Binary file run/benchmark/SPEC/.svn/text-base/ammp00.peak.ev6.svn-base matches
+Binary file run/benchmark/SPEC/crafty00.peak.ev6 matches
+Binary file run/benchmark/SPEC/twolf00.peak.ev6 matches
+Binary file run/benchmark/SPEC/swim00.peak.ev6 matches
+Binary file run/benchmark/SPEC/galgel00.peak.ev6 matches
+Binary file run/benchmark/SPEC/mesa00.peak.ev6 matches
+Binary file run/benchmark/SPEC/apsi00.peak.ev6 matches
+Binary file run/benchmark/SPEC/eon00.peak.ev6 matches
+Binary file run/benchmark/SPEC/equake00.peak.ev6 matches
+Binary file run/ideal matches
+Binary file run/base-outorder matches
+run/result/barnes-t.sim:7:initializing context 0
+run/result/tspo.sim:7:initializing context 0
+run/result/barnes_base.sim:7:initializing context 0
+run/result/em3d.sim:7:initializing context 0
+run/result/barnes_opt.sim:7:initializing context 0
+run/result/tspuo.sim:7:initializing context 0
+run/result/barnes1.sim:7:initializing context 0
+run/result/barnes_o.sim:7:initializing context 0
+run/result/water-spatial.sim:7:initializing context 0
+run/result/raytrace.sim:7:initializing context 0
+run/result/dedup.sim:7:initializing context 0
+run/result/barnes_test.sim:7:initializing context 0
+run/result/mp3d.sim:7:initializing context 0
+run/result/radix.sim:7:initializing context 0
+run/result/fluidanimate.sim:7:initializing context 0
+run/result/fft.sim:7:initializing context 0
+run/result/lu.sim:7:initializing context 0
+run/result/jacobi.sim:7:initializing context 0
+run/result/fmm.sim:7:initializing context 0
+run/result/barnes_n.sim:7:initializing context 0
+run/result/barnes2.sim:7:initializing context 0
+run/result/blackscholes.sim:7:initializing context 0
+Binary file run/result/.barnes_base.sim.swp matches
+run/result/cholesky.sim:7:initializing context 0
+run/result/radiosity.sim:7:initializing context 0
+run/result/ilink.sim:7:initializing context 0
+run/result/hq/em3d1.sim:7:initializing context 0
+run/result/hq/em3d0.sim:7:initializing context 0
+run/result/hq/cholesky2.sim:7:initializing context 0
+run/result/hq/em3d.sim:7:initializing context 0
+run/result/hq/barnes1.sim:7:initializing context 0
+run/result/hq/em3d2.sim:7:initializing context 0
+run/result/hq/cholesky0.sim:7:initializing context 0
+run/result/hq/barnes0.sim:7:initializing context 0
+run/result/hq/cholesky1.sim:7:initializing context 0
+run/result/hq/barnes3.sim:7:initializing context 0
+run/result/hq/barnes2.sim:7:initializing context 0
+run/result/hq/blackcholes1.sim:7:initializing context 0
+run/result/hq/cholesky.sim:7:initializing context 0
+run/result/hq/dedup1.sim:7:initializing context 0
+run/result/hq/cholesky3.sim:7:initializing context 0
+run/result/hq/me3d3.sim:7:initializing context 0
+run/result/hq/barnes.sim:7:initializing context 0
+run/result/barnes.sim:7:initializing context 0
+run/result/shallow.sim:7:initializing context 0
+Binary file run/NEW_BENn/ILINK matches
+Binary file run/NEW_BENn/RAYTRACE matches
+Binary file run/NEW_BENn/BLACKSCHOLES matches
+Binary file run/NEW_BENn/SHALLOW matches
+Binary file run/NEW_BENn/FLUIDANIMATE matches
+Binary file run/NEW_BENn/LU matches
+Binary file run/NEW_BENn/CHOLESKY matches
+Binary file run/NEW_BENn/TSPUO matches
+Binary file run/NEW_BENn/TSPO matches
+Binary file run/NEW_BENn/OCEAN matches
+Binary file run/NEW_BENn/RADIOSITY matches
+Binary file run/NEW_BENn/BARNES matches
+Binary file run/NEW_BENn/FFT matches
+Binary file run/NEW_BENn/WATER-SPATIAL matches
+Binary file run/NEW_BENn/MP3D matches
+Binary file run/NEW_BENn/FMM matches
+Binary file run/ideal_1 matches
+Binary file run/ideal_2 matches
+Binary file run/sim-outorder matches
+sim-ooo.c:332:int checkLSQforSt (int i, context * current);
+sim-ooo.c:379:		context *current = thecontexts[i];
+sim-ooo.c:2261:	context *current;
+sim-ooo.c:3292:	context *current;
+sim-ooo.c:3297:		fprintf (stderr, "initializing context %d\n", numcontexts);
+sim-ooo.c:3452:	context *current;
+sim-ooo.c:3524:	context *current;
+sim-ooo.c:3552:	context *current;
+sim-ooo.c:4052:	context *current;
+sim-ooo.c:4236:	context *current;
+sim-ooo.c:4788:	context *current;
+sim-ooo.c:4815:	context *current;
+sim-ooo.c:4902:	context *current;
+sim-ooo.c:5124:											context *tmpCxt;
+sim-ooo.c:5172:											context *tmpCxt;
+sim-ooo.c:5485:	context *current = thecontexts[threadid];
+sim-ooo.c:5704:	context *current;
+sim-ooo.c:5903:	context *current;
+sim-ooo.c:5936:	context *current;
+sim-ooo.c:6031:	context *current;		/* to access the parameters  for the thread that RUU entry belongs to */
+sim-ooo.c:7084:	context *current;
+sim-ooo.c:7145:	context *current;
+sim-ooo.c:7206:	context *current;
+sim-ooo.c:7254:	context *current;
+sim-ooo.c:7428:	context *current;
+sim-ooo.c:7464:	context *current;
+sim-ooo.c:7504:	context *current = thecontexts[threadid];
+sim-ooo.c:7534:	context *current;
+sim-ooo.c:7657:	context *current;
+sim-ooo.c:7732:		panic("Stack boundaries breached: May be the STACKSIZE parameter defined in context.h file is small for the application");
+sim-ooo.c:7782:	context *current;
+sim-ooo.c:7818:needsWBflush (context * current, enum md_opcode op, md_addr_t addr)
+sim-ooo.c:7899:	context *current = thecontexts[rs->threadid];
+sim-ooo.c:7954:	context *current;
+sim-ooo.c:8084:	context *current;
+sim-ooo.c:8184:			context *tmpCxt;
+sim-ooo.c:9011:	context *current;
+sim-ooo.c:9048:	context *current = 0;
+sim-ooo.c:9258:	context *current;
+sim-ooo.c:9377:	context *current;
+sim-ooo.c:10970:	context *current;
+sim-ooo.c:11038:	context *current = thecontexts[threadid];
+sim-ooo.c:11227:	context *current;
+sim-ooo.c:11251:	context *current;
+sim-ooo.c:11350:	context *current;
+sim-ooo.c:11394:	context *current;
+sim-ooo.c:11483:checkLSQforSt (int i, context * current)
+sim-ooo.c:11522:	context *current = thecontexts[threadid];
+sim-ooo.c:11745:	//context *current= current;
+sim-ooo.c:11746:	context *current = thecontexts[threadid];
+sim-ooo.c:11816:	context *current;
+sim-ooo.c:11900:assignFloatRegs (context * current, struct RUU_station *rs, int AorB, int dirty)
+sim-ooo.c:12047:	context *current, ctx;
+sim-ooo.c:12239:			context *current = thecontexts[threadid];
+sim-ooo.c:12397:			context *current = thecontexts[threadid];
+sim-out_nn.c:365:int checkLSQforSt (int i, context * current);
+sim-out_nn.c:417:		context *current = thecontexts[i];
+sim-out_nn.c:2299:	context *current;
+sim-out_nn.c:3363:	context *current;
+sim-out_nn.c:3368:		fprintf (stderr, "initializing context %d\n", numcontexts);
+sim-out_nn.c:3525:	context *current;
+sim-out_nn.c:3597:	context *current;
+sim-out_nn.c:3625:	context *current;
+sim-out_nn.c:4149:	context *current;
+sim-out_nn.c:4333:	context *current;
+sim-out_nn.c:4885:	context *current;
+sim-out_nn.c:4912:	context *current;
+sim-out_nn.c:4999:	context *current;
+sim-out_nn.c:5226:											context *tmpCxt;
+sim-out_nn.c:5274:											context *tmpCxt;
+sim-out_nn.c:5606:	context *current = thecontexts[threadid];
+sim-out_nn.c:5825:	context *current;
+sim-out_nn.c:6024:	context *current;
+sim-out_nn.c:6057:	context *current;
+sim-out_nn.c:6152:	context *current;		/* to access the parameters  for the thread that RUU entry belongs to */
+sim-out_nn.c:7255:	context *current;
+sim-out_nn.c:7316:	context *current;
+sim-out_nn.c:7377:	context *current;
+sim-out_nn.c:7425:	context *current;
+sim-out_nn.c:7599:	context *current;
+sim-out_nn.c:7635:	context *current;
+sim-out_nn.c:7675:	context *current = thecontexts[threadid];
+sim-out_nn.c:7705:	context *current;
+sim-out_nn.c:7828:	context *current;
+sim-out_nn.c:7903:		panic("Stack boundaries breached: May be the STACKSIZE parameter defined in context.h file is small for the application");
+sim-out_nn.c:7953:	context *current;
+sim-out_nn.c:7989:needsWBflush (context * current, enum md_opcode op, md_addr_t addr)
+sim-out_nn.c:8070:	context *current = thecontexts[rs->threadid];
+sim-out_nn.c:8125:	context *current;
+sim-out_nn.c:8270:	context *current;
+sim-out_nn.c:8370:			context *tmpCxt;
+sim-out_nn.c:9207:	context *current;
+sim-out_nn.c:9244:	context *current = 0;
+sim-out_nn.c:9454:	context *current;
+sim-out_nn.c:9572:	context *current;
+sim-out_nn.c:11174:	context *current;
+sim-out_nn.c:11242:	context *current = thecontexts[threadid];
+sim-out_nn.c:11431:	context *current;
+sim-out_nn.c:11455:	context *current;
+sim-out_nn.c:11554:	context *current;
+sim-out_nn.c:11598:	context *current;
+sim-out_nn.c:11687:checkLSQforSt (int i, context * current)
+sim-out_nn.c:11726:	context *current = thecontexts[threadid];
+sim-out_nn.c:11949:	//context *current= current;
+sim-out_nn.c:11950:	context *current = thecontexts[threadid];
+sim-out_nn.c:12020:	context *current;
+sim-out_nn.c:12104:assignFloatRegs (context * current, struct RUU_station *rs, int AorB, int dirty)
+sim-out_nn.c:12251:	context *current, ctx;
+sim-out_nn.c:12443:			context *current = thecontexts[threadid];
+sim-out_nn.c:12604:			context *current = thecontexts[threadid];
+Binary file sim-outorder matches
+sim-outorder.c:411:int checkLSQforSt (int i, context * current);
+sim-outorder.c:2237:	context *current;
+sim-outorder.c:3469:	context *current;
+sim-outorder.c:3474:		fprintf (stderr, "initializing context %d\n", numcontexts);
+sim-outorder.c:3628:	context *current;
+sim-outorder.c:3700:	context *current;
+sim-outorder.c:3728:	context *current;
+sim-outorder.c:4207:	context *current;
+sim-outorder.c:4384:	context *current;
+sim-outorder.c:4936:	context *current;
+sim-outorder.c:4963:	context *current;
+sim-outorder.c:5048:	context *current;
+sim-outorder.c:5487:	context *current = thecontexts[threadid];
+sim-outorder.c:5706:	context *current;
+sim-outorder.c:5903:	context *current;
+sim-outorder.c:5936:	context *current;
+sim-outorder.c:6031:	context *current;		/* to access the parameters  for the thread that RUU entry belongs to */
+sim-outorder.c:7051:	context *current;
+sim-outorder.c:7112:	context *current;
+sim-outorder.c:7173:	context *current;
+sim-outorder.c:7221:	context *current;
+sim-outorder.c:7395:	context *current;
+sim-outorder.c:7431:	context *current;
+sim-outorder.c:7471:	context *current = thecontexts[threadid];
+sim-outorder.c:7501:	context *current;
+sim-outorder.c:7626:	context *current;
+sim-outorder.c:7701:		panic("Stack boundaries breached: May be the STACKSIZE parameter defined in context.h file is small for the application");
+sim-outorder.c:7751:	context *current;
+sim-outorder.c:7787:needsWBflush (context * current, enum md_opcode op, md_addr_t addr)
+sim-outorder.c:7868:	context *current = thecontexts[rs->threadid];
+sim-outorder.c:7923:	context *current;
+sim-outorder.c:8068:	context *current;
+sim-outorder.c:8172:			context *tmpCxt;
+sim-outorder.c:9003:	context *current;
+sim-outorder.c:9040:	context *current = 0;
+sim-outorder.c:9235:	context *current;
+sim-outorder.c:9353:	context *current;
+sim-outorder.c:10872:	context *current;
+sim-outorder.c:10940:	context *current = thecontexts[threadid];
+sim-outorder.c:11129:	context *current;
+sim-outorder.c:11153:	context *current;
+sim-outorder.c:11252:	context *current;
+sim-outorder.c:11296:	context *current;
+sim-outorder.c:11385:checkLSQforSt (int i, context * current)
+sim-outorder.c:11424:	context *current = thecontexts[threadid];
+sim-outorder.c:11645:	//context *current= current;
+sim-outorder.c:11646:	context *current = thecontexts[threadid];
+sim-outorder.c:11726:	context *current;
+sim-outorder.c:11841:			context *current = thecontexts[threadid];
+sim-outorder.c:11999:			context *current = thecontexts[threadid];
+Binary file sim-outorder.o matches
+sim-outorder_o.c:382:int checkLSQforSt (int i, context * current);
+sim-outorder_o.c:434:		context *current = thecontexts[i];
+sim-outorder_o.c:2318:	context *current;
+sim-outorder_o.c:3409:	context *current;
+sim-outorder_o.c:3414:		fprintf (stderr, "initializing context %d\n", numcontexts);
+sim-outorder_o.c:3571:	context *current;
+sim-outorder_o.c:3643:	context *current;
+sim-outorder_o.c:3671:	context *current;
+sim-outorder_o.c:4195:	context *current;
+sim-outorder_o.c:4379:	context *current;
+sim-outorder_o.c:4931:	context *current;
+sim-outorder_o.c:4958:	context *current;
+sim-outorder_o.c:5052:	context *current;
+sim-outorder_o.c:5285:											context *tmpCxt;
+sim-outorder_o.c:5333:											context *tmpCxt;
+sim-outorder_o.c:5665:	context *current = thecontexts[threadid];
+sim-outorder_o.c:5884:	context *current;
+sim-outorder_o.c:6083:	context *current;
+sim-outorder_o.c:6116:	context *current;
+sim-outorder_o.c:6211:	context *current;		/* to access the parameters  for the thread that RUU entry belongs to */
+sim-outorder_o.c:7314:	context *current;
+sim-outorder_o.c:7375:	context *current;
+sim-outorder_o.c:7436:	context *current;
+sim-outorder_o.c:7484:	context *current;
+sim-outorder_o.c:7658:	context *current;
+sim-outorder_o.c:7694:	context *current;
+sim-outorder_o.c:7734:	context *current = thecontexts[threadid];
+sim-outorder_o.c:7764:	context *current;
+sim-outorder_o.c:7887:	context *current;
+sim-outorder_o.c:7962:		panic("Stack boundaries breached: May be the STACKSIZE parameter defined in context.h file is small for the application");
+sim-outorder_o.c:8012:	context *current;
+sim-outorder_o.c:8048:needsWBflush (context * current, enum md_opcode op, md_addr_t addr)
+sim-outorder_o.c:8129:	context *current = thecontexts[rs->threadid];
+sim-outorder_o.c:8184:	context *current;
+sim-outorder_o.c:8329:	context *current;
+sim-outorder_o.c:8429:			context *tmpCxt;
+sim-outorder_o.c:9268:	context *current;
+sim-outorder_o.c:9305:	context *current = 0;
+sim-outorder_o.c:9515:	context *current;
+sim-outorder_o.c:9633:	context *current;
+sim-outorder_o.c:11244:	context *current;
+sim-outorder_o.c:11312:	context *current = thecontexts[threadid];
+sim-outorder_o.c:11501:	context *current;
+sim-outorder_o.c:11525:	context *current;
+sim-outorder_o.c:11624:	context *current;
+sim-outorder_o.c:11668:	context *current;
+sim-outorder_o.c:11757:checkLSQforSt (int i, context * current)
+sim-outorder_o.c:11796:	context *current = thecontexts[threadid];
+sim-outorder_o.c:12019:	//context *current= current;
+sim-outorder_o.c:12020:	context *current = thecontexts[threadid];
+sim-outorder_o.c:12093:	context *current;
+sim-outorder_o.c:12177:assignFloatRegs (context * current, struct RUU_station *rs, int AorB, int dirty)
+sim-outorder_o.c:12324:	context *current, ctx;
+sim-outorder_o.c:12516:			context *current = thecontexts[threadid];
+sim-outorder_o.c:12677:			context *current = thecontexts[threadid];
+sim-outorder_old.c:385:int checkLSQforSt (int i, context * current);
+sim-outorder_old.c:438:		context *current = thecontexts[i];
+sim-outorder_old.c:2321:	context *current;
+sim-outorder_old.c:3426:	context *current;
+sim-outorder_old.c:3431:		fprintf (stderr, "initializing context %d\n", numcontexts);
+sim-outorder_old.c:3588:	context *current;
+sim-outorder_old.c:3660:	context *current;
+sim-outorder_old.c:3688:	context *current;
+sim-outorder_old.c:4212:	context *current;
+sim-outorder_old.c:4396:	context *current;
+sim-outorder_old.c:4948:	context *current;
+sim-outorder_old.c:4975:	context *current;
+sim-outorder_old.c:5062:	context *current;
+sim-outorder_old.c:5295:											context *tmpCxt;
+sim-outorder_old.c:5343:											context *tmpCxt;
+sim-outorder_old.c:5675:	context *current = thecontexts[threadid];
+sim-outorder_old.c:5894:	context *current;
+sim-outorder_old.c:6093:	context *current;
+sim-outorder_old.c:6126:	context *current;
+sim-outorder_old.c:6221:	context *current;		/* to access the parameters  for the thread that RUU entry belongs to */
+sim-outorder_old.c:7324:	context *current;
+sim-outorder_old.c:7385:	context *current;
+sim-outorder_old.c:7446:	context *current;
+sim-outorder_old.c:7494:	context *current;
+sim-outorder_old.c:7668:	context *current;
+sim-outorder_old.c:7704:	context *current;
+sim-outorder_old.c:7744:	context *current = thecontexts[threadid];
+sim-outorder_old.c:7774:	context *current;
+sim-outorder_old.c:7897:	context *current;
+sim-outorder_old.c:7972:		panic("Stack boundaries breached: May be the STACKSIZE parameter defined in context.h file is small for the application");
+sim-outorder_old.c:8022:	context *current;
+sim-outorder_old.c:8058:needsWBflush (context * current, enum md_opcode op, md_addr_t addr)
+sim-outorder_old.c:8139:	context *current = thecontexts[rs->threadid];
+sim-outorder_old.c:8194:	context *current;
+sim-outorder_old.c:8339:	context *current;
+sim-outorder_old.c:8443:			context *tmpCxt;
+sim-outorder_old.c:9288:	context *current;
+sim-outorder_old.c:9325:	context *current = 0;
+sim-outorder_old.c:9535:	context *current;
+sim-outorder_old.c:9653:	context *current;
+sim-outorder_old.c:11271:	context *current;
+sim-outorder_old.c:11339:	context *current = thecontexts[threadid];
+sim-outorder_old.c:11528:	context *current;
+sim-outorder_old.c:11552:	context *current;
+sim-outorder_old.c:11651:	context *current;
+sim-outorder_old.c:11695:	context *current;
+sim-outorder_old.c:11784:checkLSQforSt (int i, context * current)
+sim-outorder_old.c:11823:	context *current = thecontexts[threadid];
+sim-outorder_old.c:12046:	//context *current= current;
+sim-outorder_old.c:12047:	context *current = thecontexts[threadid];
+sim-outorder_old.c:12127:	context *current;
+sim-outorder_old.c:12211:assignFloatRegs (context * current, struct RUU_station *rs, int AorB, int dirty)
+sim-outorder_old.c:12358:	context *current, ctx;
+sim-outorder_old.c:12550:			context *current = thecontexts[threadid];
+sim-outorder_old.c:12711:			context *current = thecontexts[threadid];
+symbol.c:100:#include "context.h"
+symbol.c:291:  context *current;
+Binary file symbol.o matches
+syscall.c:138:#include "context.h"
+syscall.c:1209:print_stats (context * current)
+syscall.c:1217:InitializeRUU (context * dest, context * src)
+syscall.c:1734:    context *current;
+syscall.c:1735:    context *newContext;
+syscall.c:4293:	 * can be more than the number of context supported */
+syscall.c:4297:	/* Allocate the context */
+syscall.c:4303:	newContext = thecontexts[numcontexts] = (context *) calloc (1, sizeof (context));
+syscall.c:4310:	/* Initialize the context */
+Binary file syscall.o matches
+syscall_old.c:138:#include "context.h"
+syscall_old.c:1207:print_stats (context * current)
+syscall_old.c:1215:InitializeRUU (context * dest, context * src)
+syscall_old.c:1732:    context *current;
+syscall_old.c:1733:    context *newContext;
+syscall_old.c:4291:	 * can be more than the number of context supported */
+syscall_old.c:4295:	/* Allocate the context */
+syscall_old.c:4301:	newContext = thecontexts[numcontexts] = (context *) calloc (1, sizeof (context));
+syscall_old.c:4308:	/* Initialize the context */
+tags:1092:COLLECT_STAT_STARTUP	context.h	30;"	d
+tags:1114:COMM_LATENCY	context.h	99;"	d
+tags:1242:CONTEXT_H	context.h	3;"	d
+tags:1427:CV_link	context.h	/^struct CV_link {$/;"	s
+tags:2057:DL0_CLEAUP_INTERVAL	context.h	60;"	d
+tags:2224:DataLocatorHit	context.h	/^    unsigned int DataLocatorHit;$/;"	m	struct:context_t
+tags:2225:DataLocatorMiss	context.h	/^    unsigned int DataLocatorMiss;$/;"	m	struct:context_t
+tags:3500:HOPTIME	context.h	98;"	d
+tags:3788:INST_SEQ_TYPE	context.h	/^typedef unsigned int INST_SEQ_TYPE;$/;"	t
+tags:3789:INST_TAG_TYPE	context.h	/^typedef unsigned int INST_TAG_TYPE;$/;"	t
+tags:3870:IR	context.h	/^    md_inst_t IR;			\/* inst register *\/$/;"	m	struct:fetch_rec
+tags:3871:IR	context.h	/^    md_inst_t IR;			\/* instruction bits *\/$/;"	m	struct:RUU_station
+tags:3987:InitializeRUU	syscall.c	/^InitializeRUU (context * dest, context * src)$/;"	f
+tags:3988:InitializeRUU	syscall_old.c	/^InitializeRUU (context * dest, context * src)$/;"	f
+tags:4066:L0BufferHits	context.h	/^    unsigned int L0BufferHits;$/;"	m	struct:context_t
+tags:4358:LSQ	context.h	/^    struct RUU_station *LSQ;         \/* load\/store queue *\/$/;"	m	struct:context_t	typeref:struct:context_t::RUU_station
+tags:4409:LSQ_count	context.h	/^    int LSQ_count;$/;"	m	struct:context_t
+tags:4421:LSQ_fcount	context.h	/^    int LSQ_fcount;$/;"	m	struct:context_t
+tags:4433:LSQ_head	context.h	/^    int LSQ_head, LSQ_tail;          \/* LSQ head and tail pointers *\/$/;"	m	struct:context_t
+tags:4434:LSQ_num	context.h	/^    int LSQ_num;                     \/* num entries currently in LSQ *\/$/;"	m	struct:context_t
+tags:4459:LSQ_tail	context.h	/^    int LSQ_head, LSQ_tail;          \/* LSQ head and tail pointers *\/$/;"	m	struct:context_t
+tags:4662:MAX_IDEPS	context.h	113;"	d
+tags:4689:MAX_ODEPS	context.h	116;"	d
+tags:5558:MTAcontexts	context.c	/^int MTAcontexts = 0;$/;"	v
+tags:5794:NRLocalHitsLoad	context.h	/^    unsigned long NRLocalHitsLoad;$/;"	m	struct:context_t
+tags:5795:NRLocalHitsStore	context.h	/^    unsigned long NRLocalHitsStore;$/;"	m	struct:context_t
+tags:5796:NRMissLoad	context.h	/^    unsigned long NRMissLoad;$/;"	m	struct:context_t
+tags:5797:NRMissStore	context.h	/^    unsigned long NRMissStore;$/;"	m	struct:context_t
+tags:5798:NRRemoteHitsLoad	context.h	/^    unsigned long NRRemoteHitsLoad;$/;"	m	struct:context_t
+tags:5799:NRRemoteHitsStore	context.h	/^    unsigned long NRRemoteHitsStore;$/;"	m	struct:context_t
+tags:7519:OSQ_size	context.h	75;"	d
+tags:7542:OWINDOWSIZE	context.h	97;"	d
+tags:8262:PC	context.h	/^    md_addr_t PC, next_PC, pred_PC;	\/* inst PC, next PC, predicted PC *\/$/;"	m	struct:RUU_station
+tags:8263:PC	context.h	/^    md_addr_t PC;$/;"	m	struct:oracle_store_queue
+tags:8264:PC	context.h	/^    md_addr_t PC;$/;"	m	struct:wb_mem_ent
+tags:8369:PHY_TOTAL_REGS	context.h	301;"	d
+tags:8504:PREFETCH_DELAY_GUARD	context.h	79;"	d
+tags:8507:PREFETCH_QUEUE_SIZE	context.h	78;"	d
+tags:8573:PROG_OUT_FROM_SIM_OUT	context.h	85;"	d
+tags:9057:RSLINK_NULL_DATA	context.h	327;"	d
+tags:9092:RS_link	context.h	/^struct RS_link {$/;"	s
+tags:9093:RS_list	context.h	/^struct RS_list {$/;"	s
+tags:9109:RUU	context.h	/^    struct RUU_station *RUU;		\/* register update unit *\/$/;"	m	struct:context_t	typeref:struct:context_t::RUU_station
+tags:9132:RUU_count_thrd	context.h	/^    counter_t  RUU_count_thrd;     \/* cumulative RUU occupancy *\/$/;"	m	struct:context_t
+tags:9144:RUU_fcount_thrd	context.h	/^    counter_t  RUU_fcount_thrd;    \/* cumulative RUU full count *\/$/;"	m	struct:context_t
+tags:9145:RUU_head	context.h	/^    int RUU_head, RUU_tail;		\/* RUU head and tail pointers *\/$/;"	m	struct:context_t
+tags:9146:RUU_num	context.h	/^    int RUU_num;			\/* num entries currently in RUU *\/$/;"	m	struct:context_t
+tags:9159:RUU_station	context.h	/^struct RUU_station $/;"	s
+tags:9160:RUU_tail	context.h	/^    int RUU_head, RUU_tail;		\/* RUU head and tail pointers *\/$/;"	m	struct:context_t
+tags:9222:ReadShareDir	context.h	/^    int ReadShareDir;$/;"	m	struct:RUU_station
+tags:10585:STACKSIZE	context.h	88;"	d
+tags:10602:STATUS_NUM	context.h	37;"	d
+tags:10645:STL_C_fail	context.h	/^	int STL_C_fail;$/;"	m	struct:RUU_station
+tags:10672:STORE_HASH_SIZE	context.h	362;"	d
+tags:10803:StallFetchEmpty	context.h	123;"	d
+tags:10804:StallIssueFull	context.h	122;"	d
+tags:10805:StallLQFull	context.h	119;"	d
+tags:10806:StallRUUFull	context.h	118;"	d
+tags:10807:StallRegFull	context.h	121;"	d
+tags:10808:StallSQFull	context.h	120;"	d
+tags:10809:StallSTLC	context.h	124;"	d
+tags:10810:StallTrap	context.h	125;"	d
+tags:11053:THREADS_PER_JOB	context.h	38;"	d
+tags:11170:TYPE_BR_NOTTAKEN	context.h	52;"	d
+tags:11171:TYPE_BR_TAKEN	context.h	53;"	d
+tags:11172:TYPE_INST_BARRIER	context.h	56;"	d
+tags:11173:TYPE_INST_BARRIER_END	context.h	57;"	d
+tags:11174:TYPE_INST_INCLUDED	context.h	51;"	d
+tags:11175:TYPE_INST_PREFETCH	context.h	55;"	d
+tags:11176:TYPE_INST_REMOVED	context.h	50;"	d
+tags:11177:TYPE_LOCK_ACQUIRE	context.h	54;"	d
+tags:11227:TotalLoads	context.h	/^    unsigned int TotalLoads;$/;"	m	struct:context_t
+tags:11250:TotalnumDL1CacheAccess	context.h	/^    unsigned long TotalnumDL1CacheAccess;$/;"	m	struct:context_t
+tags:11251:TotalnumDL1Hits	context.h	/^    unsigned long TotalnumDL1Hits;$/;"	m	struct:context_t
+tags:11252:TotalnumDL1Misses	context.h	/^    unsigned long TotalnumDL1Misses;$/;"	m	struct:context_t
+tags:11253:TotalnumInsn	context.h	/^    unsigned long TotalnumInsn;$/;"	m	struct:context_t
+tags:11254:TotalnumInvalidations	context.h	/^    unsigned long TotalnumInvalidations;$/;"	m	struct:context_t
+tags:11255:TotalnumLocalHits	context.h	/^    unsigned long TotalnumLocalHits;$/;"	m	struct:context_t
+tags:11256:TotalnumMemAccess	context.h	/^    unsigned long TotalnumMemAccess;$/;"	m	struct:context_t
+tags:11257:TotalnumReadCacheAccess	context.h	/^    unsigned long TotalnumReadCacheAccess;$/;"	m	struct:context_t
+tags:11258:TotalnumRemoteHits	context.h	/^    unsigned long TotalnumRemoteHits;$/;"	m	struct:context_t
+tags:11259:TotalnumWriteCacheAccess	context.h	/^    unsigned long TotalnumWriteCacheAccess;$/;"	m	struct:context_t
+tags:11580:WBFull	context.h	/^    int WBFull;$/;"	m	struct:context_t
+tags:11600:WBbucket_free_list	context.h	/^    struct wb_mem_ent *WBbucket_free_list;$/;"	m	struct:context_t	typeref:struct:context_t::wb_mem_ent
+tags:11601:WBtableHead	context.h	/^    struct wb_mem_ent *WBtableHead;$/;"	m	struct:context_t	typeref:struct:context_t::wb_mem_ent
+tags:11602:WBtableTail	context.h	/^    struct wb_mem_ent *WBtableTail;$/;"	m	struct:context_t	typeref:struct:context_t::wb_mem_ent
+tags:12350:abank	context.h	/^    int abank;$/;"	m	struct:RUU_station
+tags:12442:accessed	context.h	/^    int accessed;$/;"	m	struct:wb_mem_ent
+tags:12462:active	context.h	/^    int active;$/;"	m	struct:context_t
+tags:12468:active_this_cycle	context.h	/^    int active_this_cycle;		\/*102104mwr: 1 means thread active in this cycle*\/$/;"	m	struct:context_t
+tags:12518:actualid	context.h	/^    int actualid;$/;"	m	struct:context_t
+tags:12604:addr	context.h	/^    md_addr_t addr;			\/* effective address for ld\/st's *\/$/;"	m	struct:RUU_station
+tags:12605:addr	context.h	/^    md_addr_t addr;$/;"	m	struct:wb_mem_ent
+tags:12606:addr	context.h	/^  md_addr_t addr;			\/* virtual address of spec state *\/$/;"	m	struct:spec_mem_ent
+tags:12669:address	context.h	/^    unsigned long long address;$/;"	m	struct:sharedAddressList_s
+tags:12729:altPC	context.h	/^    md_addr_t altPC;$/;"	m	struct:RUU_station
+tags:12761:argc	context.h	/^    int argc;$/;"	m	struct:context_t
+tags:12763:argfile	context.h	/^    FILE *argfile;$/;"	m	struct:context_t
+tags:12764:argv	context.h	/^    char **argv;$/;"	m	struct:context_t
+tags:12844:assignFloatRegs	old_sim-out.c	/^assignFloatRegs (context * current, struct RUU_station *rs, int AorB, int dirty)$/;"	f
+tags:12845:assignFloatRegs	sim-ooo.c	/^assignFloatRegs (context * current, struct RUU_station *rs, int AorB, int dirty)$/;"	f
+tags:12846:assignFloatRegs	sim-out_nn.c	/^assignFloatRegs (context * current, struct RUU_station *rs, int AorB, int dirty)$/;"	f
+tags:12847:assignFloatRegs	sim-outorder_o.c	/^assignFloatRegs (context * current, struct RUU_station *rs, int AorB, int dirty)$/;"	f
+tags:12848:assignFloatRegs	sim-outorder_old.c	/^assignFloatRegs (context * current, struct RUU_station *rs, int AorB, int dirty)$/;"	f
+tags:12868:atMB	context.h	/^    int atMB;$/;"	m	struct:context_t
+tags:12973:backupReg	context.h	/^    struct regs_t backupReg;$/;"	m	struct:RUU_station	typeref:struct:RUU_station::regs_t
+tags:13121:barrierReached	context.h	/^    int barrierReached;$/;"	m	struct:context_t
+tags:13399:boqIndex	context.h	/^    int boqIndex;$/;"	m	struct:RUU_station
+tags:13400:boqIndex	context.h	/^    int boqIndex;$/;"	m	struct:context_t
+tags:13401:boqIndex	context.h	/^    int boqIndex;$/;"	m	struct:fetch_rec
+tags:13411:bpred_access	context.h	/^    counter_t bpred_access;$/;"	m	struct:context_t
+tags:13518:branch_address2	context.h	/^    unsigned int *branch_address2;$/;"	m	struct:context_t
+tags:13530:branch_head2	context.h	/^    int branch_head2, branch_tail2; \/*head and tail of branch_address*\/$/;"	m	struct:context_t
+tags:13551:branch_tail2	context.h	/^    int branch_head2, branch_tail2; \/*head and tail of branch_address*\/$/;"	m	struct:context_t
+tags:13641:bucket_free_list	context.h	/^    struct spec_mem_ent *bucket_free_list;$/;"	m	struct:context_t	typeref:struct:context_t::spec_mem_ent
+tags:14219:cache_ready	context.h	/^    int cache_ready;$/;"	m	struct:RUU_station
+tags:14440:changeSpecMode	context.h	/^    int changeSpecMode;$/;"	m	struct:RUU_station
+tags:14475:checkLSQforSt	old_sim-out.c	/^checkLSQforSt (int i, context * current)$/;"	f
+tags:14476:checkLSQforSt	sim-ooo.c	/^checkLSQforSt (int i, context * current)$/;"	f
+tags:14477:checkLSQforSt	sim-out_nn.c	/^checkLSQforSt (int i, context * current)$/;"	f
+tags:14478:checkLSQforSt	sim-outorder.c	/^checkLSQforSt (int i, context * current)$/;"	f
+tags:14479:checkLSQforSt	sim-outorder_o.c	/^checkLSQforSt (int i, context * current)$/;"	f
+tags:14480:checkLSQforSt	sim-outorder_old.c	/^checkLSQforSt (int i, context * current)$/;"	f
+tags:14749:cluster	context.h	/^    int cluster;$/;"	m	struct:RUU_station
+tags:14750:cluster_assigned	context.h	/^    int cluster_assigned;$/;"	m	struct:RUU_station
+tags:14981:commit_time	context.h	/^    counter_t commit_time;$/;"	m	struct:RUU_station
+tags:15050:completeCycle	context.h	/^    counter_t completeCycle;$/;"	m	struct:wb_mem_ent
+tags:15067:completed	context.h	/^    int completed;			\/* operation has completed execution *\/$/;"	m	struct:RUU_station
+tags:15155:consumers	context.h	/^    struct lreg_id_t consumers[PHY_TOTAL_REGS];$/;"	m	struct:context_t	typeref:struct:context_t::lreg_id_t
+tags:15178:context	context.h	/^} context;$/;"	t	typeref:struct:context_t
+tags:15179:context_t	context.h	/^typedef struct context_t $/;"	s
+tags:15261:counted_fissueq	context.h	/^    int counted_fissueq;$/;"	m	struct:RUU_station
+tags:15262:counted_fready	context.h	/^    int counted_fready;$/;"	m	struct:RUU_station
+tags:15263:counted_iissueq	context.h	/^    int counted_iissueq;$/;"	m	struct:RUU_station
+tags:15264:counted_iready	context.h	/^    int counted_iready;$/;"	m	struct:RUU_station
+tags:15265:counted_lsqready	context.h	/^    int counted_lsqready;$/;"	m	struct:RUU_station
+tags:15266:counted_miss	context.h	/^    int counted_miss;$/;"	m	struct:RUU_station
+tags:15267:counted_non_issue_lsq	context.h	/^    int counted_non_issue_lsq;$/;"	m	struct:RUU_station
+tags:15268:counted_rawq	context.h	/^    int counted_rawq[CLUSTERS];$/;"	m	struct:RUU_station
+tags:15269:counted_unready_dispatch	context.h	/^    int counted_unready_dispatch;$/;"	m	struct:RUU_station
+tags:15328:create_vector	context.h	/^    struct CV_link create_vector[MD_TOTAL_REGS];$/;"	m	struct:context_t	typeref:struct:context_t::CV_link
+tags:15329:create_vector_rt	context.h	/^    tick_t create_vector_rt[MD_TOTAL_REGS];$/;"	m	struct:context_t
+tags:15515:cycle_mask	context.h	/^    unsigned cycle_mask;		\/*101904mwr: variable to determin which cycles the context will be active*\/$/;"	m	struct:context_t
+tags:15589:data	context.h	/^    qword_t data;$/;"	m	struct:psn_struct
+tags:15590:data	context.h	/^    unsigned int data[2];$/;"	m	struct:wb_mem_ent
+tags:15591:data	context.h	/^  unsigned int data[2];			\/* spec buffer, up to 8 bytes *\/$/;"	m	struct:spec_mem_ent
+tags:15783:dcache2_access	context.h	/^    counter_t dcache2_access;$/;"	m	struct:context_t
+tags:15804:dcache_access	context.h	/^    counter_t dcache_access;$/;"	m	struct:context_t
+tags:16101:dir_update	context.h	/^    struct bpred_update_t dir_update;	\/* bpred direction update info *\/$/;"	m	struct:RUU_station	typeref:struct:RUU_station::bpred_update_t
+tags:16102:dir_update	context.h	/^    struct bpred_update_t dir_update;	\/* bpred direction update info *\/$/;"	m	struct:fetch_rec	typeref:struct:fetch_rec::bpred_update_t
+tags:16108:dirty	context.h	/^    int dirty;$/;"	m	struct:psn_struct
+tags:16153:disp_block_time	context.h	/^    counter_t disp_block_time;$/;"	m	struct:context_t
+tags:16198:disp_time	context.h	/^    counter_t disp_time;$/;"	m	struct:RUU_station
+tags:16199:disp_time	context.h	/^    counter_t disp_time;$/;"	m	struct:wb_mem_ent
+tags:16211:dispatch_blocked	context.h	/^    int dispatch_blocked;$/;"	m	struct:context_t
+tags:16334:distissue	context.h	/^    int distissue;$/;"	m	struct:RUU_station
+tags:16409:dl2_missed	context.h	/^    int dl2_missed;$/;"	m	struct:RUU_station
+tags:16478:do_the_ff	run/benchmark/inputs/radix/tempSrc/sim-outorder.c	/^void do_the_ff(context *current, unsigned long long fastfwd_count, int threadid){$/;"	f
+tags:16479:do_the_ff	run_old/cholesky/sim-outorder.c	/^void do_the_ff(context *current, unsigned long long fastfwd_count, int threadid){$/;"	f
+tags:16480:do_the_ff	run_old/radix/sim-outorder.c	/^void do_the_ff(context *current, unsigned long long fastfwd_count, int threadid){$/;"	f
+tags:16481:do_the_ff	run_old/radix/tempSrc/sim-outorder.c	/^void do_the_ff(context *current, unsigned long long fastfwd_count, int threadid){$/;"	f
+tags:16482:do_the_ff	run_old/tspuo/sim-outorder.c	/^void do_the_ff(context *current, unsigned long long fastfwd_count, int threadid){$/;"	f
+tags:16483:do_the_ff_st	run/benchmark/inputs/radix/tempSrc/sim-outorder.c	/^void do_the_ff_st(context *current, unsigned long long fastfwd_count, int threadid, int Multiple){$/;"	f
+tags:16484:do_the_ff_st	run_old/cholesky/sim-outorder.c	/^void do_the_ff_st(context *current, unsigned long long fastfwd_count, int threadid, int Multiple){$/;"	f
+tags:16485:do_the_ff_st	run_old/radix/sim-outorder.c	/^void do_the_ff_st(context *current, unsigned long long fastfwd_count, int threadid, int Multiple){$/;"	f
+tags:16486:do_the_ff_st	run_old/radix/tempSrc/sim-outorder.c	/^void do_the_ff_st(context *current, unsigned long long fastfwd_count, int threadid, int Multiple){$/;"	f
+tags:16487:do_the_ff_st	run_old/tspuo/sim-outorder.c	/^void do_the_ff_st(context *current, unsigned long long fastfwd_count, int threadid, int Multiple){$/;"	f
+tags:16618:duplicate	context.h	/^    int duplicate;			\/*092904mwr: 1-duplicate inst, 0-original inst*\/$/;"	m	struct:RUU_station
+tags:16767:ea_comp	context.h	/^    int ea_comp;				\/* non-zero if op is an addr comp *\/$/;"	m	struct:RUU_station
+tags:16897:entryReplayed	context.h	/^    int replayThisEntry, entryReplayed;$/;"	m	struct:RUU_station
+tags:17032:event	context.h	/^   struct DIRECTORY_EVENT *event;$/;"	m	struct:context_t	typeref:struct:context_t::DIRECTORY_EVENT
+tags:17392:falu1_access	context.h	/^    counter_t falu1_access;$/;"	m	struct:context_t
+tags:17417:falu2_access	context.h	/^    counter_t falu2_access;$/;"	m	struct:context_t
+tags:17462:fastfwd_count	context.h	/^    unsigned long long fastfwd_count;$/;"	m	struct:context_t
+tags:17464:fastfwd_done	context.h	/^    int fastfwd_done;$/;"	m	struct:context_t
+tags:17472:fault_mode	context.h	/^    int fault_mode;$/;"	m	struct:context_t
+tags:17478:faulting_instr	context.h	/^    int faulting_instr;		\/\/mwr102004: if true then the instruction has error$/;"	m	struct:RUU_station
+tags:17514:fetch_data	context.h	/^    struct fetch_rec *fetch_data[128];	\/* IFETCH -> DISPATCH inst queue *\/$/;"	m	struct:context_t	typeref:struct:context_t::fetch_rec
+tags:17515:fetch_delay_stat	context.h	/^    double fetch_delay_stat;$/;"	m	struct:context_t
+tags:17527:fetch_head	context.h	/^    int fetch_tail, fetch_head;	\/* head and tail pointers of queue *\/$/;"	m	struct:context_t
+tags:17539:fetch_num	context.h	/^    int fetch_num;			\/* num entries in IF -> DIS queue *\/$/;"	m	struct:context_t
+tags:17540:fetch_num_insn	context.h	/^    counter_t fetch_num_insn;$/;"	m	struct:context_t
+tags:17541:fetch_num_thrd	context.h	/^    int fetch_num_thrd;	\/* num of instructions currently in fetch queue *\/$/;"	m	struct:context_t
+tags:17543:fetch_pred_PC	context.h	/^    md_addr_t fetch_pred_PC;$/;"	m	struct:context_t
+tags:17544:fetch_rec	context.h	/^struct fetch_rec $/;"	s
+tags:17545:fetch_redirected	context.h	/^    int fetch_redirected;       \/* moved from sim-outorder.c:ruu_dispatch  *\/$/;"	m	struct:context_t
+tags:17546:fetch_regs_PC	context.h	/^    md_addr_t fetch_regs_PC;$/;"	m	struct:context_t
+tags:17558:fetch_tail	context.h	/^    int fetch_tail, fetch_head;	\/* head and tail pointers of queue *\/$/;"	m	struct:context_t
+tags:17559:fetch_time	context.h	/^    counter_t fetch_time;$/;"	m	struct:RUU_station
+tags:17560:fetch_time	context.h	/^    unsigned long fetch_time;           \/* cycle when inst. fetched  Ali *\/$/;"	m	struct:fetch_rec
+tags:17566:fetch_total_insn	context.h	/^    counter_t fetch_total_insn;$/;"	m	struct:context_t
+tags:17600:ffStall	context.h	/^    int ffStall;$/;"	m	struct:context_t
+tags:17712:finish_cycle	context.h	/^    unsigned long long finish_cycle;$/;"	m	struct:context_t
+tags:17713:finish_time	context.h	/^    counter_t finish_time;$/;"	m	struct:RUU_station
+tags:17760:fissueq_thrd	context.h	/^    int fissueq_thrd;	\/* num of instructions currently in floating queue *\/$/;"	m	struct:context_t
+tags:17951:fname	context.h	/^    char *fname;$/;"	m	struct:context_t
+tags:18043:fqram_access	context.h	/^    counter_t fqram_access;$/;"	m	struct:context_t
+tags:18172:freed	context.h	/^    int freed;$/;"	m	struct:RUU_station
+tags:18184:freeze	context.h	/^    int freeze; $/;"	m	struct:context_t
+tags:18219:fregfile_access	context.h	/^    counter_t fregfile_access;$/;"	m	struct:context_t
+tags:18303:fresultbus_access	context.h	/^    counter_t fresultbus_access;$/;"	m	struct:context_t
+tags:18360:fselection_access	context.h	/^    counter_t fselection_access;$/;"	m	struct:context_t
+tags:18475:fwakeup_access	context.h	/^    counter_t fwakeup_access;$/;"	m	struct:context_t
+tags:18548:getRegValue	instManip.c	/^void getRegValue(enum md_opcode op, context *current, int ra, qword_t *data)$/;"	f
+tags:18604:get_next_thread	cmt.c	/^context* get_next_thread()$/;"	f
+tags:18607:get_prog_out_file	context.c	/^char * get_prog_out_file(const char * bnc_value) {$/;"	f
+tags:18771:helpThdId	context.h	/^    int helpThdId;$/;"	m	struct:context_t
+tags:18921:ialu1_access	context.h	/^    counter_t ialu1_access;$/;"	m	struct:context_t
+tags:18946:ialu2_access	context.h	/^    counter_t ialu2_access;$/;"	m	struct:context_t
+tags:19008:icache2_access	context.h	/^    counter_t icache2_access;$/;"	m	struct:context_t
+tags:19015:icache_access	context.h	/^    counter_t icache_access;$/;"	m	struct:context_t
+tags:19036:icount_thrd	context.h	/^    int icount_thrd;	\/* num of instructions currently in decode, rename issue queues *\/$/;"	m	struct:context_t
+tags:19041:id	context.h	/^    int id;$/;"	m	struct:context_t
+tags:19057:idep_name	context.h	/^    int idep_name[MAX_IDEPS];$/;"	m	struct:RUU_station
+tags:19058:idep_ready	context.h	/^    int idep_ready[MAX_IDEPS];		\/* input operand ready? *\/$/;"	m	struct:RUU_station
+tags:19167:iissueq_thrd	context.h	/^    int iissueq_thrd;	\/* num of instructions currently in integer queue *\/$/;"	m	struct:context_t
+tags:19251:in1	context.h	/^    int out1, in1, in2, in3;$/;"	m	struct:RUU_station
+tags:19252:in2	context.h	/^    int out1, in1, in2, in3;$/;"	m	struct:RUU_station
+tags:19253:in3	context.h	/^    int out1, in1, in2, in3;$/;"	m	struct:RUU_station
+tags:19256:in_LSQ	context.h	/^    int in_LSQ;				\/* non-zero if op is in LSQ *\/$/;"	m	struct:RUU_station
+tags:19278:in_qwait	context.h	/^    int in_qwait;$/;"	m	struct:RUU_station
+tags:19331:index	context.h	/^    int index;                 		\/* used in LSQ for index the entry in the queue *\/$/;"	m	struct:RUU_station
+tags:19332:index	context.h	/^    int index;$/;"	m	struct:fetch_rec
+tags:19482:input_buf_access	context.h	/^    counter_t input_buf_access;$/;"	m	struct:context_t
+tags:19612:instType	context.h	/^    int instType;$/;"	m	struct:RUU_station
+tags:19627:inst_miss_count	context.h	/^    unsigned long inst_miss_count;$/;"	m	struct:context_t
+tags:19629:inst_seq	context.h	/^    unsigned int inst_seq;$/;"	m	struct:context_t
+tags:19654:instnum	context.h	/^    long instnum;$/;"	m	struct:RUU_station
+tags:19655:instr	context.h	/^    md_addr_t instr;$/;"	m	struct:wb_mem_ent
+tags:19754:invalidationReceived	context.h	/^    int invalidationReceived;$/;"	m	struct:RUU_station
+tags:19881:ipreg	context.h	/^    int ipreg[MAX_IDEPS];   	\/* Extra registers reserved to receive the operand$/;"	m	struct:RUU_station
+tags:19895:iqram_access	context.h	/^    counter_t iqram_access;$/;"	m	struct:context_t
+tags:19967:iregfile_access	context.h	/^    counter_t iregfile_access;$/;"	m	struct:context_t
+tags:20046:iresultbus_access	context.h	/^    counter_t iresultbus_access;$/;"	m	struct:context_t
+tags:20105:isExecuted	context.h	/^    int isExecuted;$/;"	m	struct:oracle_store_queue
+tags:20106:isFFdone	context.h	/^    int isFFdone;$/;"	m	struct:context_t
+tags:20113:isL1Miss	context.h	/^    int isL1Miss;$/;"	m	struct:RUU_station
+tags:20135:isPrefetch	context.h	/^    int isPrefetch;$/;"	m	struct:RUU_station
+tags:20149:isSyncInst	context.h	/^    int isSyncInst;$/;"	m	struct:RUU_station
+tags:20150:isSyncInstBar	context.h	/^    int isSyncInstBar;$/;"	m	struct:RUU_station
+tags:20151:isSyncInstBarRel	context.h	/^    int isSyncInstBarRel;$/;"	m	struct:RUU_station
+tags:20160:isWrongPath	context.h	/^    int isWrongPath;$/;"	m	struct:RUU_station
+tags:20161:is_STL_C	context.h	/^    int is_STL_C;$/;"	m	struct:wb_mem_ent
+tags:20164:is_ctrl2	context.h	/^    unsigned int is_ctrl2 : 1; 		\/*is this a cond branch?*\/$/;"	m	struct:fetch_rec
+tags:20165:is_dup	context.h	/^    int is_dup;				\/\/100104mwr: is_dup added to recognise duplicate data$/;"	m	struct:fetch_rec
+tags:20180:iselection_access	context.h	/^    counter_t iselection_access;$/;"	m	struct:context_t
+tags:20257:issue_time	context.h	/^    counter_t issue_time;$/;"	m	struct:RUU_station
+tags:20258:issued	context.h	/^    int issued;				\/* operation is\/was executing *\/$/;"	m	struct:RUU_station
+tags:20356:iwakeup_access	context.h	/^    counter_t iwakeup_access;$/;"	m	struct:context_t
+tags:20391:jobThdId	context.h	/^    int jobThdId;$/;"	m	struct:context_t
+tags:20595:lastSubEpochSeen	context.h	/^    int lastSubEpochSeen[32];$/;"	m	struct:context_t
+tags:20687:last_op	context.h	/^    struct RS_link last_op;$/;"	m	struct:context_t	typeref:struct:context_t::RS_link
+tags:20711:last_use	context.h	/^  counter_t last_use;			\/* debug time stamp of last use *\/$/;"	m	struct:RS_link
+tags:20748:latency_factor	context.h	/^    float latency_factor;		\/*102104mwr: variable to increase latency of different activity to mimic slow processor*\/$/;"	m	struct:context_t
+tags:20754:ldAccessFlag	context.h	/^    int ldAccessFlag;$/;"	m	struct:RUU_station
+tags:20821:ld_brk_point	context.h	/^    md_addr_t ld_brk_point ;$/;"	m	struct:context_t
+tags:20825:ld_data_base	context.h	/^    md_addr_t ld_data_base ;$/;"	m	struct:context_t
+tags:20829:ld_data_size	context.h	/^    unsigned int ld_data_size ;$/;"	m	struct:context_t
+tags:20833:ld_environ_base	context.h	/^    md_addr_t ld_environ_base ;$/;"	m	struct:context_t
+tags:20840:ld_miss	context.h	/^    int ld_miss;$/;"	m	struct:context_t
+tags:20852:ld_prog_entry	context.h	/^    md_addr_t ld_prog_entry;$/;"	m	struct:context_t
+tags:20856:ld_prog_fname	context.h	/^    char *ld_prog_fname ;$/;"	m	struct:context_t
+tags:20865:ld_stack_base	context.h	/^    md_addr_t ld_stack_base ;$/;"	m	struct:context_t
+tags:20869:ld_stack_min	context.h	/^    md_addr_t ld_stack_min ;$/;"	m	struct:context_t
+tags:20873:ld_stack_size	context.h	/^    unsigned int ld_stack_size ;$/;"	m	struct:context_t
+tags:20877:ld_target_big_endian	context.h	/^    int ld_target_big_endian;$/;"	m	struct:context_t
+tags:20881:ld_text_base	context.h	/^    md_addr_t ld_text_base ;$/;"	m	struct:context_t
+tags:20885:ld_text_size	context.h	/^    unsigned int ld_text_size ;$/;"	m	struct:context_t
+tags:20912:ldpred_hit	context.h	/^    int ldpred_hit;$/;"	m	struct:RUU_station
+tags:21123:loadLatency	context.h	/^    unsigned long loadLatency;$/;"	m	struct:context_t
+tags:21159:load_hit	context.h	/^    int load_hit;$/;"	m	struct:RUU_station
+tags:21171:load_miss_count	context.h	/^    unsigned long load_miss_count;$/;"	m	struct:context_t
+tags:21176:localSubEpoch	context.h	/^    int localSubEpoch;$/;"	m	struct:context_t
+tags:21248:lockExitPC	context.h	/^    md_addr_t lockExitPC;$/;"	m	struct:context_t
+tags:21249:lockStatus	context.h	/^    int lockStatus;$/;"	m	struct:RUU_station
+tags:21250:lockStatus	context.h	/^    int lockStatus;$/;"	m	struct:context_t
+tags:21251:lockStatus	context.h	/^    int lockStatus;$/;"	m	struct:fetch_rec
+tags:21375:lprod	context.h	/^    int lprod[MD_TOTAL_REGS];$/;"	m	struct:context_t
+tags:21376:lprod_chk	context.h	/^    int lprod_chk[MD_TOTAL_REGS];$/;"	m	struct:context_t
+tags:21377:lprod_rd	context.h	/^    int lprod_rd[MD_TOTAL_REGS];$/;"	m	struct:context_t
+tags:21378:lprod_rd_chk	context.h	/^    int lprod_rd_chk[MD_TOTAL_REGS];$/;"	m	struct:context_t
+tags:21379:lreg	context.h	/^  int lreg;$/;"	m	struct:lreg_id_t
+tags:21380:lreg_id_t	context.h	/^struct lreg_id_t$/;"	s
+tags:21388:lsqEntry	context.h	/^    int lsqEntry;$/;"	m	struct:RUU_station
+tags:21394:lsqId	context.h	/^    int lsqId;$/;"	m	struct:wb_mem_ent
+tags:21396:lsq_access	context.h	/^    counter_t lsq_access;$/;"	m	struct:context_t
+tags:21532:lsq_preg_access	context.h	/^    counter_t lsq_preg_access;$/;"	m	struct:context_t
+tags:21598:lsq_thrd	context.h	/^    int lsq_thrd;   	\/* num of instructions currently in ld\/st queue including issued loads*\/$/;"	m	struct:context_t
+tags:21612:lsq_wakeup_access	context.h	/^    counter_t lsq_wakeup_access;$/;"	m	struct:context_t
+tags:21697:ltopmap	context.h	/^    int ltopmap[MD_TOTAL_REGS];$/;"	m	struct:context_t
+tags:21698:ltopmap_chk	context.h	/^    int ltopmap_chk[MD_TOTAL_REGS];$/;"	m	struct:context_t
+tags:21710:ltopmap_old	context.h	/^    int ltopmap_old[MD_TOTAL_REGS][CLUSTERS][COMM_LATENCY];$/;"	m	struct:context_t
+tags:21844:m_shLQNum	context.h	/^    short	m_shLQNum;		\/\/Number of entries in Load Queue.$/;"	m	struct:context_t
+tags:21851:m_shSQNum	context.h	/^    short	m_shSQNum;		\/\/Number of entries in Store Queue.$/;"	m	struct:context_t
+tags:21966:main_thread	context.h	/^    int main_thread;	\/*mwr102504: 1 means this is the main thread*\/$/;"	m	struct:context_t
+tags:22023:masterid	context.h	/^    int masterid;$/;"	m	struct:context_t
+tags:22073:max_fetch_delay_stat	context.h	/^    double max_fetch_delay_stat;$/;"	m	struct:context_t
+tags:22373:mem	context.h	/^    struct mem_t *mem;$/;"	m	struct:context_t	typeref:struct:context_t::mem_t
+tags:22381:memAddr	context.h	/^    md_addr_t memAddr;$/;"	m	struct:oracle_store_queue
+tags:22382:memData	context.h	/^    qword_t memData;$/;"	m	struct:oracle_store_queue
+tags:22403:memWidth	context.h	/^    int memWidth;$/;"	m	struct:oracle_store_queue
+tags:22698:miss_flag	context.h	/^	int miss_flag;$/;"	m	struct:RUU_station
+tags:22960:my_last_tag	context.h	/^    int my_last_tag;$/;"	m	struct:context_t
+tags:23065:n_cache_limit_inst	context.h	/^    int n_cache_limit_inst;$/;"	m	struct:RUU_station
+tags:23448:nbytes	context.h	/^    int nbytes;$/;"	m	struct:wb_mem_ent
+tags:23452:needBusAccess	context.h	/^    int needBusAccess;$/;"	m	struct:wb_mem_ent
+tags:23453:needsWBflush	old_sim-out.c	/^needsWBflush (context * current, enum md_opcode op, md_addr_t addr)$/;"	f
+tags:23454:needsWBflush	sim-ooo.c	/^needsWBflush (context * current, enum md_opcode op, md_addr_t addr)$/;"	f
+tags:23455:needsWBflush	sim-out_nn.c	/^needsWBflush (context * current, enum md_opcode op, md_addr_t addr)$/;"	f
+tags:23456:needsWBflush	sim-outorder.c	/^needsWBflush (context * current, enum md_opcode op, md_addr_t addr)$/;"	f
+tags:23457:needsWBflush	sim-outorder_o.c	/^needsWBflush (context * current, enum md_opcode op, md_addr_t addr)$/;"	f
+tags:23458:needsWBflush	sim-outorder_old.c	/^needsWBflush (context * current, enum md_opcode op, md_addr_t addr)$/;"	f
+tags:23534:next	context.h	/^    struct sharedAddressList_s * next;$/;"	m	struct:sharedAddressList_s	typeref:struct:sharedAddressList_s::sharedAddressList_s
+tags:23535:next	context.h	/^    struct wb_mem_ent *next;$/;"	m	struct:wb_mem_ent	typeref:struct:wb_mem_ent::wb_mem_ent
+tags:23536:next	context.h	/^  struct RS_link *next;			\/* next entry in list *\/$/;"	m	struct:RS_link	typeref:struct:RS_link::RS_link
+tags:23537:next	context.h	/^  struct spec_mem_ent *next;		\/* ptr to next hash table bucket *\/$/;"	m	struct:spec_mem_ent	typeref:struct:spec_mem_ent::spec_mem_ent
+tags:23538:next	context.h	/^ struct RS_list *next;$/;"	m	struct:RS_list	typeref:struct:RS_list::RS_list
+tags:23573:next_PC	context.h	/^    md_addr_t PC, next_PC, pred_PC;	\/* inst PC, next PC, predicted PC *\/$/;"	m	struct:RUU_station
+tags:23680:non_issue_lsq_thrd	context.h	/^    int non_issue_lsq_thrd;   	\/* num of instructions currently in ld\/st queue *\/$/;"	m	struct:context_t
+tags:23682:non_spec_rdb_miss_count	context.h	/^    unsigned long non_spec_rdb_miss_count;$/;"	m	struct:context_t
+tags:23683:non_spec_wrb_miss_count	context.h	/^    unsigned long non_spec_wrb_miss_count;$/;"	m	struct:context_t
+tags:23789:numCycleBarrier	context.h	/^    unsigned long numCycleBarrier;$/;"	m	struct:context_t
+tags:23790:numCycleLock	context.h	/^    unsigned long numCycleLock;$/;"	m	struct:context_t
+tags:23791:numDL1CacheAccess	context.h	/^    unsigned long numDL1CacheAccess;$/;"	m	struct:context_t
+tags:23792:numDL1Hits	context.h	/^    unsigned long numDL1Hits;$/;"	m	struct:context_t
+tags:23793:numDL1Misses	context.h	/^    unsigned long numDL1Misses;$/;"	m	struct:context_t
+tags:23802:numInsn	context.h	/^    unsigned long numInsn;$/;"	m	struct:context_t
+tags:23803:numInstrBarrier	context.h	/^    unsigned long numInstrBarrier;$/;"	m	struct:context_t
+tags:23804:numInstrLock	context.h	/^    unsigned long numInstrLock;$/;"	m	struct:context_t
+tags:23805:numInvalidations	context.h	/^    unsigned long numInvalidations;$/;"	m	struct:context_t
+tags:23808:numLoads	context.h	/^    unsigned long numLoads;$/;"	m	struct:context_t
+tags:23814:numLocalHits	context.h	/^    unsigned long numLocalHits;$/;"	m	struct:context_t
+tags:23815:numMemAccess	context.h	/^    unsigned long numMemAccess;$/;"	m	struct:context_t
+tags:23816:numOfWBEntry	context.h	/^    int numOfWBEntry;$/;"	m	struct:context_t
+tags:23819:numReadCacheAccess	context.h	/^    unsigned long numReadCacheAccess;$/;"	m	struct:context_t
+tags:23820:numRemoteHits	context.h	/^    unsigned long numRemoteHits;$/;"	m	struct:context_t
+tags:23834:numWriteCacheAccess	context.h	/^    unsigned long numWriteCacheAccess;$/;"	m	struct:context_t
+tags:23847:num_child	context.h	/^    int num_child;$/;"	m	struct:context_t
+tags:23848:num_child_active	context.h	/^    int num_child_active;$/;"	m	struct:context_t
+tags:24018:numcontexts	context.c	/^int numcontexts = 0;$/;"	v
+tags:24031:o_val_ra	context.h	/^    quad_t o_val_ra, o_val_rb, o_val_rc;$/;"	m	struct:RUU_station
+tags:24032:o_val_ra	context.h	/^    quad_t o_val_ra, o_val_rb, o_val_rc;$/;"	m	struct:context_t
+tags:24033:o_val_rb	context.h	/^    quad_t o_val_ra, o_val_rb, o_val_rc;$/;"	m	struct:RUU_station
+tags:24034:o_val_rb	context.h	/^    quad_t o_val_ra, o_val_rb, o_val_rc;$/;"	m	struct:context_t
+tags:24035:o_val_rc	context.h	/^    quad_t o_val_ra, o_val_rb, o_val_rc;$/;"	m	struct:RUU_station
+tags:24036:o_val_rc	context.h	/^    quad_t o_val_ra, o_val_rb, o_val_rc;$/;"	m	struct:context_t
+tags:24075:odep_list	context.h	/^    struct RS_link *odep_list[MAX_ODEPS];	\/* chains to consuming operations *\/$/;"	m	struct:RUU_station	typeref:struct:RUU_station::RS_link
+tags:24076:odep_num	context.h	/^  int odep_num;                         \/* specific output operand *\/$/;"	m	struct:CV_link
+tags:24095:oldpreg	context.h	/^    int oldpreg;$/;"	m	struct:RUU_station
+tags:24096:oldwindowbr	context.h	/^    int oldwindowbr[OWINDOWSIZE];$/;"	m	struct:context_t
+tags:24097:oldwindowilp	context.h	/^    int oldwindowilp[OWINDOWSIZE];$/;"	m	struct:context_t
+tags:24098:oldwindowpc	context.h	/^    long oldwindowpc[OWINDOWSIZE];$/;"	m	struct:context_t
+tags:24102:onames	context.h	/^    int onames[MAX_ODEPS];			\/* output logical names (NA=unused) *\/$/;"	m	struct:RUU_station
+tags:24107:op	context.h	/^    enum md_opcode op;			\/* decoded instruction opcode *\/$/;"	m	struct:RUU_station	typeref:enum:RUU_station::md_opcode
+tags:24164:opnum	context.h	/^    int opnum;				\/* input\/output operand number *\/$/;"	m	union:RS_link::__anon19
+tags:24165:opreg	context.h	/^    int opreg;$/;"	m	struct:RUU_station
+tags:24333:oracleId	context.h	/^    int oracleId;$/;"	m	struct:context_t
+tags:24334:oracle_store_queue	context.h	/^struct oracle_store_queue$/;"	s
+tags:24640:out1	context.h	/^    int out1, in1, in2, in3;$/;"	m	struct:RUU_station
+tags:24641:out2	context.h	/^    int output1, out2;	\/* output\/input register names *\/$/;"	m	struct:RUU_station
+tags:24648:outReg	context.h	/^    int outReg;$/;"	m	struct:RUU_station
+tags:24719:output1	context.h	/^    int output1, out2;	\/* output\/input register names *\/$/;"	m	struct:RUU_station
+tags:24720:output_buf_access	context.h	/^    counter_t output_buf_access;$/;"	m	struct:context_t
+tags:24777:owindow_head	context.h	/^    int owindow_head;$/;"	m	struct:context_t
+tags:24903:parent	context.h	/^    int parent;$/;"	m	struct:context_t
+tags:24927:pbank	context.h	/^    int pbank;$/;"	m	struct:RUU_station
+tags:25058:pcb_penalty	context.h	/^    int pcb_penalty;$/;"	m	struct:context_t
+tags:25267:poison	context.h	/^    struct psn_struct poison[3];$/;"	m	struct:RUU_station	typeref:struct:RUU_station::psn_struct
+tags:25309:power	context.h	/^    power_result_type power;		\/*110404mwr: power parameters structure*\/$/;"	m	struct:context_t
+tags:25366:pred	context.h	/^    struct bpred_t *pred;$/;"	m	struct:context_t	typeref:struct:context_t::bpred_t
+tags:25392:predQueue	context.h	/^    branchCorr *predQueue;$/;"	m	struct:context_t
+tags:25393:pred_PC	context.h	/^    md_addr_t PC, next_PC, pred_PC;	\/* inst PC, next PC, predicted PC *\/$/;"	m	struct:RUU_station
+tags:25394:pred_PC	context.h	/^    md_addr_t pred_PC;$/;"	m	struct:context_t
+tags:25395:pred_PC	context.h	/^    md_addr_t regs_PC, pred_PC;		\/* current PC, predicted next PC *\/$/;"	m	struct:fetch_rec
+tags:25507:present	context.h	/^    unsigned long present;$/;"	m	struct:context_t
+tags:25515:prev	context.h	/^    struct wb_mem_ent *prev;$/;"	m	struct:wb_mem_ent	typeref:struct:wb_mem_ent::wb_mem_ent
+tags:25526:prevReg	context.h	/^    struct regs_t prevReg;$/;"	m	struct:RUU_station	typeref:struct:RUU_station::regs_t
+tags:25527:prevRegVal	context.h	/^    qword_t prevRegVal;$/;"	m	struct:RUU_station
+tags:25579:print_stats	syscall.c	/^print_stats (context * current)$/;"	f
+tags:25580:print_stats	syscall_old.c	/^print_stats (context * current)$/;"	f
+tags:25688:prod	context.h	/^    struct RUU_station *prod[MAX_IDEPS];$/;"	m	struct:RUU_station	typeref:struct:RUU_station::RUU_station
+tags:25723:psn_struct	context.h	/^struct	psn_struct$/;"	s
+tags:25735:ptolmap	context.h	/^    struct lreg_id_t ptolmap[PHY_TOTAL_REGS];$/;"	m	struct:context_t	typeref:struct:context_t::lreg_id_t
+tags:25736:ptolmap_chk	context.h	/^    struct lreg_id_t ptolmap_chk[PHY_TOTAL_REGS];$/;"	m	struct:context_t	typeref:struct:context_t::lreg_id_t
+tags:25776:ptrace_seq	context.h	/^    unsigned int ptrace_seq;		\/* pipetrace sequence number *\/$/;"	m	struct:RUU_station
+tags:25777:ptrace_seq	context.h	/^    unsigned int ptrace_seq;		\/* print trace sequence id *\/$/;"	m	struct:fetch_rec
+tags:25778:ptrace_seq	context.h	/^    unsigned int ptrace_seq;$/;"	m	struct:context_t
+tags:25889:queued	context.h	/^    int queued;				\/* operands ready and queued *\/$/;"	m	struct:RUU_station
+tags:26130:readAfterWrite	context.h	/^    int readAfterWrite;$/;"	m	struct:RUU_station
+tags:26148:read_thread_args	context.c	/^read_thread_args(char *env[], char *filename, int *curcontext)$/;"	f
+tags:26281:recover_PC	context.h	/^    md_addr_t recover_PC;$/;"	m	struct:context_t
+tags:26284:recover_inst	context.h	/^    int recover_inst;			\/* start of mis-speculation? *\/$/;"	m	struct:RUU_station
+tags:26411:regs	context.h	/^    struct regs_t regs;$/;"	m	struct:context_t	typeref:struct:context_t::regs_t
+tags:26422:regs_PC	context.h	/^    md_addr_t regs_PC, pred_PC;		\/* current PC, predicted next PC *\/$/;"	m	struct:fetch_rec
+tags:26491:rename_access	context.h	/^    counter_t rename_access;$/;"	m	struct:context_t
+tags:26535:replayThisEntry	context.h	/^    int replayThisEntry, entryReplayed;$/;"	m	struct:RUU_station
+tags:26880:rob1_access	context.h	/^    counter_t rob1_access;$/;"	m	struct:context_t
+tags:26894:rob2_access	context.h	/^    counter_t rob2_access;$/;"	m	struct:context_t
+tags:26908:robEntry	context.h	/^    int robEntry;$/;"	m	struct:RUU_station
+tags:26991:rs	context.h	/^  struct RUU_station *rs;		\/* referenced RUU resv station *\/$/;"	m	struct:RS_link	typeref:struct:RS_link::RUU_station
+tags:26992:rs	context.h	/^  struct RUU_station *rs;               \/* creator's reservation station *\/$/;"	m	struct:CV_link	typeref:struct:CV_link::RUU_station
+tags:26993:rs	context.h	/^ struct RUU_station *rs;$/;"	m	struct:RS_list	typeref:struct:RS_list::RUU_station
+tags:27018:rs_link_id	context.h	/^  counter_t rs_link_id;$/;"	m	struct:RS_link
+tags:27129:running	context.h	/^    int running;$/;"	m	struct:context_t
+tags:27227:ruu_fetch_issue_delay	context.h	/^    unsigned ruu_fetch_issue_delay;$/;"	m	struct:context_t
+tags:27605:seq	context.h	/^    INST_SEQ_TYPE seq;			\/* inst sequence *\/$/;"	m	union:RS_link::__anon19
+tags:27606:seq	context.h	/^    INST_SEQ_TYPE seq;			\/* instruction sequence, used to$/;"	m	struct:RUU_station
+tags:27700:sharedAddressList	context.h	/^struct sharedAddressList_s *sharedAddressList[512];$/;"	v	typeref:struct:sharedAddressList_s
+tags:27701:sharedAddressList_s	context.h	/^struct sharedAddressList_s {$/;"	s
+tags:27893:sim_chkpt_fname	context.h	/^    char *sim_chkpt_fname;$/;"	m	struct:context_t
+tags:27901:sim_cycle	context.h	/^    counter_t sim_cycle;$/;"	m	struct:oracle_store_queue
+tags:27921:sim_eio_fd	context.h	/^    FILE *sim_eio_fd;$/;"	m	struct:context_t
+tags:27928:sim_eio_fname	context.h	/^    char *sim_eio_fname;$/;"	m	struct:context_t
+tags:27983:sim_inputfd	context.h	/^    int sim_inputfd;$/;"	m	struct:context_t
+tags:27984:sim_invalid_addrs	context.h	/^    counter_t sim_invalid_addrs;$/;"	m	struct:context_t
+tags:28040:sim_num_branches	context.h	/^    counter_t sim_num_branches;$/;"	m	struct:context_t
+tags:28054:sim_num_insn	context.h	/^    counter_t sim_num_insn;$/;"	m	struct:RUU_station
+tags:28055:sim_num_insn	context.h	/^    counter_t sim_num_insn;$/;"	m	struct:context_t
+tags:28056:sim_num_insn	context.h	/^    counter_t sim_num_insn;$/;"	m	struct:oracle_store_queue
+tags:28057:sim_num_insn	context.h	/^    counter_t sim_num_insn;$/;"	m	struct:wb_mem_ent
+tags:28076:sim_num_loads	context.h	/^    counter_t sim_num_loads;$/;"	m	struct:context_t
+tags:28088:sim_num_refs	context.h	/^    counter_t sim_num_refs;$/;"	m	struct:context_t
+tags:28120:sim_progfd	context.h	/^    FILE *sim_progfd;$/;"	m	struct:context_t
+tags:28127:sim_progin	context.h	/^    char *sim_progin;$/;"	m	struct:context_t
+tags:28128:sim_progout	context.h	/^    char *sim_progout;$/;"	m	struct:context_t
+tags:28198:sim_swap_bytes	context.h	/^    int sim_swap_bytes;$/;"	m	struct:context_t
+tags:28205:sim_swap_words	context.h	/^    int sim_swap_words;$/;"	m	struct:context_t
+tags:28212:sim_total_branches	context.h	/^    counter_t sim_total_branches;$/;"	m	struct:context_t
+tags:28224:sim_total_insn	context.h	/^    counter_t sim_total_insn;$/;"	m	struct:context_t
+tags:28236:sim_total_loads	context.h	/^    counter_t sim_total_loads;$/;"	m	struct:context_t
+tags:28248:sim_total_refs	context.h	/^    counter_t sim_total_refs;$/;"	m	struct:context_t
+tags:28334:size	context.h	/^    unsigned int size;$/;"	m	struct:sharedAddressList_s
+tags:28412:sleptAt	context.h	/^    unsigned long sleptAt; \/* The thread executed the quiese instruction at this cycle *\/$/;"	m	struct:context_t
+tags:28517:spec_create_vector	context.h	/^    struct CV_link spec_create_vector[MD_TOTAL_REGS];$/;"	m	struct:context_t	typeref:struct:context_t::CV_link
+tags:28518:spec_create_vector_rt	context.h	/^    tick_t spec_create_vector_rt[MD_TOTAL_REGS];$/;"	m	struct:context_t
+tags:28530:spec_mem_ent	context.h	/^struct spec_mem_ent {$/;"	s
+tags:28533:spec_mode	context.h	/^    int spec_mode;			\/* non-zero if issued in spec_mode *\/$/;"	m	struct:RUU_station
+tags:28534:spec_mode	context.h	/^    int spec_mode;$/;"	m	struct:context_t
+tags:28535:spec_mode	context.h	/^ int spec_mode;$/;"	m	struct:RS_list
+tags:28536:spec_rdb_miss	context.h	/^    int spec_rdb_miss;$/;"	m	struct:RUU_station
+tags:28548:spec_rdb_miss_count	context.h	/^    unsigned long spec_rdb_miss_count;$/;"	m	struct:context_t
+tags:28549:spec_regs_C	context.h	/^    md_ctrl_t spec_regs_C;$/;"	m	struct:context_t
+tags:28550:spec_regs_F	context.h	/^    md_fpr_t spec_regs_F;$/;"	m	struct:context_t
+tags:28551:spec_regs_R	context.h	/^    md_gpr_t spec_regs_R;$/;"	m	struct:context_t
+tags:28552:spec_wrb_miss	context.h	/^    int spec_wrb_miss;$/;"	m	struct:RUU_station
+tags:28564:spec_wrb_miss_count	context.h	/^    unsigned long spec_wrb_miss_count;$/;"	m	struct:context_t
+tags:28626:sqStoreForwardT	context.h	/^    counter_t sqStoreForwardT;      \/\/The dispatch time of the store inst,$/;"	m	struct:RUU_station
+tags:28733:st_reach	context.h	/^    int st_reach[CLUSTERS];$/;"	m	struct:RUU_station
+tags:28749:stack_base	context.h	/^    md_addr_t stack_base;$/;"	m	struct:context_t
+tags:28752:stack_recover_idx	context.h	/^    int stack_recover_idx;		\/* branch predictor RSB index *\/$/;"	m	struct:fetch_rec
+tags:28753:stack_recover_idx	context.h	/^    int stack_recover_idx;		\/* non-speculative TOS for RSB pred *\/$/;"	m	struct:RUU_station
+tags:28776:stallThread	context.h	/^    int stallThread;$/;"	m	struct:context_t
+tags:28803:startReached	context.h	/^    int startReached;$/;"	m	struct:context_t
+tags:28822:start_cycle	context.h	/^    unsigned long long start_cycle;$/;"	m	struct:context_t
+tags:29017:stopThread	context.h	/^    int stopThread;$/;"	m	struct:context_t
+tags:29132:store_htable	context.h	/^    struct spec_mem_ent *store_htable[STORE_HASH_SIZE];$/;"	m	struct:context_t	typeref:struct:context_t::spec_mem_ent
+tags:29133:store_miss_count	context.h	/^    unsigned long store_miss_count;$/;"	m	struct:context_t
+tags:29437:tag	context.h	/^    INST_TAG_TYPE tag;			\/* RUU slot tag, increment to$/;"	m	struct:RUU_station
+tags:29438:tag	context.h	/^  INST_TAG_TYPE tag;			\/* inst instance sequence number *\/$/;"	m	struct:RS_link
+tags:29591:thecontexts	context.c	/^context *thecontexts[MAXTHREADS];$/;"	v
+tags:29597:thrdPerJobCnt	context.h	/^int thrdPerJobCnt;$/;"	v
+tags:29660:threadid	context.h	/^    int threadid;           		\/* this RUU instant belongs to which theard  *\/$/;"	m	struct:RUU_station
+tags:29661:threadid	context.h	/^    int threadid;$/;"	m	struct:fetch_rec
+tags:29662:threadid	context.h	/^  int threadid;$/;"	m	struct:lreg_id_t
+tags:29997:totalBarrierCycle	context.h	/^    unsigned long totalBarrierCycle;$/;"	m	struct:context_t
+tags:29998:totalBarrierInstr	context.h	/^    unsigned long totalBarrierInstr;$/;"	m	struct:context_t
+tags:30200:totalLockCycle	context.h	/^    unsigned long totalLockCycle;$/;"	m	struct:context_t
+tags:30201:totalLockInstr	context.h	/^    unsigned long totalLockInstr;$/;"	m	struct:context_t
+tags:30947:unready_dispatch	context.h	/^    int unready_dispatch;$/;"	m	struct:context_t
+tags:30961:update_power_stats	power.c	/^void update_power_stats(power_result_type power, int threadid, context *current)$/;"	f
+tags:31008:ushFlag	context.h	/^    half_t  ushFlag;        \/\/Flags of the RUU entry.$/;"	m	struct:RUU_station
+tags:31009:ushSpecLdDelay	context.h	/^    half_t  ushSpecLdDelay; \/\/Number of cycles a spec load is$/;"	m	struct:RUU_station
+tags:31012:usr_id	resource.h	/^  int usr_id;				\/*mwr: usr id of the context using the resource*\/$/;"	m	struct:res_desc
+tags:31027:val_ra	context.h	/^    quad_t val_ra, val_rb, val_rc, val_ra_result;$/;"	m	struct:RUU_station
+tags:31028:val_ra_result	context.h	/^    quad_t val_ra, val_rb, val_rc, val_ra_result;$/;"	m	struct:RUU_station
+tags:31029:val_rb	context.h	/^    quad_t val_ra, val_rb, val_rc, val_ra_result;$/;"	m	struct:RUU_station
+tags:31030:val_rc	context.h	/^    quad_t val_ra, val_rb, val_rc, val_ra_result;$/;"	m	struct:RUU_station
+tags:31162:waitFor	context.h	/^    int waitFor;$/;"	m	struct:context_t
+tags:31163:waitForBranchResolve	context.h	/^    int waitForBranchResolve;$/;"	m	struct:context_t
+tags:31174:waitForSTLC	context.h	/^    int waitForSTLC;$/;"	m	struct:context_t
+tags:31175:wait_for_fetch	context.h	/^    int wait_for_fetch;$/;"	m	struct:context_t
+tags:31277:wb_mem_ent	context.h	/^struct wb_mem_ent {$/;"	s
+tags:31330:when	context.h	/^    tick_t when;			\/* time stamp of entry (for eventq) *\/$/;"	m	union:RS_link::__anon19
+tags:31331:when	context.h	/^ tick_t when;$/;"	m	struct:RS_list
+tags:31337:when_idep_ready	context.h	/^    unsigned long long when_idep_ready[MAX_IDEPS];$/;"	m	struct:RUU_station
+tags:31338:when_inq	context.h	/^    int when_inq;$/;"	m	struct:RUU_station
+tags:31339:when_ready	context.h	/^    int when_ready[MAX_IDEPS];$/;"	m	struct:RUU_station
+tags:31467:writeAlreadyDone	context.h	/^    int writeAlreadyDone;$/;"	m	struct:wb_mem_ent
+tags:31513:writemiss	context.h	/^    int writemiss;$/;"	m	struct:RUU_station
+tags:31514:writewait	context.h	/^    int writewait;$/;"	m	struct:RUU_station
+tags:31533:wrongCycle	context.h	/^    long long int wrongCycle;$/;"	m	struct:RUU_station
+tags:31554:x	context.h	/^  } x;$/;"	m	struct:RS_link	typeref:union:RS_link::__anon19
+target-alpha/loader.c:112:#include "context.h"
+target-alpha/loader.c:169:  context *current;
+target-alpha/loader.c:218:             int threadid)               /*  context id */
+target-alpha/loader.c:224:  context *current;
+Binary file temperature.o matches
+Binary file tokencoherence.o matches

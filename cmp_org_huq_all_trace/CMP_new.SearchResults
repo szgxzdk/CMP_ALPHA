@@ -1,0 +1,1835 @@
+---- if Matches (2060 in 0 files) ----
+Cache.c: * Everyone is granted permission to copy, modify and redistribute
+Cache.c: *    of this source code, either as received or modified, in any
+Cache.c:	(((tag) << (cp)->tag_shift)|((set) << (cp)->set_shift))
+Cache.c:	((((tag) << (cp)->tag_shift)/BANKS)|((set) << (cp)->set_shift))
+Cache.c:	(((tag) << ((cp)->tag_shift - (log_base2(res_membank)-log_base2(n_cache_limit_thrd[threadid])) ))| \
+Cache.c:	 ((set) << ((cp)->set_shift - (log_base2(res_membank)-log_base2(n_cache_limit_thrd[threadid])) )))
+Cache.c:	if (cmd == Read)							\
+Cache.c:#ifdef CROSSBAR_INTERCONNECT
+Cache.c:#endif
+Cache.c:#ifdef BUS_INTERCONNECT
+Cache.c:#endif
+Cache.c:#ifdef LOCK_CACHE_REGISTER
+Cache.c:struct DIRECTORY_EVENT *lock_fifo[MAXTHREADS][MAXLOCKEVENT];
+Cache.c:int lock_fifo_num[MAXTHREADS];
+Cache.c:int lock_fifo_head[MAXTHREADS];
+Cache.c:int lock_fifo_tail[MAXTHREADS];
+Cache.c:extern counter_t lock_fifo_full;
+Cache.c:extern counter_t lock_fifo_wrong;
+Cache.c:extern counter_t lock_fifo_writeback;
+Cache.c:extern counter_t lock_fifo_benefit;
+Cache.c:#endif
+Cache.c:#ifdef   THRD_WAY_CACHE
+Cache.c:#endif
+Cache.c:#ifdef   THRD_WAY_CACHE
+Cache.c:#endif
+Cache.c:extern counter_t L1_fifo_full;
+Cache.c:extern counter_t last_L1_fifo_full[MAXTHREADS+MESH_SIZE*2];
+Cache.c:extern counter_t Dir_fifo_full;
+Cache.c:extern counter_t last_Dir_fifo_full[MAXTHREADS+MESH_SIZE*2];
+Cache.c:extern counter_t Stall_L1_fifo;
+Cache.c:extern counter_t Stall_dir_fifo;
+Cache.c:#ifdef CONF_RES_RESEND
+Cache.c:#endif
+Cache.c:counter_t total_exclusive_modified;
+Cache.c:#ifdef PREFETCH_OPTI
+Cache.c:counter_t ReadDataReply_CS;			//Data reply for read prefetch update (directory in clean or shared state, but some one modified this data before, see prefetch_invalidate and prefetch_modified)
+Cache.c:counter_t ReadDowngrade_EM;			//Downgrade request is sending out if the directory is in exclusive/modified state, take prefetch update message as a read miss
+Cache.c:counter_t WriteDataReply_C;			//Data reply for write prefetch update (directory in clean state, but someone modified this date before, see prefetch_invalidate and prefetch_modified)
+Cache.c:counter_t WriteInvalidate_SEM;		//Invalidation request is sending out if the directory is in exclusive/modified state, take prefetch update message as a write update
+Cache.c:#endif
+Cache.c:		if (ent == blk)
+Cache.c:	if (!prev)
+Cache.c:	if (!blk->way_prev && !blk->way_next)
+Cache.c:	else if (!blk->way_prev)
+Cache.c:		if (where == Head)
+Cache.c:	else if (!blk->way_next)
+Cache.c:		if (where == Tail)
+Cache.c:	if (where == Head)
+Cache.c:	else if (where == Tail)
+Cache.c:	if (nsets <= 0)
+Cache.c:	if ((nsets & (nsets - 1)) != 0)
+Cache.c:	if (bsize < 8)
+Cache.c:	if ((bsize & (bsize - 1)) != 0)
+Cache.c:	if (usize < 0)
+Cache.c:	if (!blk_access_fn)
+Cache.c:		fatal ("must specify miss/replacement functions");
+Cache.c:	if (!cp)
+Cache.c:	cp->set_shift = log_base2 (bsize);
+Cache.c:	cp->tag_shift = cp->set_shift + log_base2 (nsets);
+Cache.c:	cp->tag_mask = (1 << (32 - cp->tag_shift)) - 1;
+Cache.c:	cp->dir_notification = 0;
+Cache.c:#ifdef	DCACHE_MSHR
+Cache.c:	if((!strcmp (cp->name, "dl1")) || (!strcmp (cp->name, "ul2")))
+Cache.c:		if(!strcmp (cp->name, "dl1"))
+Cache.c:#endif
+Cache.c:	if (!cp->data)
+Cache.c:		/* get a hash table, if needed */
+Cache.c:		if (cp->hsize)
+Cache.c:			if (!cp->sets[i].hash)
+Cache.c:		   chains, if hash table exists */
+Cache.c:#ifdef EUP_NETWORK
+Cache.c:			blk->early_notification = 0;
+Cache.c:#endif
+Cache.c:				if(MSI)
+Cache.c:#ifdef SERIALIZATION_ACK
+Cache.c:#endif
+Cache.c:			blk->epochModified = -1;
+Cache.c:			if (MSI)
+Cache.c:			if (cp->hsize)
+Cache.c:			if (cp->sets[i].way_head)
+Cache.c:			if (!cp->sets[i].way_tail)
+Cache.c:#ifdef EUP_NETWORK
+Cache.c:	for(i=0;i<dir_fifo_num[des];i++)
+Cache.c:		temp = dir_fifo[des][(dir_fifo_head[des] + i)%DIR_FIFO_SIZE];
+Cache.c:		if(temp->src1 == event->src1 && temp->src2 == event->src2 && temp->operation == WRITE_UPDATE && temp->popnetMsgNo < event->popnetMsgNo && (temp->addr>>cache_dl1[0]->set_shift == event->addr>>cache_dl1[0]->set_shift))
+Cache.c:		if(event->operation == MISS_WRITE && temp->operation == WRITE_UPDATE && temp->popnetMsgNo < event->popnetMsgNo && (temp->addr>>cache_dl1[0]->set_shift == event->addr>>cache_dl1[0]->set_shift))
+Cache.c:	int i, j, flag = 0, des = (event->des1-MEM_LOC_SHIFT)*mesh_size + event->des2;
+Cache.c:		if(invCollectTable[des][i].isValid && (invCollectTable[des][i].addr>>cache_dl1[0]->set_shift == event->addr>>cache_dl1[0]->set_shift))
+Cache.c:				if(invCollectTable[des][i].ownersList[j] == event->tempID)
+Cache.c:#endif
+Cache.c:	if(totalEventCount >= maxEvent)
+Cache.c:	temp->isPrefetch = 0;			// if this is a prefetch
+Cache.c:#ifdef EXCLUSIVE_OPT
+Cache.c:#endif
+Cache.c:#ifdef SMD_USE_WRITE_BUF
+Cache.c:#endif
+Cache.c:#ifdef EUP_NETWORK
+Cache.c:#endif
+Cache.c:	temp->operation = 0;                      	// directory operation, writehit update, writemiss search, readmiss search be different
+Cache.c:			return FIFO;
+Cache.c:	fprintf (stream, "cache: %s: %d-way, `%s' replacement policy, write-back\n", cp->name, cp->assoc, cp->policy == LRU ? "LRU" : cp->policy == Random ? "Random" : cp->policy == FIFO ? "FIFO" : (abort (), ""));
+Cache.c:	if (cp->threadid != -1 && cp->threadid != id)
+Cache.c:	if (!cp->name || !cp->name[0])
+Cache.c:	sprintf (buf, "%s.dir_notification", name);
+Cache.c:	stat_reg_counter (sdb, buf, "total number of updating directory", &cp->dir_notification, 0, NULL);
+Cache.c:#ifdef DCACHE_MSHR
+Cache.c:#endif
+Cache.c:#ifdef L1_STREAM_PREFETCHER
+Cache.c:{                               /* This function is called if L2 cache miss is discovered. */
+Cache.c:	if (l1miss_history_table[threadid].mht_num == 0)
+Cache.c:		if (abs (curr_dist) < abs (dist))
+Cache.c:		if (curr_dist == dist)
+Cache.c:	if (l1miss_history_table[threadid].mht_num < MISS_TABLE_SIZE)
+Cache.c:	if (count > 1)
+Cache.c:				       If the table is completely full, use LRU algorithm to evict one entry. */
+Cache.c:		if (l1stream_table[threadid][0].valid == 1)
+Cache.c:				if (l1stream_table[threadid][i].valid == 1)
+Cache.c:					if (last_use < l1stream_table[threadid][i].last_use)
+Cache.c:		if (l1stream_table[threadid][i].valid == 1 && l1stream_table[threadid][i].addr == (addr & ~(cache_dl1[0]->bsize - 1)))
+Cache.c:			if (l1stream_table[threadid][i].remaining_prefetches == 1)
+Cache.c:			if(l1stream_table[threadid][i].stride != 0)
+Cache.c:					if ((blk->tagid.tag == tag) && (blk->status & CACHE_BLK_VALID))
+Cache.c:				if(cache_hit_flag == 0)
+Cache.c:					int src = (addr_prefetch >> cache_dl2->set_shift) % numcontexts;
+Cache.c:					matchnum = MSHR_block_check(cache_dl1[threadid]->mshr, addr_prefetch, cache_dl1[threadid]->set_shift);
+Cache.c:					if(!matchnum && (cache_dl1[threadid]->mshr->freeEntries > 1))
+Cache.c:						if(new_event == NULL)       panic("Out of Virtual Memory");
+Cache.c:#ifdef PREFETCH_OPTI
+Cache.c:#endif
+Cache.c:						new_event->src1 = threadid/mesh_size+MEM_LOC_SHIFT; 
+Cache.c:						/* mem_loc_shift is for memory model because memory controller are allocated at two side of the chip */
+Cache.c:#ifdef CENTRALIZED_L2
+Cache.c:						src = (addr_prefetch >> cache_dl2->set_shift) % CENTL2_BANK_NUM;
+Cache.c:						new_event->des1 = (src /mesh_size)+MEM_LOC_SHIFT;
+Cache.c:#endif
+Cache.c:						if(l1stream_table[threadid][i].remaining_prefetches == PREFETCH_DISTANCE - 1)
+Cache.c:#endif
+Cache.c:#ifdef STREAM_PREFETCHER
+Cache.c:{                               /* This function is called if L2 cache miss is discovered. */
+Cache.c:	if (miss_history_table.mht_num == 0)
+Cache.c:		if (abs (curr_dist) < abs (dist))
+Cache.c:		if (curr_dist == dist)
+Cache.c:	if (miss_history_table.mht_num < MISS_TABLE_SIZE)
+Cache.c:	if (count > 1)
+Cache.c:				       If the table is completely full, use LRU algorithm to evict one entry. */
+Cache.c:		if (stream_table[0].valid == 1)
+Cache.c:				if (stream_table[i].valid == 1)
+Cache.c:					if (last_use < stream_table[i].last_use)
+Cache.c:	if (stream_table[i].valid == 1)
+Cache.c:			if (stream_table[i].remaining_prefetches == 1)
+Cache.c:			if(event == NULL)       panic("Out of Virtual Memory");
+Cache.c:			event->src1 = threadid/mesh_size + MEM_LOC_SHIFT;
+Cache.c:#ifdef CENTRALIZED_L2
+Cache.c:			src = (event->addr >> cache_dl2->set_shift) % CENTL2_BANK_NUM;
+Cache.c:			src = (event->addr >> cache_dl2->set_shift) % numcontexts;
+Cache.c:			event->des1 = (src /mesh_size)+MEM_LOC_SHIFT;
+Cache.c:#endif
+Cache.c:#endif
+Cache.c:#ifdef SERIALIZATION_ACK
+Cache.c:		if(!invCollectTable[threadid][i].isValid)
+Cache.c:	/* first check if there is already an entry for this address */
+Cache.c:		if(invCollectTable[threadid][i].isValid && invCollectTable[threadid][i].addr == addr)
+Cache.c:		if(!invCollectTable[threadid][i].isValid)
+Cache.c:		if(invCollectTable[threadid][i].isValid && invCollectTable[threadid][i].addr == addr)
+Cache.c:			if(invCollectTable[threadid][i].numOwners >= MAX_OWNERS)
+Cache.c:		//if(invCollectTable[threadid][i].isValid && invCollectTable[threadid][i].addr == addr )
+Cache.c:		if(invCollectTable[threadid][i].isValid && invCollectTable[threadid][i].addr == addr && invCollectTable[threadid][i].ownersList[invCollectTable[threadid][i].numOwners - 1] == owner)
+Cache.c:			if(invCollectTable[threadid][i].pendingInv == 0)
+Cache.c:					if(new_event == NULL) 	panic("Out of Virtual Memory");
+Cache.c:					new_event->src1 = threadid/mesh_size+MEM_LOC_SHIFT;
+Cache.c:					new_event->des1 = invCollectTable[threadid][i].ownersList[j]/mesh_size+MEM_LOC_SHIFT;
+Cache.c:					if(invCollectTable[threadid][i].ack_conf[j])
+Cache.c:					if (!mystricmp (network_type, "MESH"))
+Cache.c:#endif
+Cache.c:	if (collect_stats)
+Cache.c:			if ((MD_OP_FLAGS (current->LSQ[cx].op) & (F_MEM | F_LOAD)) == (F_MEM | F_LOAD) && (current->LSQ[cx].addr & mask) == (addr & mask) && !current->LSQ[cx].spec_mode && !current->LSQ[cx].isPrefetch && current->LSQ[cx].issued)
+Cache.c:#ifdef SEQUENTIAL_CONSISTENCY
+Cache.c:#endif
+Cache.c:#ifdef RELAXED_CONSISTENCY
+Cache.c:#endif
+Cache.c:/*		DIR FIFO IMPLEMENTATION			*/
+Cache.c:		dir_fifo_portuse[i] = 0;
+Cache.c:		l1_fifo_portuse[i] = 0;
+Cache.c:#ifdef TSHR
+Cache.c:		tshr_fifo_portuse[i] = 0;
+Cache.c:#endif
+Cache.c:#ifdef LOCK_CACHE_REGISTER
+Cache.c:{ /* update the lock register if necessary */
+Cache.c:	int threadid = (event->src1-MEM_LOC_SHIFT)*mesh_size + event->src2;
+Cache.c:	if(LockReg->SubScribeVect == 0 && LockReg->lock_owner == 0)
+Cache.c:	else if((event->addr & ~(cache_dl1[0]->bsize - 1)) == LockReg->tag)  /*Someone has already update the lock register*/
+Cache.c:	int threadid = (event->des1-MEM_LOC_SHIFT)*mesh_size + event->des2;
+Cache.c:	if(event->store_cond == MY_STL_C || event->store_cond == MY_LDL_L)
+Cache.c:		if(event->operation == INV_MSG_UPDATE)
+Cache.c:			if(event->addr == common_regs_s[thecontexts[threadid]->masterid][threadid].address && common_regs_s[thecontexts[threadid]->masterid][threadid].regs_lock)
+Cache.c:				if(lock_fifo_num[threadid] >= MAXLOCKEVENT)
+Cache.c:					lock_fifo_full ++;
+Cache.c:				lock_fifo[threadid][lock_fifo_tail[threadid]] = event;
+Cache.c:				lock_fifo_num[threadid] ++;
+Cache.c:				lock_fifo_tail[threadid] = (lock_fifo_tail[threadid] + 1 + MAXLOCKEVENT) % MAXLOCKEVENT;
+Cache.c:		if(((event->addr & ~(cache_dl1[0]->bsize - 1)) == Lock_cache[threadid].tag))
+Cache.c:			if(lock_fifo_num[threadid] >= MAXLOCKEVENT)
+Cache.c:				lock_fifo_full ++;
+Cache.c:			lock_fifo[threadid][lock_fifo_tail[threadid]] = event;
+Cache.c:			lock_fifo_num[threadid] ++;
+Cache.c:			lock_fifo_tail[threadid] = (lock_fifo_tail[threadid] + 1 + MAXLOCKEVENT) % MAXLOCKEVENT;
+Cache.c:	int threadid = (event->des1-MEM_LOC_SHIFT)*mesh_size + event->des2;
+Cache.c:			if((event->addr & ~(cache_dl1[0]->bsize - 1)) == LockReg->tag)
+Cache.c:			if(event->operation == INV_MSG_UPDATE)
+Cache.c:				if(event->addr == common_regs_s[thecontexts[threadid]->masterid][threadid].address && common_regs_s[thecontexts[threadid]->masterid][threadid].regs_lock)
+Cache.c:					/*fail the store conditional if there is one */
+Cache.c:						if(cache_dl1[threadid]->mshr->mshrEntry[i].isValid 
+Cache.c:								&& ((cache_dl1[threadid]->mshr->mshrEntry[i].addr >> cache_dl1[threadid]->set_shift) == (event->addr >> cache_dl1[threadid]->set_shift))) 
+Cache.c:							if(!event->spec_mode && cache_dl1[threadid]->mshr->mshrEntry[i].event->rs)
+Cache.c:#ifdef SMD_USE_WRITE_BUF
+Cache.c:							else if(event->l1_wb_entry)
+Cache.c:#endif
+Cache.c:			else if(event->operation == MISS_WRITE || event->operation == WRITE_UPDATE)
+Cache.c:				if((event->addr & ~(cache_dl1[0]->bsize - 1)) == Lock_cache[threadid].tag)
+Cache.c:					if(LockReg->lock_owner != 0 && LockReg->lock_owner != event->tempID+1) /*Someone has already have the lock, this store conditional fail*/
+Cache.c:						if(LockReg->lock_owner == 0)
+Cache.c:						else if(LockReg->lock_owner == 1+event->tempID)
+Cache.c:							if((((LockReg->SubScribeVect) & ((unsigned long long int)1 << (Threadid%64))) == ((unsigned long long int)1 << (Threadid%64))) && (Threadid != event->tempID))
+Cache.c:								if(new_event == NULL) 	panic("Out of Virtual Memory");
+Cache.c:								new_event->src1 = threadid/mesh_size+MEM_LOC_SHIFT;
+Cache.c:								new_event->des1 = Threadid/mesh_size+MEM_LOC_SHIFT;
+Cache.c:								if(!mystricmp(network_type, "FSOI") || (!mystricmp(network_type, "HYBRID")))
+Cache.c:#ifdef INV_ACK_CON
+Cache.c:									if(Is_Shared(LockReg->SubScribeVect, tempID) > 1) 
+Cache.c:										if((new_event->src1*mesh_size+new_event->src2 != new_event->des1*mesh_size+new_event->des2) && ((!mystricmp(network_type, "FSOI")) || (!mystricmp(network_type, "HYBRID") && ((abs(new_event->src1 - new_event->des1) + abs(new_event->src2 - new_event->des2)) > 1))))
+Cache.c:											if(new_event2 == NULL)       panic("Out of Virtual Memory");
+Cache.c:											if(collect_stats)
+Cache.c:#endif
+Cache.c:				if((event->addr & ~(cache_dl1[0]->bsize - 1)) == Lock_cache[threadid].tag)
+Cache.c:					thecontexts[(event->des1-MEM_LOC_SHIFT)*mesh_size+event->des2]->dcache2_access++;
+Cache.c:					if((event->parent)->childCount == 0)
+Cache.c:						parent_event->des1 = parent_event->tempID/mesh_size+MEM_LOC_SHIFT;
+Cache.c:#endif
+Cache.c:int dir_fifo_enqueue(struct DIRECTORY_EVENT *event, int type)
+Cache.c:	if(event->operation == INV_MSG_READ || event->operation == INV_MSG_WRITE || event->operation == ACK_DIR_IL1 || event->operation == ACK_DIR_READ_SHARED || event->operation == ACK_DIR_READ_EXCLUSIVE || event->operation == ACK_DIR_WRITE || event->operation == ACK_DIR_WRITEUPDATE || event->operation == FINAL_INV_ACK || event->operation == NACK || event->operation == FAIL
+Cache.c:#ifdef WRITE_EARLY
+Cache.c:#endif
+Cache.c:#ifdef PREFETCH_OPTI
+Cache.c:#endif
+Cache.c:#ifdef LOCK_CACHE_REGISTER
+Cache.c:		if(event->operation == INV_MSG_UPDATE)
+Cache.c:			if(lock_cache_access(event))
+Cache.c:#endif
+Cache.c:		if(l1_fifo_num[threadid] >= DIR_FIFO_SIZE)
+Cache.c:			panic("L1 cache FIFO is full");
+Cache.c:		if(type == 0 && l1_fifo_num[threadid] >= dir_fifo_size)
+Cache.c:			if(l1_fifo_num[threadid] >= dir_fifo_size && !last_L1_fifo_full[threadid])
+Cache.c:				L1_fifo_full ++;
+Cache.c:				last_L1_fifo_full[threadid] = sim_cycle;
+Cache.c:		if(last_L1_fifo_full[threadid])
+Cache.c:			Stall_L1_fifo += sim_cycle - last_L1_fifo_full[threadid];
+Cache.c:			last_L1_fifo_full[threadid] = 0;
+Cache.c:		if(event->operation == ACK_DIR_IL1)	event->when = sim_cycle + cache_il1_lat;
+Cache.c:		l1_fifo[threadid][l1_fifo_tail[threadid]] = event;
+Cache.c:		l1_fifo_tail[threadid] = (l1_fifo_tail[threadid]+1)%DIR_FIFO_SIZE;
+Cache.c:		l1_fifo_num[threadid]++;
+Cache.c:#ifdef LOCK_CACHE_REGISTER
+Cache.c:		if(event->operation == MISS_READ || event->operation == MISS_WRITE || event->operation == WRITE_UPDATE || event->operation == ACK_MSG_UPDATE)
+Cache.c:			if(lock_cache_access(event))
+Cache.c:#endif
+Cache.c:#ifdef TSHR
+Cache.c:		if(event->flip_flag)
+Cache.c:			tshr_fifo[threadid][tshr_fifo_tail[threadid]] = event;
+Cache.c:			tshr_fifo_tail[threadid] = (tshr_fifo_tail[threadid]+1)%TSHR_FIFO_SIZE;
+Cache.c:			tshr_fifo_num[threadid]++;
+Cache.c:#endif
+Cache.c:		if(dir_fifo_num[threadid] >= DIR_FIFO_SIZE)
+Cache.c:			panic("DIR FIFO is full");
+Cache.c:		if(type == 0 && dir_fifo_num[threadid] >= dir_fifo_size)
+Cache.c:			if(dir_fifo_num[threadid] >= dir_fifo_size && !last_Dir_fifo_full[threadid])
+Cache.c:				Dir_fifo_full ++;
+Cache.c:				last_Dir_fifo_full[threadid] = sim_cycle;
+Cache.c:		if(last_Dir_fifo_full[threadid])
+Cache.c:			Stall_dir_fifo += sim_cycle - last_Dir_fifo_full[threadid];
+Cache.c:			last_Dir_fifo_full[threadid] = 0;
+Cache.c:		if(event->operation != MEM_READ_REQ && event->operation != MEM_READ_REPLY && event->operation != WAIT_MEM_READ_NBLK)
+Cache.c:		dir_fifo[threadid][dir_fifo_tail[threadid]] = event;
+Cache.c:		dir_fifo_tail[threadid] = (dir_fifo_tail[threadid]+1)%DIR_FIFO_SIZE;
+Cache.c:		dir_fifo_num[threadid]++;
+Cache.c:void dir_fifo_dequeue()
+Cache.c:#ifdef LOCK_CACHE_REGISTER
+Cache.c:		if(lock_fifo_num[i])
+Cache.c:				if(lock_cache_operation(lock_fifo[i][lock_fifo_head[i]])) /* 1 means it's a lock cache access */
+Cache.c:					lock_fifo_num[i] --;
+Cache.c:					lock_fifo_benefit ++;
+Cache.c:					lock_fifo_head[i] = (lock_fifo_head[i]+1+MAXLOCKEVENT)%MAXLOCKEVENT;
+Cache.c:				if(lock_fifo_num[i] == 0)
+Cache.c:#endif
+Cache.c:#ifdef TSHR
+Cache.c:		if(tshr_fifo_num[i] <= 0 || tshr_fifo_portuse[i] >= DIR_FIFO_PORTS)
+Cache.c:			if(tshr_fifo[i][tshr_fifo_head[i]]->when > sim_cycle)
+Cache.c:			if(dir_operation(tshr_fifo[i][tshr_fifo_head[i]], 0) == 0) /* 0 means it's a normal cache access */
+Cache.c:			tshr_fifo_portuse[i]++;
+Cache.c:			tshr_fifo_head[i] = (tshr_fifo_head[i]+1)%TSHR_FIFO_SIZE;
+Cache.c:			tshr_fifo_num[i]--;
+Cache.c:			if(tshr_fifo_portuse[i] >= DIR_FIFO_PORTS || tshr_fifo_num[i] <= 0)
+Cache.c:#endif
+Cache.c:		if(dir_fifo_num[i] <= 0 || dir_fifo_portuse[i] >= DIR_FIFO_PORTS)
+Cache.c:			if(dir_fifo[i][dir_fifo_head[i]]->when > sim_cycle)
+Cache.c:			if(dir_operation(dir_fifo[i][dir_fifo_head[i]], 0) == 0) /* 0 means it's a normal cache access */
+Cache.c:			dir_fifo_portuse[i]++;
+Cache.c:			dir_fifo_head[i] = (dir_fifo_head[i]+1)%DIR_FIFO_SIZE;
+Cache.c:			dir_fifo_num[i]--;
+Cache.c:			if(dir_fifo_portuse[i] >= DIR_FIFO_PORTS || dir_fifo_num[i] <= 0)
+Cache.c:		if(l1_fifo_num[i] <= 0 || l1_fifo_portuse[i] >= DIR_FIFO_PORTS)
+Cache.c:			if(l1_fifo[i][l1_fifo_head[i]]->when > sim_cycle)
+Cache.c:			if(dir_operation(l1_fifo[i][l1_fifo_head[i]], 0) == 0)
+Cache.c:			l1_fifo_portuse[i]++;
+Cache.c:			l1_fifo_head[i] = (l1_fifo_head[i]+1)%DIR_FIFO_SIZE;
+Cache.c:			l1_fifo_num[i]--;
+Cache.c:			if(l1_fifo_portuse[i] >= DIR_FIFO_PORTS || l1_fifo_num[i] <= 0)
+Cache.c:/*		DIR FIFO IMPLEMENTATION ENDS		*/
+Cache.c:	if (prev)
+Cache.c:#ifdef CONF_RES_RESEND
+Cache.c:	if(queue->free_Entries == 0)
+Cache.c:		if(!queue->Queue_entry[i].isvalid)
+Cache.c:	if(!queue) return;
+Cache.c:		if(queue->Queue_entry[i].isvalid && (queue->Queue_entry[i].event->addr == event->addr) && (queue->Queue_entry[i].event->started == event->started) 
+Cache.c:	if(queue->free_Entries > QUEUE_SIZE)
+Cache.c:	if(!queue) return 0;
+Cache.c:		if(queue->Queue_entry[i].isvalid && (queue->Queue_entry[i].event->addr == event->addr) && (queue->Queue_entry[i].event->started == event->started)
+Cache.c:#endif
+Cache.c:	if(rs == NULL || event_queue == NULL)
+Cache.c:		if((ev->rs == rs) && (ev->tag == rs->tag))
+Cache.c:	if ((ev->rs == rs) && (ev->tag == rs->tag))                     //mwr: FIXED = to ==
+Cache.c:		if (prev)
+Cache.c:		if (prev)
+Cache.c:#ifdef TSHRn
+Cache.c:	if(tshr->freeEntries == 0)
+Cache.c:		if(!tshr->mshrEntry[i].isValid)
+Cache.c:		if(tshr->mshrEntry[i].isValid && (tshr->tshrEntry[i].pending_addr == (wakeup_addr & ~cache_dl2->bsize)))
+Cache.c:			if(dir_operation(tshr->tshrEntry[i].event))
+Cache.c:#endif
+Cache.c:#ifdef DCACHE_MSHR
+Cache.c:	if(!mshr) return;
+Cache.c:	if(flag == 1)
+Cache.c:#ifdef 	EDA
+Cache.c:#endif
+Cache.c:#ifdef	EDA
+Cache.c:#endif
+Cache.c:	if(!mshr) return 0;
+Cache.c:	if(mshr->freeEntries == 0 && !last_L1_mshr_full[id])
+Cache.c:		if(last_L1_mshr_full[id])
+Cache.c:	if(!mshr) return;
+Cache.c:		if(mshr->mshrEntry[i].isValid && mshr->mshrEntry[i].endCycle <= sim_cycle)
+Cache.c:				if(cur->rs && ((cur->rs->addr)>>cache_dl1[mshr->threadid]->set_shift) != (mshr->mshrEntry[i].addr>>cache_dl1[mshr->threadid]->set_shift))
+Cache.c:	if (mshr->freeEntries > MSHR_SIZE)
+Cache.c:	if(!mshr) return;
+Cache.c:		if(mshr->mshrEntry[i].isValid && mshr->mshrEntry[i].endCycle <= sim_cycle)
+Cache.c:	if (mshr->freeEntries > L2_MSHR_SIZE)
+Cache.c:		if(mshr->mshrEntry[i].isValid)
+Cache.c:			if(((mshr->mshrEntry[i].addr>>offset) == (addr>>offset)))
+Cache.c:				if(match != 0) 	panic("MSHR: a miss address belongs to more than two MSHR Entries");
+Cache.c:/* per cache line MSHR lookup. Insert if there is hit */
+Cache.c:	if(!mshr) return;
+Cache.c:	if(lat < cache_dl1_lat)
+Cache.c:	if(rs && rs->threadid != mshr->threadid)
+Cache.c:	if(mshr->freeEntries == 0)
+Cache.c:		if(!mshr->mshrEntry[i].isValid)
+Cache.c:	if(!cache_dl1[threadid]->mshr)
+Cache.c:		if(cache_dl1[threadid]->mshr->mshrEntry[i].isValid 
+Cache.c:				&& ((cache_dl1[threadid]->mshr->mshrEntry[i].addr >> cache_dl1[threadid]->set_shift) == (event->addr >> cache_dl1[threadid]->set_shift))) 
+Cache.c:#ifndef EUP_NETWORK
+Cache.c:			if(cache_dl1[threadid]->mshr->mshrEntry[i].startCycle != startcycle)
+Cache.c:#endif
+Cache.c:#ifdef READ_PERMIT
+Cache.c:	if(!cache_dl1[threadid]->mshr)
+Cache.c:		if(cache_dl1[threadid]->mshr->mshrEntry[i].isValid 
+Cache.c:				&& ((cache_dl1[threadid]->mshr->mshrEntry[i].addr >> cache_dl1[threadid]->set_shift) == (addr >> cache_dl1[threadid]->set_shift))) 
+Cache.c:#endif
+Cache.c:#endif
+Cache.c:	if((src1*mesh_size+src2)==(des1*mesh_size+des2))
+Cache.c:		if((findblk->tagid.tag == tag)  && (findblk->status & CACHE_BLK_VALID)
+Cache.c:#if PROCESS_MODEL
+Cache.c:#endif
+Cache.c:		if((((sharer[count/64]) & ((unsigned long long int)1 << (count%64))) == ((unsigned long long int)1 << (count%64)))) // && (count != threadid))
+Cache.c:	if(counter)
+Cache.c:		if((((sharer[count/64]) & ((unsigned long long int)1 << (count%64))) == ((unsigned long long int)1 << (count%64))))// && (count != threadid))
+Cache.c:	if(counter == 1)
+Cache.c:		if((((sharer[count/64]) & ((unsigned long long int)1 << (count%64))) == ((unsigned long long int)1 << (count%64))) && (count != threadid))
+Cache.c:	if(counter)
+Cache.c:		if((((sharer[count/64]) & ((unsigned long long int)1 << (count%64))) == ((unsigned long long int)1 << (count%64))) && (count != threadid))
+Cache.c:	if(counter == 1)
+Cache.c:/* L2 FIFO queue*/
+Cache.c:	if(entry < 1 || entry > L2_MSHR_SIZE) 	panic("L2 MSHR insertion error");
+Cache.c:	if(event_list[entry] && ((event->addr >> cache_dl2->set_shift) != (event_list[entry]->addr >> cache_dl2->set_shift)))
+Cache.c:	if(sim_cycle == cache_dl2->mshr->mshrEntry[entry].endCycle)
+Cache.c:	if(!cache_dl2->mshr)
+Cache.c:		if(cache_dl2->mshr->mshrEntry[i].isValid
+Cache.c:			if(cache_dl2->mshr->mshrEntry[i].startCycle != startcycle)
+Cache.c:			if(cache_dl2->mshr->mshrEntry[i].blocknum < 2)
+Cache.c:				if(((cur->addr)>>cache_dl2->set_shift) != ((cache_dl2->mshr->mshrEntry[i].addr>>cache_dl2->set_shift)))
+Cache.c:		if((((sharer) & ((unsigned long long int)1 << count)) == ((unsigned long long int)1 << count)) && (count != threadid))
+Cache.c:				if ((blk1->tagid.tag == tag) && (blk1->status & CACHE_BLK_VALID))
+Cache.c:					if(blk1->state == MESI_MODIFIED)
+Cache.c:			if(abs(threadid - count) == 3 || abs(threadid - count) == 5)
+Cache.c:				if(data_flag == 1)
+Cache.c:			if(abs(threadid - count) == 1 || abs(threadid - count) == 4)	
+Cache.c:				if(data_flag == 1)
+Cache.c:				if(data_flag == 1)
+Cache.c:	//	if(total_data_sharer > 1)
+Cache.c:	//		panic("Neighborhood Check: can not have two modified suppliser!");
+Cache.c:	if((corner + close) == total_sharer)
+Cache.c:	if(close == total_sharer)
+Cache.c:		if((((sharer) & ((unsigned long long int)1 << count)) == ((unsigned long long int)1 << count)) && (count != threadid))
+Cache.c:			if(abs(threadid - count) == 3 || abs(threadid - count) == 5)
+Cache.c:			if(abs(threadid - count) == 1 || abs(threadid - count) == 4)	
+Cache.c:	bofs = bofs >> cache_dl1[0]->set_shift;
+Cache.c:	if(new_event == NULL)       panic("Out of Virtual Memory");
+Cache.c:#ifdef SMD_USE_WRITE_BUF
+Cache.c:#endif
+Cache.c:	if((event->des1-MEM_LOC_SHIFT)/(mesh_size/2))
+Cache.c:#ifdef POPNET
+Cache.c:	if(OrderBufferNum[src] >= MAXSIZE)
+Cache.c:		if(!OrderBuffer[src][i].valid)
+Cache.c:		if(OrderBuffer[src][i].valid && OrderBuffer[src][i].addr == addr && OrderBuffer[src][i].des == des && OrderBuffer[src][i].msgno == msgno)	
+Cache.c:#ifdef MULTI_VC
+Cache.c:		if(OrderBuffer[src][i].valid && OrderBuffer[src][i].addr == addr && OrderBuffer[src][i].des == des)	
+Cache.c:#endif
+Cache.c:#endif
+Cache.c:	if(time < 0)
+Cache.c:	if(time <5)
+Cache.c:	else if(time <10)
+Cache.c:	else if(time <20)
+Cache.c:	else if(time <30)
+Cache.c:	if(type == 1)
+Cache.c:	struct cache_blk_t *blk;	//block in cache L2 if there is a L2 hit
+Cache.c:	//if(set_dir == 921 && tag_dir == 40960 && block_offset == 0)
+Cache.c:	if(!(event->operation == ACK_DIR_IL1 || event->operation == ACK_DIR_READ_SHARED || event->operation == ACK_DIR_READ_EXCLUSIVE || event->operation == ACK_DIR_WRITE || event->operation == ACK_DIR_WRITEUPDATE
+Cache.c:#ifdef PREFETCH_OPTI
+Cache.c:#endif
+Cache.c:		if(!mystricmp (network_type, "FSOI") || !(mystricmp (network_type, "HYBRID")))
+Cache.c:		else if(!mystricmp (network_type, "MESH"))
+Cache.c:			if(!(event->operation == ACK_DIR_IL1 || event->operation == ACK_DIR_READ_SHARED || event->operation == ACK_DIR_READ_EXCLUSIVE || event->operation == ACK_DIR_WRITE || event->operation == ACK_DIR_WRITEUPDATE || event->operation == FINAL_INV_ACK || event->operation == MEM_READ_REQ || event->operation == MEM_READ_REPLY || event->operation == WAIT_MEM_READ_NBLK || (event->des1 == event->src1 && event->des2 == event->src2)
+Cache.c:#ifdef PREFETCH_OPTI
+Cache.c:#endif
+Cache.c:		else if(!mystricmp (network_type, "COMB"))
+Cache.c:		if(buffer_full_flag)
+Cache.c:			if(!last_Input_queue_full[event->des1*mesh_size+event->des2])
+Cache.c:			if(last_Input_queue_full[event->des1*mesh_size+event->des2])
+Cache.c:#ifdef REAL_LOCK
+Cache.c:			if(!event->spec_mode && event->rs)
+Cache.c:#ifdef SMD_USE_WRITE_BUF
+Cache.c:			else if(event->l1_wb_entry)
+Cache.c:#endif
+Cache.c:#endif
+Cache.c:			/* this is the nack sending from L2 because of the dir_fifo full */
+Cache.c:			if(event->prefetch_next == 2 || event->prefetch_next == 4)
+Cache.c:			else if(event->isSyncAccess)
+Cache.c:			else if(event->operation == MISS_WRITE)
+Cache.c:			if(collect_stats)
+Cache.c:					if(i==0)
+Cache.c:			if(findCacheStatus(cp_dir, set_dir, tag_dir, hindex_dir, &blk))
+Cache.c:				matchnum = MSHR_block_check(cache_dl2->mshr, event->addr, cache_dl2->set_shift);
+Cache.c:				if(!matchnum && !md_text_addr(event->addr, tempID))
+Cache.c:					if(!cache_dl2->mshr->freeEntries)
+Cache.c:			thecontexts[(event->des1-MEM_LOC_SHIFT)*mesh_size+event->des2]->dcache2_access++;
+Cache.c:			if(findCacheStatus(cp_dir, set_dir, tag_dir, hindex_dir, &blk))
+Cache.c:				if (blk->way_prev && cp_dir->policy == LRU)
+Cache.c:				if(blk->dir_state[block_offset] == DIR_TRANSITION)
+Cache.c:				if(blk->dir_sharer[block_offset][0] != 0 || blk->dir_sharer[block_offset][1] != 0 || blk->dir_sharer[block_offset][2] != 0 || blk->dir_sharer[block_offset][3] != 0 || /*blk->state != MESI_SHARED ||*/ (blk->status & CACHE_BLK_DIRTY))
+Cache.c:					panic("DIR: IL1 block can not have sharers list or modified");
+Cache.c:				if(collect_stats)
+Cache.c:				matchnum = MSHR_block_check(cache_dl2->mshr, event->addr, cache_dl2->set_shift);
+Cache.c:				if(!matchnum)
+Cache.c:#ifdef DIR_FIFO_FULL
+Cache.c:					if(!cache_dl2->mshr->freeEntries)
+Cache.c:						if(!last_L2_mshr_full)
+Cache.c:#ifdef TSHR
+Cache.c:					if(tshr_fifo_num[event->des1*mesh_size+event->des2] >= tshr_fifo_size)
+Cache.c:						if(dir_fifo_full[event->des1*mesh_size+event->des2] >= dir_fifo_size)
+Cache.c:#endif
+Cache.c:						{ /* indicate that dir fifo is full, so send the NACK to the requester to resend later */
+Cache.c:							dir_fifo_full[event->des1*mesh_size+event->des2] = dir_fifo_full[event->des1*mesh_size+event->des2] - 4;
+Cache.c:							//dir_fifo_nack[event->des1*mesh_size+event->des2]
+Cache.c:							dir_fifo_full[event->des1*mesh_size+event->des2] ++;
+Cache.c:						dir_fifo_full[event->des1*mesh_size+event->des2] = 0;
+Cache.c:						if(last_L2_mshr_full)
+Cache.c:					if(!cache_dl2->mshr->freeEntries)
+Cache.c:#endif
+Cache.c:					if(collect_stats)
+Cache.c:					if(collect_stats)
+Cache.c:#ifdef PREFETCH_OPTI
+Cache.c:			thecontexts[(event->des1-MEM_LOC_SHIFT)*mesh_size+event->des2]->dcache2_access++;
+Cache.c:			if(event->reqNetTime == 0)
+Cache.c:			if(findCacheStatus(cp_dir, set_dir, tag_dir, hindex_dir, &blk))
+Cache.c:				if (blk->way_prev && cp_dir->policy == LRU)
+Cache.c:				blk->dir_prefetch[block_offset][tempID] = 1; //dir_prefetch indicate if the processor prefetch this block before
+Cache.c:				matchnum = MSHR_block_check(cache_dl2->mshr, event->addr, cache_dl2->set_shift);
+Cache.c:				if(event->isSyncAccess)
+Cache.c:				if(!matchnum)
+Cache.c:#ifdef DIR_FIFO_FULL
+Cache.c:					if(!cache_dl2->mshr->freeEntries)
+Cache.c:						if(!last_L2_mshr_full)
+Cache.c:#ifdef TSHR
+Cache.c:					if(tshr_fifo_num[event->des1*mesh_size+event->des2] >= tshr_fifo_size)
+Cache.c:						if(dir_fifo_full[event->des1*mesh_size+event->des2] >= dir_fifo_size)
+Cache.c:#endif
+Cache.c:						{ /* indicate that dir fifo is full, so send the NACK to the requester to resend later */
+Cache.c:							dir_fifo_full[event->des1*mesh_size+event->des2] = dir_fifo_full[event->des1*mesh_size+event->des2] - 4;
+Cache.c:							//dir_fifo_nack[event->des1*mesh_size+event->des2]
+Cache.c:							dir_fifo_full[event->des1*mesh_size+event->des2] ++;
+Cache.c:						dir_fifo_full[event->des1*mesh_size+event->des2] = 0;
+Cache.c:						if(last_L2_mshr_full)
+Cache.c:					if(!cache_dl2->mshr->freeEntries)
+Cache.c:#endif
+Cache.c:					if(collect_stats)
+Cache.c:					if(collect_stats)
+Cache.c:			thecontexts[(event->des1-MEM_LOC_SHIFT)*mesh_size+event->des2]->dcache2_access++;
+Cache.c:			if(findCacheStatus(cp_dir, set_dir, tag_dir, hindex_dir, &blk))
+Cache.c:				if (blk->way_prev && cp_dir->policy == LRU)
+Cache.c:#ifdef DIR_FIFO_FULL
+Cache.c:				if(blk->dir_state[block_offset] == DIR_TRANSITION 
+Cache.c:#ifdef READ_PERMIT
+Cache.c:#endif
+Cache.c:#ifdef TSHR
+Cache.c:					if(tshr_fifo_num[event->des1*mesh_size+event->des2] >= tshr_fifo_size)
+Cache.c:					if(dir_fifo_full[event->des1*mesh_size+event->des2] >= dir_fifo_size)
+Cache.c:#endif
+Cache.c:					{ /* indicate that dir fifo is full, so send the NACK to the requester to resend later */
+Cache.c:						dir_fifo_full[event->des1*mesh_size+event->des2] = dir_fifo_full[event->des1*mesh_size+event->des2] - 4;
+Cache.c:						//dir_fifo_nack[event->des1*mesh_size+event->des2]
+Cache.c:						if(collect_stats)
+Cache.c:						dir_fifo_full[event->des1*mesh_size+event->des2] ++;
+Cache.c:						if(collect_stats)
+Cache.c:					dir_fifo_full[event->des1*mesh_size+event->des2] = 0;
+Cache.c:				if(blk->dir_state[block_offset] == DIR_TRANSITION) 
+Cache.c:					if(collect_stats)
+Cache.c:#endif			    
+Cache.c:				if((!IsExclusiveOrDirty(blk->dir_sharer[block_offset], tempID, &Threadid)) && (blk->dir_dirty[block_offset] != -1))
+Cache.c:#ifdef L1_STREAM_PREFETCHER
+Cache.c:					if(event->prefetch_next == 4)
+Cache.c:						dir_fifo_full[event->des1*mesh_size+event->des2] ++;
+Cache.c:#endif
+Cache.c:				if(blk->dir_prefetch[block_offset][tempID]) //prefetch bit reset case 3
+Cache.c:					if(blk->dir_prefetch_num[block_offset] < 0)
+Cache.c:				if(collect_stats)
+Cache.c:				/* Find if director is in modified/exclusive state */
+Cache.c:				if(IsExclusiveOrDirty(blk->dir_sharer[block_offset], tempID, &Threadid) && blk->dir_blk_state[block_offset] != MESI_SHARED)
+Cache.c:					if(new_event == NULL)       panic("Out of Virtual Memory");
+Cache.c:					new_event->des1 = Threadid/mesh_size+MEM_LOC_SHIFT;
+Cache.c:#ifdef COHERENCE_MODIFIED
+Cache.c:#ifdef INV_ACK_CON
+Cache.c:					if(blk->dir_blk_state[block_offset] == MESI_EXCLUSIVE)
+Cache.c:						if((new_event->src1*mesh_size+new_event->src2 != new_event->des1*mesh_size+new_event->des2) && ((!mystricmp(network_type, "FSOI")) || (!mystricmp(network_type, "HYBRID") && ((abs(new_event->src1 - new_event->des1) + abs(new_event->src2 - new_event->des2)) > 1))))
+Cache.c:#if 0
+Cache.c:							if(new_event2 == NULL)       panic("Out of Virtual Memory");
+Cache.c:							if(collect_stats)
+Cache.c:#endif
+Cache.c:#endif
+Cache.c:#endif
+Cache.c:					if(event->rs)
+Cache.c:						if(event->rs->op == LDL_L)
+Cache.c:#ifdef COHERENCE_MODIFIED
+Cache.c:					if(!exclusive_clean) //indicate this msg is downgrade msg for a clean copy
+Cache.c:#endif
+Cache.c:				if(collect_stats)
+Cache.c:				if(blk->prefetch_modified[block_offset] || blk->prefetch_invalidate[block_offset])
+Cache.c:					if(IsShared(blk->dir_sharer[block_offset], tempID))
+Cache.c:					if(IsShared(blk->dir_sharer[block_offset], tempID))
+Cache.c:				if(!md_text_addr(addr, tempID))
+Cache.c:				if(blk->dir_prefetch_num[block_offset] == 0)
+Cache.c:					blk->prefetch_modified[block_offset] = 0;
+Cache.c:#ifdef LOCK_CACHE_REGISTER
+Cache.c:				/* update the lock register if necessary */
+Cache.c:				if(event->store_cond == MY_LDL_L) // && (bool_value)) //FIXME: check the value if bool or not
+Cache.c:#endif				
+Cache.c:				matchnum = MSHR_block_check(cache_dl2->mshr, event->addr, cache_dl2->set_shift);
+Cache.c:				if(event->isSyncAccess)
+Cache.c:				if(!matchnum)
+Cache.c:#ifdef DIR_FIFO_FULL
+Cache.c:					if(!cache_dl2->mshr->freeEntries)
+Cache.c:						if(!last_L2_mshr_full)
+Cache.c:#ifdef TSHR
+Cache.c:					if(tshr_fifo_num[event->des1*mesh_size+event->des2] >= tshr_fifo_size)
+Cache.c:						if(dir_fifo_full[event->des1*mesh_size+event->des2] >= dir_fifo_size)
+Cache.c:#endif
+Cache.c:						{ /* indicate that dir fifo is full, so send the NACK to the requester to resend later */
+Cache.c:							dir_fifo_full[event->des1*mesh_size+event->des2] = dir_fifo_full[event->des1*mesh_size+event->des2] - 4;
+Cache.c:							//dir_fifo_nack[event->des1*mesh_size+event->des2]
+Cache.c:							dir_fifo_full[event->des1*mesh_size+event->des2] ++;
+Cache.c:						dir_fifo_full[event->des1*mesh_size+event->des2] = 0;
+Cache.c:						if(last_L2_mshr_full)
+Cache.c:					if(!cache_dl2->mshr->freeEntries)
+Cache.c:#endif
+Cache.c:					if(collect_stats)
+Cache.c:					if(collect_stats)
+Cache.c:			thecontexts[(event->des1-MEM_LOC_SHIFT)*mesh_size+event->des2]->dcache2_access++;
+Cache.c:			if(md_text_addr(addr, tempID))
+Cache.c:			if(findCacheStatus(cp_dir, set_dir, tag_dir, hindex_dir, &blk))
+Cache.c:				int currentThreadId = (event->des1-MEM_LOC_SHIFT)*mesh_size + event->des2;
+Cache.c:				if(event->L2miss_flag && event->L2miss_stated)
+Cache.c:				if (blk->way_prev && cp_dir->policy == LRU)
+Cache.c:#ifdef REAL_LOCK
+Cache.c:				if(blk->dir_state[block_offset] == DIR_TRANSITION || (blk->dir_state[block_offset] == DIR_STABLE && blk->dir_dirty[block_offset] != -1 && blk->dir_dirty[block_offset] != tempID)
+Cache.c:#ifdef SERIALIZATION_ACK
+Cache.c:#endif
+Cache.c:					if(event->store_cond == MY_STL_C)
+Cache.c:						if(collect_stats)
+Cache.c:#endif
+Cache.c:#ifdef DIR_FIFO_FULL
+Cache.c:				if(blk->dir_state[block_offset] == DIR_TRANSITION
+Cache.c:#ifdef SERIALIZATION_ACK
+Cache.c:#endif
+Cache.c:#ifdef TSHR
+Cache.c:					if(tshr_fifo_num[event->des1*mesh_size+event->des2] >= tshr_fifo_size)
+Cache.c:					if(dir_fifo_full[event->des1*mesh_size+event->des2] >= dir_fifo_size)
+Cache.c:#endif
+Cache.c:					{ /* indicate that dir fifo is full, so send the NACK to the requester to resend later */
+Cache.c:						dir_fifo_full[event->des1*mesh_size+event->des2] = dir_fifo_full[event->des1*mesh_size+event->des2] - 4;
+Cache.c:						if(collect_stats)
+Cache.c:						dir_fifo_full[event->des1*mesh_size+event->des2] ++;
+Cache.c:						if(collect_stats)
+Cache.c:					dir_fifo_full[event->des1*mesh_size+event->des2] = 0;
+Cache.c:				if(blk->dir_state[block_offset] == DIR_TRANSITION
+Cache.c:#ifdef SERIALIZATION_ACK
+Cache.c:#endif
+Cache.c:					if(collect_stats)
+Cache.c:#endif
+Cache.c:#ifdef SERIALIZATION_ACK
+Cache.c:				if(!Is_ExclusiveOrDirty(blk->dir_sharer[block_offset], tempID, &Threadid) && Is_Shared(blk->dir_sharer[block_offset], tempID))
+Cache.c:					if(isInvCollectTableFull((event->des1-MEM_LOC_SHIFT)*mesh_size+event->des2) || blk->pendingInvAck[block_offset])
+Cache.c:						if(collect_stats)
+Cache.c:#endif
+Cache.c:				if((!IsExclusiveOrDirty(blk->dir_sharer[block_offset], tempID, &Threadid)) && (blk->dir_dirty[block_offset] != -1))
+Cache.c:				if(blk->dir_prefetch[block_offset][tempID]) //prefetch bit reset case 3
+Cache.c:					if(blk->dir_prefetch_num[block_offset] < 0)
+Cache.c:#ifdef SERIALIZATION_ACK
+Cache.c:				//if(!IsExclusiveOrDirty(blk->dir_sharer[block_offset], tempID, &Threadid))
+Cache.c:				if(!isExclusiveOrDirty || (isExclusiveOrDirty && Threadid == tempID))
+Cache.c:					if(!IsShared(blk->dir_sharer[block_offset], tempID))
+Cache.c:#endif
+Cache.c:						if(collect_stats)
+Cache.c:							if(blk->ever_dirty == 1)
+Cache.c:							if(blk->ever_touch == 1)
+Cache.c:							if(event->parent_operation == MISS_WRITE)
+Cache.c:						blk->dir_blk_state[block_offset] = MESI_MODIFIED;
+Cache.c:						if(blk->prefetch_invalidate[block_offset] || blk->prefetch_modified[block_offset])
+Cache.c:						if(blk->dir_prefetch_num[block_offset] == 0)
+Cache.c:							blk->prefetch_modified[block_offset] = 0;
+Cache.c:						if(!mystricmp (network_type, "FSOI") || (!mystricmp (network_type, "HYBRID")))
+Cache.c:#ifdef EUP_NETWORK
+Cache.c:						if(event->early_flag == 1)
+Cache.c:							EUP_entry_dellocate((event->src1-MEM_LOC_SHIFT)*mesh_size+event->src2, event->addr>>cache_dl2->set_shift);
+Cache.c:#endif
+Cache.c:#ifdef EUP_NETWORK
+Cache.c:#endif
+Cache.c:#ifdef SERIALIZATION_ACK
+Cache.c:						if(multiple_sharers[0] == 0 && multiple_sharers[1] == 0 && multiple_sharers[2] == 0 && multiple_sharers[3] == 0)
+Cache.c:#endif
+Cache.c:				if(multiple_sharers[0] == 0 && multiple_sharers[1] == 0 && multiple_sharers[2] == 0 && multiple_sharers[3] == 0)
+Cache.c:				if(multiple_sharers[0] == 0 && multiple_sharers[1] == 0 && multiple_sharers[2] == 0 && multiple_sharers[3] == 0)
+Cache.c:				if(IsShared(multiple_sharers, tempID) > 1) 
+Cache.c:					if((((multiple_sharers[Threadid/64]) & ((unsigned long long int)1 << (Threadid%64))) == ((unsigned long long int)1 << (Threadid%64))) && (Threadid != tempID))
+Cache.c:						if(new_event == NULL) 	panic("Out of Virtual Memory");
+Cache.c:#ifdef LOCK_CACHE_REGISTER
+Cache.c:						if(event->store_cond == MY_STL_C && multisharers_flag) //FIXME: need to check if the value is boolean or not
+Cache.c:#endif
+Cache.c:						new_event->src1 = currentThreadId/mesh_size+MEM_LOC_SHIFT;
+Cache.c:						new_event->des1 = Threadid/mesh_size+MEM_LOC_SHIFT;
+Cache.c:						if(!mystricmp(network_type, "FSOI") || (!mystricmp(network_type, "HYBRID")))
+Cache.c:#ifdef INV_ACK_CON
+Cache.c:						if(Is_Shared(multiple_sharers, tempID) > 1) 
+Cache.c:							if((new_event->src1*mesh_size+new_event->src2 != new_event->des1*mesh_size+new_event->des2) && ((!mystricmp(network_type, "FSOI")) || (!mystricmp(network_type, "HYBRID") && ((abs(new_event->src1 - new_event->des1) + abs(new_event->src2 - new_event->des2)) > 1))))
+Cache.c:								if(new_event2 == NULL)       panic("Out of Virtual Memory");
+Cache.c:								if(collect_stats)
+Cache.c:#ifdef LOCK_CACHE_REGISTER
+Cache.c:								if(event->store_cond == MY_STL_C && multisharers_flag) //FIXME: need to check if the value if boolean or not
+Cache.c:#endif
+Cache.c:#endif
+Cache.c:#ifdef SERIALIZATION_ACK
+Cache.c:				//if(!isExclusiveOrDirty && event->childCount)
+Cache.c:				if(event->childCount >= 1 && !isExclusiveOrDirty)
+Cache.c:					if(event->operation == ACK_DIR_WRITEUPDATE)
+Cache.c:					if(event->operation == ACK_DIR_WRITE)
+Cache.c:					newInvCollect((event->src1-MEM_LOC_SHIFT)*mesh_size+event->src2, event->addr, event->childCount, tempID, final_ack_conf);
+Cache.c:					if(!mystricmp (network_type, "MESH"))
+Cache.c:						if(event->operation == ACK_DIR_WRITEUPDATE)
+Cache.c:							if(thecontexts[tempID]->m_shSQNum > m_shSQSize-3)
+Cache.c:#endif
+Cache.c:				matchnum = MSHR_block_check(cache_dl2->mshr, event->addr, cache_dl2->set_shift);
+Cache.c:				if(event->isSyncAccess)
+Cache.c:				if(!matchnum)
+Cache.c:#ifdef DIR_FIFO_FULL
+Cache.c:					if(!cache_dl2->mshr->freeEntries)
+Cache.c:						if(!last_L2_mshr_full)
+Cache.c:#ifdef TSHR
+Cache.c:					if(tshr_fifo_num[event->des1*mesh_size+event->des2] >= tshr_fifo_size)
+Cache.c:						if(dir_fifo_full[event->des1*mesh_size+event->des2] >= dir_fifo_size)
+Cache.c:#endif
+Cache.c:						{ /* indicate that dir fifo is full, so send the NACK to the requester to resend later */
+Cache.c:							dir_fifo_full[event->des1*mesh_size+event->des2] = dir_fifo_full[event->des1*mesh_size+event->des2] - 4;
+Cache.c:							dir_fifo_full[event->des1*mesh_size+event->des2] ++;
+Cache.c:						dir_fifo_full[event->des1*mesh_size+event->des2] = 0;
+Cache.c:						if(last_L2_mshr_full)
+Cache.c:					if(!cache_dl2->mshr->freeEntries)
+Cache.c:#endif
+Cache.c:					if(collect_stats)
+Cache.c:					if(event->operation != WRITE_UPDATE)
+Cache.c:					if(collect_stats)
+Cache.c:#endif
+Cache.c:			thecontexts[(event->des1-MEM_LOC_SHIFT)*mesh_size+event->des2]->dcache2_access++;
+Cache.c:			if(event->reqNetTime == 0)
+Cache.c:			if(findCacheStatus(cp_dir, set_dir, tag_dir, hindex_dir, &blk))
+Cache.c:				if (blk->way_prev && cp_dir->policy == LRU)
+Cache.c:				if(event->L2miss_flag && event->L2miss_stated)
+Cache.c:#ifdef DIR_FIFO_FULL
+Cache.c:				if(blk->dir_state[block_offset] == DIR_TRANSITION 
+Cache.c:#ifdef READ_PERMIT
+Cache.c:#endif
+Cache.c:#ifdef TSHR
+Cache.c:					if(tshr_fifo_num[event->des1*mesh_size+event->des2] >= tshr_fifo_size)
+Cache.c:					if(dir_fifo_full[event->des1*mesh_size+event->des2] >= dir_fifo_size)
+Cache.c:#endif
+Cache.c:					{ /* indicate that dir fifo is full, so send the NACK to the requester to resend later */
+Cache.c:						dir_fifo_full[event->des1*mesh_size+event->des2] = dir_fifo_full[event->des1*mesh_size+event->des2] - 4;
+Cache.c:						//dir_fifo_nack[event->des1*mesh_size+event->des2]
+Cache.c:						if(collect_stats)
+Cache.c:						dir_fifo_full[event->des1*mesh_size+event->des2] ++;
+Cache.c:						if(collect_stats)
+Cache.c:					dir_fifo_full[event->des1*mesh_size+event->des2] = 0;
+Cache.c:				if(blk->dir_state[block_offset] == DIR_TRANSITION) 
+Cache.c:					if(collect_stats)
+Cache.c:#endif			    
+Cache.c:				if((!IsExclusiveOrDirty(blk->dir_sharer[block_offset], tempID, &Threadid)) && (blk->dir_dirty[block_offset] != -1))
+Cache.c:#ifdef L1_STREAM_PREFETCHER
+Cache.c:					if(event->prefetch_next == 4)
+Cache.c:						dir_fifo_full[event->des1*mesh_size+event->des2] ++;
+Cache.c:#endif
+Cache.c:#ifdef PREFETCH_OPTI
+Cache.c:				if(blk->dir_prefetch[block_offset][tempID]) //prefetch bit reset case 1
+Cache.c:#endif
+Cache.c:				if(collect_stats)
+Cache.c:					if(blk->dir_sharer[block_offset][0] == 0 && blk->dir_sharer[block_offset][1] == 0 && blk->dir_sharer[block_offset][2] == 0 && blk->dir_sharer[block_offset][3] == 0)
+Cache.c:					else if(IsExclusiveOrDirty(blk->dir_sharer[block_offset], tempID, &Threadid))
+Cache.c:				/* Find if director is in modified/exclusive state */
+Cache.c:				if(IsExclusiveOrDirty(blk->dir_sharer[block_offset], tempID, &Threadid) && blk->dir_blk_state[block_offset] != MESI_SHARED)
+Cache.c:					if(collect_stats)
+Cache.c:					if(new_event == NULL)       panic("Out of Virtual Memory");
+Cache.c:					if(collect_stats)
+Cache.c:					new_event->des1 = Threadid/mesh_size+MEM_LOC_SHIFT;
+Cache.c:#ifdef COHERENCE_MODIFIED
+Cache.c:#ifdef INV_ACK_CON
+Cache.c:					if(blk->dir_blk_state[block_offset] == MESI_EXCLUSIVE)
+Cache.c:						if((new_event->src1*mesh_size+new_event->src2 != new_event->des1*mesh_size+new_event->des2) && ((!mystricmp(network_type, "FSOI")) || (!mystricmp(network_type, "HYBRID") && ((abs(new_event->src1 - new_event->des1) + abs(new_event->src2 - new_event->des2)) > 1))))
+Cache.c:#if 0
+Cache.c:							if(new_event2 == NULL)       panic("Out of Virtual Memory");
+Cache.c:							if(collect_stats)
+Cache.c:#endif
+Cache.c:#endif
+Cache.c:#endif
+Cache.c:					if(event->rs)
+Cache.c:						if(event->rs->op == LDL_L)
+Cache.c:#ifdef COHERENCE_MODIFIED
+Cache.c:					if(!exclusive_clean) //indicate this msg is downgrade msg for a clean copy
+Cache.c:#endif
+Cache.c:				if(collect_stats)
+Cache.c:					if(blk->ever_dirty == 1)
+Cache.c:				if(event->rs)
+Cache.c:					if(event->rs->op == LDL_L)
+Cache.c:				if(!md_text_addr(addr, tempID))
+Cache.c:				if(event->operation == ACK_DIR_READ_EXCLUSIVE)
+Cache.c:				if(event->operation == ACK_DIR_READ_EXCLUSIVE && collect_stats && blk->ever_touch == 1)
+Cache.c:#ifdef LOCK_CACHE_REGISTER
+Cache.c:				/* update the lock register if necessary */
+Cache.c:				if(event->store_cond == MY_LDL_L) // && (bool_value)) //FIXME: check the value if bool or not
+Cache.c:#endif				
+Cache.c:				matchnum = MSHR_block_check(cache_dl2->mshr, event->addr, cache_dl2->set_shift);
+Cache.c:				if(event->isSyncAccess)
+Cache.c:				if(!matchnum)
+Cache.c:#ifdef DIR_FIFO_FULL
+Cache.c:					if(!cache_dl2->mshr->freeEntries)
+Cache.c:						if(!last_L2_mshr_full)
+Cache.c:#ifdef TSHR
+Cache.c:					if(tshr_fifo_num[event->des1*mesh_size+event->des2] >= tshr_fifo_size)
+Cache.c:						if(dir_fifo_full[event->des1*mesh_size+event->des2] >= dir_fifo_size)
+Cache.c:#endif
+Cache.c:						{ /* indicate that dir fifo is full, so send the NACK to the requester to resend later */
+Cache.c:							dir_fifo_full[event->des1*mesh_size+event->des2] = dir_fifo_full[event->des1*mesh_size+event->des2] - 4;
+Cache.c:							//dir_fifo_nack[event->des1*mesh_size+event->des2]
+Cache.c:							dir_fifo_full[event->des1*mesh_size+event->des2] ++;
+Cache.c:						dir_fifo_full[event->des1*mesh_size+event->des2] = 0;
+Cache.c:						if(last_L2_mshr_full)
+Cache.c:					if(!cache_dl2->mshr->freeEntries)
+Cache.c:#endif
+Cache.c:					if(collect_stats)
+Cache.c:					if(collect_stats)
+Cache.c:#ifdef COHERENCE_MODIFIED	
+Cache.c:			thecontexts[(event->des1-MEM_LOC_SHIFT)*mesh_size+event->des2]->dcache2_access++;
+Cache.c:			if(event->reqNetTime == 0)
+Cache.c:			if(md_text_addr(addr, tempID))
+Cache.c:			if(findCacheStatus(cp_dir, set_dir, tag_dir, hindex_dir, &blk))
+Cache.c:				if((blk->dir_blk_state[block_offset] == MESI_EXCLUSIVE) && (((blk->dir_sharer[block_offset][tempID/64]) & ((unsigned long long int)1 << (tempID%64))) == ((unsigned long long int)1 << (tempID%64))))
+Cache.c:					blk->dir_blk_state[block_offset] = MESI_MODIFIED;
+Cache.c:					total_exclusive_modified ++;
+Cache.c:#endif
+Cache.c:			thecontexts[(event->des1-MEM_LOC_SHIFT)*mesh_size+event->des2]->dcache2_access++;
+Cache.c:			if(event->reqNetTime == 0)
+Cache.c:			if(md_text_addr(addr, tempID))
+Cache.c:			if(findCacheStatus(cp_dir, set_dir, tag_dir, hindex_dir, &blk))
+Cache.c:				int currentThreadId = (event->des1-MEM_LOC_SHIFT)*mesh_size + event->des2;
+Cache.c:				if(event->L2miss_flag && event->L2miss_stated)
+Cache.c:				if (blk->way_prev && cp_dir->policy == LRU)
+Cache.c:#ifdef REAL_LOCK
+Cache.c:				if(blk->dir_state[block_offset] == DIR_TRANSITION || (blk->dir_state[block_offset] == DIR_STABLE && blk->dir_dirty[block_offset] != -1 && blk->dir_dirty[block_offset] != tempID)
+Cache.c:#ifdef SERIALIZATION_ACK
+Cache.c:#endif
+Cache.c:					if(event->store_cond == MY_STL_C)
+Cache.c:						if(collect_stats)
+Cache.c:#endif
+Cache.c:#ifdef DIR_FIFO_FULL
+Cache.c:				if(blk->dir_state[block_offset] == DIR_TRANSITION
+Cache.c:#ifdef SERIALIZATION_ACK
+Cache.c:#endif
+Cache.c:#ifdef TSHR
+Cache.c:					if(tshr_fifo_num[event->des1*mesh_size+event->des2] >= tshr_fifo_size)
+Cache.c:					if(dir_fifo_full[event->des1*mesh_size+event->des2] >= dir_fifo_size)
+Cache.c:#endif
+Cache.c:					{ /* indicate that dir fifo is full, so send the NACK to the requester to resend later */
+Cache.c:						dir_fifo_full[event->des1*mesh_size+event->des2] = dir_fifo_full[event->des1*mesh_size+event->des2] - 4;
+Cache.c:						if(collect_stats)
+Cache.c:						dir_fifo_full[event->des1*mesh_size+event->des2] ++;
+Cache.c:						if(collect_stats)
+Cache.c:					dir_fifo_full[event->des1*mesh_size+event->des2] = 0;
+Cache.c:				if(blk->dir_state[block_offset] == DIR_TRANSITION
+Cache.c:#ifdef SERIALIZATION_ACK
+Cache.c:#endif
+Cache.c:					if(collect_stats)
+Cache.c:#endif
+Cache.c:#ifdef SERIALIZATION_ACK
+Cache.c:				if(!Is_ExclusiveOrDirty(blk->dir_sharer[block_offset], tempID, &Threadid) && Is_Shared(blk->dir_sharer[block_offset], tempID))
+Cache.c:					if(isInvCollectTableFull((event->des1-MEM_LOC_SHIFT)*mesh_size+event->des2) || blk->pendingInvAck[block_offset])
+Cache.c:						if(collect_stats)
+Cache.c:#endif
+Cache.c:				if((!IsExclusiveOrDirty(blk->dir_sharer[block_offset], tempID, &Threadid)) && (blk->dir_dirty[block_offset] != -1))
+Cache.c:				if(collect_stats)
+Cache.c:					if(event->operation == WRITE_UPDATE)
+Cache.c:					if(blk->dir_sharer[block_offset][0] == 0 && blk->dir_sharer[block_offset][1] == 0 && blk->dir_sharer[block_offset][2] == 0 && blk->dir_sharer[block_offset][3] == 0)	/* No sharer */
+Cache.c:					else if(isExclusiveOrDirty)
+Cache.c:#ifdef PREFETCH_OPTI
+Cache.c:				if(blk->dir_prefetch[block_offset][tempID]) //prefetch bit reset case 1
+Cache.c:#endif
+Cache.c:#ifdef SERIALIZATION_ACK
+Cache.c:				//if(!IsExclusiveOrDirty(blk->dir_sharer[block_offset], tempID, &Threadid))
+Cache.c:				if(!isExclusiveOrDirty || (isExclusiveOrDirty && Threadid == tempID))
+Cache.c:					if(!IsShared(blk->dir_sharer[block_offset], tempID))
+Cache.c:#endif
+Cache.c:						if(collect_stats)
+Cache.c:							if(blk->ever_dirty == 1)
+Cache.c:							if(blk->ever_touch == 1)
+Cache.c:							if(event->parent_operation == MISS_WRITE)
+Cache.c:						blk->dir_blk_state[block_offset] = MESI_MODIFIED;
+Cache.c:#ifdef PREFETCH_OPTI
+Cache.c:						if(blk->dir_prefetch_num[block_offset])
+Cache.c:						if(blk->dir_prefetch_num[block_offset])
+Cache.c:							blk->prefetch_modified[block_offset] = 1;	
+Cache.c:#endif
+Cache.c:						if(event->parent_operation == MISS_WRITE || (multiple_sharers[0] == 0 && multiple_sharers[1] == 0 && multiple_sharers[2] == 0 && multiple_sharers[3] == 0 && blk->dir_dirty[block_offset] != -1 && event->operation == WRITE_UPDATE))
+Cache.c:						if(!mystricmp (network_type, "FSOI") || (!mystricmp (network_type, "HYBRID")))
+Cache.c:#ifdef EUP_NETWORK
+Cache.c:						if(event->early_flag == 1)
+Cache.c:							EUP_entry_dellocate((event->src1-MEM_LOC_SHIFT)*mesh_size+event->src2, event->addr>>cache_dl2->set_shift);
+Cache.c:#endif
+Cache.c:							if(event->pendingInvAck == 1 && event->parent_operation == WRITE_UPDATE)
+Cache.c:							if(event->pendingInvAck == 1 && event->parent_operation == MISS_WRITE)
+Cache.c:#ifdef EUP_NETWORK
+Cache.c:#endif
+Cache.c:							if(event->pendingInvAck == 1 && event->parent_operation == WRITE_UPDATE)
+Cache.c:							if(event->pendingInvAck == 1 && event->parent_operation == MISS_WRITE)
+Cache.c:#ifdef SERIALIZATION_ACK
+Cache.c:						if(multiple_sharers[0] == 0 && multiple_sharers[1] == 0 && multiple_sharers[2] == 0 && multiple_sharers[3] == 0)
+Cache.c:#endif
+Cache.c:				if(collect_stats)
+Cache.c:					if(event->operation == WRITE_UPDATE)
+Cache.c:				if(multiple_sharers[0] == 0 && multiple_sharers[1] == 0 && multiple_sharers[2] == 0 && multiple_sharers[3] == 0)
+Cache.c:					if(blk->dir_dirty[block_offset] != -1 && event->operation == WRITE_UPDATE)
+Cache.c:				if(multiple_sharers[0] == 0 && multiple_sharers[1] == 0 && multiple_sharers[2] == 0 && multiple_sharers[3] == 0)
+Cache.c:				if(IsShared(multiple_sharers, tempID) > 1) 
+Cache.c:					if((((multiple_sharers[Threadid/64]) & ((unsigned long long int)1 << (Threadid%64))) == ((unsigned long long int)1 << (Threadid%64))) && (Threadid != tempID))
+Cache.c:						if(new_event == NULL) 	panic("Out of Virtual Memory");
+Cache.c:#ifdef LOCK_CACHE_REGISTER
+Cache.c:						if(event->store_cond == MY_STL_C && multisharers_flag) //FIXME: need to check if the value is boolean or not
+Cache.c:#endif
+Cache.c:						new_event->src1 = currentThreadId/mesh_size+MEM_LOC_SHIFT;
+Cache.c:						new_event->des1 = Threadid/mesh_size+MEM_LOC_SHIFT;
+Cache.c:						if(!mystricmp(network_type, "FSOI") || (!mystricmp(network_type, "HYBRID")))
+Cache.c:#ifdef INV_ACK_CON
+Cache.c:						if(Is_Shared(multiple_sharers, tempID) > 1) 
+Cache.c:							if((new_event->src1*mesh_size+new_event->src2 != new_event->des1*mesh_size+new_event->des2) && ((!mystricmp(network_type, "FSOI")) || (!mystricmp(network_type, "HYBRID") && ((abs(new_event->src1 - new_event->des1) + abs(new_event->src2 - new_event->des2)) > 1))))
+Cache.c:								if(new_event2 == NULL)       panic("Out of Virtual Memory");
+Cache.c:								if(collect_stats)
+Cache.c:#ifdef LOCK_CACHE_REGISTER
+Cache.c:								if(event->store_cond == MY_STL_C && multisharers_flag) //FIXME: need to check if the value if boolean or not
+Cache.c:#endif
+Cache.c:#endif
+Cache.c:				if(event->childCount == 1 && event->parent_operation == MISS_WRITE)
+Cache.c:				else if(event->parent_operation == MISS_WRITE)
+Cache.c:#ifdef SERIALIZATION_ACK
+Cache.c:				//if(!isExclusiveOrDirty && event->childCount)
+Cache.c:				if(event->childCount >= 1 && !isExclusiveOrDirty)
+Cache.c:					if(event->operation == ACK_DIR_WRITEUPDATE)
+Cache.c:					if(event->operation == ACK_DIR_WRITE)
+Cache.c:					newInvCollect((event->src1-MEM_LOC_SHIFT)*mesh_size+event->src2, event->addr, event->childCount, tempID, final_ack_conf);
+Cache.c:					if(!mystricmp (network_type, "MESH"))
+Cache.c:						if(event->operation == ACK_DIR_WRITEUPDATE)
+Cache.c:							if(thecontexts[tempID]->m_shSQNum > m_shSQSize-3)
+Cache.c:#endif
+Cache.c:				if(event->operation == WRITE_UPDATE)
+Cache.c:				matchnum = MSHR_block_check(cache_dl2->mshr, event->addr, cache_dl2->set_shift);
+Cache.c:				if(event->isSyncAccess)
+Cache.c:				if(!matchnum)
+Cache.c:#ifdef DIR_FIFO_FULL
+Cache.c:					if(!cache_dl2->mshr->freeEntries)
+Cache.c:						if(!last_L2_mshr_full)
+Cache.c:#ifdef TSHR
+Cache.c:					if(tshr_fifo_num[event->des1*mesh_size+event->des2] >= tshr_fifo_size)
+Cache.c:						if(dir_fifo_full[event->des1*mesh_size+event->des2] >= dir_fifo_size)
+Cache.c:#endif
+Cache.c:						{ /* indicate that dir fifo is full, so send the NACK to the requester to resend later */
+Cache.c:							dir_fifo_full[event->des1*mesh_size+event->des2] = dir_fifo_full[event->des1*mesh_size+event->des2] - 4;
+Cache.c:							dir_fifo_full[event->des1*mesh_size+event->des2] ++;
+Cache.c:						dir_fifo_full[event->des1*mesh_size+event->des2] = 0;
+Cache.c:						if(last_L2_mshr_full)
+Cache.c:					if(!cache_dl2->mshr->freeEntries)
+Cache.c:#endif
+Cache.c:					if(collect_stats)
+Cache.c:					if(event->operation != WRITE_UPDATE)
+Cache.c:					if(collect_stats)
+Cache.c:#ifdef UPDATE_HINT
+Cache.c:			if(md_text_addr(addr, tempID))
+Cache.c:			if(findCacheStatus(cp_dir, set_dir, tag_dir, hindex_dir, &blk))
+Cache.c:				if(collect_stats)
+Cache.c:#endif
+Cache.c:#ifdef SILENT_DROP
+Cache.c:#endif
+Cache.c:			thecontexts[(event->des1-MEM_LOC_SHIFT)*mesh_size+event->des2]->dcache2_access++;
+Cache.c:			if(md_text_addr(addr, tempID))
+Cache.c:			if(findCacheStatus(cp_dir, set_dir, tag_dir, hindex_dir, &blk))
+Cache.c:				if(collect_stats)
+Cache.c:				if(blk->dir_state[block_offset] == DIR_TRANSITION)
+Cache.c:				{/* Directory must be waiting for another messages to complete i.e. INV. Since we see a WB for the same line, the dir must be in dirty (modified) state. We assume that the home l1 is going to drop the original INV message. We complete the request as if we received the INV ACK. */
+Cache.c:					if(!blk->ptr_cur_event[block_offset]) panic("DIR (WB): parent event missing");
+Cache.c:					if(blk->ptr_cur_event[block_offset]->operation != MISS_READ && blk->ptr_cur_event[block_offset]->operation != MISS_WRITE && blk->ptr_cur_event[block_offset]->operation != WRITE_UPDATE && blk->ptr_cur_event[block_offset]->operation != WAIT_MEM_READ)
+Cache.c:					if((blk->ptr_cur_event[block_offset])->operation == WAIT_MEM_READ)
+Cache.c:					else if(block_offset == blockoffset(blk->ptr_cur_event[block_offset]->addr))
+Cache.c:					if((blk->ptr_cur_event[block_offset])->operation == WAIT_MEM_READ && (blk->ptr_cur_event[block_offset])->individual_childCount[block_offset] == 0)	
+Cache.c:						if((blk->ptr_cur_event[block_offset])->sharer_num != 0)
+Cache.c:					if(blk->ptr_cur_event[block_offset]->childCount == 0)
+Cache.c:						if(blk->ptr_cur_event[old_boffset]->operation == WAIT_MEM_READ)
+Cache.c:							if(!blk->Iswb_to_mem && (blk->status & CACHE_BLK_DIRTY) && (blk->status & CACHE_BLK_VALID))
+Cache.c:								if(collect_stats)
+Cache.c:							for(i=0; i<(cache_dl2->set_shift - cache_dl1[0]->set_shift); i++)
+Cache.c:							/* jing: Here is a problem: copy data out of cache block, if block exists */
+Cache.c:							if (blk->way_prev && cp_dir->policy == LRU)
+Cache.c:							/* get user block data, if requested and it exists */
+Cache.c:							if (blk->ptr_cur_event[old_boffset]->udata)
+Cache.c:							if (cp_dir->hsize)
+Cache.c:							if(blk->ptr_cur_event[old_boffset]->parent_operation == L2_PREFETCH)
+Cache.c:							if(blk->ptr_cur_event[old_boffset]->parent_operation == MISS_IL1)
+Cache.c:							else if(blk->ptr_cur_event[old_boffset]->parent_operation == MISS_READ)
+Cache.c:#ifdef LOCK_CACHE_REGISTER
+Cache.c:								/* update the lock register if necessary */
+Cache.c:								if(blk->ptr_cur_event[old_boffset]->store_cond == MY_LDL_L)// && (bool_value)) //FIXME: check the value if bool or not
+Cache.c:#endif				
+Cache.c:								if (!md_text_addr(blk->ptr_cur_event[old_boffset]->addr, blk->ptr_cur_event[old_boffset]->tempID))
+Cache.c:							else if(blk->ptr_cur_event[old_boffset]->parent_operation == MISS_WRITE)
+Cache.c:								blk->dir_blk_state[block_offset] = MESI_MODIFIED;
+Cache.c:								blk->dir_blk_state[block_offset] = MESI_MODIFIED;
+Cache.c:						else if(blk->ptr_cur_event[old_boffset]->parent_operation == MISS_READ)
+Cache.c:#ifdef LOCK_CACHE_REGISTER
+Cache.c:							/* update the lock register if necessary */
+Cache.c:							if(blk->ptr_cur_event[old_boffset]->store_cond == MY_LDL_L)// && (bool_value)) //FIXME: check the value if bool or not
+Cache.c:#endif				
+Cache.c:						else if(blk->ptr_cur_event[old_boffset]->parent_operation == WRITE_UPDATE)
+Cache.c:							blk->dir_blk_state[block_offset] = MESI_MODIFIED;
+Cache.c:						else if(blk->ptr_cur_event[old_boffset]->parent_operation == MISS_WRITE)
+Cache.c:							blk->dir_blk_state[block_offset] = MESI_MODIFIED;
+Cache.c:						blk->ptr_cur_event[old_boffset]->des1 = tempID/mesh_size+MEM_LOC_SHIFT;
+Cache.c:			thecontexts[(event->des1-MEM_LOC_SHIFT)*mesh_size+event->des2]->dcache2_access++;
+Cache.c:			if(md_text_addr(addr, tempID))
+Cache.c:			if(findCacheStatus(cp_dir, set_dir, tag_dir, hindex_dir, &blk))
+Cache.c:				if(collect_stats)
+Cache.c:#ifdef NON_SILENT_DROP
+Cache.c:				if(blk->dir_state[block_offset] == DIR_TRANSITION)
+Cache.c:				{/* Directory must be waiting for another messages to complete i.e. INV. Since we see a WB for the same line, the dir must be in dirty (modified) state. We assume that the home l1 is going to drop the original INV message. We complete the request as if we received the INV ACK. */
+Cache.c:					if(blk->dir_blk_state[block_offset] == MESI_SHARED || blk->dir_blk_state[block_offset] == MESI_INVALID)	panic("DIR: The directory is not in dirty state");
+Cache.c:					if(!blk->ptr_cur_event[block_offset]) panic("DIR (WB): parent event missing");
+Cache.c:					if(blk->ptr_cur_event[block_offset]->operation != MISS_READ && blk->ptr_cur_event[block_offset]->operation != MISS_WRITE && blk->ptr_cur_event[block_offset]->operation != WRITE_UPDATE && blk->ptr_cur_event[block_offset]->operation != WAIT_MEM_READ)
+Cache.c:					if(blk->ptr_cur_event[block_offset]->operation == WAIT_MEM_READ)
+Cache.c:						if((blk->ptr_cur_event[block_offset])->individual_childCount[block_offset] == 0)	
+Cache.c:							if((blk->ptr_cur_event[block_offset])->sharer_num != 0)
+Cache.c:					if(block_offset != blockoffset(blk->ptr_cur_event[block_offset]->addr) && blk->ptr_cur_event[block_offset]->operation != WAIT_MEM_READ)
+Cache.c:					if(blk->ptr_cur_event[old_boffset]->operation == WAIT_MEM_READ)
+Cache.c:						if(!blk->Iswb_to_mem)
+Cache.c:							if(collect_stats)
+Cache.c:						for(i=0; i<(cache_dl2->set_shift - cache_dl1[0]->set_shift); i++)
+Cache.c:						/* jing: Here is a problem: copy data out of cache block, if block exists */
+Cache.c:						if (blk->way_prev && cp_dir->policy == LRU)
+Cache.c:						/* get user block data, if requested and it exists */
+Cache.c:						if (blk->ptr_cur_event[old_boffset]->udata)
+Cache.c:						if (cp_dir->hsize)
+Cache.c:						if(blk->ptr_cur_event[old_boffset]->parent_operation == L2_PREFETCH)
+Cache.c:						if(blk->ptr_cur_event[old_boffset]->parent_operation == MISS_IL1)
+Cache.c:						else if(blk->ptr_cur_event[old_boffset]->parent_operation == MISS_READ)
+Cache.c:#ifdef LOCK_CACHE_REGISTER
+Cache.c:							/* update the lock register if necessary */
+Cache.c:							if(blk->ptr_cur_event[old_boffset]->store_cond == MY_LDL_L)// && (bool_value)) //FIXME: check the value if bool or not
+Cache.c:#endif				
+Cache.c:							if (!md_text_addr(blk->ptr_cur_event[old_boffset]->addr, blk->ptr_cur_event[old_boffset]->tempID))
+Cache.c:						else if(blk->ptr_cur_event[old_boffset]->parent_operation == MISS_WRITE)
+Cache.c:							blk->dir_blk_state[block_offset] = MESI_MODIFIED;
+Cache.c:							blk->dir_blk_state[block_offset] = MESI_MODIFIED;
+Cache.c:					else if(blk->ptr_cur_event[old_boffset]->parent_operation == MISS_READ)
+Cache.c:#ifdef LOCK_CACHE_REGISTER
+Cache.c:						/* update the lock register if necessary */
+Cache.c:						if(blk->ptr_cur_event[old_boffset]->store_cond == MY_LDL_L)// && (bool_value)) //FIXME: check the value if bool or not
+Cache.c:#endif				
+Cache.c:					else if(blk->ptr_cur_event[old_boffset]->parent_operation == WRITE_UPDATE)
+Cache.c:						blk->dir_blk_state[block_offset] = MESI_MODIFIED;
+Cache.c:					else if(blk->ptr_cur_event[old_boffset]->parent_operation == MISS_WRITE)
+Cache.c:						blk->dir_blk_state[block_offset] = MESI_MODIFIED;
+Cache.c:					blk->ptr_cur_event[old_boffset]->des1 = tempID/mesh_size+MEM_LOC_SHIFT;
+Cache.c:#endif
+Cache.c:#ifdef PREFETCH_OPTI
+Cache.c:				if(blk->dir_prefetch[block_offset][tempID]) //prefetch bit reset case 2
+Cache.c:					if(blk->dir_prefetch_num[block_offset] < 0)
+Cache.c:#ifdef SILENT_DROP
+Cache.c:#endif
+Cache.c:				if(blk->dir_prefetch_num[block_offset]) //other node read the data in exclusive state and modified later, so when the data is evicted from the L1 cache, it will set the prefetch_modified bit into 1
+Cache.c:					blk->prefetch_modified[block_offset] = 1;	
+Cache.c:#endif
+Cache.c:				if(!mystricmp (network_type, "FSOI") || (!mystricmp (network_type, "HYBRID")))
+Cache.c:#ifdef EUP_NETWORK
+Cache.c:				if(blk->dir_blk_state[block_offset] == MESI_SHARED)
+Cache.c:				if(blk->dir_blk_state[block_offset] == MESI_SHARED)
+Cache.c:					panic("DIR: L2 cache block not in modified state during WB");
+Cache.c:#endif
+Cache.c:					if(blk->dir_blk_state[block_offset] == MESI_SHARED)
+Cache.c:						panic("DIR: L2 cache block not in modified state during WB");
+Cache.c:			thecontexts[(event->des1-MEM_LOC_SHIFT)*mesh_size+event->des2]->dcache_access++;
+Cache.c:			if(md_text_addr(addr, tempID))
+Cache.c:			count = (event->des1-MEM_LOC_SHIFT) * mesh_size + event->des2;			
+Cache.c:			if(collect_stats)
+Cache.c:#ifdef SILENT_DROP
+Cache.c:#endif
+Cache.c:#ifdef EXCLUSIVE_OPT
+Cache.c:#endif
+Cache.c:				if ((blk1->tagid.tag == tag) && (blk1->status & CACHE_BLK_VALID))
+Cache.c:					if(blk1->state == MESI_MODIFIED)
+Cache.c:					{  /* blk state is modified, then the blk data should be carried back into L2 cache at home node */
+Cache.c:						if(collect_stats)
+Cache.c:						if(event->data_reply == 0)
+Cache.c:					else if(blk1->state == MESI_EXCLUSIVE)
+Cache.c:					/* blk state changed from exclusive/modified to shared state */
+Cache.c:					if((blk1->status & CACHE_BLK_VALID) && blk1->state == MESI_EXCLUSIVE)
+Cache.c:					if(collect_stats)
+Cache.c:#ifdef NON_SILENT_DROP
+Cache.c:			if(!blk1)	/* if there is a miss in L1, we just drop this request. This case can only be due to write back event intiated before. */
+Cache.c:#endif
+Cache.c:#ifdef EXCLUSIVE_OPT 
+Cache.c:			if(!blk1)
+Cache.c:#endif
+Cache.c:			if(!mystricmp (network_type, "FSOI") || !mystricmp(network_type, "HYBRID"))
+Cache.c:#ifdef INV_ACK_CON
+Cache.c:			if(event->data_reply == 0 && (event->src1*mesh_size+event->src2 != event->des1*mesh_size+event->des2))
+Cache.c:				pending_invalidation[(event->des1-MEM_LOC_SHIFT)*mesh_size+event->des2] --;
+Cache.c:				if(pending_invalidation[(event->des1-MEM_LOC_SHIFT)*mesh_size+event->des2] == 0)
+Cache.c:					pending_invalid_cycles = sim_cycle - pending_invalid_start_cycles[(event->des1-MEM_LOC_SHIFT)*mesh_size+event->des2];
+Cache.c:#endif
+Cache.c:			thecontexts[(event->des1-MEM_LOC_SHIFT)*mesh_size+event->des2]->dcache_access++;
+Cache.c:			if(md_text_addr(addr, tempID))
+Cache.c:			count = (event->des1-MEM_LOC_SHIFT) * mesh_size + event->des2;
+Cache.c:			if(collect_stats)
+Cache.c:#ifdef SILENT_DROP
+Cache.c:#endif
+Cache.c:				if ((blk1->tagid.tag == tag) && (blk1->status & CACHE_BLK_VALID))
+Cache.c:					if(blk1->state == MESI_MODIFIED)
+Cache.c:					{  /* blk state is modified, then the blk data should be carried back into L2 cache at home node */
+Cache.c:						if(collect_stats)
+Cache.c:						if(collect_stats && blk1->state == MESI_SHARED)
+Cache.c:						else if(collect_stats && blk1->state == MESI_EXCLUSIVE)
+Cache.c:					/* blk state changed from exclusive/modified to shared state */
+Cache.c:					if(collect_stats)
+Cache.c:					if((blk1->status & CACHE_BLK_VALID) && blk1->state == MESI_EXCLUSIVE)
+Cache.c:						if(blk1->WordUseFlag[m])
+Cache.c:					if(event->parent->operation == WAIT_MEM_READ)
+Cache.c:					if(blk1->blkAlocReason == LINE_PREFETCH)
+Cache.c:						if(blk1->blkImdtOp)
+Cache.c:					else if(blk1->blkAlocReason == LINE_READ)
+Cache.c:						if(blk1->blkImdtOp)
+Cache.c:					else if (blk1->blkAlocReason == LINE_WRITE)
+Cache.c:						if(blk1->blkImdtOp)
+Cache.c:#ifdef NON_SILENT_DROP
+Cache.c:			if(!blk1)	/* if there is a miss in L1, we just drop this request. This case can only be due to write back event intiated before. */
+Cache.c:				if((match=MSHR_block_check(cp1->mshr, event->addr, cp1->set_shift)))
+Cache.c:					if(cp1->mshr->mshrEntry[match-1].event->operation != WRITE_UPDATE)
+Cache.c:						if(cp1->mshr->mshrEntry[match-1].event->operation == NACK && (cp1->mshr->mshrEntry[match-1].event->parent_operation == WRITE_UPDATE))
+Cache.c:#endif
+Cache.c:			if(!mystricmp (network_type, "FSOI") || !mystricmp(network_type, "HYBRID"))
+Cache.c:#ifdef INV_ACK_CON
+Cache.c:			if(event->data_reply == 0 && (event->src1*mesh_size+event->src2 != event->des1*mesh_size+event->des2))
+Cache.c:				pending_invalidation[(event->des1-MEM_LOC_SHIFT)*mesh_size+event->des2] --;
+Cache.c:				if(pending_invalidation[(event->des1-MEM_LOC_SHIFT)*mesh_size+event->des2] == 0)
+Cache.c:					pending_invalid_cycles = sim_cycle - pending_invalid_start_cycles[(event->des1-MEM_LOC_SHIFT)*mesh_size+event->des2];
+Cache.c:#endif
+Cache.c:			thecontexts[(event->des1-MEM_LOC_SHIFT)*mesh_size+event->des2]->dcache2_access++;
+Cache.c:#ifdef SERIALIZATION_ACK
+Cache.c:			if(event->blk_dir->pendingInvAck[block_offset])
+Cache.c:#ifdef READ_PERMIT
+Cache.c:				if(event->blk_dir->ReadPending[block_offset] == -1)
+Cache.c:#endif
+Cache.c:#endif
+Cache.c:			if(md_text_addr(addr, tempID))
+Cache.c:			if(event->blk_dir->dir_state[block_offset] == DIR_STABLE)
+Cache.c:			if(collect_stats)
+Cache.c:				if(event->operation == ACK_MSG_READUPDATE)
+Cache.c:			if((event->parent)->childCount == 0)
+Cache.c:				if((parent_event->blk_dir)->dir_blk_state[block_offset] == MESI_SHARED)
+Cache.c:				if(event->operation == ACK_MSG_READ)
+Cache.c:				if(event->l1LineUseStatus)
+Cache.c:#ifdef READ_PERMIT   /* jing090107 */
+Cache.c:				if(!Readpending)
+Cache.c:#endif
+Cache.c:#ifdef PREFETCH_OPTI
+Cache.c:					if(parent_event->operation == READ_COHERENCE_UPDATE)
+Cache.c:						if(event->operation == ACK_MSG_READUPDATE)
+Cache.c:							if(parent_event->blk_dir->prefetch_modified[block_offset] || parent_event->blk_dir->prefetch_invalidate[block_offset])
+Cache.c:						if(parent_event->blk_dir->dir_prefetch_num[block_offset] == 0)
+Cache.c:							parent_event->blk_dir->prefetch_modified[block_offset] = 0;
+Cache.c:#endif
+Cache.c:					parent_event->des1 = tempID/mesh_size+MEM_LOC_SHIFT;
+Cache.c:#ifdef LOCK_CACHE_REGISTER
+Cache.c:					/* update the lock register if necessary */
+Cache.c:					if(parent_event->store_cond == MY_LDL_L)// && (bool_value)) //FIXME: check the value if bool or not
+Cache.c:#endif				
+Cache.c:#ifdef READ_PERMIT   /* jing090107 */
+Cache.c:#endif
+Cache.c:#ifdef LOCK_CACHE_REGISTER
+Cache.c:			thecontexts[(event->des1-MEM_LOC_SHIFT)*mesh_size+event->des2]->dcache2_access++;
+Cache.c:			if(md_text_addr(addr, tempID))
+Cache.c:			if(event->parent->blk_dir->dir_state[block_offset] == DIR_STABLE)
+Cache.c:			if(collect_stats)
+Cache.c:			if((event->parent)->childCount == 0)
+Cache.c:				parent_event->des1 = parent_event->tempID/mesh_size+MEM_LOC_SHIFT;
+Cache.c:#ifdef LOCK_CACHE_REGISTER
+Cache.c:				/* update the lock register if necessary */
+Cache.c:				if(parent_event->store_cond == MY_LDL_L)// && (bool_value)) //FIXME: check the value if bool or not
+Cache.c:#endif				
+Cache.c:#endif
+Cache.c:#ifdef SERIALIZATION_ACK
+Cache.c:			invCollectStatus = invAckUpdate((event->des1-MEM_LOC_SHIFT)*mesh_size+event->des2, event->addr, event->tempID, event->isSyncAccess);
+Cache.c:			if(invCollectStatus == 1)	
+Cache.c:#ifdef READ_PERMIT
+Cache.c:				if(event->blk_dir->ReadPending[block_offset] != -1)
+Cache.c:					if(p_event->tempID != event->blk_dir->ReadPending[block_offset])
+Cache.c:					p_event->des1 = p_event->tempID/mesh_size+MEM_LOC_SHIFT;
+Cache.c:				if(!mystricmp (network_type, "FSOI") || !mystricmp(network_type, "HYBRID"))
+Cache.c:#ifdef EUP_NETWORK
+Cache.c:				if(event->parent->early_flag == 1)
+Cache.c:					if(event->addr == event->parent->addr)
+Cache.c:#endif
+Cache.c:#endif				
+Cache.c:			if(invCollectStatus != 0)
+Cache.c:#endif
+Cache.c:			thecontexts[(event->des1-MEM_LOC_SHIFT)*mesh_size+event->des2]->dcache2_access++;
+Cache.c:			if(md_text_addr(addr, tempID))
+Cache.c:			if(event->parent->blk_dir->dir_state[block_offset] == DIR_STABLE)
+Cache.c:			(event->parent)->blk_dir->dir_sharer[block_offset][(((event->src1-MEM_LOC_SHIFT)*mesh_size+event->src2)/64)] &= ~ ((unsigned long long int)1 << (((event->src1-MEM_LOC_SHIFT)*mesh_size+event->src2)%64));
+Cache.c:			if((event->parent)->operation == WAIT_MEM_READ)
+Cache.c:			if(collect_stats)
+Cache.c:				if(event->operation == ACK_MSG_WRITEUPDATE)
+Cache.c:			if((event->parent)->operation == WAIT_MEM_READ && (event->parent)->individual_childCount[block_offset] == 0)	
+Cache.c:				if((event->parent)->sharer_num != 0)
+Cache.c:			if((event->parent)->childCount == 0)
+Cache.c:				(parent_event->blk_dir)->dir_blk_state[block_offset] = MESI_MODIFIED;
+Cache.c:				if(event->operation == ACK_MSG_WRITE)
+Cache.c:				if(parent_event->operation != WAIT_MEM_READ)
+Cache.c:					(parent_event->blk_dir)->dir_blk_state[block_offset] = MESI_MODIFIED;
+Cache.c:					if(parent_event->originalChildCount == 1)
+Cache.c:#ifdef PREFETCH_OPTI
+Cache.c:					if(parent_event->operation != WRITE_COHERENCE_UPDATE)
+Cache.c:						if((parent_event->blk_dir)->dir_prefetch_num[block_offset])
+Cache.c:						if((parent_event->blk_dir)->dir_prefetch_num[block_offset])
+Cache.c:							(parent_event->blk_dir)->prefetch_modified[block_offset] = 1;	
+Cache.c:#endif
+Cache.c:					if(event->l1LineUseStatus)
+Cache.c:						if(event->isExclusiveOrDirty)
+Cache.c:					if(event->operation == ACK_MSG_WRITE)
+Cache.c:					/* send acknowledgement from directory to requester to changed state into modified */		    
+Cache.c:					if(parent_event->operation == WRITE_UPDATE)
+Cache.c:					else if(parent_event->operation == MISS_WRITE)
+Cache.c:#ifdef PREFETCH_OPTI
+Cache.c:					else if(parent_event->operation == WRITE_COHERENCE_UPDATE)
+Cache.c:						if(event->operation == ACK_MSG_WRITE)
+Cache.c:							if(parent_event->blk_dir->prefetch_invalidate[block_offset] || parent_event->blk_dir->prefetch_modified[block_offset])
+Cache.c:						if(parent_event->blk_dir->dir_prefetch_num[block_offset] == 0)
+Cache.c:							parent_event->blk_dir->prefetch_modified[block_offset] = 0;
+Cache.c:#endif
+Cache.c:					if(event->sharer_num != 0)
+Cache.c:					if(!parent_event->blk_dir->Iswb_to_mem && (parent_event->blk_dir->status & CACHE_BLK_DIRTY) && (parent_event->blk_dir->status & CACHE_BLK_VALID))
+Cache.c:						if(collect_stats)
+Cache.c:					for(i=0; i<(cache_dl2->set_shift - cache_dl1[0]->set_shift); i++)
+Cache.c:					/* jing: Here is a problem: copy data out of cache block, if block exists */
+Cache.c:					/* get user block data, if requested and it exists */
+Cache.c:					if (parent_event->udata)
+Cache.c:					if (cp_dir->hsize)
+Cache.c:					(parent_event->blk_dir)->dir_blk_state[block_offset] = MESI_MODIFIED;
+Cache.c:#ifdef PREFETCH_OPTI
+Cache.c:					(parent_event->blk_dir)->prefetch_modified[block_offset] = 0;
+Cache.c:#endif
+Cache.c:					if(parent_event->parent_operation == L2_PREFETCH)
+Cache.c:					if(parent_event->parent_operation == MISS_IL1)
+Cache.c:					else if(parent_event->parent_operation == MISS_READ 
+Cache.c:#ifdef PREFETCH_OPTI
+Cache.c:#endif
+Cache.c:						if (!md_text_addr(parent_event->addr, tempID))
+Cache.c:#ifdef LOCK_CACHE_REGISTER
+Cache.c:						/* update the lock register if necessary */
+Cache.c:						if(parent_event->store_cond == MY_LDL_L)// && (bool_value)) //FIXME: check the value if bool or not
+Cache.c:#endif				
+Cache.c:					else if(parent_event->parent_operation == MISS_WRITE
+Cache.c:#ifdef PREFETCH_OPTI
+Cache.c:#endif
+Cache.c:				parent_event->des1 = parent_event->tempID/mesh_size+MEM_LOC_SHIFT;
+Cache.c:			thecontexts[(event->des1-MEM_LOC_SHIFT)*mesh_size+event->des2]->icache_access++;
+Cache.c:				case FIFO:
+Cache.c:			if (collect_stats)
+Cache.c:			/* copy data out of cache block, if block exists */
+Cache.c:			if ((event->cp)->balloc && (event->vp))
+Cache.c:			/* get user block data, if requested and it exists */
+Cache.c:			if (event->udata)
+Cache.c:			if(collect_stats)
+Cache.c:			if ((event->cp)->hsize)
+Cache.c:#ifdef SERIALIZATION_ACK
+Cache.c:			if(numStorePending[event->tempID] == 0)
+Cache.c:			if((numStorePending[event->tempID] == 0) && thecontexts[event->tempID]->WBtableTail == NULL)
+Cache.c:#endif
+Cache.c:#ifdef WRITE_EARLY
+Cache.c:			if(event->early_flag == 3)
+Cache.c:					if ((blk1->tagid.tag == tag) && (blk1->status & CACHE_BLK_WVALID))
+Cache.c:				if(flag != 0)
+Cache.c:#ifdef SERIALIZATION_ACK	
+Cache.c:					if(event->pendingInvAck)
+Cache.c:#endif
+Cache.c:			//if(event->operation == ACK_DIR_WRITE_EARLY)
+Cache.c:			thecontexts[(event->des1-MEM_LOC_SHIFT)*mesh_size+event->des2]->dcache_access++;
+Cache.c:				case FIFO:
+Cache.c:				if(event->operation != ACK_DIR_WRITE_EARLY)
+Cache.c:					if(i == 0)	break;
+Cache.c:				if(repl->status & CACHE_BLK_WVALID)
+Cache.c:			if ((repl->status & CACHE_BLK_VALID) 
+Cache.c:#ifdef SILENT_DROP
+Cache.c:#ifndef UPDATE_HINT
+Cache.c:#endif
+Cache.c:#endif
+Cache.c:				if (collect_stats)
+Cache.c:				if (actualProcess == 1 && !md_text_addr(repl->addr, tempID))     /*no write back to L2 for dual exec */
+Cache.c:					if ((repl->status & CACHE_BLK_DIRTY) && !(repl->state == MESI_MODIFIED))
+Cache.c:						panic ("Cache Block should have been modified here");
+Cache.c:					if(new_event == NULL) 	panic("Out of Virtual Memory");
+Cache.c:#if defined(NON_SILENT_DROP) || defined(UPDATE_HINT)
+Cache.c:					if (repl->status & CACHE_BLK_DIRTY)
+Cache.c:#endif
+Cache.c:						if (collect_stats)
+Cache.c:#ifdef WB_SPLIT
+Cache.c:							if(wb_buffer[event->des1*mesh_size+event->des2][j] == 0)
+Cache.c:#endif
+Cache.c:#if defined(NON_SILENT_DROP) || defined(UPDATE_HINT)
+Cache.c:						if (collect_stats)
+Cache.c:							event->cp->dir_notification++;
+Cache.c:#endif
+Cache.c:					md_addr_t src = (repl->addr >> cache_dl2->set_shift) % numcontexts;
+Cache.c:					new_event->des1 = (src /mesh_size)+MEM_LOC_SHIFT;
+Cache.c:			if(repl->status & CACHE_BLK_VALID)
+Cache.c:				if(repl->state == MESI_EXCLUSIVE)
+Cache.c:				if(repl->blkAlocReason == LINE_PREFETCH)
+Cache.c:					if(repl->blkImdtOp)
+Cache.c:				else if(repl->blkAlocReason == LINE_READ)
+Cache.c:					if(repl->blkImdtOp)
+Cache.c:				else if(repl->blkAlocReason == LINE_WRITE)
+Cache.c:					if(repl->blkImdtOp)
+Cache.c:			if(event->isPrefetch)
+Cache.c:			else if(event->cmd == Write)
+Cache.c:			else if(event->cmd == Read)
+Cache.c:			if(event->operation == ACK_DIR_WRITE_EARLY)
+Cache.c:#ifdef SERIALIZATION_ACK	
+Cache.c:			if(event->operation != ACK_DIR_WRITE_EARLY && event->pendingInvAck)
+Cache.c:#endif
+Cache.c:			/* copy data out of cache block, if block exists */
+Cache.c:			if ((event->cp)->balloc && (event->vp))
+Cache.c:			if(event->operation == ACK_DIR_READ_EXCLUSIVE) 
+Cache.c:			else if(event->operation == ACK_DIR_READ_SHARED)
+Cache.c:			else if(event->operation == ACK_DIR_WRITE || event->operation == ACK_DIR_WRITEUPDATE || event->operation == ACK_DIR_WRITE_EARLY) 
+Cache.c:				repl->state = MESI_MODIFIED;
+Cache.c:			/* get user block data, if requested and it exists */
+Cache.c:			if (event->udata)
+Cache.c:			if(collect_stats)
+Cache.c:				//if(!event->isPrefetch)
+Cache.c:					if(!event->isReqL2Hit)
+Cache.c:						if(event->isReqL2SecMiss)
+Cache.c:						else if(event->isReqL2Trans)
+Cache.c:							if(event->operation == ACK_DIR_WRITE || event->operation == ACK_DIR_WRITEUPDATE)
+Cache.c:						else if(event->isReqL2Inv)
+Cache.c:				if(event->operation == ACK_DIR_WRITE && event->isReqL2Hit && !event->isReqL2SecMiss)
+Cache.c:				if(event->operation == ACK_DIR_WRITEUPDATE && event->isReqL2Hit && !event->isReqL2SecMiss)
+Cache.c:				if(event->isSyncAccess)
+Cache.c:			if ((event->cp)->hsize)
+Cache.c:			if(!event->spec_mode && event->rs)
+Cache.c:				if((event->operation == ACK_DIR_READ_SHARED) || (event->operation == ACK_DIR_READ_EXCLUSIVE))
+Cache.c:			if(event->operation != ACK_DIR_WRITE_EARLY)
+Cache.c:#endif
+Cache.c:			thecontexts[(event->des1-MEM_LOC_SHIFT)*mesh_size+event->des2]->dcache_access++;
+Cache.c:			if(event->operation == ACK_DIR_READ_SHARED)
+Cache.c:			else if(event->operation == ACK_DIR_READ_EXCLUSIVE)
+Cache.c:#ifdef LOCK_CACHE_REGISTER
+Cache.c:			if(event->operation == ACK_DIR_READ_SHARED)
+Cache.c:				if(event->op == LDL_L)
+Cache.c:					if (common_regs_s[thecontexts[tempID]->masterid][tempID].address == event->addr && common_regs_s[thecontexts[tempID]->masterid][tempID].regs_lock)
+Cache.c:				else if(event->op == STL_C)
+Cache.c:					if (common_regs_s[thecontexts[tempID]->masterid][tempID].address == event->addr && common_regs_s[thecontexts[tempID]->masterid][tempID].regs_lock)
+Cache.c:#endif
+Cache.c:			if(event->operation == ACK_DIR_WRITEUPDATE)
+Cache.c:				case FIFO:
+Cache.c:				if(!mystricmp (network_type, "FSOI") || !mystricmp(network_type, "HYBRID"))
+Cache.c:#ifdef WRITE_EARLY
+Cache.c:					if(i == 0)	break;
+Cache.c:				if(repl->status & CACHE_BLK_WVALID)
+Cache.c:#endif
+Cache.c:			if ((repl->status & CACHE_BLK_VALID) 
+Cache.c:#ifdef SILENT_DROP
+Cache.c:#ifndef UPDATE_HINT
+Cache.c:#endif
+Cache.c:#endif
+Cache.c:				if (collect_stats)
+Cache.c:				if (actualProcess == 1 && !md_text_addr(repl->addr, tempID))     /*no write back to L2 for dual exec */
+Cache.c:					if ((repl->status & CACHE_BLK_DIRTY) && !(repl->state == MESI_MODIFIED))
+Cache.c:						panic ("Cache Block should have been modified here");
+Cache.c:					if(new_event == NULL) 	panic("Out of Virtual Memory");
+Cache.c:#if defined(NON_SILENT_DROP) || defined(UPDATE_HINT)
+Cache.c:					if (repl->status & CACHE_BLK_DIRTY)
+Cache.c:#endif
+Cache.c:						if (collect_stats)
+Cache.c:							if(repl->WordUseFlag[m])
+Cache.c:#ifdef WB_SPLIT
+Cache.c:							if(wb_buffer[event->des1*mesh_size+event->des2][j] == 0)
+Cache.c:						if(wb_f == 0)
+Cache.c:#endif
+Cache.c:#if defined(NON_SILENT_DROP) || defined(UPDATE_HINT)
+Cache.c:						if (collect_stats)
+Cache.c:							event->cp->dir_notification++;
+Cache.c:#endif
+Cache.c:					md_addr_t src = (repl->addr >> cache_dl2->set_shift) % numcontexts;
+Cache.c:					new_event->des1 = (src /mesh_size)+MEM_LOC_SHIFT;
+Cache.c:			if(repl->status & CACHE_BLK_VALID)
+Cache.c:				if(repl->state == MESI_EXCLUSIVE)
+Cache.c:				if(repl->blkAlocReason == LINE_PREFETCH)
+Cache.c:					if(repl->blkImdtOp)
+Cache.c:				else if(repl->blkAlocReason == LINE_READ)
+Cache.c:					if(repl->blkImdtOp)
+Cache.c:				else if(repl->blkAlocReason == LINE_WRITE)
+Cache.c:					if(repl->blkImdtOp)
+Cache.c:			if(event->isPrefetch)
+Cache.c:			else if(event->cmd == Write)
+Cache.c:			else if(event->cmd == Read)
+Cache.c:#ifdef SERIALIZATION_ACK	
+Cache.c:			if(event->pendingInvAck)
+Cache.c:#endif
+Cache.c:			/* copy data out of cache block, if block exists */
+Cache.c:			if ((event->cp)->balloc && (event->vp))
+Cache.c:			if(event->operation == ACK_DIR_READ_EXCLUSIVE) 
+Cache.c:			else if(event->operation == ACK_DIR_READ_SHARED)
+Cache.c:			else if(event->operation == ACK_DIR_WRITE || event->operation == ACK_DIR_WRITEUPDATE) 
+Cache.c:				if(event->operation == ACK_DIR_WRITEUPDATE)
+Cache.c:				else if(event->operation == ACK_DIR_WRITE)
+Cache.c:				repl->state = MESI_MODIFIED;
+Cache.c:			/* get user block data, if requested and it exists */
+Cache.c:			if (event->udata)
+Cache.c:			if(collect_stats)
+Cache.c:				//if(!event->isPrefetch)
+Cache.c:					if(!event->isReqL2Hit)
+Cache.c:						if(event->isReqL2SecMiss)
+Cache.c:						else if(event->isReqL2Trans)
+Cache.c:							if(event->operation == ACK_DIR_WRITE || event->operation == ACK_DIR_WRITEUPDATE)
+Cache.c:						else if(event->isReqL2Inv)
+Cache.c:				if(event->operation == ACK_DIR_WRITE && event->isReqL2Hit && !event->isReqL2SecMiss)
+Cache.c:				if(event->operation == ACK_DIR_WRITEUPDATE && event->isReqL2Hit && !event->isReqL2SecMiss)
+Cache.c:				if(event->isSyncAccess)
+Cache.c:					if(event->L2miss_flag && event->L2miss_complete && event->L2miss_stated)
+Cache.c:					else if(event->L2miss_flag)
+Cache.c:			if((event->prefetch_next == 2 || event->prefetch_next == 4)&& (event->operation == ACK_DIR_READ_SHARED || event->operation == ACK_DIR_READ_EXCLUSIVE))
+Cache.c:			if ((event->cp)->hsize)
+Cache.c:			if(!event->spec_mode && event->rs)
+Cache.c:				if((event->operation == ACK_DIR_READ_SHARED) || (event->operation == ACK_DIR_READ_EXCLUSIVE))
+Cache.c:#ifdef PREFETCH_OPTI
+Cache.c:			thecontexts[(event->des1-MEM_LOC_SHIFT)*mesh_size+event->des2]->dcache_access++;
+Cache.c:				case FIFO:
+Cache.c:				if(!mystricmp (network_type, "FSOI") || !mystricmp(network_type, "HYBRID"))
+Cache.c:#ifdef WRITE_EARLY
+Cache.c:					if(i == 0)	break;
+Cache.c:				if(repl->status & CACHE_BLK_WVALID)
+Cache.c:#endif
+Cache.c:			if ((repl->status & CACHE_BLK_VALID) 
+Cache.c:#ifdef SILENT_DROP
+Cache.c:#ifndef UPDATE_HINT
+Cache.c:#endif
+Cache.c:#endif
+Cache.c:				if (collect_stats)
+Cache.c:				if (actualProcess == 1 && !md_text_addr(repl->addr, tempID))     /*no write back to L2 for dual exec */
+Cache.c:					if ((repl->status & CACHE_BLK_DIRTY) && !(repl->state == MESI_MODIFIED))
+Cache.c:						panic ("Cache Block should have been modified here");
+Cache.c:					if(new_event == NULL) 	panic("Out of Virtual Memory");
+Cache.c:#if defined(NON_SILENT_DROP) || defined(UPDATE_HINT)
+Cache.c:					if (repl->status & CACHE_BLK_DIRTY)
+Cache.c:#endif
+Cache.c:						if (collect_stats)
+Cache.c:#ifdef WB_SPLIT
+Cache.c:							if(wb_buffer[event->des1*mesh_size+event->des2][j] == 0)
+Cache.c:						if(wb_f == 0)
+Cache.c:#endif
+Cache.c:#if defined(NON_SILENT_DROP) || defined(UPDATE_HINT)
+Cache.c:						if (collect_stats)
+Cache.c:							event->cp->dir_notification++;
+Cache.c:#endif
+Cache.c:					md_addr_t src = (repl->addr >> cache_dl2->set_shift) % numcontexts;
+Cache.c:					new_event->des1 = (src /mesh_size)+MEM_LOC_SHIFT;
+Cache.c:#ifdef SERIALIZATION_ACK	
+Cache.c:			if(event->pendingInvAck)
+Cache.c:#endif
+Cache.c:			/* copy data out of cache block, if block exists */
+Cache.c:			if ((event->cp)->balloc && (event->vp))
+Cache.c:			if(event->operation == READ_META_REPLY_EXCLUSIVE || event->operation == READ_DATA_REPLY_EXCLUSIVE) 
+Cache.c:			else if(event->operation == READ_META_REPLY_SHARED || event->operation == READ_DATA_REPLY_SHARED)
+Cache.c:			else if(event->operation == WRITE_DATA_REPLY || event->operation == WRITE_META_REPLY) 
+Cache.c:				repl->state = MESI_MODIFIED;
+Cache.c:			/* get user block data, if requested and it exists */
+Cache.c:			if (event->udata)
+Cache.c:			if ((event->cp)->hsize)
+Cache.c:			if(!event->spec_mode && event->rs)
+Cache.c:				if((event->operation == READ_DATA_REPLY_SHARED) || (event->operation == READ_META_REPLY_SHARED) || (event->operation == READ_DATA_REPLY_EXCLUSIVE) || (event->operation == READ_META_REPLY_EXCLUSIVE))
+Cache.c:#endif
+Cache.c:				if(event->operation == WAIT_MEM_READ_N)
+Cache.c:				if(event->parent_operation < 100)
+Cache.c:					if(gp_event->childCount == cache_dl2->bsize/max_packet_size-1)
+Cache.c:				if(reFlag || event->parent_operation >= 100)
+Cache.c:					if(reFlag)
+Cache.c:						if(gp_event->parent->operation == WAIT_MEM_READ)
+Cache.c:					else if(event->parent_operation >= 100)
+Cache.c:					thecontexts[(p_event->des1-MEM_LOC_SHIFT)*mesh_size+p_event->des2]->dcache2_access++;
+Cache.c:						case FIFO:
+Cache.c:							if(i == 0)	break;
+Cache.c:						while(repl_dir_state_check(repl->dir_state, (p_event->des1-MEM_LOC_SHIFT)*mesh_size+p_event->des2, repl->addr));
+Cache.c:						if(repl_dir_state_check(repl->dir_state, (p_event->des1-MEM_LOC_SHIFT)*mesh_size+p_event->des2, repl->addr))
+Cache.c:					if (repl->status & CACHE_BLK_VALID)
+Cache.c:						if (collect_stats)
+Cache.c:						for(i=0; i<(cache_dl2->set_shift - cache_dl1[0]->set_shift); i++)
+Cache.c:							if(Is_Shared(repl->dir_sharer[i], tempID))
+Cache.c:							if(Is_Shared(repl->dir_sharer[i], tempID))
+Cache.c:								repl->addr = (repl->tagid.tag << cache_dl2->tag_shift) + (set_dir << cache_dl2->set_shift) + (i << cache_dl1[0]->set_shift);
+Cache.c:									if(((repl->dir_sharer[i][Threadid/64]) & ((unsigned long long int)1 << (Threadid%64))) == ((unsigned long long int)1 << (Threadid%64)))
+Cache.c:										if(collect_stats)
+Cache.c:										if(new_event == NULL)       panic("Out of Virtual Memory");
+Cache.c:										new_event->des1 = Threadid/mesh_size+MEM_LOC_SHIFT;
+Cache.c:										if(!mystricmp (network_type, "FSOI") || !mystricmp(network_type, "HYBRID"))
+Cache.c:#ifdef INV_ACK_CON
+Cache.c:										if(Is_Shared(repl->dir_sharer[i], tempID) > 1)
+Cache.c:											if((new_event->src1*mesh_size+new_event->src2 != new_event->des1*mesh_size+new_event->des2) && ((!mystricmp(network_type, "FSOI")) || (!mystricmp(network_type, "HYBRID") && ((abs(new_event->src1 - new_event->des1) + abs(new_event->src2 - new_event->des2)) > 1))))
+Cache.c:												if(new_event2 == NULL)       panic("Out of Virtual Memory");
+Cache.c:#endif
+Cache.c:						if(flag == 1)
+Cache.c:							if(collect_stats)
+Cache.c:						if(repl->status & CACHE_BLK_DIRTY)
+Cache.c:							if(collect_stats)
+Cache.c:#ifdef PREFETCH_OPTI
+Cache.c:					repl->prefetch_modified[block_offset] = 0;
+Cache.c:#endif
+Cache.c:#ifdef STREAM_PREFETCHER
+Cache.c:					if(dl2_prefetch_active)
+Cache.c:#endif
+Cache.c:					/* jing: Here is a problem: copy data out of cache block, if block exists */
+Cache.c:					if (repl->way_prev && cp_dir->policy == LRU)
+Cache.c:					/* get user block data, if requested and it exists */
+Cache.c:					if (p_event->udata)
+Cache.c:					if (cp_dir->hsize)
+Cache.c:					if(p_event->parent_operation == L2_PREFETCH)
+Cache.c:					if(p_event->parent_operation == MISS_IL1)
+Cache.c:					else if(p_event->parent_operation == MISS_READ
+Cache.c:#ifdef PREFETCH_OPTI
+Cache.c:#endif
+Cache.c:#ifdef LOCK_CACHE_REGISTER
+Cache.c:						/* update the lock register if necessary */
+Cache.c:						if(p_event->store_cond == MY_LDL_L)// && (bool_value)) //FIXME: check the value if bool or not
+Cache.c:#endif				
+Cache.c:						if (!md_text_addr(addr, tempID))
+Cache.c:					else if(p_event->parent_operation == MISS_WRITE
+Cache.c:#ifdef PREFETCH_OPTI
+Cache.c:#endif
+Cache.c:						repl->dir_blk_state[block_offset] = MESI_MODIFIED;
+Cache.c:						repl->dir_blk_state[block_offset] = MESI_MODIFIED;
+Cache.c:					p_event->des1 = tempID/mesh_size+MEM_LOC_SHIFT;
+Cache.c:				else if(gp_event->childCount == 0)
+Cache.c:					//if(findCacheStatus(cp_dir, set_dir, tag_dir, hindex_dir, &blk, block_offset))
+Cache.c:#ifdef EUP_NETWORK
+Cache.c:	if(!mystricmp (network_type, "FSOI") || (!mystricmp (network_type, "HYBRID")))
+Cache.c:	if(EUP_entry_replacecheck(id, addr>>cache_dl2->set_shift))
+Cache.c:#endif
+Cache.c:	for(m=0; m<(cache_dl2->set_shift - cache_dl1[0]->set_shift); m++)
+Cache.c:		if(dir_state[m] == DIR_TRANSITION)
+Cache.c:   places NBYTES of data at *P, returns latency of operation if initiated
+Cache.c:   at NOW, places pointer to block user data in *UDATA, *P is untouched if
+Cache.c:   cache blocks are not allocated (!CP->BALLOC), UDATA should be NULL if no
+Cache.c:#ifdef SMD_USE_WRITE_BUF
+Cache.c:#endif
+Cache.c:	if (!strcmp (cp->name, dl1name) && cp->threadid != threadid)
+Cache.c:	if(!strcmp (cp->name, dl1name) && md_text_addr(addr, threadid))
+Cache.c:	if(addr == 5368767520)
+Cache.c:#if PROCESS_MODEL
+Cache.c:#endif
+Cache.c:#if PROCESS_MODEL
+Cache.c:	if (!strcmp (cp->name, dl1name))
+Cache.c:#endif
+Cache.c:	if (!strcmp (cp->name, dl1name))
+Cache.c:		if (cmd == Write)
+Cache.c:				if ((quiesceAddrStruct[cnt].address == addr))
+Cache.c:#ifdef  L1_STREAM_PREFETCHER
+Cache.c:	/* Forward the request to stream prefetcher. do not prefetch if it's a sync instruction */
+Cache.c:		if(rs)
+Cache.c:			if(!rs->isSyncInst)
+Cache.c:#endif
+Cache.c:	if (repl_addr)
+Cache.c:	if ((nbytes & (nbytes - 1)) != 0 || (addr & (nbytes - 1)) != 0)
+Cache.c:	if ((addr + nbytes - 1) > ((addr & ~cp->blk_mask) + cp->bsize - 1))
+Cache.c:	if (strcmp (cp->name, dl1name))	//not level-1 data cache
+Cache.c:		if (cp->hsize)
+Cache.c:				if ((blk->tagid.tag == tag) && (blk->status & CACHE_BLK_VALID))
+Cache.c:				if ((blk->tagid.tag == tag) && (blk->status & CACHE_BLK_VALID))
+Cache.c:		if(rs)
+Cache.c:			if(rs->isSyncInst)
+Cache.c:				if(my_rs->in_LSQ != 1)
+Cache.c:				if(!my_rs)
+Cache.c:				if(my_rs->op == LDL)
+Cache.c:				else if(my_rs->op == LDL_L)
+Cache.c:				else if(my_rs->op == STL_C)
+Cache.c:#ifdef BAR_OPT
+Cache.c:			if(rs->isSyncInstBarRel)
+Cache.c:				if(my_rs->in_LSQ != 1)
+Cache.c:				if(!my_rs)
+Cache.c:#endif
+Cache.c:#ifdef SMD_USE_WRITE_BUF
+Cache.c:		else if(l1_wb_entry)
+Cache.c:			if(l1_wb_entry->op == STL_C)
+Cache.c:#endif
+Cache.c:					if ((blk->tagid.tag == tag) && (blk->status & CACHE_BLK_VALID) && ((blk->state == MESI_SHARED) || (blk->state == MESI_MODIFIED) || (blk->state == MESI_EXCLUSIVE)))
+Cache.c:						if (collect_stats)
+Cache.c:								case MESI_MODIFIED:
+Cache.c:#ifdef PREFETCH_OPTI
+Cache.c:						if(blk->isL1prefetch)
+Cache.c:							//if(blk->prefetch_time)
+Cache.c:							if (!event)
+Cache.c:							event->src1 = thecontexts[threadid]->actualid/mesh_size+MEM_LOC_SHIFT;
+Cache.c:							int src = (addr >> cache_dl2->set_shift) % numcontexts;
+Cache.c:							event->des1 = (src /mesh_size)+MEM_LOC_SHIFT;
+Cache.c:#ifdef SMD_USE_WRITE_BUF
+Cache.c:#endif
+Cache.c:#endif
+Cache.c:					if ((blk->tagid.tag == tag) && (blk->status & CACHE_BLK_VALID))
+Cache.c:							case MESI_MODIFIED:
+Cache.c:								if (collect_stats)
+Cache.c:								if (collect_stats)
+Cache.c:								if (spec_benchmarks)
+Cache.c:								if(collect_stats)
+Cache.c:									if(blk->blkAlocReason == LINE_PREFETCH)
+Cache.c:										if(blk->blkImdtOp)
+Cache.c:									else if(blk->blkAlocReason == LINE_READ)
+Cache.c:										if(blk->blkImdtOp)
+Cache.c:									else if (blk->blkAlocReason == LINE_WRITE)
+Cache.c:										if(blk->blkImdtOp)
+Cache.c:								if(rs)
+Cache.c:#ifdef SMD_USE_WRITE_BUF
+Cache.c:								else if(l1_wb_entry)
+Cache.c:									if(l1_wb_entry->op == STL_C)
+Cache.c:#endif
+Cache.c:								if (!event)
+Cache.c:								if(my_rs)
+Cache.c:									if(my_rs->isSyncInst)
+Cache.c:										if(my_rs->op == STL_C || my_rs->op == STQ_C)
+Cache.c:										if(my_rs->op == STL)
+Cache.c:#ifdef BAR_OPT
+Cache.c:									if(my_rs->isSyncInstBarRel && my_rs->op == STL)
+Cache.c:#endif
+Cache.c:#ifdef SMD_USE_WRITE_BUF
+Cache.c:								else if(l1_wb_entry)
+Cache.c:									if(l1_wb_entry->op == STL_C)
+Cache.c:#endif
+Cache.c:								event->src1 = thecontexts[threadid]->actualid/mesh_size+MEM_LOC_SHIFT;
+Cache.c:#ifdef CENTRALIZED_L2
+Cache.c:								src = (addr >> cache_dl2->set_shift) % CENTL2_BANK_NUM;
+Cache.c:								src = (addr >> cache_dl2->set_shift) % numcontexts;
+Cache.c:								event->des1 = (src /mesh_size)+MEM_LOC_SHIFT;
+Cache.c:#endif
+Cache.c:								if(collect_stats)
+Cache.c:									if(((event->addr)>>cache_dl2->set_shift)%numcontexts == thecontexts[threadid]->actualid)
+Cache.c:								if(collect_stats)
+Cache.c:								if(collect_stats && event->isSyncAccess)
+Cache.c:#ifdef SMD_USE_WRITE_BUF
+Cache.c:#endif
+Cache.c:								if(blk->isL1prefetch)
+Cache.c:								if (collect_stats)
+Cache.c:								blk->state = MESI_MODIFIED;
+Cache.c:#ifdef COHERENCE_MODIFIED
+Cache.c:								if (!event)
+Cache.c:								event->src1 = thecontexts[threadid]->actualid/mesh_size+MEM_LOC_SHIFT;
+Cache.c:								src = (addr >> cache_dl2->set_shift) % numcontexts;
+Cache.c:								event->des1 = (src /mesh_size)+MEM_LOC_SHIFT;
+Cache.c:								if(collect_stats)
+Cache.c:#ifdef SMD_USE_WRITE_BUF
+Cache.c:#endif
+Cache.c:#endif
+Cache.c:#ifdef PREFETCH_OPTI
+Cache.c:								if(blk->isL1prefetch)
+Cache.c:									//if(blk->prefetch_time)
+Cache.c:									if (!event)
+Cache.c:									event->src1 = thecontexts[threadid]->actualid/mesh_size+MEM_LOC_SHIFT;
+Cache.c:									src = (addr >> cache_dl2->set_shift) % numcontexts;
+Cache.c:									event->des1 = (src /mesh_size)+MEM_LOC_SHIFT;
+Cache.c:#ifdef SMD_USE_WRITE_BUF
+Cache.c:#endif
+Cache.c:#endif
+Cache.c:	if(!strcmp(cp->name, dl1name))
+Cache.c:		if(collect_stats)
+Cache.c:				if ((blk->tagid.tag == tag) && (blk->status == 0)&& (blk->state == MESI_INVALID))
+Cache.c:			if(flag != 1)
+Cache.c:#ifdef DL1_PREFETCH
+Cache.c:		/* find if next block is in the cache line */
+Cache.c:		if(set == 0)
+Cache.c:				if ((blk->tagid.tag == tag) && (blk->status & CACHE_BLK_VALID))
+Cache.c:				if ((blk->tagid.tag == tag) && (blk->status & CACHE_BLK_VALID))
+Cache.c:			if ((blk->tagid.tag == tag) && (blk->status & CACHE_BLK_VALID))
+Cache.c:#endif
+Cache.c:		if(rs)
+Cache.c:#ifdef SMD_USE_WRITE_BUF
+Cache.c:		else if(l1_wb_entry)
+Cache.c:			if(l1_wb_entry->op == STL_C)
+Cache.c:#endif
+Cache.c:		if (!event)
+Cache.c:		if (cmd == Read)
+Cache.c:			if(rs)
+Cache.c:		if(collect_stats)
+Cache.c:		if(collect_stats && isSyncAccess)
+Cache.c:			if(event->operation == MISS_WRITE)
+Cache.c:		event->src1 = thecontexts[threadid]->actualid/mesh_size+MEM_LOC_SHIFT;
+Cache.c:#ifdef CENTRALIZED_L2
+Cache.c:		src = (addr >> cache_dl2->set_shift) % CENTL2_BANK_NUM;
+Cache.c:		src = (addr >> cache_dl2->set_shift) % numcontexts;
+Cache.c:		event->des1 = (src /mesh_size)+MEM_LOC_SHIFT;
+Cache.c:#endif
+Cache.c:		if(rs)
+Cache.c:#ifdef SMD_USE_WRITE_BUF
+Cache.c:		else if(l1_wb_entry)
+Cache.c:			if(l1_wb_entry->op == STL_C)
+Cache.c:#endif
+Cache.c:		if(collect_stats)
+Cache.c:			if((addr>>cache_dl2->set_shift)%numcontexts == thecontexts[threadid]->actualid)
+Cache.c:#ifdef SMD_USE_WRITE_BUF
+Cache.c:#endif
+Cache.c:		if(my_rs)
+Cache.c:			if(my_rs->isSyncInst && my_rs->op == LDL)
+Cache.c:			if(my_rs->op == LDL_L)
+Cache.c:			if(my_rs->op == STL_C)
+Cache.c:			if(my_rs->isSyncInst && my_rs->op == STL)
+Cache.c:#ifdef BAR_OPT
+Cache.c:			if(my_rs->isSyncInstBarRel && my_rs->op == STL)
+Cache.c:#endif
+Cache.c:#ifdef SMD_USE_WRITE_BUF
+Cache.c:		else if(l1_wb_entry)
+Cache.c:			if(l1_wb_entry->op == STL_C)
+Cache.c:#endif
+Cache.c:#ifdef  L1_STREAM_PREFETCHER
+Cache.c:		if (!dl1_prefetch_active)
+Cache.c:			if(rs)
+Cache.c:				if(!rs->isSyncInst)
+Cache.c:#endif
+Cache.c:#ifdef DL1_PREFETCH
+Cache.c:		if(!next_block && pre_block)
+Cache.c:			addr_prefetch = (tag << cp->tag_shift) + (((set+1)%cp->nsets) << cp->set_shift);
+Cache.c:			src = (addr_prefetch >> cache_dl2->set_shift) % numcontexts;
+Cache.c:			matchnum = MSHR_block_check(cp->mshr, addr_prefetch, cp->set_shift);
+Cache.c:			if(!matchnum && (cp->mshr->freeEntries > 1))
+Cache.c:				if(new_event == NULL)       panic("Out of Virtual Memory");
+Cache.c:#ifdef PREFETCH_OPTI
+Cache.c:#endif
+Cache.c:#ifdef CENTRALIZED_L2
+Cache.c:				src = (addr_prefetch >> cache_dl2->set_shift) % CENTL2_BANK_NUM;
+Cache.c:				new_event->des1 = (src /mesh_size)+MEM_LOC_SHIFT;
+Cache.c:#endif
+Cache.c:#ifdef SMD_USE_WRITE_BUF
+Cache.c:#endif
+Cache.c:#endif
+Cache.c:	else if(!strcmp (cp->name, "il1"))
+Cache.c:		if (!event)
+Cache.c:		if(cmd == Write)
+Cache.c:		event->src1 = thecontexts[threadid]->actualid/mesh_size+MEM_LOC_SHIFT;
+Cache.c:#ifdef CENTRALIZED_L2
+Cache.c:		src = (addr >> cache_dl2->set_shift) % CENTL2_BANK_NUM;
+Cache.c:		src = (addr >> cache_dl2->set_shift) % numcontexts;
+Cache.c:		event->des1 = (src /mesh_size)+MEM_LOC_SHIFT;
+Cache.c:#endif
+Cache.c:		if(collect_stats)
+Cache.c:			if((addr>>cache_dl2->set_shift)%numcontexts == thecontexts[threadid]->actualid)
+Cache.c:#ifdef SMD_USE_WRITE_BUF
+Cache.c:#endif
+Cache.c:		case FIFO:
+Cache.c:	if (strcmp (cp->name, dl1name))	//not level-1 data cache
+Cache.c:		if (collect_stats)
+Cache.c:		/* remove this block from the hash bucket chain, if hash exists */
+Cache.c:		if (cp->hsize)
+Cache.c:		if (repl->status & CACHE_BLK_VALID)
+Cache.c:			if (collect_stats)
+Cache.c:			if (repl_addr)
+Cache.c:			if ((repl->status & CACHE_BLK_DIRTY))
+Cache.c:				if (collect_stats)
+Cache.c:		if (cp->balloc && p)
+Cache.c:		if (cmd == Write)
+Cache.c:		if (!strcmp (cp->name, "ul2"))
+Cache.c:			if (cmd == Write)
+Cache.c:		/* get user block data, if requested and it exists */
+Cache.c:		if (udata)
+Cache.c:		if (cp->hsize)
+Cache.c:	if (collect_stats)
+Cache.c:	/* copy data out of cache block, if block exists */
+Cache.c:	if (cp->balloc && p)
+Cache.c:	if (cmd == Write)
+Cache.c:	if (!strcmp (cp->name, "dl1"))
+Cache.c:		if (cmd == Write)
+Cache.c:		if(blk->blkImdtOp)
+Cache.c:		if(blk->isL1prefetch)
+Cache.c:			//if(blk->prefetch_time)
+Cache.c:		if(my_rs)
+Cache.c:			if(my_rs->isSyncInst && my_rs->op == LDL)
+Cache.c:			if(my_rs->op == LDL_L)
+Cache.c:			if(my_rs->op == STL_C)
+Cache.c:			if(my_rs->isSyncInst && my_rs->op == STL)
+Cache.c:#ifdef SMD_USE_WRITE_BUF
+Cache.c:		else if(l1_wb_entry)
+Cache.c:			if(l1_wb_entry->op == STL_C)
+Cache.c:#endif
+Cache.c:	if (!strcmp (cp->name, "ul2"))
+Cache.c:		if (cmd == Write)
+Cache.c:#ifdef STREAM_PREFETCHER
+Cache.c:	if (!strcmp (cp->name, "ul2") && blk->spTag && !dl2_prefetch_active)
+Cache.c:#endif
+Cache.c:	if (blk->way_prev && cp->policy == LRU)
+Cache.c:	/* tag is unchanged, so hash links (if they exist) are still valid */
+Cache.c:	/* get user block data, if requested and it exists */
+Cache.c:	if (udata)
+Cache.c:	if((int) max2 ((cp->hit_latency + lat), (blk->ready - now)) > WAIT_TIME)
+Cache.c:	if(!strcmp (cp->name, dl1name) && cp->threadid != threadid)
+Cache.c:	if(!strcmp (cp->name, dl1name) && md_text_addr(addr, threadid))
+Cache.c:#if PROCESS_MODEL
+Cache.c:#endif
+Cache.c:#if PROCESS_MODEL
+Cache.c:	if (!strcmp (cp->name, dl1name))
+Cache.c:#endif
+Cache.c:	if ((nbytes & (nbytes - 1)) != 0 || (addr & (nbytes - 1)) != 0)
+Cache.c:	if ((addr + nbytes - 1) > ((addr & ~cp->blk_mask) + cp->bsize - 1))
+Cache.c:	if (cp->hsize)
+Cache.c:			if ((blk->tagid.tag == tag) && (blk->status & CACHE_BLK_VALID))
+Cache.c:				if (blk->way_prev && cp->policy == LRU)
+Cache.c:			if ((blk->tagid.tag == tag) && (blk->status & CACHE_BLK_VALID))
+Cache.c:				if (blk->way_prev && cp->policy == LRU)
+Cache.c:		if ((blk->tagid.tag == tag_dir) && (blk->status & CACHE_BLK_VALID))
+Cache.c:			if (blk->way_prev && cache_dl2->policy == LRU)
+Cache.c:	if(isL2Hit)	/* Hit in L2 cache, add to sharers list */
+Cache.c:		if(strcmp (cp->name, "il1"))
+Cache.c:#ifdef NEW_WARMUP
+Cache.c:			if(cmd == Read)
+Cache.c:				if(blk->dir_blk_state[block_offset] == MESI_INVALID)
+Cache.c:				if(blk->dir_blk_state[block_offset] == MESI_MODIFIED || blk->dir_blk_state[block_offset] == MESI_EXCLUSIVE)
+Cache.c:					if(blk->dir_sharer[block_offset][threadid/64] & ((unsigned long long int)1<<(threadid%64)) != ((unsigned long long int)1<<(threadid%64)))
+Cache.c:				blk->dir_blk_state[block_offset] = MESI_MODIFIED;
+Cache.c:#endif
+Cache.c:			case FIFO:
+Cache.c:				if(i == 0)	break;
+Cache.c:			if(repl_dir_state_check(repl->dir_state, threadid, repl->addr))
+Cache.c:		if (repl->status & CACHE_BLK_VALID)
+Cache.c:			for(i=0; i<(cache_dl2->set_shift - cache_dl1[0]->set_shift); i++)
+Cache.c:				if(Is_Shared(repl->dir_sharer[i], -1))
+Cache.c:				if(Is_Shared(repl->dir_sharer[i], -1))
+Cache.c:					repl->addr = (repl->tagid.tag << cache_dl2->tag_shift) + (set_dir << cache_dl2->set_shift) + (i << cache_dl1[0]->set_shift);
+Cache.c:						if(((repl->dir_sharer[i][Threadid/64]) & ((unsigned long long int)1 << (Threadid%64))) == ((unsigned long long int)1 << (Threadid%64)))
+Cache.c:								if ((blk->tagid.tag == temp_tag) && (blk->status & CACHE_BLK_VALID))
+Cache.c:#ifdef NEW_WARMUP
+Cache.c:		if(cmd == Read)
+Cache.c:			repl->dir_blk_state[block_offset] = MESI_MODIFIED;
+Cache.c:			if(strcmp (cp->name, "il1"))
+Cache.c:#endif
+Cache.c:		if(strcmp (cp->name, "il1"))
+Cache.c:		if (cache_dl2->hsize)
+Cache.c:#ifdef NEW_WARMUP	
+Cache.c:#endif
+Cache.c:		case FIFO:
+Cache.c:#ifdef NEW_WARMUP
+Cache.c:#endif
+Cache.c:	if ((cp)->hsize)
+Cache.c:		if ((blk->tagid.tag == tag) && !(blk->status & CACHE_BLK_VALID))
+Cache.c:	if (cp2)
+Cache.c:#ifdef TOKENB
+Cache.c:#endif
+Cache.c:			if (blk->status & CACHE_BLK_VALID)
+Cache.c:				if (blk->status & CACHE_BLK_DIRTY)
+Cache.c:					if (collect_stats)
+Cache.c:			if (blk->status & CACHE_BLK_VALID)
+Cache.c:				//if (collect_stats)
+Cache.c:	if (!strcmp (cp->name, "dl1") && cp->threadid != threadid)
+Cache.c:	if (cp->hsize)
+Cache.c:			if ((blk->tagid.tag == tag) && (blk->status & CACHE_BLK_VALID))
+Cache.c:			if ((blk->tagid.tag == tag) && (blk->status & CACHE_BLK_VALID))
+Cache.c:#if 	defined(BUS_INTERCONNECT) || defined(CROSSBAR_INTERCONNECT)
+Cache.c:		if (!link)
+Cache.c:#ifdef BUS_INTERCONNECT
+Cache.c:#endif
+Cache.c:#endif
+Cache.c:#ifdef	EDA
+Cache.c:		if (thecontexts[i]->masterid != 0)
+Cache.c:#endif
+Cache.c:#ifdef SMT_SS
+Cache.c:				if ((blk->tagid.tag == tag) && (blk->tagid.threadid == i) && (blk->status & CACHE_BLK_VALID))
+Cache.c:					if (blk->tag == tag && (blk->status & CACHE_BLK_VALID))
+Cache.c:#endif
+Cache.c:			if (blk)

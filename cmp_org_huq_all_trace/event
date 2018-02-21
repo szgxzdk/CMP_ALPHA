@@ -1,0 +1,537 @@
+Binary file bpred.o matches
+cache.c:231:struct DIRECTORY_EVENT *lock_fifo[MAXTHREADS][MAXLOCKEVENT];
+cache.c:283:extern struct DIRECTORY_EVENT *dir_event_queue;  /* Head pointer point to the directory event queue */
+cache.c:284:extern struct DIRECTORY_EVENT *event_list[L2_MSHR_SIZE];  /* event list for L2 MSHR */
+cache.c:736:int UpgradeCheck(struct DIRECTORY_EVENT *event)
+cache.c:739:	struct DIRECTORY_EVENT *temp;
+cache.c:750:int SameUpgradeCheck(struct DIRECTORY_EVENT *event)
+cache.c:768:	free_event_list = calloc(1, sizeof(struct DIRECTORY_EVENT));
+cache.c:769:	struct DIRECTORY_EVENT * next = free_event_list;
+cache.c:773:		next->next = calloc(1, sizeof(struct DIRECTORY_EVENT));
+cache.c:779:struct DIRECTORY_EVENT * allocate_event(int isSyncAccess)
+cache.c:783:	struct DIRECTORY_EVENT * temp = free_event_list;
+cache.c:864:void free_event(struct DIRECTORY_EVENT *event)
+cache.c:1047:void dir_eventq_insert(struct DIRECTORY_EVENT *event);     // event queue directory version, put dir event in queue
+cache.c:1049:struct DIRECTORY_EVENT *event_created = NULL;
+cache.c:1215:						struct DIRECTORY_EVENT *new_event = allocate_event(0);
+cache.c:1421:			struct DIRECTORY_EVENT *event = allocate_event(0);
+cache.c:1580://void scheduleThroughNetwork(struct DIRECTORY_EVENT *event, counter_t start, int type, int vc);
+cache.c:1596:					struct DIRECTORY_EVENT *new_event = allocate_event(isSyncAccess);
+cache.c:1691:void LockRegesterCheck(struct DIRECTORY_EVENT *event)
+cache.c:1704:int lock_cache_access(struct DIRECTORY_EVENT *event)
+cache.c:1739:int lock_cache_operation(struct DIRECTORY_EVENT *event)
+cache.c:1841:								struct DIRECTORY_EVENT *new_event = allocate_event(event->isSyncAccess);
+cache.c:1882:											struct DIRECTORY_EVENT *new_event2 = allocate_event(event->isSyncAccess);
+cache.c:1958:						struct DIRECTORY_EVENT *parent_event = event->parent;
+cache.c:1993:int dir_fifo_enqueue(struct DIRECTORY_EVENT *event, int type)
+cache.c:2168:void dir_eventq_insert(struct DIRECTORY_EVENT *event)     // event queue directory version, put dir event in queue
+cache.c:2170:	struct DIRECTORY_EVENT *ev, *prev;     
+cache.c:2187:void queue_insert(struct DIRECTORY_EVENT *event, struct QUEUE_EVENT *queue)
+cache.c:2206:void free_queue(struct DIRECTORY_EVENT *event, struct QUEUE_EVENT *queue)
+cache.c:2226:int queue_check(struct DIRECTORY_EVENT *event, struct QUEUE_EVENT *queue)
+cache.c:2297:void TSHRInsert(struct tshr_t *tshr, struct DIRECTORY_EVENT *event, md_addr_t addr)
+cache.c:2343://struct DIRECTORY_EVENT *event_created = NULL;
+cache.c:2490:void mshrentry_update(struct DIRECTORY_EVENT *event, tick_t ready, tick_t startcycle)
+cache.c:2638:void event_list_insert(struct DIRECTORY_EVENT *event, int entry)
+cache.c:2642:	struct DIRECTORY_EVENT *cur, *prev;
+cache.c:2662:	struct DIRECTORY_EVENT *cur, *prev;
+cache.c:2818:struct DIRECTORY_EVENT *allocate_new_event(struct DIRECTORY_EVENT *event)
+cache.c:2820:	struct DIRECTORY_EVENT *new_event = allocate_event(event->isSyncAccess);
+cache.c:3002:int dir_operation (struct DIRECTORY_EVENT *event, int lock_access)
+cache.c:3147:					struct DIRECTORY_EVENT *new_event;
+cache.c:3204:					struct DIRECTORY_EVENT *new_event;
+cache.c:3329:					struct DIRECTORY_EVENT *new_event;
+cache.c:3460:					struct DIRECTORY_EVENT *new_event;
+cache.c:3596:					struct DIRECTORY_EVENT *new_event = allocate_event(event->isSyncAccess);
+cache.c:3636:							struct DIRECTORY_EVENT *new_event2 = allocate_event(event->isSyncAccess);
+cache.c:3834:					struct DIRECTORY_EVENT *new_event;
+cache.c:4114:						struct DIRECTORY_EVENT *new_event = allocate_event(event->isSyncAccess);
+cache.c:4165:								struct DIRECTORY_EVENT *new_event2 = allocate_event(event->isSyncAccess);
+cache.c:4331:					struct DIRECTORY_EVENT *new_event;
+cache.c:4482:					struct DIRECTORY_EVENT *new_event = allocate_event(event->isSyncAccess);
+cache.c:4524:							struct DIRECTORY_EVENT *new_event2 = allocate_event(event->isSyncAccess);
+cache.c:4712:					struct DIRECTORY_EVENT *new_event;
+cache.c:5057:						struct DIRECTORY_EVENT *new_event = allocate_event(event->isSyncAccess);
+cache.c:5107:								struct DIRECTORY_EVENT *new_event2 = allocate_event(event->isSyncAccess);
+cache.c:5282:					struct DIRECTORY_EVENT *new_event;
+cache.c:6088:				struct DIRECTORY_EVENT *parent_event = event->parent;
+cache.c:6200:				struct DIRECTORY_EVENT *parent_event = event->parent;
+cache.c:6242:					struct DIRECTORY_EVENT *p_event;
+cache.c:6318:				struct DIRECTORY_EVENT *parent_event = event->parent;
+cache.c:6423:							struct DIRECTORY_EVENT *new_event;
+cache.c:6730:					struct DIRECTORY_EVENT *new_event = allocate_event(event->isSyncAccess);
+cache.c:7062:					struct DIRECTORY_EVENT *new_event = allocate_event(event->isSyncAccess);
+cache.c:7413:					struct DIRECTORY_EVENT *new_event = allocate_event(event->isSyncAccess);
+cache.c:7547:				struct DIRECTORY_EVENT *p_event;
+cache.c:7548:				struct DIRECTORY_EVENT *gp_event;
+cache.c:7651:										struct DIRECTORY_EVENT *new_event = allocate_event(event->isSyncAccess);
+cache.c:7694:												struct DIRECTORY_EVENT *new_event2 = allocate_event(event->isSyncAccess);
+cache.c:7764:								struct DIRECTORY_EVENT *new_event;
+cache.c:7993:	struct DIRECTORY_EVENT *event;
+cache.c:8144:							event = (struct DIRECTORY_EVENT *) allocate_event(isSyncAccess); //create a space
+cache.c:8258:								event = (struct DIRECTORY_EVENT *)
+cache.c:8394:								event = (struct DIRECTORY_EVENT *) allocate_event(isSyncAccess); //create a space
+cache.c:8458:									event = (struct DIRECTORY_EVENT *) allocate_event(isSyncAccess); //create a space
+cache.c:8576:		event = (struct DIRECTORY_EVENT *)
+cache.c:8749:				struct DIRECTORY_EVENT *new_event = allocate_event(0);
+cache.c:8813:		event = (struct DIRECTORY_EVENT *)
+cache.h:250:	struct DIRECTORY_EVENT *event;
+cache.h:267://void mshrentry_update(struct DIRECTORY_EVENT *event, tick_t ready, tick_t startcycle);
+cache.h:574:	struct DIRECTORY_EVENT *ptr_cur_event[8];
+cache.h:578:  struct DIRECTORY_EVENT *ReadPending_event[8];
+cache.h:971:struct DIRECTORY_EVENT
+cache.h:977:	struct DIRECTORY_EVENT *next;       	// pointer to next entry
+cache.h:1022:	struct DIRECTORY_EVENT *parent;       // pointer to next entry
+cache.h:1046:struct DIRECTORY_EVENT *free_event_list;
+cache.h:1053:	struct DIRECTORY_EVENT *event;
+cache.h:1074:struct DIRECTORY_EVENT *dir_fifo[MAXSIZE][DIR_FIFO_SIZE];
+cache.h:1081:struct DIRECTORY_EVENT *tshr_fifo[MAXSIZE][TSHR_FIFO_SIZE];
+cache.h:1088:struct DIRECTORY_EVENT *l1_fifo[MAXSIZE][DIR_FIFO_SIZE];
+cache.h:1095:int dir_fifo_enqueue(struct DIRECTORY_EVENT *event, int type);
+Binary file cache.o matches
+cache_o.c:232:struct DIRECTORY_EVENT *lock_fifo[MAXTHREADS][MAXLOCKEVENT];
+cache_o.c:284:extern struct DIRECTORY_EVENT *dir_event_queue;  /* Head pointer point to the directory event queue */
+cache_o.c:285:extern struct DIRECTORY_EVENT *event_list[L2_MSHR_SIZE];  /* event list for L2 MSHR */
+cache_o.c:737:int UpgradeCheck(struct DIRECTORY_EVENT *event)
+cache_o.c:740:	struct DIRECTORY_EVENT *temp;
+cache_o.c:751:int SameUpgradeCheck(struct DIRECTORY_EVENT *event)
+cache_o.c:769:	free_event_list = calloc(1, sizeof(struct DIRECTORY_EVENT));
+cache_o.c:770:	struct DIRECTORY_EVENT * next = free_event_list;
+cache_o.c:774:		next->next = calloc(1, sizeof(struct DIRECTORY_EVENT));
+cache_o.c:780:struct DIRECTORY_EVENT * allocate_event(int isSyncAccess)
+cache_o.c:784:	struct DIRECTORY_EVENT * temp = free_event_list;
+cache_o.c:865:void free_event(struct DIRECTORY_EVENT *event)
+cache_o.c:1046:void dir_eventq_insert(struct DIRECTORY_EVENT *event);     // event queue directory version, put dir event in queue
+cache_o.c:1048:struct DIRECTORY_EVENT *event_created = NULL;
+cache_o.c:1213:						struct DIRECTORY_EVENT *new_event = allocate_event(0);
+cache_o.c:1415:			struct DIRECTORY_EVENT *event = allocate_event(0);
+cache_o.c:1567://void scheduleThroughNetwork(struct DIRECTORY_EVENT *event, counter_t start, int type, int vc);
+cache_o.c:1583:					struct DIRECTORY_EVENT *new_event = allocate_event(isSyncAccess);
+cache_o.c:1678:void LockRegesterCheck(struct DIRECTORY_EVENT *event)
+cache_o.c:1691:int lock_cache_access(struct DIRECTORY_EVENT *event)
+cache_o.c:1726:int lock_cache_operation(struct DIRECTORY_EVENT *event)
+cache_o.c:1828:								struct DIRECTORY_EVENT *new_event = allocate_event(event->isSyncAccess);
+cache_o.c:1869:											struct DIRECTORY_EVENT *new_event2 = allocate_event(event->isSyncAccess);
+cache_o.c:1945:						struct DIRECTORY_EVENT *parent_event = event->parent;
+cache_o.c:1980:int dir_fifo_enqueue(struct DIRECTORY_EVENT *event, int type)
+cache_o.c:2155:void dir_eventq_insert(struct DIRECTORY_EVENT *event)     // event queue directory version, put dir event in queue
+cache_o.c:2157:	struct DIRECTORY_EVENT *ev, *prev;     
+cache_o.c:2174:void queue_insert(struct DIRECTORY_EVENT *event, struct QUEUE_EVENT *queue)
+cache_o.c:2193:void free_queue(struct DIRECTORY_EVENT *event, struct QUEUE_EVENT *queue)
+cache_o.c:2213:int queue_check(struct DIRECTORY_EVENT *event, struct QUEUE_EVENT *queue)
+cache_o.c:2284:void TSHRInsert(struct tshr_t *tshr, struct DIRECTORY_EVENT *event, md_addr_t addr)
+cache_o.c:2330://struct DIRECTORY_EVENT *event_created = NULL;
+cache_o.c:2477:void mshrentry_update(struct DIRECTORY_EVENT *event, tick_t ready, tick_t startcycle)
+cache_o.c:2625:void event_list_insert(struct DIRECTORY_EVENT *event, int entry)
+cache_o.c:2629:	struct DIRECTORY_EVENT *cur, *prev;
+cache_o.c:2649:	struct DIRECTORY_EVENT *cur, *prev;
+cache_o.c:2805:struct DIRECTORY_EVENT *allocate_new_event(struct DIRECTORY_EVENT *event)
+cache_o.c:2807:	struct DIRECTORY_EVENT *new_event = allocate_event(event->isSyncAccess);
+cache_o.c:2989:int dir_operation (struct DIRECTORY_EVENT *event, int lock_access)
+cache_o.c:3134:					struct DIRECTORY_EVENT *new_event;
+cache_o.c:3191:					struct DIRECTORY_EVENT *new_event;
+cache_o.c:3316:					struct DIRECTORY_EVENT *new_event;
+cache_o.c:3447:					struct DIRECTORY_EVENT *new_event;
+cache_o.c:3583:					struct DIRECTORY_EVENT *new_event = allocate_event(event->isSyncAccess);
+cache_o.c:3623:							struct DIRECTORY_EVENT *new_event2 = allocate_event(event->isSyncAccess);
+cache_o.c:3821:					struct DIRECTORY_EVENT *new_event;
+cache_o.c:4101:						struct DIRECTORY_EVENT *new_event = allocate_event(event->isSyncAccess);
+cache_o.c:4152:								struct DIRECTORY_EVENT *new_event2 = allocate_event(event->isSyncAccess);
+cache_o.c:4318:					struct DIRECTORY_EVENT *new_event;
+cache_o.c:4469:					struct DIRECTORY_EVENT *new_event = allocate_event(event->isSyncAccess);
+cache_o.c:4511:							struct DIRECTORY_EVENT *new_event2 = allocate_event(event->isSyncAccess);
+cache_o.c:4699:					struct DIRECTORY_EVENT *new_event;
+cache_o.c:5044:						struct DIRECTORY_EVENT *new_event = allocate_event(event->isSyncAccess);
+cache_o.c:5094:								struct DIRECTORY_EVENT *new_event2 = allocate_event(event->isSyncAccess);
+cache_o.c:5269:					struct DIRECTORY_EVENT *new_event;
+cache_o.c:6075:				struct DIRECTORY_EVENT *parent_event = event->parent;
+cache_o.c:6187:				struct DIRECTORY_EVENT *parent_event = event->parent;
+cache_o.c:6229:					struct DIRECTORY_EVENT *p_event;
+cache_o.c:6305:				struct DIRECTORY_EVENT *parent_event = event->parent;
+cache_o.c:6410:							struct DIRECTORY_EVENT *new_event;
+cache_o.c:6717:					struct DIRECTORY_EVENT *new_event = allocate_event(event->isSyncAccess);
+cache_o.c:7049:					struct DIRECTORY_EVENT *new_event = allocate_event(event->isSyncAccess);
+cache_o.c:7400:					struct DIRECTORY_EVENT *new_event = allocate_event(event->isSyncAccess);
+cache_o.c:7534:				struct DIRECTORY_EVENT *p_event;
+cache_o.c:7535:				struct DIRECTORY_EVENT *gp_event;
+cache_o.c:7638:										struct DIRECTORY_EVENT *new_event = allocate_event(event->isSyncAccess);
+cache_o.c:7681:												struct DIRECTORY_EVENT *new_event2 = allocate_event(event->isSyncAccess);
+cache_o.c:7751:								struct DIRECTORY_EVENT *new_event;
+cache_o.c:7975:	struct DIRECTORY_EVENT *event;
+cache_o.c:8126:							event = (struct DIRECTORY_EVENT *) allocate_event(isSyncAccess); //create a space
+cache_o.c:8240:								event = (struct DIRECTORY_EVENT *)
+cache_o.c:8369:								event = (struct DIRECTORY_EVENT *) allocate_event(isSyncAccess); //create a space
+cache_o.c:8433:									event = (struct DIRECTORY_EVENT *) allocate_event(isSyncAccess); //create a space
+cache_o.c:8551:		event = (struct DIRECTORY_EVENT *)
+cache_o.c:8717:				struct DIRECTORY_EVENT *new_event = allocate_event(0);
+cache_o.c:8774:		event = (struct DIRECTORY_EVENT *)
+cache_o.h:250:	struct DIRECTORY_EVENT *event;
+cache_o.h:267://void mshrentry_update(struct DIRECTORY_EVENT *event, tick_t ready, tick_t startcycle);
+cache_o.h:571:	struct DIRECTORY_EVENT *ptr_cur_event[8];
+cache_o.h:575:  struct DIRECTORY_EVENT *ReadPending_event[8];
+cache_o.h:968:struct DIRECTORY_EVENT
+cache_o.h:974:	struct DIRECTORY_EVENT *next;       	// pointer to next entry
+cache_o.h:1019:	struct DIRECTORY_EVENT *parent;       // pointer to next entry
+cache_o.h:1043:struct DIRECTORY_EVENT *free_event_list;
+cache_o.h:1050:	struct DIRECTORY_EVENT *event;
+cache_o.h:1071:struct DIRECTORY_EVENT *dir_fifo[MAXSIZE][DIR_FIFO_SIZE];
+cache_o.h:1078:struct DIRECTORY_EVENT *tshr_fifo[MAXSIZE][TSHR_FIFO_SIZE];
+cache_o.h:1085:struct DIRECTORY_EVENT *l1_fifo[MAXSIZE][DIR_FIFO_SIZE];
+cache_o.h:1092:int dir_fifo_enqueue(struct DIRECTORY_EVENT *event, int type);
+Binary file cluster.o matches
+Binary file cluster-opts.o matches
+Binary file CMP_new.PS matches
+CMP_new.SearchResults:14:Cache.c:struct DIRECTORY_EVENT *lock_fifo[MAXTHREADS][MAXLOCKEVENT];
+CMP_new.SearchResults:240:Cache.c:int dir_fifo_enqueue(struct DIRECTORY_EVENT *event, int type)
+Binary file cmt.o matches
+context.h:797:   struct DIRECTORY_EVENT *event;
+Binary file context.o matches
+Binary file dlite.o matches
+Binary file eio.o matches
+Binary file endian.o matches
+Binary file flp.o matches
+Binary file hotspot.o matches
+Binary file instManip.o matches
+Binary file interconnect.o matches
+Binary file loader.o matches
+Binary file machine.o matches
+Binary file main.o matches
+Binary file memory.o matches
+network.c:313:void scheduleThroughNetwork(struct DIRECTORY_EVENT *event, long start, unsigned int type, int vc)
+network.c:676:	struct DIRECTORY_EVENT *event, *prev;
+network.c:706:				struct DIRECTORY_EVENT *temp = event->next;
+network.c:808:	struct DIRECTORY_EVENT *event, *prev;
+network.c:838:				struct DIRECTORY_EVENT *temp = event->next;
+network.c:881:int EarlyWrite(struct DIRECTORY_EVENT *event)
+network.c:929:int EarlyWriteGenerate(struct DIRECTORY_EVENT *event)
+network.c:931:	struct DIRECTORY_EVENT *new_event2 = allocate_event();
+network.c:1057:int EarlyUpgrade(struct DIRECTORY_EVENT *event)
+network.c:1100:int EarlyUpgrateGenerate(struct DIRECTORY_EVENT *event)
+network.c:1102:	struct DIRECTORY_EVENT *new_event2 = allocate_event();
+network.h:35:void scheduleThroughNetwork(struct DIRECTORY_EVENT *event, long start, unsigned int type, int vc);
+network.h:44:int EarlyUpgrade(struct DIRECTORY_EVENT *event);
+network.h:45:int EarlyUpgrateGenerate(struct DIRECTORY_EVENT *event);
+Binary file network.o matches
+old_sim-out.c:3782:struct DIRECTORY_EVENT *dir_event_queue;   // event queue directory version, global directory event queue
+old_sim-out.c:3783:struct DIRECTORY_EVENT *event_list[L2_MSHR_SIZE];   //event list appending to a mshr entry 
+old_sim-out.c:3819:int buffer_full_check(struct DIRECTORY_EVENT *event)
+old_sim-out.c:3884:	struct DIRECTORY_EVENT *event, *ev, *next, *prev;
+Binary file opticalForSimplescalar/sim_routing.o matches
+Binary file opticalForSimplescalar/input_buffer.o matches
+Binary file opticalForSimplescalar/optical_statistics.o matches
+opticalForSimplescalar/point-point.h:153:extern struct DIRECTORY_EVENT *dir_event_queue;  /* Head pointer point to the directory event queue */
+Binary file opticalForSimplescalar/packet_retry_algr.o matches
+Binary file opticalForSimplescalar/packet.o matches
+opticalForSimplescalar/input_buffer.c:758:	struct DIRECTORY_EVENT *event;
+Binary file opticalForSimplescalar/mess_queue.o matches
+Binary file opticalForSimplescalar/sim_receive.o matches
+Binary file opticalForSimplescalar/sim_mess.o matches
+Binary file opticalForSimplescalar/configuration.o matches
+Binary file opticalForSimplescalar/main.o matches
+Binary file opticalForSimplescalar/sim_conflict.o matches
+Binary file opticalForSimplescalar/sim_main.o matches
+Binary file opticalForSimplescalar/flit.o matches
+Binary file power.o matches
+Binary file range.o matches
+Binary file RCutil.o matches
+Binary file run/sim-outorder_n matches
+Binary file run/base matches
+Binary file run/ideal matches
+Binary file run/base-outorder matches
+Binary file run/ideal_1 matches
+Binary file run/ideal_2 matches
+Binary file run/sim-outorder matches
+sim-ooo.c:3822:struct DIRECTORY_EVENT *dir_event_queue;   // event queue directory version, global directory event queue
+sim-ooo.c:3823:struct DIRECTORY_EVENT *event_list[L2_MSHR_SIZE];   //event list appending to a mshr entry 
+sim-ooo.c:3859:int buffer_full_check(struct DIRECTORY_EVENT *event)
+sim-ooo.c:3925:	struct DIRECTORY_EVENT *event, *ev, *next, *prev;
+sim-out_nn.c:3895:struct DIRECTORY_EVENT *dir_event_queue;   // event queue directory version, global directory event queue
+sim-out_nn.c:3896:struct DIRECTORY_EVENT *event_list[L2_MSHR_SIZE];   //event list appending to a mshr entry 
+sim-out_nn.c:3955:int buffer_full_check(struct DIRECTORY_EVENT *event)
+sim-out_nn.c:4021:	struct DIRECTORY_EVENT *event, *ev, *next, *prev;
+Binary file sim-outorder matches
+sim-outorder.c:3993:struct DIRECTORY_EVENT *dir_event_queue;   // event queue directory version, global directory event queue
+sim-outorder.c:3994:struct DIRECTORY_EVENT *event_list[L2_MSHR_SIZE];   //event list appending to a mshr entry 
+sim-outorder.c:4053:int buffer_full_check(struct DIRECTORY_EVENT *event)
+sim-outorder.c:4103:	struct DIRECTORY_EVENT *event, *ev, *next, *prev;
+Binary file sim-outorder.o matches
+sim-outorder_o.c:3941:struct DIRECTORY_EVENT *dir_event_queue;   // event queue directory version, global directory event queue
+sim-outorder_o.c:3942:struct DIRECTORY_EVENT *event_list[L2_MSHR_SIZE];   //event list appending to a mshr entry 
+sim-outorder_o.c:4001:int buffer_full_check(struct DIRECTORY_EVENT *event)
+sim-outorder_o.c:4067:	struct DIRECTORY_EVENT *event, *ev, *next, *prev;
+sim-outorder_old.c:3958:struct DIRECTORY_EVENT *dir_event_queue;   // event queue directory version, global directory event queue
+sim-outorder_old.c:3959:struct DIRECTORY_EVENT *event_list[L2_MSHR_SIZE];   //event list appending to a mshr entry 
+sim-outorder_old.c:4018:int buffer_full_check(struct DIRECTORY_EVENT *event)
+sim-outorder_old.c:4084:	struct DIRECTORY_EVENT *event, *ev, *next, *prev;
+Binary file symbol.o matches
+Binary file syscall.o matches
+tags:2001:DIRECTORY_EVENT	cache.h	/^struct DIRECTORY_EVENT$/;"	s
+tags:2002:DIRECTORY_EVENT	cache_old.h	/^struct DIRECTORY_EVENT$/;"	s
+tags:2489:EarlyUpgrade	network.c	/^int EarlyUpgrade(struct DIRECTORY_EVENT *event)$/;"	f
+tags:2490:EarlyUpgrateGenerate	network.c	/^int EarlyUpgrateGenerate(struct DIRECTORY_EVENT *event)$/;"	f
+tags:2491:EarlyWrite	network.c	/^int EarlyWrite(struct DIRECTORY_EVENT *event)$/;"	f
+tags:2492:EarlyWriteGenerate	network.c	/^int EarlyWriteGenerate(struct DIRECTORY_EVENT *event)$/;"	f
+tags:4132:L2miss_complete	cache.h	/^	int L2miss_complete;$/;"	m	struct:DIRECTORY_EVENT
+tags:4133:L2miss_complete	cache_old.h	/^	int L2miss_complete;$/;"	m	struct:DIRECTORY_EVENT
+tags:4134:L2miss_flag	cache.h	/^	int L2miss_flag;$/;"	m	struct:DIRECTORY_EVENT
+tags:4135:L2miss_flag	cache_old.h	/^	int L2miss_flag;$/;"	m	struct:DIRECTORY_EVENT
+tags:4136:L2miss_stated	cache.h	/^	int L2miss_stated;$/;"	m	struct:DIRECTORY_EVENT
+tags:4137:L2miss_stated	cache_old.h	/^	int L2miss_stated;$/;"	m	struct:DIRECTORY_EVENT
+tags:4507:LockRegesterCheck	cache.c	/^void LockRegesterCheck(struct DIRECTORY_EVENT *event)$/;"	f
+tags:9220:ReadPending_event	cache.h	/^  struct DIRECTORY_EVENT *ReadPending_event[8];$/;"	m	struct:cache_blk_t	typeref:struct:cache_blk_t::DIRECTORY_EVENT
+tags:9221:ReadPending_event	cache_old.h	/^  struct DIRECTORY_EVENT *ReadPending_event[8];$/;"	m	struct:cache_blk_t	typeref:struct:cache_blk_t::DIRECTORY_EVENT
+tags:10766:SameUpgradeCheck	cache.c	/^int SameUpgradeCheck(struct DIRECTORY_EVENT *event)$/;"	f
+tags:10767:SameUpgradeCheck	cache_lockold.c	/^int SameUpgradeCheck(struct DIRECTORY_EVENT *event)$/;"	f
+tags:10768:SameUpgradeCheck	cache_n.c	/^int SameUpgradeCheck(struct DIRECTORY_EVENT *event)$/;"	f
+tags:10769:SameUpgradeCheck	cache_o.c	/^int SameUpgradeCheck(struct DIRECTORY_EVENT *event)$/;"	f
+tags:10770:SameUpgradeCheck	cache_old.c	/^int SameUpgradeCheck(struct DIRECTORY_EVENT *event)$/;"	f
+tags:11142:TSHRInsert	cache.c	/^void TSHRInsert(struct tshr_t *tshr, struct DIRECTORY_EVENT *event, md_addr_t addr)$/;"	f
+tags:11143:TSHRInsert	cache_lockold.c	/^void TSHRInsert(struct tshr_t *tshr, struct DIRECTORY_EVENT *event, md_addr_t addr)$/;"	f
+tags:11144:TSHRInsert	cache_old.c	/^void TSHRInsert(struct tshr_t *tshr, struct DIRECTORY_EVENT *event, md_addr_t addr)$/;"	f
+tags:11363:UpgradeCheck	cache.c	/^int UpgradeCheck(struct DIRECTORY_EVENT *event)$/;"	f
+tags:11364:UpgradeCheck	cache_lockold.c	/^int UpgradeCheck(struct DIRECTORY_EVENT *event)$/;"	f
+tags:11365:UpgradeCheck	cache_n.c	/^int UpgradeCheck(struct DIRECTORY_EVENT *event)$/;"	f
+tags:11366:UpgradeCheck	cache_o.c	/^int UpgradeCheck(struct DIRECTORY_EVENT *event)$/;"	f
+tags:11367:UpgradeCheck	cache_old.c	/^int UpgradeCheck(struct DIRECTORY_EVENT *event)$/;"	f
+tags:12585:addr	cache.h	/^	md_addr_t addr;                     	\/\/ address to access$/;"	m	struct:DIRECTORY_EVENT
+tags:12596:addr	cache_old.h	/^	md_addr_t addr;                     	\/\/ address to access$/;"	m	struct:DIRECTORY_EVENT
+tags:12709:allocate_event	cache.c	/^struct DIRECTORY_EVENT * allocate_event(int isSyncAccess)$/;"	f
+tags:12710:allocate_event	cache_lockold.c	/^struct DIRECTORY_EVENT * allocate_event(int isSyncAccess)$/;"	f
+tags:12711:allocate_event	cache_n.c	/^struct DIRECTORY_EVENT * allocate_event(int isSyncAccess)$/;"	f
+tags:12712:allocate_event	cache_o.c	/^struct DIRECTORY_EVENT * allocate_event(int isSyncAccess)$/;"	f
+tags:12713:allocate_event	cache_old.c	/^struct DIRECTORY_EVENT * allocate_event(int isSyncAccess)$/;"	f
+tags:12721:allocate_new_event	cache.c	/^struct DIRECTORY_EVENT *allocate_new_event(struct DIRECTORY_EVENT *event)$/;"	f
+tags:12722:allocate_new_event	cache_lockold.c	/^struct DIRECTORY_EVENT *allocate_new_event(struct DIRECTORY_EVENT *event)$/;"	f
+tags:12723:allocate_new_event	cache_n.c	/^struct DIRECTORY_EVENT *allocate_new_event(struct DIRECTORY_EVENT *event)$/;"	f
+tags:12724:allocate_new_event	cache_o.c	/^struct DIRECTORY_EVENT *allocate_new_event(struct DIRECTORY_EVENT *event)$/;"	f
+tags:12725:allocate_new_event	cache_old.c	/^struct DIRECTORY_EVENT *allocate_new_event(struct DIRECTORY_EVENT *event)$/;"	f
+tags:12775:arrival_time	cache.h	/^	counter_t arrival_time;$/;"	m	struct:DIRECTORY_EVENT
+tags:12776:arrival_time	cache_old.h	/^	counter_t arrival_time;$/;"	m	struct:DIRECTORY_EVENT
+tags:13349:blk1	cache.h	/^	struct cache_blk_t *blk1, *blk_dir; 	\/\/ point to dl1 block accessed  $/;"	m	struct:DIRECTORY_EVENT	typeref:struct:DIRECTORY_EVENT::cache_blk_t
+tags:13350:blk1	cache_old.h	/^	struct cache_blk_t *blk1, *blk_dir; 	\/\/ point to dl1 block accessed  $/;"	m	struct:DIRECTORY_EVENT	typeref:struct:DIRECTORY_EVENT::cache_blk_t
+tags:13361:blk_dir	cache.h	/^	struct cache_blk_t *blk1, *blk_dir; 	\/\/ point to dl1 block accessed  $/;"	m	struct:DIRECTORY_EVENT	typeref:struct:DIRECTORY_EVENT::
+tags:13362:blk_dir	cache_old.h	/^	struct cache_blk_t *blk1, *blk_dir; 	\/\/ point to dl1 block accessed  $/;"	m	struct:DIRECTORY_EVENT	typeref:struct:DIRECTORY_EVENT::
+tags:13648:buffer_full_check	old_sim-out.c	/^int buffer_full_check(struct DIRECTORY_EVENT *event)$/;"	f
+tags:13649:buffer_full_check	sim-ooo.c	/^int buffer_full_check(struct DIRECTORY_EVENT *event)$/;"	f
+tags:13650:buffer_full_check	sim-out_nn.c	/^int buffer_full_check(struct DIRECTORY_EVENT *event)$/;"	f
+tags:13651:buffer_full_check	sim-outorder.c	/^int buffer_full_check(struct DIRECTORY_EVENT *event)$/;"	f
+tags:13652:buffer_full_check	sim-outorder_o.c	/^int buffer_full_check(struct DIRECTORY_EVENT *event)$/;"	f
+tags:13653:buffer_full_check	sim-outorder_old.c	/^int buffer_full_check(struct DIRECTORY_EVENT *event)$/;"	f
+tags:14590:childCount	cache.h	/^	int childCount, processingDone, spec_mode;$/;"	m	struct:DIRECTORY_EVENT
+tags:14591:childCount	cache_old.h	/^	int childCount, processingDone, spec_mode;$/;"	m	struct:DIRECTORY_EVENT
+tags:14759:cmd	cache.h	/^	enum mem_cmd cmd;			\/\/ access type, Read or Write $/;"	m	struct:DIRECTORY_EVENT	typeref:enum:DIRECTORY_EVENT::mem_cmd
+tags:14760:cmd	cache_old.h	/^	enum mem_cmd cmd;			\/\/ access type, Read or Write $/;"	m	struct:DIRECTORY_EVENT	typeref:enum:DIRECTORY_EVENT::mem_cmd
+tags:15092:conf_bit	cache.h	/^	int conf_bit;$/;"	m	struct:DIRECTORY_EVENT
+tags:15093:conf_bit	cache_old.h	/^	int conf_bit;$/;"	m	struct:DIRECTORY_EVENT
+tags:15297:cp	cache.h	/^	struct cache_t *cp;                 	\/\/ cache to access$/;"	m	struct:DIRECTORY_EVENT	typeref:struct:DIRECTORY_EVENT::cache_t
+tags:15298:cp	cache_old.h	/^	struct cache_t *cp;                 	\/\/ cache to access$/;"	m	struct:DIRECTORY_EVENT	typeref:struct:DIRECTORY_EVENT::cache_t
+tags:15730:data_reply	cache.h	/^	int data_reply;$/;"	m	struct:DIRECTORY_EVENT
+tags:15731:data_reply	cache_old.h	/^	int data_reply;$/;"	m	struct:DIRECTORY_EVENT
+tags:15900:delay	cache.h	/^	int delay;$/;"	m	struct:DIRECTORY_EVENT
+tags:15901:delay	cache_old.h	/^	int delay;$/;"	m	struct:DIRECTORY_EVENT
+tags:15995:des1	cache.h	/^	long src1, src2, des1, des2, startCycle;$/;"	m	struct:DIRECTORY_EVENT
+tags:15996:des1	cache_old.h	/^	long src1, src2, des1, des2, startCycle;$/;"	m	struct:DIRECTORY_EVENT
+tags:15999:des2	cache.h	/^	long src1, src2, des1, des2, startCycle;$/;"	m	struct:DIRECTORY_EVENT
+tags:16000:des2	cache_old.h	/^	long src1, src2, des1, des2, startCycle;$/;"	m	struct:DIRECTORY_EVENT
+tags:16033:dir_event_queue	old_sim-out.c	/^struct DIRECTORY_EVENT *dir_event_queue;   \/\/ event queue directory version, global directory event queue$/;"	v	typeref:struct:DIRECTORY_EVENT
+tags:16034:dir_event_queue	sim-ooo.c	/^struct DIRECTORY_EVENT *dir_event_queue;   \/\/ event queue directory version, global directory event queue$/;"	v	typeref:struct:DIRECTORY_EVENT
+tags:16035:dir_event_queue	sim-out_nn.c	/^struct DIRECTORY_EVENT *dir_event_queue;   \/\/ event queue directory version, global directory event queue$/;"	v	typeref:struct:DIRECTORY_EVENT
+tags:16036:dir_event_queue	sim-outorder.c	/^struct DIRECTORY_EVENT *dir_event_queue;   \/\/ event queue directory version, global directory event queue$/;"	v	typeref:struct:DIRECTORY_EVENT
+tags:16037:dir_event_queue	sim-outorder_o.c	/^struct DIRECTORY_EVENT *dir_event_queue;   \/\/ event queue directory version, global directory event queue$/;"	v	typeref:struct:DIRECTORY_EVENT
+tags:16038:dir_event_queue	sim-outorder_old.c	/^struct DIRECTORY_EVENT *dir_event_queue;   \/\/ event queue directory version, global directory event queue$/;"	v	typeref:struct:DIRECTORY_EVENT
+tags:16045:dir_eventq_insert	cache.c	/^void dir_eventq_insert(struct DIRECTORY_EVENT *event)     \/\/ event queue directory version, put dir event in queue$/;"	f
+tags:16046:dir_eventq_insert	cache_lockold.c	/^void dir_eventq_insert(struct DIRECTORY_EVENT *event)     \/\/ event queue directory version, put dir event in queue$/;"	f
+tags:16047:dir_eventq_insert	cache_n.c	/^void dir_eventq_insert(struct DIRECTORY_EVENT *event)     \/\/ event queue directory version, put dir event in queue$/;"	f
+tags:16048:dir_eventq_insert	cache_o.c	/^void dir_eventq_insert(struct DIRECTORY_EVENT *event)     \/\/ event queue directory version, put dir event in queue$/;"	f
+tags:16049:dir_eventq_insert	cache_old.c	/^void dir_eventq_insert(struct DIRECTORY_EVENT *event)     \/\/ event queue directory version, put dir event in queue$/;"	f
+tags:16057:dir_fifo	cache.h	/^struct DIRECTORY_EVENT *dir_fifo[MAXSIZE][DIR_FIFO_SIZE];$/;"	v	typeref:struct:DIRECTORY_EVENT
+tags:16058:dir_fifo	cache_old.h	/^struct DIRECTORY_EVENT *dir_fifo[MAXSIZE][DIR_FIFO_SIZE];$/;"	v	typeref:struct:DIRECTORY_EVENT
+tags:16066:dir_fifo_enqueue	cache.c	/^int dir_fifo_enqueue(struct DIRECTORY_EVENT *event, int type)$/;"	f
+tags:16067:dir_fifo_enqueue	cache_lockold.c	/^int dir_fifo_enqueue(struct DIRECTORY_EVENT *event, int type)$/;"	f
+tags:16068:dir_fifo_enqueue	cache_n.c	/^int dir_fifo_enqueue(struct DIRECTORY_EVENT *event, int type)$/;"	f
+tags:16069:dir_fifo_enqueue	cache_o.c	/^int dir_fifo_enqueue(struct DIRECTORY_EVENT *event, int type)$/;"	f
+tags:16070:dir_fifo_enqueue	cache_old.c	/^int dir_fifo_enqueue(struct DIRECTORY_EVENT *event, int type)$/;"	f
+tags:16092:dir_operation	cache.c	/^int dir_operation (struct DIRECTORY_EVENT *event, int lock_access)$/;"	f
+tags:16093:dir_operation	cache_lockold.c	/^int dir_operation(struct DIRECTORY_EVENT *event, int lock_access)$/;"	f
+tags:16094:dir_operation	cache_n.c	/^int dir_operation(struct DIRECTORY_EVENT *event, int lock_access)$/;"	f
+tags:16095:dir_operation	cache_o.c	/^int dir_operation(struct DIRECTORY_EVENT *event, int lock_access)$/;"	f
+tags:16096:dir_operation	cache_old.c	/^int dir_operation(struct DIRECTORY_EVENT *event, int lock_access)$/;"	f
+tags:16112:dirty_flag	cache.h	/^	int dirty_flag;$/;"	m	struct:DIRECTORY_EVENT
+tags:16113:dirty_flag	cache_old.h	/^	int dirty_flag;$/;"	m	struct:DIRECTORY_EVENT
+tags:16769:early_flag	cache.h	/^	int early_flag;$/;"	m	struct:DIRECTORY_EVENT
+tags:16770:early_flag	cache_old.h	/^	int early_flag;$/;"	m	struct:DIRECTORY_EVENT
+tags:17028:event	cache.h	/^	struct DIRECTORY_EVENT *event;$/;"	m	struct:QUEUE_EVENT_ENTRY	typeref:struct:QUEUE_EVENT_ENTRY::DIRECTORY_EVENT
+tags:17029:event	cache.h	/^	struct DIRECTORY_EVENT *event;$/;"	m	struct:mshr_entry_t	typeref:struct:mshr_entry_t::DIRECTORY_EVENT
+tags:17030:event	cache_old.h	/^	struct DIRECTORY_EVENT *event;$/;"	m	struct:QUEUE_EVENT_ENTRY	typeref:struct:QUEUE_EVENT_ENTRY::DIRECTORY_EVENT
+tags:17031:event	cache_old.h	/^	struct DIRECTORY_EVENT *event;$/;"	m	struct:mshr_entry_t	typeref:struct:mshr_entry_t::DIRECTORY_EVENT
+tags:17032:event	context.h	/^   struct DIRECTORY_EVENT *event;$/;"	m	struct:context_t	typeref:struct:context_t::DIRECTORY_EVENT
+tags:17035:eventType	cache.h	/^	int eventType;$/;"	m	struct:DIRECTORY_EVENT
+tags:17036:eventType	cache_old.h	/^	int eventType;$/;"	m	struct:DIRECTORY_EVENT
+tags:17038:event_created	cache.c	/^struct DIRECTORY_EVENT *event_created = NULL;$/;"	v	typeref:struct:DIRECTORY_EVENT
+tags:17039:event_created	cache_lockold.c	/^struct DIRECTORY_EVENT *event_created = NULL;$/;"	v	typeref:struct:DIRECTORY_EVENT
+tags:17040:event_created	cache_n.c	/^struct DIRECTORY_EVENT *event_created = NULL;$/;"	v	typeref:struct:DIRECTORY_EVENT
+tags:17041:event_created	cache_o.c	/^struct DIRECTORY_EVENT *event_created = NULL;$/;"	v	typeref:struct:DIRECTORY_EVENT
+tags:17042:event_created	cache_old.c	/^struct DIRECTORY_EVENT *event_created = NULL;$/;"	v	typeref:struct:DIRECTORY_EVENT
+tags:17043:event_list	old_sim-out.c	/^struct DIRECTORY_EVENT *event_list[L2_MSHR_SIZE];   \/\/event list appending to a mshr entry $/;"	v	typeref:struct:DIRECTORY_EVENT
+tags:17044:event_list	sim-ooo.c	/^struct DIRECTORY_EVENT *event_list[L2_MSHR_SIZE];   \/\/event list appending to a mshr entry $/;"	v	typeref:struct:DIRECTORY_EVENT
+tags:17045:event_list	sim-out_nn.c	/^struct DIRECTORY_EVENT *event_list[L2_MSHR_SIZE];   \/\/event list appending to a mshr entry $/;"	v	typeref:struct:DIRECTORY_EVENT
+tags:17046:event_list	sim-outorder.c	/^struct DIRECTORY_EVENT *event_list[L2_MSHR_SIZE];   \/\/event list appending to a mshr entry $/;"	v	typeref:struct:DIRECTORY_EVENT
+tags:17047:event_list	sim-outorder_o.c	/^struct DIRECTORY_EVENT *event_list[L2_MSHR_SIZE];   \/\/event list appending to a mshr entry $/;"	v	typeref:struct:DIRECTORY_EVENT
+tags:17048:event_list	sim-outorder_old.c	/^struct DIRECTORY_EVENT *event_list[L2_MSHR_SIZE];   \/\/event list appending to a mshr entry $/;"	v	typeref:struct:DIRECTORY_EVENT
+tags:17049:event_list_insert	cache.c	/^void event_list_insert(struct DIRECTORY_EVENT *event, int entry)$/;"	f
+tags:17050:event_list_insert	cache_lockold.c	/^void event_list_insert(struct DIRECTORY_EVENT *event, int entry)$/;"	f
+tags:17051:event_list_insert	cache_n.c	/^void event_list_insert(struct DIRECTORY_EVENT *event, int entry)$/;"	f
+tags:17052:event_list_insert	cache_o.c	/^void event_list_insert(struct DIRECTORY_EVENT *event, int entry)$/;"	f
+tags:17053:event_list_insert	cache_old.c	/^void event_list_insert(struct DIRECTORY_EVENT *event, int entry)$/;"	f
+tags:17803:flip_flag	cache.h	/^	int flip_flag;$/;"	m	struct:DIRECTORY_EVENT
+tags:17804:flip_flag	cache_old.h	/^	int flip_flag;$/;"	m	struct:DIRECTORY_EVENT
+tags:18137:free_event	cache.c	/^void free_event(struct DIRECTORY_EVENT *event)$/;"	f
+tags:18138:free_event	cache_lockold.c	/^void free_event(struct DIRECTORY_EVENT *event)$/;"	f
+tags:18139:free_event	cache_n.c	/^void free_event(struct DIRECTORY_EVENT *event)$/;"	f
+tags:18140:free_event	cache_o.c	/^void free_event(struct DIRECTORY_EVENT *event)$/;"	f
+tags:18141:free_event	cache_old.c	/^void free_event(struct DIRECTORY_EVENT *event)$/;"	f
+tags:18142:free_event_list	cache.h	/^struct DIRECTORY_EVENT *free_event_list;$/;"	v	typeref:struct:DIRECTORY_EVENT
+tags:18143:free_event_list	cache_old.h	/^struct DIRECTORY_EVENT *free_event_list;$/;"	v	typeref:struct:DIRECTORY_EVENT
+tags:18165:free_queue	cache.c	/^void free_queue(struct DIRECTORY_EVENT *event, struct QUEUE_EVENT *queue)$/;"	f
+tags:18166:free_queue	cache_lockold.c	/^void free_queue(struct DIRECTORY_EVENT *event, struct QUEUE_EVENT *queue)$/;"	f
+tags:18167:free_queue	cache_n.c	/^void free_queue(struct DIRECTORY_EVENT *event, struct QUEUE_EVENT *queue)$/;"	f
+tags:18168:free_queue	cache_o.c	/^void free_queue(struct DIRECTORY_EVENT *event, struct QUEUE_EVENT *queue)$/;"	f
+tags:18169:free_queue	cache_old.c	/^void free_queue(struct DIRECTORY_EVENT *event, struct QUEUE_EVENT *queue)$/;"	f
+tags:19338:individual_childCount	cache.h	/^	int individual_childCount[8];$/;"	m	struct:DIRECTORY_EVENT
+tags:19339:individual_childCount	cache_old.h	/^	int individual_childCount[8];$/;"	m	struct:DIRECTORY_EVENT
+tags:19495:input_buffer_full	cache.h	/^	int input_buffer_full;$/;"	m	struct:DIRECTORY_EVENT
+tags:19496:input_buffer_full	cache_old.h	/^	int input_buffer_full;$/;"	m	struct:DIRECTORY_EVENT
+tags:20103:isExclusiveOrDirty	cache.h	/^	int isExclusiveOrDirty;$/;"	m	struct:DIRECTORY_EVENT
+tags:20104:isExclusiveOrDirty	cache_old.h	/^	int isExclusiveOrDirty;$/;"	m	struct:DIRECTORY_EVENT
+tags:20133:isPrefetch	cache.h	/^	int isPrefetch;			\/\/ if this is a prefetch$/;"	m	struct:DIRECTORY_EVENT
+tags:20134:isPrefetch	cache_old.h	/^	int isPrefetch;			\/\/ if this is a prefetch$/;"	m	struct:DIRECTORY_EVENT
+tags:20136:isReqL2Hit	cache.h	/^	int isReqL2Hit;$/;"	m	struct:DIRECTORY_EVENT
+tags:20137:isReqL2Hit	cache_old.h	/^	int isReqL2Hit;$/;"	m	struct:DIRECTORY_EVENT
+tags:20138:isReqL2Inv	cache.h	/^	int isReqL2Inv;$/;"	m	struct:DIRECTORY_EVENT
+tags:20139:isReqL2Inv	cache_old.h	/^	int isReqL2Inv;$/;"	m	struct:DIRECTORY_EVENT
+tags:20140:isReqL2SecMiss	cache.h	/^	int isReqL2SecMiss;$/;"	m	struct:DIRECTORY_EVENT
+tags:20141:isReqL2SecMiss	cache_old.h	/^	int isReqL2SecMiss;$/;"	m	struct:DIRECTORY_EVENT
+tags:20142:isReqL2Trans	cache.h	/^	int isReqL2Trans;$/;"	m	struct:DIRECTORY_EVENT
+tags:20143:isReqL2Trans	cache_old.h	/^	int isReqL2Trans;$/;"	m	struct:DIRECTORY_EVENT
+tags:20146:isSyncAccess	cache.h	/^	int isSyncAccess;$/;"	m	struct:DIRECTORY_EVENT
+tags:20147:isSyncAccess	cache_old.h	/^	int isSyncAccess;$/;"	m	struct:DIRECTORY_EVENT
+tags:20416:l1LineUseStatus	cache.h	/^	int l1LineUseStatus;$/;"	m	struct:DIRECTORY_EVENT
+tags:20417:l1LineUseStatus	cache_old.h	/^	int l1LineUseStatus;$/;"	m	struct:DIRECTORY_EVENT
+tags:20418:l1_fifo	cache.h	/^struct DIRECTORY_EVENT *l1_fifo[MAXSIZE][DIR_FIFO_SIZE];$/;"	v	typeref:struct:DIRECTORY_EVENT
+tags:20419:l1_fifo	cache_old.h	/^struct DIRECTORY_EVENT *l1_fifo[MAXSIZE][DIR_FIFO_SIZE];$/;"	v	typeref:struct:DIRECTORY_EVENT
+tags:20433:l1_wb_entry	cache.h	/^	struct m_L1WBufEntry *l1_wb_entry;$/;"	m	struct:DIRECTORY_EVENT	typeref:struct:DIRECTORY_EVENT::m_L1WBufEntry
+tags:20434:l1_wb_entry	cache_old.h	/^	struct m_L1WBufEntry *l1_wb_entry;$/;"	m	struct:DIRECTORY_EVENT	typeref:struct:DIRECTORY_EVENT::m_L1WBufEntry
+tags:20455:l2MissStart	cache.h	/^	counter_t 	l2MissStart;$/;"	m	struct:DIRECTORY_EVENT
+tags:20456:l2MissStart	cache_old.h	/^	counter_t 	l2MissStart;$/;"	m	struct:DIRECTORY_EVENT
+tags:20457:l2Status	cache.h	/^	int l2Status;			\/\/ 0 - not yet accessed, 1 - l2 miss, 2 - l2 miss completed$/;"	m	struct:DIRECTORY_EVENT
+tags:20458:l2Status	cache_old.h	/^	int l2Status;			\/\/ 0 - not yet accessed, 1 - l2 miss, 2 - l2 miss completed$/;"	m	struct:DIRECTORY_EVENT
+tags:21282:lock_cache_access	cache.c	/^int lock_cache_access(struct DIRECTORY_EVENT *event)$/;"	f
+tags:21283:lock_cache_access	cache_lockold.c	/^int lock_cache_access(struct DIRECTORY_EVENT *event)$/;"	f
+tags:21284:lock_cache_access	cache_n.c	/^int lock_cache_access(struct DIRECTORY_EVENT *event)$/;"	f
+tags:21285:lock_cache_access	cache_o.c	/^int lock_cache_access(struct DIRECTORY_EVENT *event)$/;"	f
+tags:21286:lock_cache_access	cache_old.c	/^int lock_cache_access(struct DIRECTORY_EVENT *event)$/;"	f
+tags:21291:lock_cache_operation	cache.c	/^int lock_cache_operation(struct DIRECTORY_EVENT *event)$/;"	f
+tags:21301:lock_fifo	cache.c	/^struct DIRECTORY_EVENT *lock_fifo[MAXTHREADS][MAXLOCKEVENT];$/;"	v	typeref:struct:DIRECTORY_EVENT
+tags:21302:lock_fifo	cache_lockold.c	/^struct DIRECTORY_EVENT *lock_fifo[MAXTHREADS][MAXLOCKEVENT];$/;"	v	typeref:struct:DIRECTORY_EVENT
+tags:21303:lock_fifo	cache_n.c	/^struct DIRECTORY_EVENT *lock_fifo[MAXTHREADS][MAXLOCKEVENT];$/;"	v	typeref:struct:DIRECTORY_EVENT
+tags:21304:lock_fifo	cache_o.c	/^struct DIRECTORY_EVENT *lock_fifo[MAXTHREADS][MAXLOCKEVENT];$/;"	v	typeref:struct:DIRECTORY_EVENT
+tags:21305:lock_fifo	cache_old.c	/^struct DIRECTORY_EVENT *lock_fifo[MAXTHREADS][MAXLOCKEVENT];$/;"	v	typeref:struct:DIRECTORY_EVENT
+tags:22689:missNo	cache.h	/^	counter_t missNo;$/;"	m	struct:DIRECTORY_EVENT
+tags:22694:missNo	cache_old.h	/^	counter_t missNo;$/;"	m	struct:DIRECTORY_EVENT
+tags:22891:mshr_time	cache.h	/^	tick_t mshr_time;$/;"	m	struct:DIRECTORY_EVENT
+tags:22892:mshr_time	cache_old.h	/^	tick_t mshr_time;$/;"	m	struct:DIRECTORY_EVENT
+tags:22893:mshrentry_update	cache.c	/^void mshrentry_update(struct DIRECTORY_EVENT *event, tick_t ready, tick_t startcycle)$/;"	f
+tags:22894:mshrentry_update	cache_lockold.c	/^void mshrentry_update(struct DIRECTORY_EVENT *event, tick_t ready, tick_t startcycle)$/;"	f
+tags:22895:mshrentry_update	cache_n.c	/^void mshrentry_update(struct DIRECTORY_EVENT *event, tick_t ready, tick_t startcycle)$/;"	f
+tags:22896:mshrentry_update	cache_o.c	/^void mshrentry_update(struct DIRECTORY_EVENT *event, tick_t ready, tick_t startcycle)$/;"	f
+tags:22897:mshrentry_update	cache_old.c	/^void mshrentry_update(struct DIRECTORY_EVENT *event, tick_t ready, tick_t startcycle)$/;"	f
+tags:23446:nbytes	cache.h	/^	int nbytes;                         	\/\/ number of bytes to access$/;"	m	struct:DIRECTORY_EVENT
+tags:23447:nbytes	cache_old.h	/^	int nbytes;                         	\/\/ number of bytes to access$/;"	m	struct:DIRECTORY_EVENT
+tags:23514:new_des1	cache.h	/^	int new_src1, new_src2, new_des1, new_des2;$/;"	m	struct:DIRECTORY_EVENT
+tags:23515:new_des1	cache_old.h	/^	int new_src1, new_src2, new_des1, new_des2;$/;"	m	struct:DIRECTORY_EVENT
+tags:23516:new_des2	cache.h	/^	int new_src1, new_src2, new_des1, new_des2;$/;"	m	struct:DIRECTORY_EVENT
+tags:23517:new_des2	cache_old.h	/^	int new_src1, new_src2, new_des1, new_des2;$/;"	m	struct:DIRECTORY_EVENT
+tags:23518:new_src1	cache.h	/^	int new_src1, new_src2, new_des1, new_des2;$/;"	m	struct:DIRECTORY_EVENT
+tags:23519:new_src1	cache_old.h	/^	int new_src1, new_src2, new_des1, new_des2;$/;"	m	struct:DIRECTORY_EVENT
+tags:23520:new_src2	cache.h	/^	int new_src1, new_src2, new_des1, new_des2;$/;"	m	struct:DIRECTORY_EVENT
+tags:23521:new_src2	cache_old.h	/^	int new_src1, new_src2, new_des1, new_des2;$/;"	m	struct:DIRECTORY_EVENT
+tags:23526:next	cache.h	/^	struct DIRECTORY_EVENT *next;       	\/\/ pointer to next entry$/;"	m	struct:DIRECTORY_EVENT	typeref:struct:DIRECTORY_EVENT::DIRECTORY_EVENT
+tags:23529:next	cache_old.h	/^	struct DIRECTORY_EVENT *next;       	\/\/ pointer to next entry$/;"	m	struct:DIRECTORY_EVENT	typeref:struct:DIRECTORY_EVENT::DIRECTORY_EVENT
+tags:24105:op	cache.h	/^	enum md_opcode op;$/;"	m	struct:DIRECTORY_EVENT	typeref:enum:DIRECTORY_EVENT::md_opcode
+tags:24106:op	cache_old.h	/^	enum md_opcode op;$/;"	m	struct:DIRECTORY_EVENT	typeref:enum:DIRECTORY_EVENT::md_opcode
+tags:24121:operation	cache.h	/^	unsigned int operation;                      	\/\/ directory operation, writehit update, writemiss search, readmiss search be different$/;"	m	struct:DIRECTORY_EVENT
+tags:24122:operation	cache_old.h	/^	unsigned int operation;                      	\/\/ directory operation, writehit update, writemiss search, readmiss search be different$/;"	m	struct:DIRECTORY_EVENT
+tags:24901:parent	cache.h	/^	struct DIRECTORY_EVENT *parent;       \/\/ pointer to next entry$/;"	m	struct:DIRECTORY_EVENT	typeref:struct:DIRECTORY_EVENT::DIRECTORY_EVENT
+tags:24902:parent	cache_old.h	/^	struct DIRECTORY_EVENT *parent;       \/\/ pointer to next entry$/;"	m	struct:DIRECTORY_EVENT	typeref:struct:DIRECTORY_EVENT::DIRECTORY_EVENT
+tags:24905:parent_operation	cache.h	/^	int parent_operation; 		\/\/ Parent operation is used for L2 cache MISS$/;"	m	struct:DIRECTORY_EVENT
+tags:24906:parent_operation	cache_old.h	/^	int parent_operation; 		\/\/ Parent operation is used for L2 cache MISS$/;"	m	struct:DIRECTORY_EVENT
+tags:25161:pendingInvAck	cache.h	/^	int pendingInvAck;$/;"	m	struct:DIRECTORY_EVENT
+tags:25163:pendingInvAck	cache_old.h	/^	int pendingInvAck;$/;"	m	struct:DIRECTORY_EVENT
+tags:25168:pending_flag	cache.h	/^	int pending_flag;$/;"	m	struct:DIRECTORY_EVENT
+tags:25169:pending_flag	cache_old.h	/^	int pending_flag;$/;"	m	struct:DIRECTORY_EVENT
+tags:25281:popnetMsgNo	cache.h	/^	counter_t popnetMsgNo;$/;"	m	struct:DIRECTORY_EVENT
+tags:25286:popnetMsgNo	cache_old.h	/^	counter_t popnetMsgNo;$/;"	m	struct:DIRECTORY_EVENT
+tags:25498:prefetch_next	cache.h	/^	int prefetch_next;$/;"	m	struct:DIRECTORY_EVENT
+tags:25499:prefetch_next	cache_old.h	/^	int prefetch_next;$/;"	m	struct:DIRECTORY_EVENT
+tags:25666:processingDone	cache.h	/^	int childCount, processingDone, spec_mode;$/;"	m	struct:DIRECTORY_EVENT
+tags:25667:processingDone	cache_old.h	/^	int childCount, processingDone, spec_mode;$/;"	m	struct:DIRECTORY_EVENT
+tags:25737:ptr_cur_event	cache.h	/^	struct DIRECTORY_EVENT *ptr_cur_event[8];$/;"	m	struct:cache_blk_t	typeref:struct:cache_blk_t::DIRECTORY_EVENT
+tags:25738:ptr_cur_event	cache_old.h	/^	struct DIRECTORY_EVENT *ptr_cur_event[8];$/;"	m	struct:cache_blk_t	typeref:struct:cache_blk_t::DIRECTORY_EVENT
+tags:25739:ptr_event	cache.h	/^	struct RS_link *ptr_event;          	\/\/ point to the false entry in event queue$/;"	m	struct:DIRECTORY_EVENT	typeref:struct:DIRECTORY_EVENT::RS_link
+tags:25740:ptr_event	cache_old.h	/^	struct RS_link *ptr_event;          	\/\/ point to the false entry in event queue$/;"	m	struct:DIRECTORY_EVENT	typeref:struct:DIRECTORY_EVENT::RS_link
+tags:25874:queue_check	cache.c	/^int queue_check(struct DIRECTORY_EVENT *event, struct QUEUE_EVENT *queue)$/;"	f
+tags:25875:queue_check	cache_lockold.c	/^int queue_check(struct DIRECTORY_EVENT *event, struct QUEUE_EVENT *queue)$/;"	f
+tags:25876:queue_check	cache_n.c	/^int queue_check(struct DIRECTORY_EVENT *event, struct QUEUE_EVENT *queue)$/;"	f
+tags:25877:queue_check	cache_o.c	/^int queue_check(struct DIRECTORY_EVENT *event, struct QUEUE_EVENT *queue)$/;"	f
+tags:25878:queue_check	cache_old.c	/^int queue_check(struct DIRECTORY_EVENT *event, struct QUEUE_EVENT *queue)$/;"	f
+tags:25882:queue_insert	cache.c	/^void queue_insert(struct DIRECTORY_EVENT *event, struct QUEUE_EVENT *queue)$/;"	f
+tags:25883:queue_insert	cache_lockold.c	/^void queue_insert(struct DIRECTORY_EVENT *event, struct QUEUE_EVENT *queue)$/;"	f
+tags:25884:queue_insert	cache_n.c	/^void queue_insert(struct DIRECTORY_EVENT *event, struct QUEUE_EVENT *queue)$/;"	f
+tags:25885:queue_insert	cache_o.c	/^void queue_insert(struct DIRECTORY_EVENT *event, struct QUEUE_EVENT *queue)$/;"	f
+tags:25886:queue_insert	cache_old.c	/^void queue_insert(struct DIRECTORY_EVENT *event, struct QUEUE_EVENT *queue)$/;"	f
+tags:26238:rec_busy	cache.h	/^	int rec_busy;$/;"	m	struct:DIRECTORY_EVENT
+tags:26239:rec_busy	cache_old.h	/^	int rec_busy;$/;"	m	struct:DIRECTORY_EVENT
+tags:26551:reqAckTime	cache.h	/^	counter_t reqAckTime;$/;"	m	struct:DIRECTORY_EVENT
+tags:26552:reqAckTime	cache_old.h	/^	counter_t reqAckTime;$/;"	m	struct:DIRECTORY_EVENT
+tags:26553:reqAtDirTime	cache.h	/^	counter_t reqAtDirTime;$/;"	m	struct:DIRECTORY_EVENT
+tags:26554:reqAtDirTime	cache_old.h	/^	counter_t reqAtDirTime;$/;"	m	struct:DIRECTORY_EVENT
+tags:26555:reqNetTime	cache.h	/^	counter_t reqNetTime;$/;"	m	struct:DIRECTORY_EVENT
+tags:26556:reqNetTime	cache_old.h	/^	counter_t reqNetTime;$/;"	m	struct:DIRECTORY_EVENT
+tags:26561:req_time	cache.h	/^	tick_t req_time;$/;"	m	struct:DIRECTORY_EVENT
+tags:26562:req_time	cache_old.h	/^	tick_t req_time;$/;"	m	struct:DIRECTORY_EVENT
+tags:26726:resend	cache.h	/^	int resend;$/;"	m	struct:DIRECTORY_EVENT
+tags:26727:resend	cache_old.h	/^	int resend;$/;"	m	struct:DIRECTORY_EVENT
+tags:26987:rs	cache.h	/^	struct RUU_station *rs;       $/;"	m	struct:DIRECTORY_EVENT	typeref:struct:DIRECTORY_EVENT::RUU_station
+tags:26989:rs	cache_old.h	/^	struct RUU_station *rs;       $/;"	m	struct:DIRECTORY_EVENT	typeref:struct:DIRECTORY_EVENT::RUU_station
+tags:27525:scheduleThroughNetwork	network.c	/^void scheduleThroughNetwork(struct DIRECTORY_EVENT *event, long start, unsigned int type, int vc)$/;"	f
+tags:27555:sendBackAck	cache_old.h	/^	int sendBackAck;$/;"	m	struct:DIRECTORY_EVENT
+tags:27704:sharer_num	cache.h	/^	int sharer_num;$/;"	m	struct:DIRECTORY_EVENT
+tags:27709:sharer_num	cache_old.h	/^	int sharer_num;$/;"	m	struct:DIRECTORY_EVENT
+tags:28531:spec_mode	cache.h	/^	int childCount, processingDone, spec_mode;$/;"	m	struct:DIRECTORY_EVENT
+tags:28532:spec_mode	cache_old.h	/^	int childCount, processingDone, spec_mode;$/;"	m	struct:DIRECTORY_EVENT
+tags:28653:src1	cache.h	/^	long src1, src2, des1, des2, startCycle;$/;"	m	struct:DIRECTORY_EVENT
+tags:28654:src1	cache_old.h	/^	long src1, src2, des1, des2, startCycle;$/;"	m	struct:DIRECTORY_EVENT
+tags:28657:src2	cache.h	/^	long src1, src2, des1, des2, startCycle;$/;"	m	struct:DIRECTORY_EVENT
+tags:28658:src2	cache_old.h	/^	long src1, src2, des1, des2, startCycle;$/;"	m	struct:DIRECTORY_EVENT
+tags:28795:startCycle	cache.h	/^	long src1, src2, des1, des2, startCycle;$/;"	m	struct:DIRECTORY_EVENT
+tags:28797:startCycle	cache_old.h	/^	long src1, src2, des1, des2, startCycle;$/;"	m	struct:DIRECTORY_EVENT
+tags:28855:started	cache.h	/^	tick_t started;$/;"	m	struct:DIRECTORY_EVENT
+tags:28856:started	cache_old.h	/^	tick_t started;$/;"	m	struct:DIRECTORY_EVENT
+tags:29120:store_cond	cache.h	/^	int store_cond;$/;"	m	struct:DIRECTORY_EVENT
+tags:29121:store_cond	cache_old.h	/^	int store_cond;$/;"	m	struct:DIRECTORY_EVENT
+tags:29555:tempID	cache.h	/^	int tempID;                         	\/\/ which processor issue the directory operation$/;"	m	struct:DIRECTORY_EVENT
+tags:29556:tempID	cache_old.h	/^	int tempID;                         	\/\/ which processor issue the directory operation$/;"	m	struct:DIRECTORY_EVENT
+tags:30612:totaleventcount	cache.h	/^	counter_t totaleventcount;$/;"	m	struct:DIRECTORY_EVENT
+tags:30617:totaleventcount	cache_old.h	/^	counter_t totaleventcount;$/;"	m	struct:DIRECTORY_EVENT
+tags:30714:transfer_time	cache.h	/^	tick_t transfer_time;$/;"	m	struct:DIRECTORY_EVENT
+tags:30715:transfer_time	cache_old.h	/^	tick_t transfer_time;$/;"	m	struct:DIRECTORY_EVENT
+tags:30778:tshr_fifo	cache.h	/^struct DIRECTORY_EVENT *tshr_fifo[MAXSIZE][TSHR_FIFO_SIZE];$/;"	v	typeref:struct:DIRECTORY_EVENT
+tags:30779:tshr_fifo	cache_old.h	/^struct DIRECTORY_EVENT *tshr_fifo[MAXSIZE][TSHR_FIFO_SIZE];$/;"	v	typeref:struct:DIRECTORY_EVENT
+tags:30902:udata	cache.h	/^	byte_t **udata;                     	\/\/ for return of user data ptr$/;"	m	struct:DIRECTORY_EVENT
+tags:30903:udata	cache_old.h	/^	byte_t **udata;                     	\/\/ for return of user data ptr$/;"	m	struct:DIRECTORY_EVENT
+tags:31144:vp	cache.h	/^	void *vp;                           	\/\/ ptr to buffer for input\/output$/;"	m	struct:DIRECTORY_EVENT
+tags:31145:vp	cache_old.h	/^	void *vp;                           	\/\/ ptr to buffer for input\/output$/;"	m	struct:DIRECTORY_EVENT
+tags:31326:when	cache.h	/^	tick_t when;                        	\/\/ when directory be accessed$/;"	m	struct:DIRECTORY_EVENT
+tags:31328:when	cache_old.h	/^	tick_t when;                        	\/\/ when directory be accessed$/;"	m	struct:DIRECTORY_EVENT
+Binary file temperature.o matches
+Binary file tokencoherence.o matches

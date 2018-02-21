@@ -1,0 +1,747 @@
+Binary file bpred.o matches
+cache.c:2240:void eventq_update(struct RUU_station *rs, tick_t ready)   /*directory event queue version */
+cache.c:2457:void MSHRLookup(struct mshr_t *mshr, md_addr_t addr, int lat, int isOC, struct RUU_station *rs)
+cache.c:2512:counter_t mshr_check_rs(int threadid, md_addr_t addr, struct RUU_station **rs)
+cache.c:7964:		struct RUU_station *rs,
+cache.c:7989:	struct RUU_station  *my_rs = rs;
+cache.h:249:	struct RUU_station *rs;
+cache.h:266:void MSHRLookup(struct mshr_t *mshr, md_addr_t addr, int lat, int isOC, struct RUU_station *rs);
+cache.h:861:		struct RUU_station *rs, 
+cache.h:1016:	struct RUU_station *rs;       
+Binary file cache.o matches
+cache_o.c:2227:void eventq_update(struct RUU_station *rs, tick_t ready)   /*directory event queue version */
+cache_o.c:2444:void MSHRLookup(struct mshr_t *mshr, md_addr_t addr, int lat, int isOC, struct RUU_station *rs)
+cache_o.c:2499:counter_t mshr_check_rs(int threadid, md_addr_t addr, struct RUU_station **rs)
+cache_o.c:7946:		struct RUU_station *rs,
+cache_o.c:7971:	struct RUU_station  *my_rs = rs;
+cache_o.h:249:	struct RUU_station *rs;
+cache_o.h:266:void MSHRLookup(struct mshr_t *mshr, md_addr_t addr, int lat, int isOC, struct RUU_station *rs);
+cache_o.h:858:		struct RUU_station *rs, 
+cache_o.h:1013:	struct RUU_station *rs;       
+cache_update.c:293:extern struct RUU_station *LSQ[];         /* load/store queue */
+cluster.c:312:extern struct RUU_station *LSQ[];	/* load/store queue */
+cluster.c:404:int get_cluster (int, int, int, struct RUU_station *, int);
+cluster.c:1298:st_ring_lat (struct RUU_station *rs)
+Binary file cluster.o matches
+Binary file cluster-opts.o matches
+Binary file CMP_new.PS matches
+cmt.c:75:int get_cluster(int in1, int in2, int in3, struct RUU_station *rs, int threadid)
+Binary file cmt.o matches
+context:145:old_sim-out.c:12006:assignFloatRegs (context * current, struct RUU_station *rs, int AorB, int dirty)
+context:593:sim-ooo.c:11900:assignFloatRegs (context * current, struct RUU_station *rs, int AorB, int dirty)
+context:648:sim-out_nn.c:12104:assignFloatRegs (context * current, struct RUU_station *rs, int AorB, int dirty)
+context:755:sim-outorder_o.c:12177:assignFloatRegs (context * current, struct RUU_station *rs, int AorB, int dirty)
+context:810:sim-outorder_old.c:12211:assignFloatRegs (context * current, struct RUU_station *rs, int AorB, int dirty)
+context:847:tags:3871:IR	context.h	/^    md_inst_t IR;			\/* instruction bits *\/$/;"	m	struct:RUU_station
+context:851:tags:4358:LSQ	context.h	/^    struct RUU_station *LSQ;         \/* load\/store queue *\/$/;"	m	struct:context_t	typeref:struct:context_t::RUU_station
+context:868:tags:8262:PC	context.h	/^    md_addr_t PC, next_PC, pred_PC;	\/* inst PC, next PC, predicted PC *\/$/;"	m	struct:RUU_station
+context:878:tags:9109:RUU	context.h	/^    struct RUU_station *RUU;		\/* register update unit *\/$/;"	m	struct:context_t	typeref:struct:context_t::RUU_station
+context:883:tags:9159:RUU_station	context.h	/^struct RUU_station $/;"	s
+context:885:tags:9222:ReadShareDir	context.h	/^    int ReadShareDir;$/;"	m	struct:RUU_station
+context:888:tags:10645:STL_C_fail	context.h	/^	int STL_C_fail;$/;"	m	struct:RUU_station
+context:922:tags:12350:abank	context.h	/^    int abank;$/;"	m	struct:RUU_station
+context:927:tags:12604:addr	context.h	/^    md_addr_t addr;			\/* effective address for ld\/st's *\/$/;"	m	struct:RUU_station
+context:931:tags:12729:altPC	context.h	/^    md_addr_t altPC;$/;"	m	struct:RUU_station
+context:935:tags:12844:assignFloatRegs	old_sim-out.c	/^assignFloatRegs (context * current, struct RUU_station *rs, int AorB, int dirty)$/;"	f
+context:936:tags:12845:assignFloatRegs	sim-ooo.c	/^assignFloatRegs (context * current, struct RUU_station *rs, int AorB, int dirty)$/;"	f
+context:937:tags:12846:assignFloatRegs	sim-out_nn.c	/^assignFloatRegs (context * current, struct RUU_station *rs, int AorB, int dirty)$/;"	f
+context:938:tags:12847:assignFloatRegs	sim-outorder_o.c	/^assignFloatRegs (context * current, struct RUU_station *rs, int AorB, int dirty)$/;"	f
+context:939:tags:12848:assignFloatRegs	sim-outorder_old.c	/^assignFloatRegs (context * current, struct RUU_station *rs, int AorB, int dirty)$/;"	f
+context:941:tags:12973:backupReg	context.h	/^    struct regs_t backupReg;$/;"	m	struct:RUU_station	typeref:struct:RUU_station::regs_t
+context:943:tags:13399:boqIndex	context.h	/^    int boqIndex;$/;"	m	struct:RUU_station
+context:951:tags:14219:cache_ready	context.h	/^    int cache_ready;$/;"	m	struct:RUU_station
+context:952:tags:14440:changeSpecMode	context.h	/^    int changeSpecMode;$/;"	m	struct:RUU_station
+context:959:tags:14749:cluster	context.h	/^    int cluster;$/;"	m	struct:RUU_station
+context:960:tags:14750:cluster_assigned	context.h	/^    int cluster_assigned;$/;"	m	struct:RUU_station
+context:961:tags:14981:commit_time	context.h	/^    counter_t commit_time;$/;"	m	struct:RUU_station
+context:963:tags:15067:completed	context.h	/^    int completed;			\/* operation has completed execution *\/$/;"	m	struct:RUU_station
+context:967:tags:15261:counted_fissueq	context.h	/^    int counted_fissueq;$/;"	m	struct:RUU_station
+context:968:tags:15262:counted_fready	context.h	/^    int counted_fready;$/;"	m	struct:RUU_station
+context:969:tags:15263:counted_iissueq	context.h	/^    int counted_iissueq;$/;"	m	struct:RUU_station
+context:970:tags:15264:counted_iready	context.h	/^    int counted_iready;$/;"	m	struct:RUU_station
+context:971:tags:15265:counted_lsqready	context.h	/^    int counted_lsqready;$/;"	m	struct:RUU_station
+context:972:tags:15266:counted_miss	context.h	/^    int counted_miss;$/;"	m	struct:RUU_station
+context:973:tags:15267:counted_non_issue_lsq	context.h	/^    int counted_non_issue_lsq;$/;"	m	struct:RUU_station
+context:974:tags:15268:counted_rawq	context.h	/^    int counted_rawq[CLUSTERS];$/;"	m	struct:RUU_station
+context:975:tags:15269:counted_unready_dispatch	context.h	/^    int counted_unready_dispatch;$/;"	m	struct:RUU_station
+context:984:tags:16101:dir_update	context.h	/^    struct bpred_update_t dir_update;	\/* bpred direction update info *\/$/;"	m	struct:RUU_station	typeref:struct:RUU_station::bpred_update_t
+context:988:tags:16198:disp_time	context.h	/^    counter_t disp_time;$/;"	m	struct:RUU_station
+context:991:tags:16334:distissue	context.h	/^    int distissue;$/;"	m	struct:RUU_station
+context:992:tags:16409:dl2_missed	context.h	/^    int dl2_missed;$/;"	m	struct:RUU_station
+context:1003:tags:16618:duplicate	context.h	/^    int duplicate;			\/*092904mwr: 1-duplicate inst, 0-original inst*\/$/;"	m	struct:RUU_station
+context:1004:tags:16767:ea_comp	context.h	/^    int ea_comp;				\/* non-zero if op is an addr comp *\/$/;"	m	struct:RUU_station
+context:1005:tags:16897:entryReplayed	context.h	/^    int replayThisEntry, entryReplayed;$/;"	m	struct:RUU_station
+context:1012:tags:17478:faulting_instr	context.h	/^    int faulting_instr;		\/\/mwr102004: if true then the instruction has error$/;"	m	struct:RUU_station
+context:1024:tags:17559:fetch_time	context.h	/^    counter_t fetch_time;$/;"	m	struct:RUU_station
+context:1029:tags:17713:finish_time	context.h	/^    counter_t finish_time;$/;"	m	struct:RUU_station
+context:1033:tags:18172:freed	context.h	/^    int freed;$/;"	m	struct:RUU_station
+context:1049:tags:19057:idep_name	context.h	/^    int idep_name[MAX_IDEPS];$/;"	m	struct:RUU_station
+context:1050:tags:19058:idep_ready	context.h	/^    int idep_ready[MAX_IDEPS];		\/* input operand ready? *\/$/;"	m	struct:RUU_station
+context:1052:tags:19251:in1	context.h	/^    int out1, in1, in2, in3;$/;"	m	struct:RUU_station
+context:1053:tags:19252:in2	context.h	/^    int out1, in1, in2, in3;$/;"	m	struct:RUU_station
+context:1054:tags:19253:in3	context.h	/^    int out1, in1, in2, in3;$/;"	m	struct:RUU_station
+context:1055:tags:19256:in_LSQ	context.h	/^    int in_LSQ;				\/* non-zero if op is in LSQ *\/$/;"	m	struct:RUU_station
+context:1056:tags:19278:in_qwait	context.h	/^    int in_qwait;$/;"	m	struct:RUU_station
+context:1057:tags:19331:index	context.h	/^    int index;                 		\/* used in LSQ for index the entry in the queue *\/$/;"	m	struct:RUU_station
+context:1060:tags:19612:instType	context.h	/^    int instType;$/;"	m	struct:RUU_station
+context:1063:tags:19654:instnum	context.h	/^    long instnum;$/;"	m	struct:RUU_station
+context:1065:tags:19754:invalidationReceived	context.h	/^    int invalidationReceived;$/;"	m	struct:RUU_station
+context:1066:tags:19881:ipreg	context.h	/^    int ipreg[MAX_IDEPS];   	\/* Extra registers reserved to receive the operand$/;"	m	struct:RUU_station
+context:1072:tags:20113:isL1Miss	context.h	/^    int isL1Miss;$/;"	m	struct:RUU_station
+context:1073:tags:20135:isPrefetch	context.h	/^    int isPrefetch;$/;"	m	struct:RUU_station
+context:1074:tags:20149:isSyncInst	context.h	/^    int isSyncInst;$/;"	m	struct:RUU_station
+context:1075:tags:20150:isSyncInstBar	context.h	/^    int isSyncInstBar;$/;"	m	struct:RUU_station
+context:1076:tags:20151:isSyncInstBarRel	context.h	/^    int isSyncInstBarRel;$/;"	m	struct:RUU_station
+context:1077:tags:20160:isWrongPath	context.h	/^    int isWrongPath;$/;"	m	struct:RUU_station
+context:1082:tags:20257:issue_time	context.h	/^    counter_t issue_time;$/;"	m	struct:RUU_station
+context:1083:tags:20258:issued	context.h	/^    int issued;				\/* operation is\/was executing *\/$/;"	m	struct:RUU_station
+context:1090:tags:20754:ldAccessFlag	context.h	/^    int ldAccessFlag;$/;"	m	struct:RUU_station
+context:1104:tags:20912:ldpred_hit	context.h	/^    int ldpred_hit;$/;"	m	struct:RUU_station
+context:1106:tags:21159:load_hit	context.h	/^    int load_hit;$/;"	m	struct:RUU_station
+context:1110:tags:21249:lockStatus	context.h	/^    int lockStatus;$/;"	m	struct:RUU_station
+context:1119:tags:21388:lsqEntry	context.h	/^    int lsqEntry;$/;"	m	struct:RUU_station
+context:1137:tags:22698:miss_flag	context.h	/^	int miss_flag;$/;"	m	struct:RUU_station
+context:1139:tags:23065:n_cache_limit_inst	context.h	/^    int n_cache_limit_inst;$/;"	m	struct:RUU_station
+context:1153:tags:23573:next_PC	context.h	/^    md_addr_t PC, next_PC, pred_PC;	\/* inst PC, next PC, predicted PC *\/$/;"	m	struct:RUU_station
+context:1176:tags:24031:o_val_ra	context.h	/^    quad_t o_val_ra, o_val_rb, o_val_rc;$/;"	m	struct:RUU_station
+context:1178:tags:24033:o_val_rb	context.h	/^    quad_t o_val_ra, o_val_rb, o_val_rc;$/;"	m	struct:RUU_station
+context:1180:tags:24035:o_val_rc	context.h	/^    quad_t o_val_ra, o_val_rb, o_val_rc;$/;"	m	struct:RUU_station
+context:1182:tags:24075:odep_list	context.h	/^    struct RS_link *odep_list[MAX_ODEPS];	\/* chains to consuming operations *\/$/;"	m	struct:RUU_station	typeref:struct:RUU_station::RS_link
+context:1184:tags:24095:oldpreg	context.h	/^    int oldpreg;$/;"	m	struct:RUU_station
+context:1188:tags:24102:onames	context.h	/^    int onames[MAX_ODEPS];			\/* output logical names (NA=unused) *\/$/;"	m	struct:RUU_station
+context:1189:tags:24107:op	context.h	/^    enum md_opcode op;			\/* decoded instruction opcode *\/$/;"	m	struct:RUU_station	typeref:enum:RUU_station::md_opcode
+context:1191:tags:24165:opreg	context.h	/^    int opreg;$/;"	m	struct:RUU_station
+context:1194:tags:24640:out1	context.h	/^    int out1, in1, in2, in3;$/;"	m	struct:RUU_station
+context:1195:tags:24641:out2	context.h	/^    int output1, out2;	\/* output\/input register names *\/$/;"	m	struct:RUU_station
+context:1196:tags:24648:outReg	context.h	/^    int outReg;$/;"	m	struct:RUU_station
+context:1197:tags:24719:output1	context.h	/^    int output1, out2;	\/* output\/input register names *\/$/;"	m	struct:RUU_station
+context:1201:tags:24927:pbank	context.h	/^    int pbank;$/;"	m	struct:RUU_station
+context:1203:tags:25267:poison	context.h	/^    struct psn_struct poison[3];$/;"	m	struct:RUU_station	typeref:struct:RUU_station::psn_struct
+context:1207:tags:25393:pred_PC	context.h	/^    md_addr_t PC, next_PC, pred_PC;	\/* inst PC, next PC, predicted PC *\/$/;"	m	struct:RUU_station
+context:1212:tags:25526:prevReg	context.h	/^    struct regs_t prevReg;$/;"	m	struct:RUU_station	typeref:struct:RUU_station::regs_t
+context:1213:tags:25527:prevRegVal	context.h	/^    qword_t prevRegVal;$/;"	m	struct:RUU_station
+context:1216:tags:25688:prod	context.h	/^    struct RUU_station *prod[MAX_IDEPS];$/;"	m	struct:RUU_station	typeref:struct:RUU_station::RUU_station
+context:1220:tags:25776:ptrace_seq	context.h	/^    unsigned int ptrace_seq;		\/* pipetrace sequence number *\/$/;"	m	struct:RUU_station
+context:1223:tags:25889:queued	context.h	/^    int queued;				\/* operands ready and queued *\/$/;"	m	struct:RUU_station
+context:1224:tags:26130:readAfterWrite	context.h	/^    int readAfterWrite;$/;"	m	struct:RUU_station
+context:1227:tags:26284:recover_inst	context.h	/^    int recover_inst;			\/* start of mis-speculation? *\/$/;"	m	struct:RUU_station
+context:1231:tags:26535:replayThisEntry	context.h	/^    int replayThisEntry, entryReplayed;$/;"	m	struct:RUU_station
+context:1234:tags:26908:robEntry	context.h	/^    int robEntry;$/;"	m	struct:RUU_station
+context:1235:tags:26991:rs	context.h	/^  struct RUU_station *rs;		\/* referenced RUU resv station *\/$/;"	m	struct:RS_link	typeref:struct:RS_link::RUU_station
+context:1236:tags:26992:rs	context.h	/^  struct RUU_station *rs;               \/* creator's reservation station *\/$/;"	m	struct:CV_link	typeref:struct:CV_link::RUU_station
+context:1237:tags:26993:rs	context.h	/^ struct RUU_station *rs;$/;"	m	struct:RS_list	typeref:struct:RS_list::RUU_station
+context:1242:tags:27606:seq	context.h	/^    INST_SEQ_TYPE seq;			\/* instruction sequence, used to$/;"	m	struct:RUU_station
+context:1252:tags:28054:sim_num_insn	context.h	/^    counter_t sim_num_insn;$/;"	m	struct:RUU_station
+context:1272:tags:28533:spec_mode	context.h	/^    int spec_mode;			\/* non-zero if issued in spec_mode *\/$/;"	m	struct:RUU_station
+context:1275:tags:28536:spec_rdb_miss	context.h	/^    int spec_rdb_miss;$/;"	m	struct:RUU_station
+context:1280:tags:28552:spec_wrb_miss	context.h	/^    int spec_wrb_miss;$/;"	m	struct:RUU_station
+context:1282:tags:28626:sqStoreForwardT	context.h	/^    counter_t sqStoreForwardT;      \/\/The dispatch time of the store inst,$/;"	m	struct:RUU_station
+context:1283:tags:28733:st_reach	context.h	/^    int st_reach[CLUSTERS];$/;"	m	struct:RUU_station
+context:1286:tags:28753:stack_recover_idx	context.h	/^    int stack_recover_idx;		\/* non-speculative TOS for RSB pred *\/$/;"	m	struct:RUU_station
+context:1293:tags:29437:tag	context.h	/^    INST_TAG_TYPE tag;			\/* RUU slot tag, increment to$/;"	m	struct:RUU_station
+context:1297:tags:29660:threadid	context.h	/^    int threadid;           		\/* this RUU instant belongs to which theard  *\/$/;"	m	struct:RUU_station
+context:1306:tags:31008:ushFlag	context.h	/^    half_t  ushFlag;        \/\/Flags of the RUU entry.$/;"	m	struct:RUU_station
+context:1307:tags:31009:ushSpecLdDelay	context.h	/^    half_t  ushSpecLdDelay; \/\/Number of cycles a spec load is$/;"	m	struct:RUU_station
+context:1309:tags:31027:val_ra	context.h	/^    quad_t val_ra, val_rb, val_rc, val_ra_result;$/;"	m	struct:RUU_station
+context:1310:tags:31028:val_ra_result	context.h	/^    quad_t val_ra, val_rb, val_rc, val_ra_result;$/;"	m	struct:RUU_station
+context:1311:tags:31029:val_rb	context.h	/^    quad_t val_ra, val_rb, val_rc, val_ra_result;$/;"	m	struct:RUU_station
+context:1312:tags:31030:val_rc	context.h	/^    quad_t val_ra, val_rb, val_rc, val_ra_result;$/;"	m	struct:RUU_station
+context:1320:tags:31337:when_idep_ready	context.h	/^    unsigned long long when_idep_ready[MAX_IDEPS];$/;"	m	struct:RUU_station
+context:1321:tags:31338:when_inq	context.h	/^    int when_inq;$/;"	m	struct:RUU_station
+context:1322:tags:31339:when_ready	context.h	/^    int when_ready[MAX_IDEPS];$/;"	m	struct:RUU_station
+context:1324:tags:31513:writemiss	context.h	/^    int writemiss;$/;"	m	struct:RUU_station
+context:1325:tags:31514:writewait	context.h	/^    int writewait;$/;"	m	struct:RUU_station
+context:1326:tags:31533:wrongCycle	context.h	/^    long long int wrongCycle;$/;"	m	struct:RUU_station
+context.h:140:struct RUU_station 
+context.h:188:    struct RUU_station *prod[MAX_IDEPS];
+context.h:317:  struct RUU_station *rs;		/* referenced RUU resv station */
+context.h:331:  struct RUU_station *rs;               /* creator's reservation station */
+context.h:337: struct RUU_station *rs;
+context.h:565:    struct RUU_station *RUU;		/* register update unit */
+context.h:572:    struct RUU_station *LSQ;         /* load/store queue */
+Binary file context.o matches
+Binary file dlite.o matches
+Binary file eio.o matches
+Binary file endian.o matches
+event:504:tags:26987:rs	cache.h	/^	struct RUU_station *rs;       $/;"	m	struct:DIRECTORY_EVENT	typeref:struct:DIRECTORY_EVENT::RUU_station
+event:505:tags:26989:rs	cache_old.h	/^	struct RUU_station *rs;       $/;"	m	struct:DIRECTORY_EVENT	typeref:struct:DIRECTORY_EVENT::RUU_station
+Binary file flp.o matches
+Binary file hotspot.o matches
+Binary file instManip.o matches
+interconnect.c:1249:void st_ring_lat(struct RUU_station *rs)
+interconnect.c:1365:counter_t predict_commit(struct RUU_station *rs)
+interconnect.c:1370:    struct RUU_station *wrs,*our_ROB,*wlsq;
+interconnect.c:1371://    struct RUU_station *our_LSQ;
+Binary file interconnect.o matches
+Binary file loader.o matches
+Binary file machine.o matches
+Binary file main.o matches
+Binary file memory.o matches
+Binary file network.o matches
+old_sim-out.c:164:	counter_t predict_commit (struct RUU_station *rs);
+old_sim-out.c:1383:void st_ring_lat (struct RUU_station *);
+old_sim-out.c:1657:struct RUU_station *rsCacheAccess = NULL;
+old_sim-out.c:3414:	current->RUU = calloc (RUU_size, sizeof (struct RUU_station));
+old_sim-out.c:3454:ruu_dumpent (struct RUU_station *rs,	/* ptr to RUU station */
+old_sim-out.c:3481:	struct RUU_station *rs;
+old_sim-out.c:3515:	current->LSQ = calloc (LSQ_size, sizeof (struct RUU_station));
+old_sim-out.c:4025:			struct RUU_station *rs = RSLINK_RS (ev);
+old_sim-out.c:4038:eventq_queue_event (struct RUU_station *rs, tick_t when
+old_sim-out.c:4083:	static struct RUU_station *
+old_sim-out.c:4113:			struct RUU_station *rs = RSLINK_RS (ev);
+old_sim-out.c:4137:changeInEventQueue (struct RUU_station * rs, int threadid)
+old_sim-out.c:4209:			struct RUU_station *rs = RSLINK_RS (link);
+old_sim-out.c:4230:readyq_enqueue (struct RUU_station *rs)	/* RS to enqueue */
+old_sim-out.c:4284:readyq_enqueue (struct RUU_station *rs)	/* RS to enqueue */
+old_sim-out.c:4801:void RS_block_list(struct RUU_station *rs, tick_t when, int entry, int threadid)
+old_sim-out.c:4862:	struct RUU_station *temp_LSQ_rs;
+old_sim-out.c:4914:			struct RUU_station *rs = &(current->RUU[current->RUU_head]);
+old_sim-out.c:5446:	struct RUU_station *temp_LSQ_rs;
+old_sim-out.c:5656:	struct RUU_station *rs;
+old_sim-out.c:6062:			struct RUU_station *rs = RSLINK_RS (node);
+old_sim-out.c:6970:			struct RUU_station *rs = RSLINK_RS (node);
+old_sim-out.c:7707:ruu_link_idep (struct RUU_station *rs,	/* rs station to link */
+old_sim-out.c:7826:ruu_install_odep (struct RUU_station *rs,	/* creating RUU station */
+old_sim-out.c:7855:ruu_install_odep_skip (struct RUU_station *rs,	/* creating RUU station */
+old_sim-out.c:7982:	struct RUU_station *rs;	/* RUU station being allocated */
+old_sim-out.c:7983:	struct RUU_station *lsq;	/* LSQ station for ld/st's */
+old_sim-out.c:7986:	struct RUU_station *rs_dup;	/* RUU station being allocated */
+old_sim-out.c:11592:	struct RUU_station *rs = &current->LSQ[i];
+old_sim-out.c:11632:	struct RUU_station *temp_LSQ_rs;
+old_sim-out.c:11727:				struct RUU_station *rs_rob = &current->RUU[RUU_index];
+old_sim-out.c:11728:				struct RUU_station *rs_lsq = &current->LSQ[LSQ_index];
+old_sim-out.c:11853:	struct RUU_station *rs;
+old_sim-out.c:12006:assignFloatRegs (context * current, struct RUU_station *rs, int AorB, int dirty)
+old_sim-out.c:12130:calculateWrongValue (struct RUU_station *rs)
+Binary file opticalForSimplescalar/sim_routing.o matches
+Binary file opticalForSimplescalar/input_buffer.o matches
+Binary file opticalForSimplescalar/optical_statistics.o matches
+Binary file opticalForSimplescalar/packet_retry_algr.o matches
+Binary file opticalForSimplescalar/packet.o matches
+Binary file opticalForSimplescalar/mess_queue.o matches
+Binary file opticalForSimplescalar/sim_receive.o matches
+Binary file opticalForSimplescalar/sim_mess.o matches
+Binary file opticalForSimplescalar/configuration.o matches
+Binary file opticalForSimplescalar/main.o matches
+Binary file opticalForSimplescalar/sim_conflict.o matches
+Binary file opticalForSimplescalar/sim_main.o matches
+Binary file opticalForSimplescalar/flit.o matches
+Binary file power.o matches
+Binary file range.o matches
+Binary file RCutil.o matches
+Binary file run/sim-outorder_n matches
+Binary file run/base matches
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:181:counter_t predict_commit(struct RUU_station *rs);
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:363:	struct RUU_station *rs;
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:430:int determinPCBlat(struct RUU_station *rs, int threadid);
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:1400:void st_ring_lat(struct RUU_station *);
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:3653:  current->RUU = calloc(RUU_size, sizeof(struct RUU_station));
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:3693:ruu_dumpent(struct RUU_station *rs,		/* ptr to RUU station */
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:3732:	struct RUU_station *rs;
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:3763:	current->LSQ = calloc(LSQ_size, sizeof(struct RUU_station));
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:4012:	  struct RUU_station *rs = RSLINK_RS(ev);
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:4025:eventq_queue_event(struct RUU_station *rs, tick_t when)
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:4063:static struct RUU_station *
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:4070:  //struct RUU_station *temp_rs = RSLINK_RS(temp_ev);
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:4093:	  struct RUU_station *rs = RSLINK_RS(ev);
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:4160:	  struct RUU_station *rs = RSLINK_RS(link);
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:4181:readyq_enqueue(struct RUU_station *rs)		/* RS to enqueue */
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:4344:	struct RUU_station *temp_LSQ_rs;
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:4401:			struct RUU_station *rs = &(current->RUU[current->RUU_head]);
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:4891:	struct RUU_station *temp_LSQ_rs;
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:5114:	struct RUU_station *rs;
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:5425:			struct RUU_station *rs = RSLINK_RS(node);
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:5955:			struct RUU_station *rs = RSLINK_RS(node);
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:7378:ruu_link_idep(struct RUU_station *rs,		/* rs station to link */
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:7424:ruu_install_odep(struct RUU_station *rs,	/* creating RUU station */
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:7452:ruu_install_odep_skip(struct RUU_station *rs,	/* creating RUU station */
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:7581:	struct RUU_station *rs;		/* RUU station being allocated */
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:7582:	struct RUU_station *lsq;		/* LSQ station for ld/st's */
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:7585:	struct RUU_station *rs_dup;		/* RUU station being allocated */
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:10924:/*int determinPCBlat(struct RUU_station *rs, int threadid){
+run/benchmark/inputs/radix/tempSrc/sim-outorder.c:11902:	struct RUU_station *temp_LSQ_rs;
+Binary file run/benchmark/inputs/radix/tempSrc/sim-outorder matches
+run/benchmark/SPEC/166.i:10475:struct RUU_station {
+run/benchmark/SPEC/166.i:10516:static struct RUU_station *RUU;          
+run/benchmark/SPEC/166.i:10524:  RUU = calloc(RUU_size, sizeof(struct RUU_station));
+run/benchmark/SPEC/166.i:10534:ruu_dumpent(struct RUU_station *rs,		 
+run/benchmark/SPEC/166.i:10570:  struct RUU_station *rs;
+run/benchmark/SPEC/166.i:10615:static struct RUU_station *LSQ;          
+run/benchmark/SPEC/166.i:10634:  LSQ = calloc(LSQ_size, sizeof(struct RUU_station));
+run/benchmark/SPEC/166.i:10647:  struct RUU_station *rs;
+run/benchmark/SPEC/166.i:10679:  struct RUU_station *rs;                
+run/benchmark/SPEC/166.i:10785:	  struct RUU_station *rs = (( ev )->rs) ;
+run/benchmark/SPEC/166.i:10799:eventq_queue_event(struct RUU_station *rs, SS_TIME_TYPE when)
+run/benchmark/SPEC/166.i:10834:static struct RUU_station *
+run/benchmark/SPEC/166.i:10848:	  struct RUU_station *rs = (( ev )->rs) ;
+run/benchmark/SPEC/166.i:10908:	  struct RUU_station *rs = (( link )->rs) ;
+run/benchmark/SPEC/166.i:10930:readyq_enqueue(struct RUU_station *rs)		 
+run/benchmark/SPEC/166.i:10981:  struct RUU_station *rs;                
+run/benchmark/SPEC/166.i:11292:  struct RUU_station *rs;
+run/benchmark/SPEC/166.i:11528:	  struct RUU_station *rs = (( node )->rs) ;
+run/benchmark/SPEC/166.i:11720:	  struct RUU_station *rs = (( node )->rs) ;
+run/benchmark/SPEC/166.i:12170:ruu_link_idep(struct RUU_station *rs,		 
+run/benchmark/SPEC/166.i:12210:ruu_install_odep(struct RUU_station *rs,	 
+run/benchmark/SPEC/166.i:12937:  struct RUU_station *rs;                
+run/benchmark/SPEC/166.i:12938:  struct RUU_station *lsq;               
+run/benchmark/SPEC/.svn/text-base/166.i.svn-base:10475:struct RUU_station {
+run/benchmark/SPEC/.svn/text-base/166.i.svn-base:10516:static struct RUU_station *RUU;          
+run/benchmark/SPEC/.svn/text-base/166.i.svn-base:10524:  RUU = calloc(RUU_size, sizeof(struct RUU_station));
+run/benchmark/SPEC/.svn/text-base/166.i.svn-base:10534:ruu_dumpent(struct RUU_station *rs,		 
+run/benchmark/SPEC/.svn/text-base/166.i.svn-base:10570:  struct RUU_station *rs;
+run/benchmark/SPEC/.svn/text-base/166.i.svn-base:10615:static struct RUU_station *LSQ;          
+run/benchmark/SPEC/.svn/text-base/166.i.svn-base:10634:  LSQ = calloc(LSQ_size, sizeof(struct RUU_station));
+run/benchmark/SPEC/.svn/text-base/166.i.svn-base:10647:  struct RUU_station *rs;
+run/benchmark/SPEC/.svn/text-base/166.i.svn-base:10679:  struct RUU_station *rs;                
+run/benchmark/SPEC/.svn/text-base/166.i.svn-base:10785:	  struct RUU_station *rs = (( ev )->rs) ;
+run/benchmark/SPEC/.svn/text-base/166.i.svn-base:10799:eventq_queue_event(struct RUU_station *rs, SS_TIME_TYPE when)
+run/benchmark/SPEC/.svn/text-base/166.i.svn-base:10834:static struct RUU_station *
+run/benchmark/SPEC/.svn/text-base/166.i.svn-base:10848:	  struct RUU_station *rs = (( ev )->rs) ;
+run/benchmark/SPEC/.svn/text-base/166.i.svn-base:10908:	  struct RUU_station *rs = (( link )->rs) ;
+run/benchmark/SPEC/.svn/text-base/166.i.svn-base:10930:readyq_enqueue(struct RUU_station *rs)		 
+run/benchmark/SPEC/.svn/text-base/166.i.svn-base:10981:  struct RUU_station *rs;                
+run/benchmark/SPEC/.svn/text-base/166.i.svn-base:11292:  struct RUU_station *rs;
+run/benchmark/SPEC/.svn/text-base/166.i.svn-base:11528:	  struct RUU_station *rs = (( node )->rs) ;
+run/benchmark/SPEC/.svn/text-base/166.i.svn-base:11720:	  struct RUU_station *rs = (( node )->rs) ;
+run/benchmark/SPEC/.svn/text-base/166.i.svn-base:12170:ruu_link_idep(struct RUU_station *rs,		 
+run/benchmark/SPEC/.svn/text-base/166.i.svn-base:12210:ruu_install_odep(struct RUU_station *rs,	 
+run/benchmark/SPEC/.svn/text-base/166.i.svn-base:12937:  struct RUU_station *rs;                
+run/benchmark/SPEC/.svn/text-base/166.i.svn-base:12938:  struct RUU_station *lsq;               
+Binary file run/ideal matches
+Binary file run/base-outorder matches
+Binary file run/ideal_1 matches
+Binary file run/ideal_2 matches
+Binary file run/sim-outorder matches
+sim-ooo.c:165:	counter_t predict_commit (struct RUU_station *rs);
+sim-ooo.c:1405:void st_ring_lat (struct RUU_station *);
+sim-ooo.c:1643:struct RUU_station *rsCacheAccess = NULL;
+sim-ooo.c:3455:	current->RUU = calloc (RUU_size, sizeof (struct RUU_station));
+sim-ooo.c:3495:ruu_dumpent (struct RUU_station *rs,	/* ptr to RUU station */
+sim-ooo.c:3522:	struct RUU_station *rs;
+sim-ooo.c:3556:	current->LSQ = calloc (LSQ_size, sizeof (struct RUU_station));
+sim-ooo.c:4066:			struct RUU_station *rs = RSLINK_RS (ev);
+sim-ooo.c:4079:eventq_queue_event (struct RUU_station *rs, tick_t when
+sim-ooo.c:4124:	static struct RUU_station *
+sim-ooo.c:4154:			struct RUU_station *rs = RSLINK_RS (ev);
+sim-ooo.c:4178:changeInEventQueue (struct RUU_station * rs, int threadid)
+sim-ooo.c:4250:			struct RUU_station *rs = RSLINK_RS (link);
+sim-ooo.c:4271:readyq_enqueue (struct RUU_station *rs)	/* RS to enqueue */
+sim-ooo.c:4325:readyq_enqueue (struct RUU_station *rs)	/* RS to enqueue */
+sim-ooo.c:4842:void RS_block_list(struct RUU_station *rs, tick_t when, int entry, int threadid)
+sim-ooo.c:4904:	struct RUU_station *temp_LSQ_rs;
+sim-ooo.c:4958:			struct RUU_station *rs = &(current->RUU[current->RUU_head]);
+sim-ooo.c:5488:	struct RUU_station *temp_LSQ_rs;
+sim-ooo.c:5701:	struct RUU_station *rs;
+sim-ooo.c:6091:			struct RUU_station *rs = RSLINK_RS (node);
+sim-ooo.c:7037:			struct RUU_station *rs = RSLINK_RS (node);
+sim-ooo.c:7774:ruu_link_idep (struct RUU_station *rs,	/* rs station to link */
+sim-ooo.c:7893:ruu_install_odep (struct RUU_station *rs,	/* creating RUU station */
+sim-ooo.c:7922:ruu_install_odep_skip (struct RUU_station *rs,	/* creating RUU station */
+sim-ooo.c:8049:	struct RUU_station *rs;	/* RUU station being allocated */
+sim-ooo.c:8050:	struct RUU_station *lsq;	/* LSQ station for ld/st's */
+sim-ooo.c:8053:	struct RUU_station *rs_dup;	/* RUU station being allocated */
+sim-ooo.c:11486:	struct RUU_station *rs = &current->LSQ[i];
+sim-ooo.c:11526:	struct RUU_station *temp_LSQ_rs;
+sim-ooo.c:11621:				struct RUU_station *rs_rob = &current->RUU[RUU_index];
+sim-ooo.c:11622:				struct RUU_station *rs_lsq = &current->LSQ[LSQ_index];
+sim-ooo.c:11747:	struct RUU_station *rs;
+sim-ooo.c:11900:assignFloatRegs (context * current, struct RUU_station *rs, int AorB, int dirty)
+sim-ooo.c:12024:calculateWrongValue (struct RUU_station *rs)
+sim-out_nn.c:164:	counter_t predict_commit (struct RUU_station *rs);
+sim-out_nn.c:1443:void st_ring_lat (struct RUU_station *);
+sim-out_nn.c:1681:struct RUU_station *rsCacheAccess = NULL;
+sim-out_nn.c:3528:	current->RUU = calloc (RUU_size, sizeof (struct RUU_station));
+sim-out_nn.c:3568:ruu_dumpent (struct RUU_station *rs,	/* ptr to RUU station */
+sim-out_nn.c:3595:	struct RUU_station *rs;
+sim-out_nn.c:3629:	current->LSQ = calloc (LSQ_size, sizeof (struct RUU_station));
+sim-out_nn.c:4163:			struct RUU_station *rs = RSLINK_RS (ev);
+sim-out_nn.c:4176:eventq_queue_event (struct RUU_station *rs, tick_t when
+sim-out_nn.c:4221:	static struct RUU_station *
+sim-out_nn.c:4251:			struct RUU_station *rs = RSLINK_RS (ev);
+sim-out_nn.c:4275:changeInEventQueue (struct RUU_station * rs, int threadid)
+sim-out_nn.c:4347:			struct RUU_station *rs = RSLINK_RS (link);
+sim-out_nn.c:4368:readyq_enqueue (struct RUU_station *rs)	/* RS to enqueue */
+sim-out_nn.c:4422:readyq_enqueue (struct RUU_station *rs)	/* RS to enqueue */
+sim-out_nn.c:4939:void RS_block_list(struct RUU_station *rs, tick_t when, int entry, int threadid)
+sim-out_nn.c:5001:	struct RUU_station *temp_LSQ_rs;
+sim-out_nn.c:5060:			struct RUU_station *rs = &(current->RUU[current->RUU_head]);
+sim-out_nn.c:5609:	struct RUU_station *temp_LSQ_rs;
+sim-out_nn.c:5822:	struct RUU_station *rs;
+sim-out_nn.c:6214:			struct RUU_station *rs = RSLINK_RS (node);
+sim-out_nn.c:7208:			struct RUU_station *rs = RSLINK_RS (node);
+sim-out_nn.c:7945:ruu_link_idep (struct RUU_station *rs,	/* rs station to link */
+sim-out_nn.c:8064:ruu_install_odep (struct RUU_station *rs,	/* creating RUU station */
+sim-out_nn.c:8093:ruu_install_odep_skip (struct RUU_station *rs,	/* creating RUU station */
+sim-out_nn.c:8235:	struct RUU_station *rs;	/* RUU station being allocated */
+sim-out_nn.c:8236:	struct RUU_station *lsq;	/* LSQ station for ld/st's */
+sim-out_nn.c:8239:	struct RUU_station *rs_dup;	/* RUU station being allocated */
+sim-out_nn.c:11690:	struct RUU_station *rs = &current->LSQ[i];
+sim-out_nn.c:11730:	struct RUU_station *temp_LSQ_rs;
+sim-out_nn.c:11825:				struct RUU_station *rs_rob = &current->RUU[RUU_index];
+sim-out_nn.c:11826:				struct RUU_station *rs_lsq = &current->LSQ[LSQ_index];
+sim-out_nn.c:11951:	struct RUU_station *rs;
+sim-out_nn.c:12104:assignFloatRegs (context * current, struct RUU_station *rs, int AorB, int dirty)
+sim-out_nn.c:12228:calculateWrongValue (struct RUU_station *rs)
+Binary file sim-outorder matches
+sim-outorder.c:170:	counter_t predict_commit (struct RUU_station *rs);
+sim-outorder.c:1409:void st_ring_lat (struct RUU_station *);
+sim-outorder.c:1647:struct RUU_station *rsCacheAccess = NULL;
+sim-outorder.c:3631:	current->RUU = calloc (RUU_size, sizeof (struct RUU_station));
+sim-outorder.c:3671:ruu_dumpent (struct RUU_station *rs,	/* ptr to RUU station */
+sim-outorder.c:3698:	struct RUU_station *rs;
+sim-outorder.c:3732:	current->LSQ = calloc (LSQ_size, sizeof (struct RUU_station));
+sim-outorder.c:4221:			struct RUU_station *rs = RSLINK_RS (ev);
+sim-outorder.c:4234:eventq_queue_event (struct RUU_station *rs, tick_t when, int lat)
+sim-outorder.c:4272:	static struct RUU_station *
+sim-outorder.c:4302:			struct RUU_station *rs = RSLINK_RS (ev);
+sim-outorder.c:4326:changeInEventQueue (struct RUU_station * rs, int threadid)
+sim-outorder.c:4398:			struct RUU_station *rs = RSLINK_RS (link);
+sim-outorder.c:4419:readyq_enqueue (struct RUU_station *rs)	/* RS to enqueue */
+sim-outorder.c:4473:readyq_enqueue (struct RUU_station *rs)	/* RS to enqueue */
+sim-outorder.c:4989:void RS_block_list(struct RUU_station *rs, tick_t when, int entry, int threadid)
+sim-outorder.c:5050:	struct RUU_station *temp_LSQ_rs;
+sim-outorder.c:5099:			struct RUU_station *rs = &(current->RUU[current->RUU_head]);
+sim-outorder.c:5490:	struct RUU_station *temp_LSQ_rs;
+sim-outorder.c:5703:	struct RUU_station *rs;
+sim-outorder.c:6093:			struct RUU_station *rs = RSLINK_RS (node);
+sim-outorder.c:7004:			struct RUU_station *rs = RSLINK_RS (node);
+sim-outorder.c:7743:ruu_link_idep (struct RUU_station *rs,	/* rs station to link */
+sim-outorder.c:7862:ruu_install_odep (struct RUU_station *rs,	/* creating RUU station */
+sim-outorder.c:7891:ruu_install_odep_skip (struct RUU_station *rs,	/* creating RUU station */
+sim-outorder.c:8033:	struct RUU_station *rs;	/* RUU station being allocated */
+sim-outorder.c:8034:	struct RUU_station *lsq;	/* LSQ station for ld/st's */
+sim-outorder.c:8037:	struct RUU_station *rs_dup;	/* RUU station being allocated */
+sim-outorder.c:11388:	struct RUU_station *rs = &current->LSQ[i];
+sim-outorder.c:11428:	struct RUU_station *temp_LSQ_rs;
+sim-outorder.c:11522:				struct RUU_station *rs_rob = &current->RUU[RUU_index];
+sim-outorder.c:11523:				struct RUU_station *rs_lsq = &current->LSQ[LSQ_index];
+sim-outorder.c:11647:	struct RUU_station *rs;
+sim-outorder.h:9:void calculateWrongValue(struct RUU_station *rs);
+sim-outorder.h:38:    struct RUU_station *rs;
+sim-outorder.h:53:	int MarkWriteCommit(int threadid, struct RUU_station *rs);
+Binary file sim-outorder.o matches
+sim-outorder_o.c:164:	counter_t predict_commit (struct RUU_station *rs);
+sim-outorder_o.c:1460:void st_ring_lat (struct RUU_station *);
+sim-outorder_o.c:1698:struct RUU_station *rsCacheAccess = NULL;
+sim-outorder_o.c:3574:	current->RUU = calloc (RUU_size, sizeof (struct RUU_station));
+sim-outorder_o.c:3614:ruu_dumpent (struct RUU_station *rs,	/* ptr to RUU station */
+sim-outorder_o.c:3641:	struct RUU_station *rs;
+sim-outorder_o.c:3675:	current->LSQ = calloc (LSQ_size, sizeof (struct RUU_station));
+sim-outorder_o.c:4209:			struct RUU_station *rs = RSLINK_RS (ev);
+sim-outorder_o.c:4222:eventq_queue_event (struct RUU_station *rs, tick_t when
+sim-outorder_o.c:4267:	static struct RUU_station *
+sim-outorder_o.c:4297:			struct RUU_station *rs = RSLINK_RS (ev);
+sim-outorder_o.c:4321:changeInEventQueue (struct RUU_station * rs, int threadid)
+sim-outorder_o.c:4393:			struct RUU_station *rs = RSLINK_RS (link);
+sim-outorder_o.c:4414:readyq_enqueue (struct RUU_station *rs)	/* RS to enqueue */
+sim-outorder_o.c:4468:readyq_enqueue (struct RUU_station *rs)	/* RS to enqueue */
+sim-outorder_o.c:4985:void RS_block_list(struct RUU_station *rs, tick_t when, int entry, int threadid)
+sim-outorder_o.c:5054:	struct RUU_station *temp_LSQ_rs;
+sim-outorder_o.c:5113:			struct RUU_station *rs = &(current->RUU[current->RUU_head]);
+sim-outorder_o.c:5668:	struct RUU_station *temp_LSQ_rs;
+sim-outorder_o.c:5881:	struct RUU_station *rs;
+sim-outorder_o.c:6273:			struct RUU_station *rs = RSLINK_RS (node);
+sim-outorder_o.c:7267:			struct RUU_station *rs = RSLINK_RS (node);
+sim-outorder_o.c:8004:ruu_link_idep (struct RUU_station *rs,	/* rs station to link */
+sim-outorder_o.c:8123:ruu_install_odep (struct RUU_station *rs,	/* creating RUU station */
+sim-outorder_o.c:8152:ruu_install_odep_skip (struct RUU_station *rs,	/* creating RUU station */
+sim-outorder_o.c:8294:	struct RUU_station *rs;	/* RUU station being allocated */
+sim-outorder_o.c:8295:	struct RUU_station *lsq;	/* LSQ station for ld/st's */
+sim-outorder_o.c:8298:	struct RUU_station *rs_dup;	/* RUU station being allocated */
+sim-outorder_o.c:11760:	struct RUU_station *rs = &current->LSQ[i];
+sim-outorder_o.c:11800:	struct RUU_station *temp_LSQ_rs;
+sim-outorder_o.c:11895:				struct RUU_station *rs_rob = &current->RUU[RUU_index];
+sim-outorder_o.c:11896:				struct RUU_station *rs_lsq = &current->LSQ[LSQ_index];
+sim-outorder_o.c:12021:	struct RUU_station *rs;
+sim-outorder_o.c:12177:assignFloatRegs (context * current, struct RUU_station *rs, int AorB, int dirty)
+sim-outorder_o.c:12301:calculateWrongValue (struct RUU_station *rs)
+sim-outorder_old.c:164:	counter_t predict_commit (struct RUU_station *rs);
+sim-outorder_old.c:1464:void st_ring_lat (struct RUU_station *);
+sim-outorder_old.c:1702:struct RUU_station *rsCacheAccess = NULL;
+sim-outorder_old.c:3591:	current->RUU = calloc (RUU_size, sizeof (struct RUU_station));
+sim-outorder_old.c:3631:ruu_dumpent (struct RUU_station *rs,	/* ptr to RUU station */
+sim-outorder_old.c:3658:	struct RUU_station *rs;
+sim-outorder_old.c:3692:	current->LSQ = calloc (LSQ_size, sizeof (struct RUU_station));
+sim-outorder_old.c:4226:			struct RUU_station *rs = RSLINK_RS (ev);
+sim-outorder_old.c:4239:eventq_queue_event (struct RUU_station *rs, tick_t when
+sim-outorder_old.c:4284:	static struct RUU_station *
+sim-outorder_old.c:4314:			struct RUU_station *rs = RSLINK_RS (ev);
+sim-outorder_old.c:4338:changeInEventQueue (struct RUU_station * rs, int threadid)
+sim-outorder_old.c:4410:			struct RUU_station *rs = RSLINK_RS (link);
+sim-outorder_old.c:4431:readyq_enqueue (struct RUU_station *rs)	/* RS to enqueue */
+sim-outorder_old.c:4485:readyq_enqueue (struct RUU_station *rs)	/* RS to enqueue */
+sim-outorder_old.c:5002:void RS_block_list(struct RUU_station *rs, tick_t when, int entry, int threadid)
+sim-outorder_old.c:5064:	struct RUU_station *temp_LSQ_rs;
+sim-outorder_old.c:5123:			struct RUU_station *rs = &(current->RUU[current->RUU_head]);
+sim-outorder_old.c:5678:	struct RUU_station *temp_LSQ_rs;
+sim-outorder_old.c:5891:	struct RUU_station *rs;
+sim-outorder_old.c:6283:			struct RUU_station *rs = RSLINK_RS (node);
+sim-outorder_old.c:7277:			struct RUU_station *rs = RSLINK_RS (node);
+sim-outorder_old.c:8014:ruu_link_idep (struct RUU_station *rs,	/* rs station to link */
+sim-outorder_old.c:8133:ruu_install_odep (struct RUU_station *rs,	/* creating RUU station */
+sim-outorder_old.c:8162:ruu_install_odep_skip (struct RUU_station *rs,	/* creating RUU station */
+sim-outorder_old.c:8304:	struct RUU_station *rs;	/* RUU station being allocated */
+sim-outorder_old.c:8305:	struct RUU_station *lsq;	/* LSQ station for ld/st's */
+sim-outorder_old.c:8308:	struct RUU_station *rs_dup;	/* RUU station being allocated */
+sim-outorder_old.c:11787:	struct RUU_station *rs = &current->LSQ[i];
+sim-outorder_old.c:11827:	struct RUU_station *temp_LSQ_rs;
+sim-outorder_old.c:11922:				struct RUU_station *rs_rob = &current->RUU[RUU_index];
+sim-outorder_old.c:11923:				struct RUU_station *rs_lsq = &current->LSQ[LSQ_index];
+sim-outorder_old.c:12048:	struct RUU_station *rs;
+sim-outorder_old.c:12211:assignFloatRegs (context * current, struct RUU_station *rs, int AorB, int dirty)
+sim-outorder_old.c:12335:calculateWrongValue (struct RUU_station *rs)
+Binary file symbol.o matches
+syscall.c:1220:    struct RUU_station *RUUDest, *RUUSrc, *rs;
+syscall.c:4612:	newContext->RUU = calloc (RUU_size, sizeof (struct RUU_station));
+Binary file syscall.o matches
+syscall_old.c:1218:    struct RUU_station *RUUDest, *RUUSrc, *rs;
+syscall_old.c:4610:	newContext->RUU = calloc (RUU_size, sizeof (struct RUU_station));
+tags:3871:IR	context.h	/^    md_inst_t IR;			\/* instruction bits *\/$/;"	m	struct:RUU_station
+tags:4358:LSQ	context.h	/^    struct RUU_station *LSQ;         \/* load\/store queue *\/$/;"	m	struct:context_t	typeref:struct:context_t::RUU_station
+tags:5399:MSHRLookup	cache.c	/^void MSHRLookup(struct mshr_t *mshr, md_addr_t addr, int lat, int isOC, struct RUU_station *rs)$/;"	f
+tags:5400:MSHRLookup	cache_lockold.c	/^void MSHRLookup(struct mshr_t *mshr, md_addr_t addr, int lat, int isOC, struct RUU_station *rs)$/;"	f
+tags:5401:MSHRLookup	cache_n.c	/^void MSHRLookup(struct mshr_t *mshr, md_addr_t addr, int lat, int isOC, struct RUU_station *rs)$/;"	f
+tags:5402:MSHRLookup	cache_o.c	/^void MSHRLookup(struct mshr_t *mshr, md_addr_t addr, int lat, int isOC, struct RUU_station *rs)$/;"	f
+tags:5403:MSHRLookup	cache_old.c	/^void MSHRLookup(struct mshr_t *mshr, md_addr_t addr, int lat, int isOC, struct RUU_station *rs)$/;"	f
+tags:8262:PC	context.h	/^    md_addr_t PC, next_PC, pred_PC;	\/* inst PC, next PC, predicted PC *\/$/;"	m	struct:RUU_station
+tags:9080:RS_block_list	old_sim-out.c	/^void RS_block_list(struct RUU_station *rs, tick_t when, int entry, int threadid)$/;"	f
+tags:9081:RS_block_list	sim-ooo.c	/^void RS_block_list(struct RUU_station *rs, tick_t when, int entry, int threadid)$/;"	f
+tags:9082:RS_block_list	sim-out_nn.c	/^void RS_block_list(struct RUU_station *rs, tick_t when, int entry, int threadid)$/;"	f
+tags:9083:RS_block_list	sim-outorder.c	/^void RS_block_list(struct RUU_station *rs, tick_t when, int entry, int threadid)$/;"	f
+tags:9084:RS_block_list	sim-outorder_o.c	/^void RS_block_list(struct RUU_station *rs, tick_t when, int entry, int threadid)$/;"	f
+tags:9085:RS_block_list	sim-outorder_old.c	/^void RS_block_list(struct RUU_station *rs, tick_t when, int entry, int threadid)$/;"	f
+tags:9109:RUU	context.h	/^    struct RUU_station *RUU;		\/* register update unit *\/$/;"	m	struct:context_t	typeref:struct:context_t::RUU_station
+tags:9159:RUU_station	context.h	/^struct RUU_station $/;"	s
+tags:9222:ReadShareDir	context.h	/^    int ReadShareDir;$/;"	m	struct:RUU_station
+tags:10645:STL_C_fail	context.h	/^	int STL_C_fail;$/;"	m	struct:RUU_station
+tags:12350:abank	context.h	/^    int abank;$/;"	m	struct:RUU_station
+tags:12604:addr	context.h	/^    md_addr_t addr;			\/* effective address for ld\/st's *\/$/;"	m	struct:RUU_station
+tags:12729:altPC	context.h	/^    md_addr_t altPC;$/;"	m	struct:RUU_station
+tags:12844:assignFloatRegs	old_sim-out.c	/^assignFloatRegs (context * current, struct RUU_station *rs, int AorB, int dirty)$/;"	f
+tags:12845:assignFloatRegs	sim-ooo.c	/^assignFloatRegs (context * current, struct RUU_station *rs, int AorB, int dirty)$/;"	f
+tags:12846:assignFloatRegs	sim-out_nn.c	/^assignFloatRegs (context * current, struct RUU_station *rs, int AorB, int dirty)$/;"	f
+tags:12847:assignFloatRegs	sim-outorder_o.c	/^assignFloatRegs (context * current, struct RUU_station *rs, int AorB, int dirty)$/;"	f
+tags:12848:assignFloatRegs	sim-outorder_old.c	/^assignFloatRegs (context * current, struct RUU_station *rs, int AorB, int dirty)$/;"	f
+tags:12973:backupReg	context.h	/^    struct regs_t backupReg;$/;"	m	struct:RUU_station	typeref:struct:RUU_station::regs_t
+tags:13399:boqIndex	context.h	/^    int boqIndex;$/;"	m	struct:RUU_station
+tags:14219:cache_ready	context.h	/^    int cache_ready;$/;"	m	struct:RUU_station
+tags:14261:calculateWrongValue	old_sim-out.c	/^calculateWrongValue (struct RUU_station *rs)$/;"	f
+tags:14262:calculateWrongValue	sim-ooo.c	/^calculateWrongValue (struct RUU_station *rs)$/;"	f
+tags:14263:calculateWrongValue	sim-out_nn.c	/^calculateWrongValue (struct RUU_station *rs)$/;"	f
+tags:14264:calculateWrongValue	sim-outorder_o.c	/^calculateWrongValue (struct RUU_station *rs)$/;"	f
+tags:14265:calculateWrongValue	sim-outorder_old.c	/^calculateWrongValue (struct RUU_station *rs)$/;"	f
+tags:14434:changeInEventQueue	old_sim-out.c	/^changeInEventQueue (struct RUU_station * rs, int threadid)$/;"	f
+tags:14435:changeInEventQueue	sim-ooo.c	/^changeInEventQueue (struct RUU_station * rs, int threadid)$/;"	f
+tags:14436:changeInEventQueue	sim-out_nn.c	/^changeInEventQueue (struct RUU_station * rs, int threadid)$/;"	f
+tags:14437:changeInEventQueue	sim-outorder.c	/^changeInEventQueue (struct RUU_station * rs, int threadid)$/;"	f
+tags:14438:changeInEventQueue	sim-outorder_o.c	/^changeInEventQueue (struct RUU_station * rs, int threadid)$/;"	f
+tags:14439:changeInEventQueue	sim-outorder_old.c	/^changeInEventQueue (struct RUU_station * rs, int threadid)$/;"	f
+tags:14440:changeSpecMode	context.h	/^    int changeSpecMode;$/;"	m	struct:RUU_station
+tags:14749:cluster	context.h	/^    int cluster;$/;"	m	struct:RUU_station
+tags:14750:cluster_assigned	context.h	/^    int cluster_assigned;$/;"	m	struct:RUU_station
+tags:14981:commit_time	context.h	/^    counter_t commit_time;$/;"	m	struct:RUU_station
+tags:15067:completed	context.h	/^    int completed;			\/* operation has completed execution *\/$/;"	m	struct:RUU_station
+tags:15261:counted_fissueq	context.h	/^    int counted_fissueq;$/;"	m	struct:RUU_station
+tags:15262:counted_fready	context.h	/^    int counted_fready;$/;"	m	struct:RUU_station
+tags:15263:counted_iissueq	context.h	/^    int counted_iissueq;$/;"	m	struct:RUU_station
+tags:15264:counted_iready	context.h	/^    int counted_iready;$/;"	m	struct:RUU_station
+tags:15265:counted_lsqready	context.h	/^    int counted_lsqready;$/;"	m	struct:RUU_station
+tags:15266:counted_miss	context.h	/^    int counted_miss;$/;"	m	struct:RUU_station
+tags:15267:counted_non_issue_lsq	context.h	/^    int counted_non_issue_lsq;$/;"	m	struct:RUU_station
+tags:15268:counted_rawq	context.h	/^    int counted_rawq[CLUSTERS];$/;"	m	struct:RUU_station
+tags:15269:counted_unready_dispatch	context.h	/^    int counted_unready_dispatch;$/;"	m	struct:RUU_station
+tags:16101:dir_update	context.h	/^    struct bpred_update_t dir_update;	\/* bpred direction update info *\/$/;"	m	struct:RUU_station	typeref:struct:RUU_station::bpred_update_t
+tags:16198:disp_time	context.h	/^    counter_t disp_time;$/;"	m	struct:RUU_station
+tags:16334:distissue	context.h	/^    int distissue;$/;"	m	struct:RUU_station
+tags:16409:dl2_missed	context.h	/^    int dl2_missed;$/;"	m	struct:RUU_station
+tags:16618:duplicate	context.h	/^    int duplicate;			\/*092904mwr: 1-duplicate inst, 0-original inst*\/$/;"	m	struct:RUU_station
+tags:16767:ea_comp	context.h	/^    int ea_comp;				\/* non-zero if op is an addr comp *\/$/;"	m	struct:RUU_station
+tags:16897:entryReplayed	context.h	/^    int replayThisEntry, entryReplayed;$/;"	m	struct:RUU_station
+tags:17127:eventq_queue_event	old_sim-out.c	/^eventq_queue_event (struct RUU_station *rs, tick_t when$/;"	f	file:
+tags:17128:eventq_queue_event	run/benchmark/inputs/radix/tempSrc/sim-outorder.c	/^eventq_queue_event(struct RUU_station *rs, tick_t when)$/;"	f	file:
+tags:17129:eventq_queue_event	run_old/cholesky/sim-outorder.c	/^eventq_queue_event(struct RUU_station *rs, tick_t when)$/;"	f	file:
+tags:17130:eventq_queue_event	run_old/radix/sim-outorder.c	/^eventq_queue_event(struct RUU_station *rs, tick_t when)$/;"	f	file:
+tags:17131:eventq_queue_event	run_old/radix/tempSrc/sim-outorder.c	/^eventq_queue_event(struct RUU_station *rs, tick_t when)$/;"	f	file:
+tags:17132:eventq_queue_event	run_old/tspuo/sim-outorder.c	/^eventq_queue_event(struct RUU_station *rs, tick_t when)$/;"	f	file:
+tags:17133:eventq_queue_event	sim-ooo.c	/^eventq_queue_event (struct RUU_station *rs, tick_t when$/;"	f	file:
+tags:17134:eventq_queue_event	sim-out_nn.c	/^eventq_queue_event (struct RUU_station *rs, tick_t when$/;"	f	file:
+tags:17135:eventq_queue_event	sim-outorder.c	/^eventq_queue_event (struct RUU_station *rs, tick_t when, int lat)$/;"	f	file:
+tags:17136:eventq_queue_event	sim-outorder_o.c	/^eventq_queue_event (struct RUU_station *rs, tick_t when$/;"	f	file:
+tags:17137:eventq_queue_event	sim-outorder_old.c	/^eventq_queue_event (struct RUU_station *rs, tick_t when$/;"	f	file:
+tags:17142:eventq_update	cache.c	/^void eventq_update(struct RUU_station *rs, tick_t ready)   \/*directory event queue version *\/$/;"	f
+tags:17143:eventq_update	cache_lockold.c	/^void eventq_update(struct RUU_station *rs, tick_t ready)   \/*directory event queue version *\/$/;"	f
+tags:17144:eventq_update	cache_n.c	/^void eventq_update(struct RUU_station *rs, tick_t ready)   \/*directory event queue version *\/$/;"	f
+tags:17145:eventq_update	cache_o.c	/^void eventq_update(struct RUU_station *rs, tick_t ready)   \/*directory event queue version *\/$/;"	f
+tags:17146:eventq_update	cache_old.c	/^void eventq_update(struct RUU_station *rs, tick_t ready)   \/*directory event queue version *\/$/;"	f
+tags:17478:faulting_instr	context.h	/^    int faulting_instr;		\/\/mwr102004: if true then the instruction has error$/;"	m	struct:RUU_station
+tags:17559:fetch_time	context.h	/^    counter_t fetch_time;$/;"	m	struct:RUU_station
+tags:17713:finish_time	context.h	/^    counter_t finish_time;$/;"	m	struct:RUU_station
+tags:18172:freed	context.h	/^    int freed;$/;"	m	struct:RUU_station
+tags:18560:get_cluster	cmt.c	/^int get_cluster(int in1, int in2, int in3, struct RUU_station *rs, int threadid)$/;"	f
+tags:19057:idep_name	context.h	/^    int idep_name[MAX_IDEPS];$/;"	m	struct:RUU_station
+tags:19058:idep_ready	context.h	/^    int idep_ready[MAX_IDEPS];		\/* input operand ready? *\/$/;"	m	struct:RUU_station
+tags:19251:in1	context.h	/^    int out1, in1, in2, in3;$/;"	m	struct:RUU_station
+tags:19252:in2	context.h	/^    int out1, in1, in2, in3;$/;"	m	struct:RUU_station
+tags:19253:in3	context.h	/^    int out1, in1, in2, in3;$/;"	m	struct:RUU_station
+tags:19256:in_LSQ	context.h	/^    int in_LSQ;				\/* non-zero if op is in LSQ *\/$/;"	m	struct:RUU_station
+tags:19278:in_qwait	context.h	/^    int in_qwait;$/;"	m	struct:RUU_station
+tags:19331:index	context.h	/^    int index;                 		\/* used in LSQ for index the entry in the queue *\/$/;"	m	struct:RUU_station
+tags:19612:instType	context.h	/^    int instType;$/;"	m	struct:RUU_station
+tags:19654:instnum	context.h	/^    long instnum;$/;"	m	struct:RUU_station
+tags:19754:invalidationReceived	context.h	/^    int invalidationReceived;$/;"	m	struct:RUU_station
+tags:19881:ipreg	context.h	/^    int ipreg[MAX_IDEPS];   	\/* Extra registers reserved to receive the operand$/;"	m	struct:RUU_station
+tags:20113:isL1Miss	context.h	/^    int isL1Miss;$/;"	m	struct:RUU_station
+tags:20135:isPrefetch	context.h	/^    int isPrefetch;$/;"	m	struct:RUU_station
+tags:20149:isSyncInst	context.h	/^    int isSyncInst;$/;"	m	struct:RUU_station
+tags:20150:isSyncInstBar	context.h	/^    int isSyncInstBar;$/;"	m	struct:RUU_station
+tags:20151:isSyncInstBarRel	context.h	/^    int isSyncInstBarRel;$/;"	m	struct:RUU_station
+tags:20160:isWrongPath	context.h	/^    int isWrongPath;$/;"	m	struct:RUU_station
+tags:20257:issue_time	context.h	/^    counter_t issue_time;$/;"	m	struct:RUU_station
+tags:20258:issued	context.h	/^    int issued;				\/* operation is\/was executing *\/$/;"	m	struct:RUU_station
+tags:20754:ldAccessFlag	context.h	/^    int ldAccessFlag;$/;"	m	struct:RUU_station
+tags:20912:ldpred_hit	context.h	/^    int ldpred_hit;$/;"	m	struct:RUU_station
+tags:21159:load_hit	context.h	/^    int load_hit;$/;"	m	struct:RUU_station
+tags:21249:lockStatus	context.h	/^    int lockStatus;$/;"	m	struct:RUU_station
+tags:21388:lsqEntry	context.h	/^    int lsqEntry;$/;"	m	struct:RUU_station
+tags:22698:miss_flag	context.h	/^	int miss_flag;$/;"	m	struct:RUU_station
+tags:22816:mshr_check_rs	cache.c	/^counter_t mshr_check_rs(int threadid, md_addr_t addr, struct RUU_station **rs)$/;"	f
+tags:22817:mshr_check_rs	cache_lockold.c	/^counter_t mshr_check_rs(int threadid, md_addr_t addr, struct RUU_station **rs)$/;"	f
+tags:22818:mshr_check_rs	cache_n.c	/^counter_t mshr_check_rs(int threadid, md_addr_t addr, struct RUU_station **rs)$/;"	f
+tags:22819:mshr_check_rs	cache_o.c	/^counter_t mshr_check_rs(int threadid, md_addr_t addr, struct RUU_station **rs)$/;"	f
+tags:22820:mshr_check_rs	cache_old.c	/^counter_t mshr_check_rs(int threadid, md_addr_t addr, struct RUU_station **rs)$/;"	f
+tags:23065:n_cache_limit_inst	context.h	/^    int n_cache_limit_inst;$/;"	m	struct:RUU_station
+tags:23573:next_PC	context.h	/^    md_addr_t PC, next_PC, pred_PC;	\/* inst PC, next PC, predicted PC *\/$/;"	m	struct:RUU_station
+tags:24031:o_val_ra	context.h	/^    quad_t o_val_ra, o_val_rb, o_val_rc;$/;"	m	struct:RUU_station
+tags:24033:o_val_rb	context.h	/^    quad_t o_val_ra, o_val_rb, o_val_rc;$/;"	m	struct:RUU_station
+tags:24035:o_val_rc	context.h	/^    quad_t o_val_ra, o_val_rb, o_val_rc;$/;"	m	struct:RUU_station
+tags:24075:odep_list	context.h	/^    struct RS_link *odep_list[MAX_ODEPS];	\/* chains to consuming operations *\/$/;"	m	struct:RUU_station	typeref:struct:RUU_station::RS_link
+tags:24095:oldpreg	context.h	/^    int oldpreg;$/;"	m	struct:RUU_station
+tags:24102:onames	context.h	/^    int onames[MAX_ODEPS];			\/* output logical names (NA=unused) *\/$/;"	m	struct:RUU_station
+tags:24107:op	context.h	/^    enum md_opcode op;			\/* decoded instruction opcode *\/$/;"	m	struct:RUU_station	typeref:enum:RUU_station::md_opcode
+tags:24165:opreg	context.h	/^    int opreg;$/;"	m	struct:RUU_station
+tags:24640:out1	context.h	/^    int out1, in1, in2, in3;$/;"	m	struct:RUU_station
+tags:24641:out2	context.h	/^    int output1, out2;	\/* output\/input register names *\/$/;"	m	struct:RUU_station
+tags:24648:outReg	context.h	/^    int outReg;$/;"	m	struct:RUU_station
+tags:24719:output1	context.h	/^    int output1, out2;	\/* output\/input register names *\/$/;"	m	struct:RUU_station
+tags:24927:pbank	context.h	/^    int pbank;$/;"	m	struct:RUU_station
+tags:25267:poison	context.h	/^    struct psn_struct poison[3];$/;"	m	struct:RUU_station	typeref:struct:RUU_station::psn_struct
+tags:25393:pred_PC	context.h	/^    md_addr_t PC, next_PC, pred_PC;	\/* inst PC, next PC, predicted PC *\/$/;"	m	struct:RUU_station
+tags:25434:predict_commit	interconnect.c	/^counter_t predict_commit(struct RUU_station *rs)$/;"	f
+tags:25526:prevReg	context.h	/^    struct regs_t prevReg;$/;"	m	struct:RUU_station	typeref:struct:RUU_station::regs_t
+tags:25527:prevRegVal	context.h	/^    qword_t prevRegVal;$/;"	m	struct:RUU_station
+tags:25688:prod	context.h	/^    struct RUU_station *prod[MAX_IDEPS];$/;"	m	struct:RUU_station	typeref:struct:RUU_station::RUU_station
+tags:25776:ptrace_seq	context.h	/^    unsigned int ptrace_seq;		\/* pipetrace sequence number *\/$/;"	m	struct:RUU_station
+tags:25889:queued	context.h	/^    int queued;				\/* operands ready and queued *\/$/;"	m	struct:RUU_station
+tags:26130:readAfterWrite	context.h	/^    int readAfterWrite;$/;"	m	struct:RUU_station
+tags:26173:readyq_enqueue	old_sim-out.c	/^readyq_enqueue (struct RUU_station *rs)	\/* RS to enqueue *\/$/;"	f
+tags:26174:readyq_enqueue	old_sim-out.c	/^readyq_enqueue (struct RUU_station *rs)	\/* RS to enqueue *\/$/;"	f	file:
+tags:26175:readyq_enqueue	run/benchmark/inputs/radix/tempSrc/sim-outorder.c	/^readyq_enqueue(struct RUU_station *rs)		\/* RS to enqueue *\/$/;"	f	file:
+tags:26176:readyq_enqueue	run_old/cholesky/sim-outorder.c	/^readyq_enqueue(struct RUU_station *rs)		\/* RS to enqueue *\/$/;"	f	file:
+tags:26177:readyq_enqueue	run_old/radix/sim-outorder.c	/^readyq_enqueue(struct RUU_station *rs)		\/* RS to enqueue *\/$/;"	f	file:
+tags:26178:readyq_enqueue	run_old/radix/tempSrc/sim-outorder.c	/^readyq_enqueue(struct RUU_station *rs)		\/* RS to enqueue *\/$/;"	f	file:
+tags:26179:readyq_enqueue	run_old/tspuo/sim-outorder.c	/^readyq_enqueue(struct RUU_station *rs)		\/* RS to enqueue *\/$/;"	f	file:
+tags:26180:readyq_enqueue	sim-ooo.c	/^readyq_enqueue (struct RUU_station *rs)	\/* RS to enqueue *\/$/;"	f
+tags:26181:readyq_enqueue	sim-ooo.c	/^readyq_enqueue (struct RUU_station *rs)	\/* RS to enqueue *\/$/;"	f	file:
+tags:26182:readyq_enqueue	sim-out_nn.c	/^readyq_enqueue (struct RUU_station *rs)	\/* RS to enqueue *\/$/;"	f
+tags:26183:readyq_enqueue	sim-out_nn.c	/^readyq_enqueue (struct RUU_station *rs)	\/* RS to enqueue *\/$/;"	f	file:
+tags:26184:readyq_enqueue	sim-outorder.c	/^readyq_enqueue (struct RUU_station *rs)	\/* RS to enqueue *\/$/;"	f
+tags:26185:readyq_enqueue	sim-outorder.c	/^readyq_enqueue (struct RUU_station *rs)	\/* RS to enqueue *\/$/;"	f	file:
+tags:26186:readyq_enqueue	sim-outorder_o.c	/^readyq_enqueue (struct RUU_station *rs)	\/* RS to enqueue *\/$/;"	f
+tags:26187:readyq_enqueue	sim-outorder_o.c	/^readyq_enqueue (struct RUU_station *rs)	\/* RS to enqueue *\/$/;"	f	file:
+tags:26188:readyq_enqueue	sim-outorder_old.c	/^readyq_enqueue (struct RUU_station *rs)	\/* RS to enqueue *\/$/;"	f
+tags:26189:readyq_enqueue	sim-outorder_old.c	/^readyq_enqueue (struct RUU_station *rs)	\/* RS to enqueue *\/$/;"	f	file:
+tags:26284:recover_inst	context.h	/^    int recover_inst;			\/* start of mis-speculation? *\/$/;"	m	struct:RUU_station
+tags:26535:replayThisEntry	context.h	/^    int replayThisEntry, entryReplayed;$/;"	m	struct:RUU_station
+tags:26908:robEntry	context.h	/^    int robEntry;$/;"	m	struct:RUU_station
+tags:26987:rs	cache.h	/^	struct RUU_station *rs;       $/;"	m	struct:DIRECTORY_EVENT	typeref:struct:DIRECTORY_EVENT::RUU_station
+tags:26988:rs	cache.h	/^	struct RUU_station *rs;$/;"	m	struct:mshr_entry_t	typeref:struct:mshr_entry_t::RUU_station
+tags:26989:rs	cache_old.h	/^	struct RUU_station *rs;       $/;"	m	struct:DIRECTORY_EVENT	typeref:struct:DIRECTORY_EVENT::RUU_station
+tags:26990:rs	cache_old.h	/^	struct RUU_station *rs;$/;"	m	struct:mshr_entry_t	typeref:struct:mshr_entry_t::RUU_station
+tags:26991:rs	context.h	/^  struct RUU_station *rs;		\/* referenced RUU resv station *\/$/;"	m	struct:RS_link	typeref:struct:RS_link::RUU_station
+tags:26992:rs	context.h	/^  struct RUU_station *rs;               \/* creator's reservation station *\/$/;"	m	struct:CV_link	typeref:struct:CV_link::RUU_station
+tags:26993:rs	context.h	/^ struct RUU_station *rs;$/;"	m	struct:RS_list	typeref:struct:RS_list::RUU_station
+tags:26994:rs	run/benchmark/inputs/radix/tempSrc/sim-outorder.c	/^	struct RUU_station *rs;$/;"	m	struct:pcbPQ	typeref:struct:pcbPQ::RUU_station	file:
+tags:26995:rs	run_old/cholesky/sim-outorder.c	/^	struct RUU_station *rs;$/;"	m	struct:pcbPQ	typeref:struct:pcbPQ::RUU_station	file:
+tags:26996:rs	run_old/radix/sim-outorder.c	/^	struct RUU_station *rs;$/;"	m	struct:pcbPQ	typeref:struct:pcbPQ::RUU_station	file:
+tags:26997:rs	run_old/radix/tempSrc/sim-outorder.c	/^	struct RUU_station *rs;$/;"	m	struct:pcbPQ	typeref:struct:pcbPQ::RUU_station	file:
+tags:26998:rs	run_old/tspuo/sim-outorder.c	/^	struct RUU_station *rs;$/;"	m	struct:pcbPQ	typeref:struct:pcbPQ::RUU_station	file:
+tags:26999:rs	sim-outorder.h	/^    struct RUU_station *rs;$/;"	m	struct:m_L1WBufEntry	typeref:struct:m_L1WBufEntry::RUU_station
+tags:27000:rsCacheAccess	old_sim-out.c	/^struct RUU_station *rsCacheAccess = NULL;$/;"	v	typeref:struct:RUU_station
+tags:27001:rsCacheAccess	sim-ooo.c	/^struct RUU_station *rsCacheAccess = NULL;$/;"	v	typeref:struct:RUU_station
+tags:27002:rsCacheAccess	sim-out_nn.c	/^struct RUU_station *rsCacheAccess = NULL;$/;"	v	typeref:struct:RUU_station
+tags:27003:rsCacheAccess	sim-outorder.c	/^struct RUU_station *rsCacheAccess = NULL;$/;"	v	typeref:struct:RUU_station
+tags:27004:rsCacheAccess	sim-outorder_o.c	/^struct RUU_station *rsCacheAccess = NULL;$/;"	v	typeref:struct:RUU_station
+tags:27005:rsCacheAccess	sim-outorder_old.c	/^struct RUU_station *rsCacheAccess = NULL;$/;"	v	typeref:struct:RUU_station
+tags:27205:ruu_dumpent	old_sim-out.c	/^ruu_dumpent (struct RUU_station *rs,	\/* ptr to RUU station *\/$/;"	f	file:
+tags:27206:ruu_dumpent	run/benchmark/inputs/radix/tempSrc/sim-outorder.c	/^ruu_dumpent(struct RUU_station *rs,		\/* ptr to RUU station *\/$/;"	f	file:
+tags:27207:ruu_dumpent	run_old/cholesky/sim-outorder.c	/^ruu_dumpent(struct RUU_station *rs,		\/* ptr to RUU station *\/$/;"	f	file:
+tags:27208:ruu_dumpent	run_old/radix/sim-outorder.c	/^ruu_dumpent(struct RUU_station *rs,		\/* ptr to RUU station *\/$/;"	f	file:
+tags:27209:ruu_dumpent	run_old/radix/tempSrc/sim-outorder.c	/^ruu_dumpent(struct RUU_station *rs,		\/* ptr to RUU station *\/$/;"	f	file:
+tags:27210:ruu_dumpent	run_old/tspuo/sim-outorder.c	/^ruu_dumpent(struct RUU_station *rs,		\/* ptr to RUU station *\/$/;"	f	file:
+tags:27211:ruu_dumpent	sim-ooo.c	/^ruu_dumpent (struct RUU_station *rs,	\/* ptr to RUU station *\/$/;"	f	file:
+tags:27212:ruu_dumpent	sim-out_nn.c	/^ruu_dumpent (struct RUU_station *rs,	\/* ptr to RUU station *\/$/;"	f	file:
+tags:27213:ruu_dumpent	sim-outorder.c	/^ruu_dumpent (struct RUU_station *rs,	\/* ptr to RUU station *\/$/;"	f	file:
+tags:27214:ruu_dumpent	sim-outorder_o.c	/^ruu_dumpent (struct RUU_station *rs,	\/* ptr to RUU station *\/$/;"	f	file:
+tags:27215:ruu_dumpent	sim-outorder_old.c	/^ruu_dumpent (struct RUU_station *rs,	\/* ptr to RUU station *\/$/;"	f	file:
+tags:27272:ruu_install_odep	old_sim-out.c	/^ruu_install_odep (struct RUU_station *rs,	\/* creating RUU station *\/$/;"	f	file:
+tags:27273:ruu_install_odep	run/benchmark/inputs/radix/tempSrc/sim-outorder.c	/^ruu_install_odep(struct RUU_station *rs,	\/* creating RUU station *\/$/;"	f	file:
+tags:27274:ruu_install_odep	run_old/cholesky/sim-outorder.c	/^ruu_install_odep(struct RUU_station *rs,	\/* creating RUU station *\/$/;"	f	file:
+tags:27275:ruu_install_odep	run_old/radix/sim-outorder.c	/^ruu_install_odep(struct RUU_station *rs,	\/* creating RUU station *\/$/;"	f	file:
+tags:27276:ruu_install_odep	run_old/radix/tempSrc/sim-outorder.c	/^ruu_install_odep(struct RUU_station *rs,	\/* creating RUU station *\/$/;"	f	file:
+tags:27277:ruu_install_odep	run_old/tspuo/sim-outorder.c	/^ruu_install_odep(struct RUU_station *rs,	\/* creating RUU station *\/$/;"	f	file:
+tags:27278:ruu_install_odep	sim-ooo.c	/^ruu_install_odep (struct RUU_station *rs,	\/* creating RUU station *\/$/;"	f	file:
+tags:27279:ruu_install_odep	sim-out_nn.c	/^ruu_install_odep (struct RUU_station *rs,	\/* creating RUU station *\/$/;"	f	file:
+tags:27280:ruu_install_odep	sim-outorder.c	/^ruu_install_odep (struct RUU_station *rs,	\/* creating RUU station *\/$/;"	f	file:
+tags:27281:ruu_install_odep	sim-outorder_o.c	/^ruu_install_odep (struct RUU_station *rs,	\/* creating RUU station *\/$/;"	f	file:
+tags:27282:ruu_install_odep	sim-outorder_old.c	/^ruu_install_odep (struct RUU_station *rs,	\/* creating RUU station *\/$/;"	f	file:
+tags:27283:ruu_install_odep_skip	old_sim-out.c	/^ruu_install_odep_skip (struct RUU_station *rs,	\/* creating RUU station *\/$/;"	f	file:
+tags:27284:ruu_install_odep_skip	run/benchmark/inputs/radix/tempSrc/sim-outorder.c	/^ruu_install_odep_skip(struct RUU_station *rs,	\/* creating RUU station *\/$/;"	f	file:
+tags:27285:ruu_install_odep_skip	run_old/cholesky/sim-outorder.c	/^ruu_install_odep_skip(struct RUU_station *rs,	\/* creating RUU station *\/$/;"	f	file:
+tags:27286:ruu_install_odep_skip	run_old/radix/sim-outorder.c	/^ruu_install_odep_skip(struct RUU_station *rs,	\/* creating RUU station *\/$/;"	f	file:
+tags:27287:ruu_install_odep_skip	run_old/radix/tempSrc/sim-outorder.c	/^ruu_install_odep_skip(struct RUU_station *rs,	\/* creating RUU station *\/$/;"	f	file:
+tags:27288:ruu_install_odep_skip	run_old/tspuo/sim-outorder.c	/^ruu_install_odep_skip(struct RUU_station *rs,	\/* creating RUU station *\/$/;"	f	file:
+tags:27289:ruu_install_odep_skip	sim-ooo.c	/^ruu_install_odep_skip (struct RUU_station *rs,	\/* creating RUU station *\/$/;"	f	file:
+tags:27290:ruu_install_odep_skip	sim-out_nn.c	/^ruu_install_odep_skip (struct RUU_station *rs,	\/* creating RUU station *\/$/;"	f	file:
+tags:27291:ruu_install_odep_skip	sim-outorder.c	/^ruu_install_odep_skip (struct RUU_station *rs,	\/* creating RUU station *\/$/;"	f	file:
+tags:27292:ruu_install_odep_skip	sim-outorder_o.c	/^ruu_install_odep_skip (struct RUU_station *rs,	\/* creating RUU station *\/$/;"	f	file:
+tags:27293:ruu_install_odep_skip	sim-outorder_old.c	/^ruu_install_odep_skip (struct RUU_station *rs,	\/* creating RUU station *\/$/;"	f	file:
+tags:27317:ruu_link_idep	old_sim-out.c	/^ruu_link_idep (struct RUU_station *rs,	\/* rs station to link *\/$/;"	f	file:
+tags:27318:ruu_link_idep	run/benchmark/inputs/radix/tempSrc/sim-outorder.c	/^ruu_link_idep(struct RUU_station *rs,		\/* rs station to link *\/$/;"	f	file:
+tags:27319:ruu_link_idep	run_old/cholesky/sim-outorder.c	/^ruu_link_idep(struct RUU_station *rs,		\/* rs station to link *\/$/;"	f	file:
+tags:27320:ruu_link_idep	run_old/radix/sim-outorder.c	/^ruu_link_idep(struct RUU_station *rs,		\/* rs station to link *\/$/;"	f	file:
+tags:27321:ruu_link_idep	run_old/radix/tempSrc/sim-outorder.c	/^ruu_link_idep(struct RUU_station *rs,		\/* rs station to link *\/$/;"	f	file:
+tags:27322:ruu_link_idep	run_old/tspuo/sim-outorder.c	/^ruu_link_idep(struct RUU_station *rs,		\/* rs station to link *\/$/;"	f	file:
+tags:27323:ruu_link_idep	sim-ooo.c	/^ruu_link_idep (struct RUU_station *rs,	\/* rs station to link *\/$/;"	f	file:
+tags:27324:ruu_link_idep	sim-out_nn.c	/^ruu_link_idep (struct RUU_station *rs,	\/* rs station to link *\/$/;"	f	file:
+tags:27325:ruu_link_idep	sim-outorder.c	/^ruu_link_idep (struct RUU_station *rs,	\/* rs station to link *\/$/;"	f	file:
+tags:27326:ruu_link_idep	sim-outorder_o.c	/^ruu_link_idep (struct RUU_station *rs,	\/* rs station to link *\/$/;"	f	file:
+tags:27327:ruu_link_idep	sim-outorder_old.c	/^ruu_link_idep (struct RUU_station *rs,	\/* rs station to link *\/$/;"	f	file:
+tags:27606:seq	context.h	/^    INST_SEQ_TYPE seq;			\/* instruction sequence, used to$/;"	m	struct:RUU_station
+tags:28054:sim_num_insn	context.h	/^    counter_t sim_num_insn;$/;"	m	struct:RUU_station
+tags:28533:spec_mode	context.h	/^    int spec_mode;			\/* non-zero if issued in spec_mode *\/$/;"	m	struct:RUU_station
+tags:28536:spec_rdb_miss	context.h	/^    int spec_rdb_miss;$/;"	m	struct:RUU_station
+tags:28552:spec_wrb_miss	context.h	/^    int spec_wrb_miss;$/;"	m	struct:RUU_station
+tags:28626:sqStoreForwardT	context.h	/^    counter_t sqStoreForwardT;      \/\/The dispatch time of the store inst,$/;"	m	struct:RUU_station
+tags:28733:st_reach	context.h	/^    int st_reach[CLUSTERS];$/;"	m	struct:RUU_station
+tags:28734:st_ring_lat	cluster.c	/^st_ring_lat (struct RUU_station *rs)$/;"	f
+tags:28735:st_ring_lat	interconnect.c	/^void st_ring_lat(struct RUU_station *rs)$/;"	f
+tags:28753:stack_recover_idx	context.h	/^    int stack_recover_idx;		\/* non-speculative TOS for RSB pred *\/$/;"	m	struct:RUU_station
+tags:29437:tag	context.h	/^    INST_TAG_TYPE tag;			\/* RUU slot tag, increment to$/;"	m	struct:RUU_station
+tags:29660:threadid	context.h	/^    int threadid;           		\/* this RUU instant belongs to which theard  *\/$/;"	m	struct:RUU_station
+tags:30704:traffic_generate	cache_n.c	/^void traffic_generate(counter_t sim_cycle, md_addr_t addr, struct RUU_station *rs)$/;"	f
+tags:30705:traffic_generate	cache_o.c	/^void traffic_generate(counter_t sim_cycle, md_addr_t addr, struct RUU_station *rs)$/;"	f
+tags:30706:traffic_generate	cache_old.c	/^void traffic_generate(counter_t sim_cycle, md_addr_t addr, struct RUU_station *rs)$/;"	f
+tags:31008:ushFlag	context.h	/^    half_t  ushFlag;        \/\/Flags of the RUU entry.$/;"	m	struct:RUU_station
+tags:31009:ushSpecLdDelay	context.h	/^    half_t  ushSpecLdDelay; \/\/Number of cycles a spec load is$/;"	m	struct:RUU_station
+tags:31027:val_ra	context.h	/^    quad_t val_ra, val_rb, val_rc, val_ra_result;$/;"	m	struct:RUU_station
+tags:31028:val_ra_result	context.h	/^    quad_t val_ra, val_rb, val_rc, val_ra_result;$/;"	m	struct:RUU_station
+tags:31029:val_rb	context.h	/^    quad_t val_ra, val_rb, val_rc, val_ra_result;$/;"	m	struct:RUU_station
+tags:31030:val_rc	context.h	/^    quad_t val_ra, val_rb, val_rc, val_ra_result;$/;"	m	struct:RUU_station
+tags:31337:when_idep_ready	context.h	/^    unsigned long long when_idep_ready[MAX_IDEPS];$/;"	m	struct:RUU_station
+tags:31338:when_inq	context.h	/^    int when_inq;$/;"	m	struct:RUU_station
+tags:31339:when_ready	context.h	/^    int when_ready[MAX_IDEPS];$/;"	m	struct:RUU_station
+tags:31513:writemiss	context.h	/^    int writemiss;$/;"	m	struct:RUU_station
+tags:31514:writewait	context.h	/^    int writewait;$/;"	m	struct:RUU_station
+tags:31533:wrongCycle	context.h	/^    long long int wrongCycle;$/;"	m	struct:RUU_station
+Binary file temperature.o matches
+Binary file tokencoherence.o matches

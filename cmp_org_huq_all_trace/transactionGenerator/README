@@ -1,0 +1,17 @@
+GENERATED AT OCT.03 2008 BY JING XUE, UNIVERSITY OF ROCHESTER
+
+	This transaction generator to mimic SPLASH benchmarks. This simulator provides flexibility and accelerate simulation for network design however with the cost of reduced accuracy.
+Configuration:
+1. Data packet: 5 flits.
+2. Meta packet: 1 flit.
+
+Discription:
+	This transaction generator to mimic SPLASH benchmarks. This simulator provides flexibility and accelerate simulation for network design however with the cost of reduced accuracy.
+	Transaction based on Interavention forwarding (4-hops) directory cache coherence protocol without NACK. 
+
+	Including the following files:
+1. PROFILE: SPLASH benchmarks profiles, including the probability of generating different kind of transactions. Like miss read, miss write or write upgrade. And also probabilities of generate two hops and four hops transactions. Based on different transactions, packets type are dicided as data/meta packets.
+
+2. HEADER: head file including all the transaction type definition.
+
+ 

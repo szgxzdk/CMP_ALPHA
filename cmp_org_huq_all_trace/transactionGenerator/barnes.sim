@@ -1,0 +1,21 @@
+[INFO]: sim_cycle=5710	Progress=10
+[INFO]: sim_cycle=11420	Progress=20
+[INFO]: sim_cycle=17130	Progress=30
+[INFO]: sim_cycle=22840	Progress=40
+[INFO]: sim_cycle=28550	Progress=50
+[INFO]: sim_cycle=34260	Progress=60
+[INFO]: sim_cycle=39970	Progress=70
+[INFO]: sim_cycle=45680	Progress=80
+[INFO]: sim_cycle=51390	Progress=90
+[INFO]: sim_cycle=57100	Progress=100
+
+sim: ** simulation statistics **
+total_network_access          17259 # total network access
+total_network_delay          245161 # total network delay
+average_network_time        14.2048 # cycles per network access
+total_read_misses              6593 # total read requests
+total_write_misses              386 # total write requests
+total_write_upgrades            110 # total write upgrades
+total_meta_packets             9125 # total meta packets in network
+total_data_packets             8139 # total data packets in network
+

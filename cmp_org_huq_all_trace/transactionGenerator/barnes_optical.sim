@@ -1,0 +1,145 @@
+[INFO]: sim_cycle=5710	Progress=10
+[INFO]: sim_cycle=11420	Progress=20
+[INFO]: sim_cycle=17130	Progress=30
+[INFO]: sim_cycle=22840	Progress=40
+[INFO]: sim_cycle=28550	Progress=50
+[INFO]: sim_cycle=34260	Progress=60
+[INFO]: sim_cycle=39970	Progress=70
+[INFO]: sim_cycle=45680	Progress=80
+[INFO]: sim_cycle=51390	Progress=90
+[INFO]: sim_cycle=57100	Progress=100
+
+sim: ** simulation statistics **
+total_network_access          17227 # total network access
+total_network_delay          121275 # total network delay
+average_network_time         7.0398 # cycles per network access
+total_read_misses              6556 # total read requests
+total_write_misses              403 # total write requests
+total_write_upgrades            101 # total write upgrades
+total_meta_packets            10366 # total meta packets in network
+total_data_packets             6862 # total data packets in network
+total_req_msg                 10366 # total request messages in network
+total_data_msg                 6862 # total data messages in network
+total_req_msg_sending         10430 # total request messages sending in network
+total_data_msg_sending         7044 # total data messages sending in network
+total_network_occupancy        32386 # total cycles spend in network
+laser_power_switch_off            0 # total numbers of laser power is switch off
+laser_power_on_cycle          57078 # total cycles of laser power on
+laser_power_switch_on            16 # total numbers of laser power is switch on
+laser_direction_switch        15939 # total times of laser steering is required
+flits_transmit                45645 # total numbers of flits transmittion
+flits_receiving               45158 # total numbers of flits are receiving
+data_conflict_packet_num          163 # total numbers of data packet in confliction
+meta_conflict_packet_num           61 # total numbers of meta packet in confliction
+data_retry_packet_num           182 # total times of data packet retry
+meta_retry_packet_num            64 # total times of meta packet retry
+pending_packet_num                0 # total numbers of pending packet
+confliction_delay             11830 # total delay of confliction
+data_confliction_delay        10985 # total delay of data confliction
+meta_confliction_delay         1089 # total delay of meta confliction
+pending_delay                     0 # total delay of pending packet
+laser_switch_on_delay           320 # total delay of laser warmup
+network_delay_in_fiber        44671 # total network delay in fiber
+steering_delay                31938 # total delay of laser steering
+net_work_queue_delay          18776 # total delay due to the queue effect
+data_network_queue_delay         4855 # total data delay due to the queue effect
+meta_network_queue_delay        13921 # total meta delay due to the queue effect
+timeslot_wait_delay           15100 # total delay due to data channel time slot
+meta_wait_delay                   0 # total delay due to meta channel time slot
+reply_data_packets                0 # total data packets which are reply
+original_replydata_packets            0 # total data packets which are reply
+write_back_packets                0 # total data packets which are write back
+original_writeback_packets            0 # total data packets which are write back
+data_retry_queue                 27 # total retried data packets queued
+meta_retry_queue                  8 # total retried meta packets queued
+max_conflict_involves  193952133152770 # maximum packets involves in one conflict
+max_packet_retry                  3 # maximum number packets retry
+max_packets_inbuffer             15 # maximum number packets in the input buffer
+max_flits_inbuffer               25 # maximum number flits in the input buffer
+meta_delay_packets                0 # number of meta packets delay
+meta_packets_forward              0 # number of meta packets forward
+data_packets_forward              0 # number of data packets forward
+RTCC                              0 # data_conflict due to Request Time Close to each other Counter
+RTC_C_miss                        0 # data_conflict due to Request Time Close to each other Counter
+RTC_counter_reduced               0 # data_conflict due to Request Time Close to each other Counter
+meta_reduced_packets              0 # Request Time Close to each other Counter
+meta_close_packets                0 # Request Time Close to each other Counter
+data_packets_delay                0 # data packets are actually delayed to avoid conflict
+data_packets_no_delay             0 # data packets are not delayed to avoid conflict
+data_delay                        0 # data packets delay time
+data_packet_generate_max           27 # data packets generation max per 100 cycles
+data_distribution_0.bincount            1 # data_distribution
+data_distribution_1.bincount            0 # data_distribution
+data_distribution_2.bincount            9 # data_distribution
+data_distribution_3.bincount          179 # data_distribution
+data_distribution_4.bincount          377 # data_distribution
+data_distribution_5.bincount            6 # data_distribution
+data_distribution_6.bincount            0 # data_distribution
+data_distribution_7.bincount            0 # data_distribution
+queue_0.bincount             771666 # bincount for input buffer
+queue_1.bincount             122454 # bincount for input buffer
+queue_2.bincount              15259 # bincount for input buffer
+queue_3.bincount               2167 # bincount for input buffer
+queue_4.bincount                713 # bincount for input buffer
+queue_5.bincount                402 # bincount for input buffer
+queue_6.bincount                987 # bincount for input buffer
+data_conf_inv0.bincount           91 # bincount for packets involved in a conflict
+data_conf_inv1.bincount            0 # bincount for packets involved in a conflict
+data_conf_inv2.bincount            0 # bincount for packets involved in a conflict
+data_conf_inv3.bincount            0 # bincount for packets involved in a conflict
+data_conf_inv4.bincount            0 # bincount for packets involved in a conflict
+data_conf_inv5.bincount            0 # bincount for packets involved in a conflict
+data_conf_inv6.bincount            0 # bincount for packets involved in a conflict
+wb_conf_inv0.bincount             0 # bincount for wb packets involves in a conflict
+wb_conf_inv1.bincount             0 # bincount for wb packets involves in a conflict
+wb_conf_inv2.bincount             0 # bincount for wb packets involves in a conflict
+packet_pending0.bincount            0 # packet pending number
+packet_pending1.bincount            0 # packet pending number
+packet_pending2.bincount            0 # packet pending number
+data_packet_retry0.bincount          146 # data packet retry number
+data_packet_retry1.bincount           15 # data packet retry number
+data_packet_retry2.bincount            2 # data packet retry number
+data_packet_retry3.bincount            0 # data packet retry number
+data_packet_retry4.bincount            0 # data packet retry number
+meta_packet_retry0.bincount           58 # meta packet retry number
+meta_packet_retry1.bincount            3 # meta packet retry number
+meta_packet_retry2.bincount            0 # meta packet retry number
+meta_packet_retry3.bincount            0 # meta packet retry number
+meta_packet_retry4.bincount            0 # meta packet retry number
+time_spending0.bincount            0 # time spending between last packet and first packet in one laser switch
+time_spending1.bincount            0 # time spending between last packet and first packet in one laser switch
+time_spending2.bincount            0 # time spending between last packet and first packet in one laser switch
+time_spending3.bincount            0 # time spending between last packet and first packet in one laser switch
+time_spending4.bincount            0 # time spending between last packet and first packet in one laser switch
+packets_spending_0.bincount            0 # packets sending bin count during the laser switch on and off
+packets_spending_1.bincount            0 # packets sending bin count during the laser switch on and off
+packets_spending_2.bincount            0 # packets sending bin count during the laser switch on and off
+packets_spending_3.bincount            0 # packets sending bin count during the laser switch on and off
+packets_spending_4.bincount            0 # packets sending bin count during the laser switch on and off
+request_0.conflict                0 # request conflict on destination per event
+request_1.conflict                0 # request conflict on destination per event
+request_2.conflict                0 # request conflict on destination per event
+request_3.conflict                0 # request conflict on destination per event
+data_0.conflict                   0 # data conflict on destination per event
+data_1.conflict                   0 # data conflict on destination per event
+data_2.conflict                   0 # data conflict on destination per event
+data_3.conflict                   0 # data conflict on destination per event
+req_cycle_0.conflict            661 # how many cycles see a req conflicts
+req_cycle_1.conflict            270 # how many cycles see a req conflicts
+req_cycle_2.conflict            144 # how many cycles see a req conflicts
+req_cycle_3.conflict            107 # how many cycles see a req conflicts
+data_cycle_0.conflict           696 # how many cycles see a data conflicts
+data_cycle_1.conflict           320 # how many cycles see a data conflicts
+data_cycle_2.conflict           189 # how many cycles see a data conflicts
+data_cycle_3.conflict           121 # how many cycles see a data conflicts
+req_0.bincount                 8726 # bin counter for request
+req_1.bincount                  792 # bin counter for request
+req_2.bincount                   40 # bin counter for request
+req_3.bincount                    0 # bin counter for request
+req_4.bincount                    0 # bin counter for request
+data_0.bincount               20185 # bin counter for data
+data_1.bincount                5860 # bin counter for data
+data_2.bincount                 915 # bin counter for data
+data_3.bincount                 110 # bin counter for data
+data_4.bincount                  25 # bin counter for data
+
